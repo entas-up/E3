@@ -1,0 +1,260 @@
+
+/* Nice-menu */
+
+
+#block-nice-menus-1 li.active-trail > a.active{
+/*color: #ff6600 ; /* orange */
+color: #FFE800;
+text-shadow: 1px 1px 2px #000;
+font-weight: 400;
+}
+
+#block-nice-menus-1 li.active-trail > a{
+/* Вариант 1 */ /* color: #027AC6; */
+/* Вариант 2 */ color: #FFF;
+font-weight: 400;
+}
+ 
+#block-nice-menus-1 li .active-trail {
+/* Вариант 1 */ /*color: #027AC6;*/
+/* Вариант 1 */ /*background-color: #fff;*/
+/* Вариант 2 */ color: #fff;
+/* Вариант 2 */ background-color: #027AC6;
+border-color:#595959;
+font-weight: 400;
+}
+ 
+#block-nice-menus-1 .active-trail {
+/* Вариант 1 */ /*color: #027AC6;*/
+/* Вариант 1 *//*background-color: #fff;*/
+/* Вариант 2 */color: #fff;
+/* Вариант 2 */background-color: #027AC6;
+
+/*border-color:#595959 #595959 #fff #595959;*/
+}
+ 
+#block-nice-menus-1 ul li {
+
+} 
+
+ ul.nice-menu li:hover
+{
+
+	/*Вариант 1*/ /*background:#fff;  */
+	/* Вариант 2*/ background:#027AC6;
+	/*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
+background-position: right center;
+background-repeat: no-repeat;
+}
+
+#block-nice-menus-1 .menu-path-user-logout a{
+padding-right: 1px;
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+#block-nice-menus-1 .menu-path-user-login  a{
+padding-right: 1px;
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+ul.nice-menu-down li li {
+/*border: 1px solid red;*/
+}
+
+ul.nice-menu a {
+display: block;
+color: #fff;
+text-decoration: none;
+}
+
+ul.nice-menu a:hover {
+/* Вариант 1 */ /*color: #027AC6;*/
+/* Вариант 2 */ color: #FFF;
+text-decoration: none;
+font-weight: 400;
+
+}
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  
+}
+
+ul.nice-menu li {
+  border-top: none;
+border-bottom: none;
+border-right: none; 
+border-left: none;
+  float: left; /* LTR */
+  background-color: #414141;
+ /* background-image: url(/sites/all/themes/entas/images/separator5.png);*/
+background-position: right center;
+background-repeat: no-repeat;
+  /*margin: 0 1px 0 0; */ /* Эффект папки */
+  /*border-radius: 5px 5px 0 0; */ /* Эффект папки */
+ /* border-color: #000 #000 #595959 #000;*/
+  /*box-shadow: inset 0 0 5px #ccc; *//* Если не включен эффект папки */
+}
+
+ul.nice-menu a {
+  padding-right: 1px;
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+ul.nice-menu ul {
+  top: 2.4em;
+  left: -1px; /* LTR */
+  border: 0;
+    margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+border-radius: 0;
+}
+
+ul.nice-menu li .first {
+border-top-left-radius:2px;
+border-top-right-radius:2px;
+}
+
+ul.nice-menu li .last {
+border-bottom-left-radius:2px;
+border-bottom-right-radius:2px;
+}
+
+/* nice-menu next step */
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+/*border: 1px solid #BBB; */ /* #3B3B3B */
+}
+
+ul.nice-menu-down li li {
+  
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+  border-left: 2px solid #F60;
+  border-top: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-radius: 2px;
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+  border-bottom: 1px solid #BBB;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 14.0em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 1px; /* LTR */
+  padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+ul.nice-menu-down li.menuparent {
+  background: #414141; /* LTR *//* first level */
+    background-image: url(../images/arrow-down.png), url(/sites/all/themes/entas/images/separator5.png);
+background-position: 95% center, right center;
+background-repeat: 	no-repeat;
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  /* Вариант 1*/ /*background: #fff url(../images/arrow-down.png) right center no-repeat; /* LTR *//* first level наведение */
+  /* Вариант 2*//* background: #027AC6 url(../images/arrow-down.png) 95% center no-repeat; *//* LTR *//* first level наведение */
+  /*border-color: #575757;*/
+  background: #027AC6; /* LTR *//* first level */
+    background-image: url(../images/arrow-down.png), url(/sites/all/themes/entas/images/separator5.png);
+background-position: 95% center, right center;
+background-repeat: 	no-repeat;
+  font-weight: 400;
+}
+
+
+
+
+ul.nice-menu-down li.menuparent:hover > a {
+/* Вариант 1 */ /*color: #027AC6;*/
+/* Вариант 2 */ color: #fff;
+font-weight: 400;
+   
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: #414141 url(../images/arrow-right.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  /* Вариант 1 */ /*background: #fff url(../images/arrow-right.png) right center no-repeat; /* LTR */
+  /* Вариант 2 */ background: #027AC6 url(../images/arrow-right.png) right center no-repeat; /* LTR */
+  border-color: #ccc;
+} 
+
+ul.nice-menu-down li li.menuparent:hover > a {
+ /* Вариант 1 */ /*color: #027AC6;*/
+/* Вариант 2 */ color: #fff;
+font-weight: 400;
+} 
+
+ul.nice-menu-down li.first:hover {
+/*border-color: #000 #000 #fff #000;*/
+}
+
+ul.nice-menu-down li.first:hover > a {
+  /* Вариант 1 */ /*color: #027AC6;*/
+/* Вариант 2 */ color: #fff;
+font-weight: 400;
+} 
+ul.nice-menu-down li.first a {
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+
+ul.nice-menu a.active   {
+color: orange;
+}
+
+/* nice menu end */
+
+ul.nice-menu-down li.menu-path-front {
+background: #414141; 
+background-image:url(/sites/all/themes/entas/images/separator5.png);
+background-position: right center;
+background-repeat: 	no-repeat;
+}
+
+ul.nice-menu-down li.menu-path-front:hover {
+  
+background: #027AC6; 
+background-image:url(/sites/all/themes/entas/images/separator5.png);
+background-position: right center;
+background-repeat: 	no-repeat;
+font-weight: 400;
+}

@@ -1,0 +1,491 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block /* Block wrapper */ {
+/*  margin-bottom: 1.5em;*/
+}
+
+.block.first /* The first block in the region */ {
+}
+
+.block.last /* The last block in the region */ {
+}
+
+.block.odd /* Zebra striping for each block in the region */ {
+}
+
+.block.even /* Zebra striping for each block in the region */ {
+}
+
+h2.block-title /* Block title */ {
+}
+
+.block .content /* Block's content wrapper */ {
+}
+
+
+/* Блок "Новость дня"  УДАЛИТЬ???? */
+#block-block-4 {
+font-size: 0.75em;
+margin: 10px 0 0 600px;
+position: absolute;
+}
+#block-block-4 a {
+color: black;
+}
+
+#block-aggregator-category-1 /* Block for the latest news items in the first category */ {
+}
+
+#block-aggregator-feed-1 /* Block for the latest news items in the first feed */ {
+}
+
+#block-block-1 /* First block created with "Add block" link */ {
+}
+
+#block-blog-recent /* "Recent blog posts" block */ {
+}
+
+#block-book-navigation /* "Book navigation" block for the current book's table of contents */ {
+}
+
+#block-comment-recent /* "Recent comments" block */ {
+}
+
+#block-forum-active /* "Active forum topics" block */ {
+}
+
+#block-forum-new /* "New forum topics" block */ {
+}
+
+#block-locale-language /* Language switcher block */ {
+}
+
+#block-menu-menu-NAME /* Custom menu block  */ {
+}
+#block-views-news3-block { /* Блок новостей НОВЫЙ */
+/* background:#ccc; */
+padding: 0px 10px;
+/*line-height: 1.4em;*/
+word-wrap: break-word;
+/*box-shadow: -5px 5px 10px #7B7B7B;*/
+}
+#block-views-news3-block .views-field-created { /* Блок новостей НОВЫЙ */
+color:#555;
+font-size:11px;
+text-align: center;
+}
+
+/*#block-views-news3-block .views-row {/* Блок новостей НОВЫЙ */
+/*border-bottom:double;
+border-bottom-color:red;
+padding: 7px 0;} */
+#block-views-news3-block .block-title {/* Блок новостей НОВЫЙ --- Titul */
+padding-top: 10px;
+padding-bottom: 10px;
+/* font-family: Comic Sans MS; */
+color: #CE6904;
+font-size: 1.5em;
+text-shadow: 2px 2px 2px #999;
+font-weight: bold;
+text-align:center;
+}
+#block-views-news3-block .views-field-title {/* Блок новостей НОВЫЙ --- Titul */
+/* text-align:justify; */
+font-size: 0.75em;
+}
+
+
+#block-views-news3-block .field-item /* Блок новостей НОВЫЙ podcherkivania megdy novostiami*/  {
+	border-bottom:#F00;
+	border-bottom-style:double;
+	margin-bottom:10px;	
+	/*line-height: 1.4em;*/
+	/* text-align:justify; */
+         font-size: 0.75em;
+	}
+	
+#block-views-news3-block  .pager li/* kostil' pager v odny stroky*/{
+		
+}
+#block-views-news3-block  .pager /* kostil' cvet pager'a */{
+	color:#CE6904;
+	margin: 0 20px 10px -40px;
+}
+#block-views-news3-block  .more-links /* kostil' cvet pager'a */{
+	
+}
+/*#block-views-news3-block .content a:hover{
+	background:#666;}
+#block-views-news3-block .content a:active {
+	background:#666;}
+#block-views-news3-block .content a:focus{
+	background:#666;} */
+#block-views-news3-block .content a/* Блок новостей НОВЫЙ */ {
+color: #1829EB;
+font-weight: normal;
+/*text-shadow: 1px 1px  1px red;*/
+}
+
+#block-views-news3-block .view-header {
+text-align: center;
+margin: 0 0 5px 0;
+padding-top: 10px;
+}
+
+#block-views-news3-block .view-header a:hover {
+background: none;
+}
+
+
+/* PANEL NEWS */
+.pane-news3 { /* Блок новостей НОВЫЙ */
+background:#ccc;
+padding: 0 10px;
+
+line-height: 1.2em;
+list-style:none !important;
+list-style-type:none !important;
+
+}
+
+/*#block-views-news3-block .views-row {/* Блок новостей НОВЫЙ */
+/*border-bottom:double;
+border-bottom-color:red;
+padding: 7px 0;} */
+.pane-news3 .pane-title {/* Блок новостей НОВЫЙ --- Titul */
+/*padding-top: 10px;
+padding-bottom: 10px;*/
+font-family: Comic Sans MS;
+color: #CE6904;
+font-size: 1.2em;
+text-shadow: 2px 2px 2px #999;
+font-weight: bold;
+text-align:center;
+list-style:none !important;
+list-style-type:none !important;
+
+
+}
+.pane-news3 .field-item /* Блок новостей НОВЫЙ podcherkivania megdy novostiami*/  {
+	border-bottom:#F00;
+	border-bottom-style:double;
+	margin-bottom:10px;	
+	
+		}
+	
+.pane-news3  .pager li/* kostil' pager v odny stroky*/{
+		margin: 0;
+}
+.pane-news3  .pager /* kostil' cvet pager'a */{
+	color:#CE6904;
+	
+}
+.pane-news3 .more-links /* kostil' cvet pager'a */{
+	margin:30px;
+	
+}
+
+.pane-news3  a/* Блок новостей НОВЫЙ */ {
+color: #CE6904;
+/*text-shadow: 1px 1px  1px red;*/
+}
+
+
+/* END PANEL NEWS */
+
+
+#block-node-recent /* "Recent content" block */ {
+	}
+
+
+#block-node-syndicate /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */ {
+}
+
+#block-poll-recent /* "Most recent poll" block */ {
+	color: #BBB;
+text-shadow: 1px 1px 1px black;
+padding: 0 6px;
+}
+#block-poll-recent .links /* "Most recent poll" block */ {
+	padding-left: 10px ;
+}
+#block-profile-author-information /* "Author information" block for the profile of the page's author */ {
+}
+
+#block-search-form /* "Search form" block */ {
+}
+
+#block-shortcut-shortcuts /* "Shortcuts" block */ {
+}
+
+#block-statistics-popular /* "Popular content" block */ {
+}
+
+#block-system-main-menu /* "Main menu" block */ {
+}
+
+#block-system-management /* "Management" block for Drupal management menu */ {
+}
+
+#block-system-navigation /* "Navigation" block for Drupal navigation menu */ {
+}
+
+#block-system-user-menu /* "User menu" block for Drupal user menu */ {
+}
+
+#block-system-help /* "System help" block */ {
+}
+
+#block-system-main /* "Main page content" block */ {
+}
+#block-system-main .pager /* "Main page content" block */ {
+color:#F93;	
+}
+#block-system-main .pager a /* "Main page content" block */ {
+color:#F93;	
+}
+#block-system-powered-by /* "Powered by Drupal" block */ {
+}
+
+#block-user-login /* "User login form" block */ {
+}
+
+#block-user-new /* "Who's new" block for a list of the newest users */ {
+}
+
+#block-user-online /* "Who's online" block for a list of the online users */ {
+}
+
+
+
+/* Nice-menu */
+
+
+#block-nice-menus-1 li.active-trail > a.active{
+color: #ff6600 ; /* orange */
+font-weight: 400;
+}
+
+#block-nice-menus-1 li.active-trail > a{
+color: #027AC6;
+font-weight: 400;
+}
+ 
+#block-nice-menus-1 li .active-trail {
+color: #027AC6;
+background-color: #fff;
+border-color:#595959;
+font-weight: 400;
+}
+ 
+#block-nice-menus-1 .active-trail {
+color: #027AC6;
+background-color: #fff;
+border-color:#595959 #595959 #fff #595959;
+}
+ 
+
+ul.nice-menu a {
+display: block;
+color: #fff;
+text-decoration: none;
+}
+ul.nice-menu a:hover {
+color: #027AC6;
+text-decoration: none;
+font-weight: 400;
+}
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+ul.nice-menu li {
+  border: 1px solid;
+  float: left; /* LTR */
+  background-color: #595959;
+  margin: 0 1px 0 0;
+  border-radius: 5px 5px 0 0;
+  border-color: #000 #000 #595959 #000;
+}
+
+ul.nice-menu a {
+  padding: 0px;
+}
+
+ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  border: 0;
+    margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+border-radius: 0;
+}
+ul.nice-menu li .first {
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+ul.nice-menu li .last {
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+/* nice-menu next step */
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+border: 1px solid #BBB;  /* #3B3B3B */
+}
+
+ul.nice-menu-down li li {
+  
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 1px; /* LTR */
+  padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+ul.nice-menu-down li.menuparent {
+  background: #595959 url(../images/arrow-down.png) right center no-repeat; /* LTR *//* first level */
+   
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  background: #fff url(../images/arrow-down.png) right center no-repeat; /* LTR *//* first level наведение */
+  border-color: #000 #000 #fff #000;
+font-weight: 400;
+}
+
+ul.nice-menu-down li.menuparent:hover > a {
+color: #027AC6;
+font-weight: 400;
+   
+}
+
+
+
+ul.nice-menu-down li li.menuparent {
+  background: #595959 url(../images/arrow-right.png) right center no-repeat; /* LTR */
+
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #fff url(../images/arrow-right.png) right center no-repeat; /* LTR */
+  border-color: #3B3B3B;
+} 
+
+ul.nice-menu-down li li.menuparent:hover > a {
+  color: #027AC6;
+font-weight: 400;
+} 
+
+ul.nice-menu-down li.first:hover {
+border-color: #000 #000 #fff #000;
+}
+
+ul.nice-menu-down li.first:hover > a {
+  color: #027AC6;
+font-weight: 400;
+} 
+ul.nice-menu-down li.first a {
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+
+ul.nice-menu a.active   {
+color: orange;
+}
+
+
+/* news cycle */
+
+#block-views-news3-block-1 {
+border: 7px solid #ccc;
+padding: 20px;
+border-radius: 10px;
+min-width: 500px;
+}
+
+#views_slideshow_cycle_main_news3-block_1 .views_slideshow_cycle_main {
+margin: 0 10px 0 10px;
+}
+#views_slideshow_cycle_main_news3-block_1 .views-field-field-image {
+float: left;
+}
+
+
+#block-views-news3-block-1 .views-slideshow-controls-top {
+background-color: #ccc;
+border: 1px solid #000;
+border-radius: 10px;
+padding: 10px;
+margin: 10px;
+}
+#block-views-news3-block-1 .views_slideshow_cycle_main {
+/* background-color: red; */
+}
+
+.region-news1000 {
+float: left;
+position: absolute;
+margin-left: 650px;
+}
+
+
+#block-block-7 {
+float: left;
+margin-right: 100px;
+}
+
+#block-block-8 {
+float: right;
+margin-right: 40px;
+}
+
+#block-menu-block-4 {
+float: left;
+margin-right: 20px;
+}
+
+#block-menu-block-4 ul li {
+float: left;
+margin-right: 20px;
+}
+
+#block-menu-block-4 ul.menu li {
+list-style: none;
+}
+#block-block-2 { margin-top: 200px; }

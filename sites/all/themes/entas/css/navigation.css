@@ -1,0 +1,329 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+.menu li a.active {
+  color: #F93;
+  }
+
+/*
+ * Navigation bar
+ */
+#navigation {
+  /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
+  /*padding-top: 5px;*/
+  background: #414141;
+  margin-top: -5px;
+  font-size: 0.8em;
+/*
+padding-top: 5px;
+background: #FFF;
+margin-top: -5px;
+font-size: 0.9em;
+border-bottom: 1px solid #F60;
+*/
+}
+
+#navigation ul.links, /* Main menu and secondary menu links */
+#navigation .content ul /* Menu block links */ {
+ /* margin: 0px 0 0 25px;*/ 
+  padding: 0;
+  text-align: left; /* LTR */
+ z-index: 500;
+}
+
+
+#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
+#navigation .content li {
+  float: left; /* LTR */
+  padding: 0 20px 0 0; /* LTR */
+
+}
+
+
+.region-navigation {
+/* margin: 50px 0 0 45px; */
+}
+
+/*
+ * Main menu and Secondary menu links
+ */
+#main-menu {
+}
+
+#secondary-menu {
+  float: right;
+}
+
+/*
+ * Menu blocks
+ */
+
+.block-menu {
+}
+.region-sidebar-first .block-menu {
+border-bottom: 1px solid #F60
+	
+}
+
+/*
+ * "Menu block" blocks
+ *
+ * Drupal core has limited ways in which it can display its menus. To get around
+ * these limitations, see http://drupal.org/project/menu_block
+ */
+.region-sidebar-first .block-menu-block {
+border-bottom: 1px solid #F60
+	
+}
+.block-menu-block {  }
+
+li.menu-path-front {
+padding: 7px 10px!important;
+}
+.menu-path-front  a {
+font-size: 1pt;
+color:#414141;
+}
+
+
+/* Icons from Font Awesome  */
+
+
+.region-sidebar-first .collapsed a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f0fe""\00a0\00a0\00a0";
+}
+
+.region-sidebar-first .expanded>a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f146""\00a0\00a0\00a0";
+}
+
+.region-sidebar-first ul li.expanded, .region-sidebar-first ul li.collapsed, ul li.leaf {
+list-style-image:none;
+list-style-type:none;
+}
+
+
+.menu-2667 a:before {
+isplay: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f0ed""\00a0\00a0";
+}
+
+.menu-790 a:before {
+isplay: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f059""\00a0\00a0";
+}
+/* back to top */
+
+#backtotop:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f139";
+color: #FF820F;
+font-size: 61em;
+top: -5px;
+position: absolute;
+right: 0px;
+/*transition: all 0.3s;*/
+}
+/*
+#backtotop:before {
+background: #FFF;
+position: absolute;
+top: 10px;
+right: 11px;
+content: " ";
+height: 30em;
+width: 35em;
+transition: all 0.3s;
+}
+*/
+#backtotop:hover:after {
+color: #f60;
+font-size: 63em;
+}
+/*
+#backtotop:hover:before {
+background: #EAFF1F;
+height: 35em;
+width: 37em;
+
+}
+*/
+
+
+
+.region-sidebar-first ul li.leaf a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f111""\00a0\00a0\00a0\00a0";
+font-size: 5px;
+text-shadow: 0px 0px 4px #000;
+vertical-align: middle;
+}
+
+/* Home1  */
+.menu-path-front a:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f015";
+color: #FFF;
+/*vertical-align: middle;
+text-align: center;
+margin-top: -11px;
+
+padding: 0 6px;*/
+font-size: 15em;
+position: absolute;
+top: 17%;
+left: 25%;
+}
+
+/* Стрелка вправо  */
+ul.nice-menu-down li li.menuparent:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f054";
+right: 5px;
+position: absolute;
+top: 30%;
+font-size: 1.2em;
+color: antiquewhite;
+}
+/* стрелка вниз */
+ul.nice-menu-down li.menuparent:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f078";
+right: 5px;
+position: absolute;
+top: 30%;
+font-size: 1.2em;
+color: antiquewhite;
+}
+
+
+/* Home2  */
+.menu-mlid-1838 a {
+/*font-size: 0;*/
+}
+
+.menu-mlid-1838 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f015";
+color: #F60;
+vertical-align: middle;
+text-align: center;
+margin-top: -5px;
+font-size: 1.2em;
+cursor: pointer;
+margin-right: 4px;
+}
+.menu-mlid-1838 a.active:before {
+color:#F93;
+}
+.menu-mlid-1838 a.focus:before., .menu-mlid-1838 a.hover:before, .menu-mlid-1838 a.active:before {
+text-decoration: underline;
+}
+
+/* Sitemap  */
+.menu-mlid-1839 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f0e8";
+color: #F60;
+margin-right: 4px;
+}
+.menu-mlid-1839 a.active:before {
+color:#F93;
+
+}
+
+
+/* Search  */
+.menu-mlid-1840 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f002";
+color: #F60;
+margin-right: 4px;
+}
+.menu-mlid-1840 a.active:before {
+color:#F93;
+
+}
+
+.menu-mlid-1839 a.hover:before{
+text-decoration: underline;
+}
+/* Feedback  */
+.menu-mlid-2904 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f044";
+color: #F60;
+margin-right: 4px;
+}
+.menu-mlid-2904 a.active:before {
+color:#F93;
+
+}
+
+
+#block-menu-block-4 a:hover {
+text-decoration: none;
+} 

@@ -1,0 +1,135 @@
+<?php
+/**
+ * @file
+ * Set/unset test configuration and add quick admin links.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function uptime_widget_test_install() {
+  // Create a sample page.
+  $t = get_t();
+
+  $node = new stdClass();
+  $node->uid = 1;
+  $node->language = LANGUAGE_NONE;
+  $node->type = 'page';
+  $node->status = 1;
+  $node->promote = 1;
+  $node->title = $t('Demo site');
+  $node->body[LANGUAGE_NONE][0]['value'] = $t('<p>This is the demo site for both the <a href="https://drupal.org/project/uptime_widget">UpTime Widget</a>  and <a href="https://drupal.org/project/pagerank_widget">PageRank Widget</a> module.</p><p><strong>NOTE</strong>: Once you enter the PageRank settings page, cron will run and the actual host of the current site is loaded. This might result in a Pagerank of N/A or a Google error on a development site.</p><!--break--><h2>Features</h2><h4>Customizable</h4>Advantage over embedding third party scripts is the possibility to change the color of the widget to fit your theme. A CSS file is provided.<h4>Lightweight</h4>An external script makes a request on each page load. The modules once every 24 hours.');
+  $node->body[LANGUAGE_NONE][0]['format'] = 'full_html';
+  node_save($node);
+
+  // Enable the PageRank Widget module to showcase as well.
+  module_enable(array('pr_widget'), 'FALSE');
+
+  // Create some admin quick links in the navigation menu.
+  $item = array(
+    'link_title' => $t('Configure Uptime block'),
+    'link_path' => 'admin/structure/block/manage/uptime/uptime_widget/configure',
+  );
+  menu_link_save($item);
+  $item = array(
+    'link_title' => $t('Uptime settings'),
+    'link_path' => 'admin/config/system/uptime',
+  );
+  menu_link_save($item);
+  if (module_exists('pr_widget')) {
+    $item = array(
+      'link_title' => $t('Configure PageRank block'),
+      'link_path' => 'admin/structure/block/manage/pr_widget/pr_widget_widget/configure',
+    );
+    menu_link_save($item);
+    $item = array(
+      'link_title' => $t('PageRank settings'),
+      'link_path' => 'admin/config/system/pr_widget',
+    );
+    menu_link_save($item);
+  }
+
+  // Save old settings.
+  variable_set('uptime_old_api_key', variable_get('uptime_api_key', ''));
+  variable_set('uptime_old_monitor_id', variable_get('uptime_monitor_id', ''));
+  variable_set('uptime_old_enabled', variable_get('uptime_enabled', '1'));
+  variable_set('uptime_old_notice_enabled', variable_get('uptime_notice_enabled', '0'));
+  variable_set('uptime_old_url_name', variable_get('uptime_url_name', ''));
+  if (module_exists('pr_widget')) {
+    variable_set('pr_widget_old_interval', variable_get('pr_widget_interval', 24 * 60 * 60));
+    variable_set('pr_widget_old_ratio', variable_get('pr_widget_ratio', 'N/A'));
+    variable_set('pr_widget_old_url', variable_get('pr_widget_url', parse_url($GLOBALS['base_url'], PHP_URL_HOST)));
+  }
+
+  // New settings for testing.
+  variable_set('uptime_api_key', 'u67898-e10c189beee66ab36cc2045c');
+  variable_set('uptime_monitor_id', '775659447');
+  variable_set('uptime_enabled', '1');
+  variable_set('uptime_notice_enabled', '1');
+  variable_set('uptime_url_name', 'simplytest.me');
+  if (module_exists('pr_widget')) {
+    variable_set('pr_widget_url', 'simplytest.me');
+  }
+
+  // New uptime ratio must be grabbed.
+  drupal_cron_run();
+
+  // New uptime ratio needs to be grabbed.
+  if (module_exists('pr_widget')) {
+    $interval = variable_get('pr_widget_interval', 24 * 60 * 60);
+    $url = 'http://simplytest.me/';
+    if (pr_widget_pagerank($url) == -1) {
+      variable_set('pr_widget_ratio', 'N/A');
+    }
+    else {
+      variable_set('pr_widget_ratio', pr_widget_pagerank($url));
+    }
+    watchdog('pr_widget', 'PageRank updated successfully');
+    variable_set('pr_widget_next_execution', time() + $interval);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function uptime_widget_test_uninstall() {
+
+  // Remove the admin quick links.
+  $path = 'admin/structure/block/manage/uptime/uptime_widget/configure';
+  menu_link_delete(NULL, $path);
+  $path = 'admin/config/system/uptime';
+  menu_link_delete(NULL, $path);
+  if (module_exists('pr_widget')) {
+    $path = 'admin/structure/block/manage/pr_widget/pr_widget_widget/configure';
+    menu_link_delete(NULL, $path);
+    $path = 'admin/config/system/pr_widget';
+    menu_link_delete(NULL, $path);
+  }
+  // Reset settings to their old values.
+  variable_set('uptime_api_key', variable_get('uptime_old_api_key', ''));
+  variable_set('uptime_monitor_id', variable_get('uptime_old_monitor_id', ''));
+  variable_set('uptime_enabled', variable_get('uptime_old_enabled', '1'));
+  variable_set('uptime_notice_enabled', variable_get('uptime_old_notice_enabled', '0'));
+  variable_set('uptime_url_name', variable_get('uptime_old_url_name', ''));
+  if (module_exists('pr_widget')) {
+    variable_set('pr_widget_interval', variable_get('pr_widget_old_interval', 24 * 60 * 60));
+    variable_set('pr_widget_ratio', variable_get('pr_widget_old_ratio', 'N/A'));
+    variable_set('pr_widget_url', variable_get('pr_widget_old_url', parse_url($GLOBALS['base_url'], PHP_URL_HOST)));
+    // The cron needs to run asap after uninstall of the test.
+    variable_set('pr_widget_next_execution', 0);
+  }
+  // Cleanup saved variables.
+  db_delete('variable')
+  ->condition('name', 'uptime_old_%', 'LIKE')
+  ->execute();
+  cache_clear_all('variables', 'cache_bootstrap');
+  if (module_exists('pr_widget')) {
+    db_delete('variable')
+    ->condition('name', 'pr_widget_old_%', 'LIKE')
+    ->execute();
+    cache_clear_all('variables', 'cache_bootstrap');
+    // Old uptime ratio needs to be grabbed.
+    drupal_cron_run();
+  }
+}
+

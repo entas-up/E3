@@ -1,0 +1,28 @@
+#block-views-last-entas-block {
+background:#FEF7A2;
+border: 1px solid #ccc;
+}
+
+#block-views-last-b-r-block {
+background:#FEF7A2;
+border: 1px solid #ccc;
+}
+
+#block-views-last-files-block {
+background:#FEF7A2;
+border: 1px solid #ccc;
+}
+
+.last-block .pager-current {
+margin-right: 5px;	
+}
+
+.view-frontpage .item-list .pager li.pager-current  {
+margin-right: 5px;
+}
+
+
+#header .section {
+background:#E16615;
+
+}

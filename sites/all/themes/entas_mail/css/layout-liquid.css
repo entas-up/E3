@@ -1,0 +1,235 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+
+/*
+ * Body
+ */
+ body {  
+
+}
+
+#page-wrapper,
+.region-bottom {
+  width: 960px; /* Don't allow the browser to make the site unreadable. */
+  margin: 0 auto; /* Центрирование */
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+position: relative;
+}
+
+#header .section {
+	/*background: #ed8d0b;
+	background-image: url(/base/pic/header2.png);
+	background-repeat:repeat-x;
+	*/
+background-color:rgba(255, 102, 0, 0.8);
+background-image: linear-gradient(rgba(255,255,255,.3) 0px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.3) 0px, transparent 1px),
+linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+height: 115px;
+position: relative;
+	}
+
+.region-header {
+	/*float:left;*/ /*right стандарт*/
+	/* margin: 30px 0px 0 80%;
+	position:absolute; */
+	
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  position: relative;
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+  float: left; /* LTR */
+  width: 100%; /*100% в оригинале */
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* -100%; Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+/*  background: white; */
+}
+
+#content .section,
+.no-sidebars #content .section {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-first #content .section {
+ /* padding-left: 200px;*/ /* LTR */ /* The width + left margin of .region-sidebar-first. */
+  padding-right: 0; /* LTR */
+  margin-top: 26px;
+  
+  
+}
+
+.sidebar-second #content .section {
+  padding-left: 0; /* LTR */
+  padding-right: 200px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+margin-left: 40px;
+margin-top: 30px;
+}
+
+.two-sidebars #content .section {
+  padding-left: 250px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 200px; /* The width + right margin of .region-sidebar-second. */
+margin-top: 30px;
+}
+
+/*
+ * Navigation
+ */
+#navigation {
+  float: left; /* LTR */
+background: #ed8d0b;
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+ /* height: 3em; убивало бридкамб!!!*//* The navigation can have any arbritrary height. We picked one
+                    that is the line-height plus 1em: 1.3 + 1 = 2.3
+                    Set this to the same value as the margin-top below. */
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
+  /*margin-top: 3em;*/ /* Set this to the same value as the navigation height above. */
+}
+
+#navigation .section {
+	  /*margin-top: -49px;*/
+	  /*padding-left: 215px;*/
+
+}
+
+/*
+ * First sidebar
+
+ */
+
+
+.region-sidebar-first ul li.collapsed {
+list-style-image: url('../images/menu-collapsed.png');
+   }
+.region-sidebar-first ul li.expanded {
+list-style-image: url('../images/menu-expanded.png');
+   }
+.region-sidebar-first ul li.leaf     {
+/*list-style-image: none;*/
+   }
+   
+.region-sidebar-first ul.menu {
+padding-top: 5px !important;
+}
+
+
+.region-sidebar-first {
+  float: left; /* LTR */
+  width: 250px;
+  margin-left: 0; /* LTR */
+  margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+  /*height:1000px;*/
+  margin-top: 18px;
+  line-height: 1.5em;
+  background: #414141;
+}
+
+.region-sidebar-first .section {
+  /*margin: 0 15px 0 0;*/ /* LTR */
+  padding: 7px 7px;
+  
+}
+
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: right; /* LTR */
+  width: 200px;
+  margin-left: -200px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
+  margin-right: 0; /* LTR */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+  margin-top: -5px;
+}
+
+.region-sidebar-second .section {
+  margin: 0px 0 0 20px; /* LTR */
+  padding: 0;
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+}
+
+/*
+ * Page bottom
+ */
+.region-bottom /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  /*word-wrap: break-word; *//* A very nice CSS3 property, а по мне так отстой... */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/

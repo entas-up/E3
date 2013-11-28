@@ -1,0 +1,431 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+.block /* Block wrapper */ {
+
+}
+
+.block.first /* The first block in the region */ {
+}
+
+.block.last /* The last block in the region */ {
+}
+
+.block.odd /* Zebra striping for each block in the region */ {
+}
+
+.block.even /* Zebra striping for each block in the region */ {
+}
+
+h2.block-title /* Block title */ {
+}
+
+.block .content /* Block's content wrapper */ {
+}
+
+
+#block-aggregator-category-1 /* Block for the latest news items in the first category */ {
+}
+
+#block-aggregator-feed-1 /* Block for the latest news items in the first feed */ {
+}
+
+#block-block-1 /* First block created with "Add block" link */ {
+}
+
+#block-blog-recent /* "Recent blog posts" block */ {
+}
+
+#block-book-navigation /* "Book navigation" block for the current book's table of contents */ {
+}
+
+#block-comment-recent /* "Recent comments" block */ {
+}
+
+#block-forum-active /* "Active forum topics" block */ {
+}
+
+#block-forum-new /* "New forum topics" block */ {
+}
+
+#block-locale-language /* Language switcher block */ {
+}
+
+#block-menu-menu-NAME /* Custom menu block  */ {
+}
+
+#block-node-recent /* "Recent content" block */ {
+	}
+
+#block-node-syndicate /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */ {
+}
+
+#block-poll-recent /* "Most recent poll" block */ {
+	color: #BBB;
+text-shadow: 1px 1px 1px black;
+padding: 0 6px;
+}
+#block-poll-recent .links /* "Most recent poll" block */ {
+	padding-left: 10px ;
+}
+#block-profile-author-information /* "Author information" block for the profile of the page's author */ {
+}
+
+#block-search-form /* "Search form" block */ {
+float: right;
+margin-top: 5px;
+}
+#edit-search-block-form--2 {
+position:relative;
+background: #FFF;
+border: none;
+border-radius: 10px;
+width: 150px;
+padding-left: 5px;
+}
+.form-actions {
+position: relative;
+right: 23px;
+top: 3px;
+}
+#block-shortcut-shortcuts /* "Shortcuts" block */ {
+}
+
+#block-statistics-popular /* "Popular content" block */ {
+}
+
+#block-system-main-menu /* "Main menu" block */ {
+}
+
+#block-system-management /* "Management" block for Drupal management menu */ {
+}
+
+#block-system-navigation /* "Navigation" block for Drupal navigation menu */ {
+}
+
+#block-system-user-menu /* "User menu" block for Drupal user menu */ {
+}
+
+#block-system-help /* "System help" block */ {
+}
+
+#block-system-main /* "Main page content" block */ {
+}
+#block-system-main .pager /* "Main page content" block */ {
+color:#F93;	
+}
+#block-system-main .pager a /* "Main page content" block */ {
+color: #F93;
+/*background: #575757;*/
+padding: 1px 11px;
+border-radius: 3px;	
+border: 1px solid #575757;
+}
+#block-system-powered-by /* "Powered by Drupal" block */ {
+}
+
+#block-user-login /* "User login form" block */ {
+}
+
+#block-user-new /* "Who's new" block for a list of the newest users */ {
+}
+
+#block-user-online /* "Who's online" block for a list of the online users */ {
+}
+
+
+
+
+/* news cycle start*/
+
+#block-views-news3-block-1 {
+border: 1px solid #8D8D8D;
+margin: 15px 10px 30px;
+/*width: 100%;*/
+z-index: 5;
+box-shadow: 0 0 15px #868585;
+height: 235px; /*190*/
+}
+
+#block-views-news3-block-1 .content {
+padding: 5px;
+margin-bottom: 2px;
+}
+
+#views_slideshow_cycle_main_news3-block_1 .views_slideshow_cycle_main {
+margin: 0 10px 0 10px;
+width: 500px;
+}
+#views_slideshow_cycle_main_news3-block_1 .views-field-field-image {
+float: left;
+margin: 0 5px 0px 10px;
+}
+ #block-views-news3-block-1 .views-field-title a {
+ font-weight: bold; 
+ }
+
+#block-views-news3-block-1 .views-slideshow-controls-top {
+ background-color: #575757; 
+border: 1px solid #3C3C3C;
+/*border-radius: 10px; */
+/*padding: 10px;*/
+margin: 10px auto;
+width: 880px;  /* 840px для точного совпадения с элементами. Край в край!!!  */
+/*box-shadow: inset 0 0 50px rgba(255, 102, 0, 0.47);*/
+box-shadow: 0 0 2px,inset 0 0 10px #CCC;
+}
+
+#widget_pager_top_news3-block_1 {
+padding: 0 20px;
+
+}
+
+.views_slideshow_pager_field_item * {
+/*float:left;
+border-radius: 100%;
+margin-right: 12px;*/
+
+
+}
+.views-content-field-image img {
+width: 100px;
+height: 40px;
+border-radius: 10%; /* классные овалы можно получить утановиив 100% */
+float: left;
+margin: 5px 10px 5px 10px;
+}
+
+
+.slide-text {
+font-size: 0.9em;
+width: 650px;
+margin-left: 260px;
+}
+
+#block-views-news3-block-1 .views_slideshow_cycle_main {
+/* background-color: red; */
+}
+
+#block-views-news3-block-1  .views-field-field-image {
+
+}
+
+
+.views-slideshow-controls-top .active img {
+/*border: 3px solid #FFA300;
+box-shadow: 0 0 60px #fff;*/
+
+}
+/* Подсветка активного пункта */
+.views-slideshow-controls-top  .active a  {
+position: relative;
+float: left;
+width: 100px;
+/*height: 100px;*/
+background: #f60;
+padding-right: 20px;
+
+}
+
+.views-content-field-image {
+/*padding: 10px 10px 10px 10px;*/
+float:left;
+
+}
+.views-slideshow-controls-top .active {
+/*
+position: relative;
+float: left;
+width: 100px;
+height: 100px;
+background: #00F;
+*/
+}
+
+
+#block-views-news3-block-1 .more-link a {
+font-size: 0.9em;
+margin-right: 20px;
+
+/* новый вариант
+font-size: 0.9em;
+padding: 0 5px;
+*/
+/*padding: 0 10px;
+box-shadow: 0 0 10px #575757, inset 0 0 5px #757575;
+
+background: #575757;
+border: 1px solid #616161;
+transition: 0.5s all;*/
+}
+#block-views-news3-block-1 .more-link a:hover {
+box-shadow:inset 0 0 15px #fFF;
+}
+
+/* news cycle end*/
+
+
+.region-news1000 { /* Блок баннера в шапке */
+float: right;
+/*top: -60px;*/
+position: relative;
+right: 0px; /*210px в центре футера*/
+}
+
+
+#block-block-7 { /* Блок адреса */
+/*float: left;*/
+/*margin-right: 100px;*/
+/*margin-top: 30px;*/
+padding-left: 15px;
+border-top: 1px solid #F60;
+}
+
+#block-block-8 { /* Копирайт */
+float: right;
+/*margin-right: 40px;*/
+margin-top: -30px;
+padding-right: 15px;
+}
+
+
+/* Меню в подвале start*/
+#block-menu-block-4 { 
+/*float: left;
+margin-right: 20px;*/
+overflow: hidden;
+
+}
+#block-menu-block-4 ul {
+margin: 0px;
+
+
+}
+
+#block-menu-block-4 ul li {
+float: left;
+margin-right: 20px;
+
+
+}
+
+#block-menu-block-4 ul.menu li {
+list-style: none;
+padding: 3px;
+}
+
+#block-menu-block-4 li.collapsed, #block-menu-block-4 li.leaf {
+margin:0 20px 0 0;
+padding:0;
+}
+
+#block-menu-block-4 li.collapsed:hover, #block-menu-block-4 li.leaf:hover {
+background: #027AC6;
+
+
+}
+
+
+/* Меню в подвале end*/
+
+
+#block-block-11 { /* Счетчик mail.ru */
+float: left;
+margin-top: 20px;
+margin-left: 5px;
+
+}
+
+#block-block-12 { /* Счетчик openstat */
+float: left;
+margin-top: 20px;
+margin-left: 5px;
+
+}
+
+#block-block-2 { 
+
+ margin-top: 50px;
+ float: left;
+ }
+ 
+ /* Блок Uptime start*/
+#block-uptime-uptime-widget { 
+margin-top: 20px;
+ float: left;
+}
+#block-uptime-uptime-widget table {
+margin: 0;
+}
+/* Блок Uptime end*/
+
+
+.block-simpleads{
+float: left;
+}
+#backtotop {
+  background: url(../images/backtotop_2.png) no-repeat center center; 
+  top: 40px;
+}
+
+/* Темизация страницы новостей */
+#block-system-main .ent-news .views-row {
+border: 1px solid #10A5F8;
+margin-bottom: 10px;
+box-shadow: 1px 1px 10px;
+padding: 15px;
+}
+
+#block-system-main .ent-news .views-row-first {
+margin-top: 10px;
+}
+
+#block-system-main .ent-news .views-row .views-field-title , #block-system-main .ent-news .views-row .views-field-created{
+border-bottom: 1px dotted #CCC;
+}
+
+#block-simplenews-61 {padding: 20px 0;}
+
+.site-map-menus {
+border: 2px solid #ededed;
+padding: 0px 20px;
+margin-top: 10px;
+}
+
+.site-map-box-terms {
+border: 2px solid #ededed;
+margin: 20px 5px 0 5px;
+padding: 0px 20px;
+width: 40%;
+float: left;
+}
+
+.uptime-table caption {
+display: none;
+}
+
+#block-block-13 {
+position: absolute;
+top: 50px;
+font-size: 0.8em;
+width: 250px;
+left: 330px;
+text-align: center;
+color: #25EB25;
+background: rgba(52, 54, 70, 0.58);
+border: 2px solid #F5FF00;
+padding: 2px;
+border-radius: 4px;
+}
+
+a[href^="http"]:not([HREF *= "entas.ru"]) /* Пометка внешних ссылок */{
+background: url('/sites/all/themes/entas/images/external-link.png') no-repeat right;
+padding-right: 15px;
+}
+
+
+#block-search-form .captcha-admin-links {
+display: none;
+}

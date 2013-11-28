@@ -1,0 +1,318 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block /* Block wrapper */ {
+  margin-bottom: 1.5em;
+}
+
+.block.first /* The first block in the region */ {
+}
+
+.block.last /* The last block in the region */ {
+}
+
+.block.odd /* Zebra striping for each block in the region */ {
+}
+
+.block.even /* Zebra striping for each block in the region */ {
+}
+
+h2.block-title /* Block title */ {
+}
+
+.block .content /* Block's content wrapper */ {
+}
+
+#block-aggregator-category-1 /* Block for the latest news items in the first category */ {
+}
+
+#block-aggregator-feed-1 /* Block for the latest news items in the first feed */ {
+}
+
+#block-block-1 /* First block created with "Add block" link */ {
+}
+
+#block-blog-recent /* "Recent blog posts" block */ {
+}
+
+#block-book-navigation /* "Book navigation" block for the current book's table of contents */ {
+}
+
+#block-comment-recent /* "Recent comments" block */ {
+}
+
+#block-forum-active /* "Active forum topics" block */ {
+}
+
+#block-forum-new /* "New forum topics" block */ {
+}
+
+#block-locale-language /* Language switcher block */ {
+}
+
+#block-menu-menu-NAME /* Custom menu block  */ {
+}
+#block-views-news3-block { /* Блок новостей НОВЫЙ */
+background:#ccc;
+padding: 0px 10px;
+/*line-height: 1.4em;*/
+word-wrap: break-word;
+box-shadow: -5px 5px 10px #7B7B7B;
+}
+#block-views-news3-block .views-field-created { /* Блок новостей НОВЫЙ */
+color:#555;
+font-size:11px;
+text-align: center;
+}
+
+/*#block-views-news3-block .views-row {/* Блок новостей НОВЫЙ */
+/*border-bottom:double;
+border-bottom-color:red;
+padding: 7px 0;} */
+#block-views-news3-block .block-title {/* Блок новостей НОВЫЙ --- Titul */
+padding-top: 10px;
+padding-bottom: 10px;
+/* font-family: Comic Sans MS; */
+color: #CE6904;
+font-size: 1.0em;
+text-shadow: 2px 2px 2px #999;
+font-weight: bold;
+text-align:center;
+}
+#block-views-news3-block .views-field-title {/* Блок новостей НОВЫЙ --- Titul */
+/* text-align:justify; */
+font-size: 0.75em;
+}
+
+
+#block-views-news3-block .field-item /* Блок новостей НОВЫЙ podcherkivania megdy novostiami*/  {
+	border-bottom:#F00;
+	border-bottom-style:double;
+	margin-bottom:10px;	
+	/*line-height: 1.4em;*/
+	/* text-align:justify; */
+         font-size: 0.75em;
+	}
+	
+#block-views-news3-block  .pager li/* kostil' pager v odny stroky*/{
+		
+}
+#block-views-news3-block  .pager /* kostil' cvet pager'a */{
+	color:#CE6904;
+	margin: 0 20px 10px -40px;
+}
+#block-views-news3-block  .more-links /* kostil' cvet pager'a */{
+	
+}
+#block-views-news3-block .content a:hover/* Блок новостей НОВЫЙ */ {
+	background:#666;}
+#block-views-news3-block .content a:active/* Блок новостей НОВЫЙ */ {
+	background:#666;}
+#block-views-news3-block .content a:focus/* Блок новостей НОВЫЙ */ {
+	background:#666;}
+#block-views-news3-block .content a/* Блок новостей НОВЫЙ */ {
+color: #CE6904;
+/*text-shadow: 1px 1px  1px red;*/
+}
+
+
+
+
+
+/* PANEL NEWS */
+.pane-news3 { /* Блок новостей НОВЫЙ */
+background:#ccc;
+padding: 0 10px;
+
+line-height: 1.2em;
+list-style:none !important;
+list-style-type:none !important;
+
+}
+
+/*#block-views-news3-block .views-row {/* Блок новостей НОВЫЙ */
+/*border-bottom:double;
+border-bottom-color:red;
+padding: 7px 0;} */
+.pane-news3 .pane-title {/* Блок новостей НОВЫЙ --- Titul */
+/*padding-top: 10px;
+padding-bottom: 10px;*/
+font-family: Comic Sans MS;
+color: #CE6904;
+font-size: 1.2em;
+text-shadow: 2px 2px 2px #999;
+font-weight: bold;
+text-align:center;
+list-style:none !important;
+list-style-type:none !important;
+
+
+}
+.pane-news3 .field-item /* Блок новостей НОВЫЙ podcherkivania megdy novostiami*/  {
+	border-bottom:#F00;
+	border-bottom-style:double;
+	margin-bottom:10px;	
+	
+		}
+	
+.pane-news3  .pager li/* kostil' pager v odny stroky*/{
+		margin: 0;
+}
+.pane-news3  .pager /* kostil' cvet pager'a */{
+	color:#CE6904;
+	
+}
+.pane-news3 .more-links /* kostil' cvet pager'a */{
+	margin:30px;
+	
+}
+
+.pane-news3  a/* Блок новостей НОВЫЙ */ {
+color: #CE6904;
+/*text-shadow: 1px 1px  1px red;*/
+}
+
+
+/* END PANEL NEWS */
+
+
+#block-node-recent /* "Recent content" block */ {
+	}
+
+
+#block-node-syndicate /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */ {
+}
+
+#block-poll-recent /* "Most recent poll" block */ {
+	color: #BBB;
+text-shadow: 1px 1px 1px black;
+padding: 0 6px;
+}
+#block-poll-recent .links /* "Most recent poll" block */ {
+	padding-left: 10px ;
+}
+#block-profile-author-information /* "Author information" block for the profile of the page's author */ {
+}
+
+#block-search-form /* "Search form" block */ {
+}
+
+#block-shortcut-shortcuts /* "Shortcuts" block */ {
+}
+
+#block-statistics-popular /* "Popular content" block */ {
+}
+
+#block-system-main-menu /* "Main menu" block */ {
+}
+
+#block-system-management /* "Management" block for Drupal management menu */ {
+}
+
+#block-system-navigation /* "Navigation" block for Drupal navigation menu */ {
+}
+
+#block-system-user-menu /* "User menu" block for Drupal user menu */ {
+}
+
+#block-system-help /* "System help" block */ {
+}
+
+#block-system-main /* "Main page content" block */ {
+}
+#block-system-main .pager /* "Main page content" block */ {
+color:#F93;	
+}
+#block-system-main .pager a /* "Main page content" block */ {
+color:#F93;	
+}
+#block-system-powered-by /* "Powered by Drupal" block */ {
+}
+
+#block-user-login /* "User login form" block */ {
+}
+
+#block-user-new /* "Who's new" block for a list of the newest users */ {
+}
+
+#block-user-online /* "Who's online" block for a list of the online users */ {
+}
+
+
+
+ul.nice-menu li {
+border-radius: 5px 5px 0 0;
+border-color:#595959;
+margin: 0 5px 0 0;
+padding: 0;
+background-color: #595959;
+}
+ul.nice-menu-down li li.menuparent{
+border-radius: 0;
+background-color: #595959;
+}
+/*  Пункт меню не активный  */
+/*#block-nice-menus-1 ul li{
+border-radius: 5px 5px 0 0;
+border-color:#595959;
+margin: 0 5px 0 0;
+padding: 0;
+background-color: #595959;
+}*/
+/* второй уровень не активных пунктов */
+#block-nice-menus-1 ul li li{
+border-radius: 0;
+border-color:#595959;
+
+}
+ul.nice-menu-down li.menuparent {
+background-color: #595959;
+}
+
+#block-nice-menus-1 a{
+padding-left: 20px;
+
+}
+ul.nice-menu-down a:active {
+color: #027AC6;
+}
+
+/* скругление подменю */
+ul.nice-menu-down ul {
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+#block-nice-menus-1 ul li .first{
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+#block-nice-menus-1 ul li .last{
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+/* выделение в меню активного пути */
+#block-nice-menus-1 .active-trail {
+background-color: #fff;
+border-color:#fff;
+} 
+
+/* Блок "Новость дня"  */
+#block-block-4 {
+font-size: 0.75em;
+margin: -20px 0 0 -500px;
+position: absolute;
+}
+#block-block-4 a {
+color: black;
+}
+
+/* Задает толщину пунктов меню */
+ul.nice-menu a {
+padding: 1px; 
+}
+
+

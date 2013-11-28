@@ -1,0 +1,15 @@
+name = Uptime test
+description = "Set/unset test configuration and add quick admin links. UNINSTALL TO RESET SETTINGS TO OLD VALUES !!!"
+package = Development
+version = 7.0
+core = 7.x
+
+dependencies[] = uptime
+
+
+; Information added by drupal.org packaging script on 2013-10-18
+version = "7.x-1.0"
+core = "7.x"
+project = "uptime_widget"
+datestamp = "1382089559"
+

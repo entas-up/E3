@@ -1,0 +1,14 @@
+name = Uptime
+description = A block showing the uptime ratio of the site using the free service from UptimeRobot.com.
+core = 7.x
+configure = admin/structure/block
+
+test_dependencies[] = uptime_widget_test
+
+
+; Information added by drupal.org packaging script on 2013-10-18
+version = "7.x-1.0"
+core = "7.x"
+project = "uptime_widget"
+datestamp = "1382089559"
+

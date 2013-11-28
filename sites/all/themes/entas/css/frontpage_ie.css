@@ -1,0 +1,120 @@
+/* Специальный набор костылей для Internet Explorer
+в дополнение к родным средствам темы Zen. 
+ */
+
+
+#block-views-last-entas-block {
+background:#FEF7A2;
+border: 1px solid #ccc;
+}
+
+#block-views-last-b-r-block {
+background:#FEF7A2;
+border: 1px solid #ccc;
+}
+
+#block-views-last-files-block {
+background:#FEF7A2;
+border: 1px solid #ccc;
+}
+
+.last-block .pager-current {
+margin-right: 5px;	
+}
+
+.view-frontpage .item-list .pager li.pager-current  {
+margin-right: 5px;
+}
+
+
+#header .section {
+background:#E16615;
+
+}
+li.menu-path-front {
+padding: 0px 10px!important;
+}
+
+.view-frontpage .views-field-sticky {
+bottom:0px;
+
+}
+
+.region-content /* Wrapper for the actual page content */ {
+margin-top: 0px;
+}
+
+
+ul.nice-menu-down li.menuparent {
+background-image: url(../images/arrow-down.png);
+background-position: right center;
+background-repeat: 	no-repeat;
+}
+
+ul.nice-menu-down li.menuparent:hover {
+background-image:  url(../images/arrow-down.png);
+background-position:  right center;
+background-repeat: 	no-repeat;
+
+}
+
+
+ul.nice-menu-down li li.menuparent {
+  background: #414141 url(../images/arrow-right.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #027AC6 url(../images/arrow-right.png) right center no-repeat; /* LTR */
+ 
+} 
+
+ul.nice-menu-down li.menu-path-front, ul.nice-menu-down li.menu-path-front:hover {
+background-image:none;
+
+}
+.menu-path-front a {
+font-size: 1em;
+}
+
+#block-system-main .pager a {
+border: none;
+}
+
+.last-block .pager li a{
+font-size: 0.8em;
+border: none;
+background: none;
+
+}
+
+.item-list .pager li.pager-current  {
+color:#fff;
+font-size: 0.8em;
+border: none;
+}
+
+#block-views-news3-block-1 .views-field-title a {
+font-weight: normal;
+text-shadow: none;
+}
+
+#block-search-form .form-submit  {
+font-size: 0.9em;
+background: #414141;
+height: 18px;
+color: #fff;
+padding:0;
+
+}
+
+#block-search-form .form-item-search-block-form {
+
+}
+
+#edit-search-block-form--2 {
+
+}
+
+
+
+/* Конец набора костылей для Internet Explorer */

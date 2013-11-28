@@ -1,0 +1,232 @@
+/**
+ * @file
+ * Field Styling
+ */
+
+
+.field /* Wrapper for any field. */ {
+}
+
+/*
+ * Field types (Core)
+ */
+.field-type-text {
+}
+
+.field-type-text-long {
+}
+
+.field-type-text-with-summary {
+}
+
+.field-type-image {
+}
+
+.field-type-file {
+padding: 10px;
+border: 1px solid #757575;
+margin: 15px 0;
+box-shadow: inset 0 0 15px #B9B9B9;
+}
+.field-name-field-filelink-page {
+padding: 10px;
+border: 1px solid #757575;
+margin: 15px 0;
+box-shadow: inset 0 0 15px #B9B9B9;
+}
+
+.field-type-link-field {
+/* Что это за код?*//*padding: 10px;
+border: 1px solid #757575;
+margin: 15px 0;
+box-shadow: inset 0 0 15px #B9B9B9;
+line-height: 30px;*/
+}
+
+.field-type-taxonomy-term-reference {
+}
+.field-name-field-catalog  {
+/*background: yellow;*/
+margin: 15px 0;
+}
+
+.field-name-field-catalog  .field-item {
+float:left;
+margin-right: 20px;
+/*padding: 5px;
+border-radius: 5px;*/
+}
+.field-name-field-catalog  .field-item a {
+color:#494848;
+padding: 5px;
+border: 1px solid #575757;
+border-radius: 5px;
+}
+/*.field-name-field-catalog .field-item.even {
+background: #D4E7D4;
+box-shadow: 0px 0px 15px #5B545C, inset 0 0 15px #DDD;
+border: 1px solid #575757;
+}*/
+.field-name-field-catalog .field-item.even a {
+background: #D4E7D4;
+/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
+
+}
+
+/*.field-name-field-catalog .field-item.odd {
+background: #D4D7E7;
+box-shadow: 0px 0px 15px #5B545C, inset 0 0 15px #DDD;
+border: 1px solid #575757;
+}*/
+.field-name-field-catalog .field-item.odd a {
+background: #D4D7E7;
+/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
+
+}
+
+
+.field-name-field-catalog  .field-item.even  a:hover {
+background: #BEE9BE;
+text-decoration: none;
+/*box-shadow: 0px 0px 15px #5B545C;*/
+}
+
+.field-name-field-catalog .field-item.odd a:hover {
+background: #C5CCF1;
+text-decoration: none;
+/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
+
+}
+
+.field-type-number-integer {
+}
+
+.field-type-number-decimal {
+}
+
+.field-type-number-float {
+}
+
+.field-type-list-text {
+}
+
+.field-type-list-boolean {
+}
+
+.field-type-list-integer {
+}
+
+.field-type-list-float {
+}
+
+/*
+ * Field types (Contrib)
+ */
+.field-type-datetime /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */ {
+}
+
+.field-type-node-reference {
+}
+
+.field-type-user-reference {
+}
+
+
+/*
+ * Named fields
+ */
+.field-name-body {
+}
+
+.field-name-field-image {
+}
+
+.field-name-field-tags {
+}
+
+.field-name-field-FIELDNAME /* Underscores in field name are replaced with dashes. */ {
+}
+
+
+/* Поля "Событий" НАЧАЛО */
+.field-name-field-type-event { /* Тип события */
+float: left;
+padding: 10px;
+}
+
+.field-name-field-date { /* Дата */
+background: rgba(211, 229, 231, 0.5);
+padding: 10px;
+border: 1px solid #757575;
+margin: 15px 0;
+}
+
+.field-name-field-time-event{ /* Время/план события */
+background: rgba(211, 229, 231, 0.5);
+padding: 10px;
+border: 1px solid #757575;
+margin-top: 15px;
+}
+
+.field-name-field-location { /* Местоположение. Карта */
+border: 1px solid #757575;
+margin-top: 15px;
+padding: 15px;
+}
+.field-name-field-link-event { /* Сссылка на сайт  */
+border: 1px solid #757575;
+text-align: right;
+background: rgba(211, 229, 231, 0.5);
+padding: 10px;
+}
+
+.field-name-field-ticket-event { /* Билеты */
+background: rgba(230, 228, 243, 0.5);
+padding: 10px;
+border: 1px solid #757575;
+margin-top: 15px;
+
+}
+
+.field-name-field-location2 {
+margin-top: 20px;
+}
+
+
+/* Теги событий. Начало. */
+
+.field-name-field-location2  .field-item {
+float:left;
+margin-right: 20px;
+
+}
+.field-name-field-location2  .field-item a {
+color:#494848;
+padding: 5px;
+border: 1px solid #575757;
+border-radius: 5px;
+}
+
+.field-name-field-location2 .field-item.even a {
+background: #FCF9B6;
+box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;
+
+}
+.field-name-field-location2 .field-item.odd a {
+background: #A6F5BC;
+box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;
+
+}
+
+
+.field-name-field-location2  .field-item  a:hover {
+
+box-shadow: 0px 0px 15px #5B545C;
+}
+
+/* Теги событий. КОНЕЦ. */
+/* Поля "Событий" КОНЕЦ. */
+
+#block-search-form .captcha-admin-links {
+display:none;
+}
