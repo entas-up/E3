@@ -395,8 +395,8 @@ padding:0;
 /*.view-frontpage */.item-list .pager li.pager-current {
 background: #027AC6;
 padding: 1px 11px;
-border-radius: 35%;
-border: 1px solid #B3B3B3;
+border-radius: 3px;
+border: 1px solid #636363;
 font-weight: normal;
 }
 .view-frontpage .item-list .pager {
@@ -476,6 +476,7 @@ background: #575757;  /*#7D7D7D */
 width: 959px;
 padding: 5px 0 5px 0;
 font-size: 0.9em;
+position: relative;
 }
 .region-footer a{
 font-weight: normal;
@@ -800,10 +801,10 @@ border-radius: 10px;
 
 }
 .node-webform .webform-component--about {
-background: #F1F1F1;
+/*background: #F1F1F1;
 border-radius: 3px;
-box-shadow: 0 0 6px #868585;
-border: 1px solid #8D8D8D;
+box-shadow: 0 0 1px #868585;
+border: 1px solid #8D8D8D;*/
 }
 
 .node-webform .legend {
@@ -817,7 +818,16 @@ display: inline-block;
 }
 
 .node-webform  input {
-border-radius: 5px;
-/*position: absolute;
-left: 125px;*/
+
+}
+
+.block-simplenews a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f046";
+color: #F60;
+margin-right: 4px;
+position: relative;
 }
