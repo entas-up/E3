@@ -229,16 +229,19 @@ li.expanded,
 li.collapsed,
 li.leaf /* Drupal override */ {
   margin: 0;
-  padding: 0 0 10px 0;
-}
+/*  padding: 0 0 10px 0;*/
+  line-height: 1.5em;
 
+}
+li.expanded, li.collapsed, li.leaf {
+padding: 0;
+}
 
 
  li.collapsed:hover, 
  li.leaf:hover
 {
-	/* Вариант 1 */ /* background: #393939;  */
-	/* Вариант 2 */ background: #027AC6;
+	background: #027AC6;
 }
 
 
