@@ -14,7 +14,8 @@
 body {
   margin: 0;
   padding: 0;
-background-image: url('/sites/all/themes/entas/images/linen5.png');
+  background-image: url('/sites/all/themes/entas/images/linen5.png');
+  background-attachment: fixed;
 }
 
 a:link,
@@ -438,8 +439,11 @@ font-weight: normal;
 	color:#bbb;
 	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
 	font-weight: normal;	
+	display: inline-block;
 }
-
+.region-sidebar-first a:hover{
+background: #027AC6;
+}
 /*
  * Second sidebar (on right in LTR languages, on left in RTL)
  *
@@ -512,6 +516,13 @@ overflow: hidden;
 .item-list ul {
 	float:left;
 	}
+#user-login-form  .item-list ul  {
+	display: inline-block;
+    list-style-type: none;
+    float: right;
+	}
+	
+	
 .item-list ul li {
   /*margin: 0 0 0.25em 1.5em; *//* LTR */
   padding: 0;
