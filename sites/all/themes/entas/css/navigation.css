@@ -92,6 +92,11 @@ color:#414141;
 }
 
 
+.region-sidebar-first .expanded>a:hover {
+background: #027AC6;
+}
+
+
 /* Icons from Font Awesome  */
 
 
@@ -327,3 +332,4 @@ color:#F93;
 #block-menu-block-4 a:hover {
 text-decoration: none;
 } 
+
