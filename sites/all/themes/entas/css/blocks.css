@@ -142,6 +142,16 @@ padding-left: 5px;
 }
 
 #block-system-user-menu /* "User menu" block for Drupal user menu */ {
+background: #ECECEC;
+border: 1px solid #999;
+display: inline-block;
+padding: 2px;
+margin: 0 0 20px 0;
+border-radius: 10px;
+}
+#block-system-user-menu .menu ,#block-system-user-menu ul.menu li,#block-system-user-menu li.leaf{
+margin: 0;
+padding: 1px 5px;
 }
 
 #block-system-help /* "System help" block */ {
@@ -491,14 +501,11 @@ width: 40%;
 float: left;
 }
 
-
-
 #block-block-13 {
 position: absolute;
 top: 50px;
 font-size: 0.8em;
-width: 250px;
-left: 330px;
+left: 200px;
 text-align: center;
 color: #25EB25;
 background: rgba(52, 54, 70, 0.58);
