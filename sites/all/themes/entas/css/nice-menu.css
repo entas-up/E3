@@ -102,7 +102,7 @@ font-weight: 400;
 }
 
 ul.nice-menu ul {
-  top: 2.4em;
+  top: 2.0em; /* 2.4em with JS */
   left: -1px; /* LTR */
   border: 0;
     margin-right: 0; /* LTR */
