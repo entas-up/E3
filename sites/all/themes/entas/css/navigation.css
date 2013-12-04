@@ -11,6 +11,21 @@
   color: #F93;
   }
 
+  
+.region-sidebar-first .expanded>a:hover {
+background: #027AC6;
+}
+
+.region-sidebar-first a{
+	color:#bbb;
+	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
+	font-weight: normal;	
+	display: inline-block;
+}
+.region-sidebar-first a:hover{
+background: #027AC6;
+}
+  
 /*
  * Navigation bar
  */
@@ -91,10 +106,6 @@ font-size: 1pt;
 color:#414141;
 }
 
-
-.region-sidebar-first .expanded>a:hover {
-background: #027AC6;
-}
 
 
 /* Icons from Font Awesome  */
