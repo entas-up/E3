@@ -290,6 +290,7 @@ font-size: 0.8em;
 .breadcrumb /* The path to the current page in the form of a list of links */ {
   padding-bottom: 0; /* Undo system.css */
   padding-top: 8px; /* hack for big menu */
+  font-size: 0.9em;
 }
 
 h1.title, /* The title of the page */
@@ -821,6 +822,10 @@ display: inline-block;
 }
 
 .node-webform  input {
+border:1px solid #979797;
+}
+
+.node-webform  .form-radio {
 
 }
 
