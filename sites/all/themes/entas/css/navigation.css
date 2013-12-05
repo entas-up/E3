@@ -21,6 +21,7 @@ background: #027AC6;
 	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
 	font-weight: normal;	
 	display: inline-block;
+	line-height: 1em;
 }
 .region-sidebar-first a:hover{
 background: #027AC6;
@@ -208,7 +209,7 @@ font-weight: normal;
 line-height: 1;
 -webkit-font-smoothing: antialiased;
 content: "\f111""\00a0\00a0\00a0\00a0";
-font-size: 5px;
+font-size: 7px;
 text-shadow: 0px 0px 4px #000;
 vertical-align: middle;
 }
@@ -247,7 +248,8 @@ top: 30%;
 font-size: 1.2em;
 color: antiquewhite;
 }
-/* стрелка вниз */
+
+/* стрелка вниз *//*
 ul.nice-menu-down li.menuparent:after {
 display: inline-block;
 font-family: FontAwesome;
@@ -261,8 +263,7 @@ position: absolute;
 top: 30%;
 font-size: 1.2em;
 color: antiquewhite;
-}
-
+}*/
 
 /* Home2  */
 .menu-mlid-1838 a {
