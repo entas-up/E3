@@ -776,29 +776,36 @@ clear:both;
 
 
 .view-files {
-background: #ECEBEB;
-padding: 20px 20px;
-margin-top: 15px;
-border-radius: 10px;
+/*background: #ECEBEB;*/
+padding: 20px 0px;
+margin-top: 0px;
+/*border-radius: 10px;*/
 }
 
 .view-files a {
-color: #575757
+color: #575757;
+font-size: 0.8em;
 }
 .view-files h3{
 font-size: 0.9em;
 margin:0;
 }
 
+.view-files h3 a {
+color: #2A63DB;
+font-size: 1em;
+}
+
 .view-files  .views-row{
 border: 1px solid #E7E7E7;
-margin-bottom: 9px;
+margin-bottom: -1px;
+background: #FFF;
 }
 
 .view-files .view-content {
-background: #FDFCFC;
-padding: 5px 20px;
-border-radius: 10px;
+background: #E6E6E6;
+padding: 5px 3px;
+border-radius: 5px;
 }
 
 .node-webform {
