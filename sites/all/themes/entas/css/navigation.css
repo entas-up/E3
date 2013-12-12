@@ -157,6 +157,18 @@ line-height: 1;
 -webkit-font-smoothing: antialiased;
 content: "\f059""\00a0\00a0";
 }
+
+.menu-3232 a:before {
+isplay: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f02d""\00a0\00a0";
+}
+
+
 /* back to top */
 
 #backtotop:after {
