@@ -625,6 +625,10 @@ position: absolute;
 right: 10px;
 }
 
+.ent-taxonometry  .views-field-field-file1 {
+display: inline-block;
+}
+
 .views-field-term-node-tid {
 position: absolute;
 bottom: 10px;
