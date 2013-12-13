@@ -221,9 +221,11 @@ background: #A6F5BC;
 
 .field-name-field-location2 .field-item.even a:hover {
 background: #FFFA88;
+text-decoration: none;
 }
 .field-name-field-location2 .field-item.odd a:hover {
 background: #44FF78;
+text-decoration: none;
 }
 
 
