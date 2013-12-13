@@ -603,13 +603,47 @@ background: red;
 /*background: #E3e3e3; */
 /*width: 250px;*/
 /*float:left;*/
-margin:5px 0;
+margin:20px 0;
 padding: 10px;
-height:300px;
+height:150px;
 border-radius: 5px;
 border: 1px solid #f60;
-box-shadow: 5px 5px 10px #ccc, inset 0 0 50px #CCC;
+box-shadow: 3px 3px 6px #ccc;
+position: relative;
 }
+
+.ent-taxonometry  .views-field-field-imagepage {
+float: left;
+padding: 0 10px 10px 0;
+}
+.ent-taxonometry  .views-field-title {
+float: left;
+}
+.ent-taxonometry  .views-field-field-file1 {
+top: 10px;
+position: absolute;
+right: 10px;
+}
+
+.views-field-term-node-tid a {
+margin-right: 10px;
+border: 1px solid #FF8F00;
+padding: 1px 2px;
+border-radius: 3px;
+}
+.views-field-term-node-tid a.active {
+background: #027AC6;
+color: #FFF;
+
+}
+ 
+.views-field-term-node-tid a:hover {
+background: #FF7A00;
+color: #FFF;
+text-decoration: none;
+
+}
+
 
 .feed-icon {
 /*float: right;*/
