@@ -184,32 +184,13 @@ font-size: 61em;
 top: -5px;
 position: absolute;
 right: 0px;
-/*transition: all 0.3s;*/
 }
-/*
-#backtotop:before {
-background: #FFF;
-position: absolute;
-top: 10px;
-right: 11px;
-content: " ";
-height: 30em;
-width: 35em;
-transition: all 0.3s;
-}
-*/
+
 #backtotop:hover:after {
 color: #f60;
 font-size: 63em;
 }
-/*
-#backtotop:hover:before {
-background: #EAFF1F;
-height: 35em;
-width: 37em;
 
-}
-*/
 
 
 
@@ -234,11 +215,7 @@ font-style: normal;
 font-weight: normal;
 content: "\f015";
 color: #FFF;
-/*vertical-align: middle;
-text-align: center;
-margin-top: -11px;
 
-padding: 0 6px;*/
 font-size: 15em;
 position: absolute;
 top: 17%;
