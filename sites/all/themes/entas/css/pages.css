@@ -69,7 +69,7 @@ border-right: 1px solid #666;*/
 }
 
 #logo /* Wrapping link for logo */ {
-  float: left; /* LTR */
+  /*float: left;*/ /* LTR */
   margin: 0;
   padding: 0;
   position:relative;
@@ -78,9 +78,7 @@ border-right: 1px solid #666;*/
 }
 
 #logo img {
- /* vertical-align: bottom;*/
-  margin: 40px 30px 0px 5px;
-  /*margin: 40px 30px 0px -715px;*/
+  margin: 19px 30px 0px 19px;
   z-index: 100;
 }
 #logo2 {
@@ -95,19 +93,14 @@ z-index:80;
   }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
-  float: left;
- /* margin: 0 0 0 -715px; */
-  position: absolute;
-  /*font-family: Comic Sans MS;*/
-  color: #FFE800;
-  font-size: 1.2em;
-  text-shadow: -1px -1px 1px #999;
-  top: 5px;
-left: 5px;
-/*  font-weight: bold;*/
-  
-  
-  }
+color: #494949;
+font-size: 1.2em;
+text-shadow: -1px -1px 1px #ECBE9A;
+padding-left: 18px;
+margin-top: -4px;
+
+}
+
 
 h1#site-name,
 div#site-name /* The name of the website */ {
@@ -233,6 +226,7 @@ padding-left: 10px;
 padding-top: 10px;
 position: relative;
 overflow: hidden;
+font-size: 0.9em;
 }
 
 .view-frontpage  .views-field-title{
@@ -250,7 +244,7 @@ padding: 2px 5px;
 border-top: 1px dotted #464646;
 border-right: 1px dotted #464646;
 text-align: center;
-width: 150px;
+width: 200px;
 font-size: 0.8em;
 }
 .view-frontpage  .views-label  {
@@ -468,12 +462,13 @@ padding-bottom: 20px;
  * Footer
  */
 .region-footer {
-	/*float: left;*/
-background: #575757;  /*#7D7D7D */
+float: left;
+background: rgba(223, 229, 233, 0.38);
 width: 959px;
 padding: 5px 0 5px 0;
 font-size: 0.9em;
 position: relative;
+border-bottom: 1px solid rgba(87, 87, 87, 0.52);
 }
 .region-footer a{
 font-weight: normal;
