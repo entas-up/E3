@@ -44,13 +44,13 @@ position: relative;
 	background-image: url(/base/pic/header2.png);
 	background-repeat:repeat-x;
 	*/
-background-color:rgba(255, 102, 0, 0.8);
-background-image: linear-gradient(rgba(255,255,255,.3) 0px, transparent 1px),
+background-color:rgba(250, 118, 43, 0.86);
+/*background-image: linear-gradient(rgba(255,255,255,.3) 0px, transparent 1px),
 linear-gradient(90deg, rgba(255,255,255,.3) 0px, transparent 1px),
 linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
 linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
 background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
-background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;*/
 height: 115px;
 position: relative;
 	}
