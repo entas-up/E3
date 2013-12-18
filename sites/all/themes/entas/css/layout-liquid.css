@@ -40,17 +40,7 @@ position: relative;
 }
 
 #header .section {
-	/*background: #ed8d0b;
-	background-image: url(/base/pic/header2.png);
-	background-repeat:repeat-x;
-	*/
-background-color:rgba(255, 102, 0, 0.8);
-background-image: linear-gradient(rgba(255,255,255,.3) 0px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.3) 0px, transparent 1px),
-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
-background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+background-color:rgba(250, 118, 43, 0.86);
 height: 115px;
 position: relative;
 	}
@@ -121,9 +111,7 @@ background: #ed8d0b;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
- /* height: 3em; убивало бридкамб!!!*//* The navigation can have any arbritrary height. We picked one
-                    that is the line-height plus 1em: 1.3 + 1 = 2.3
-                    Set this to the same value as the margin-top below. */
+ 
 }
 
 .with-navigation #content,
@@ -133,8 +121,7 @@ background: #ed8d0b;
 }
 
 #navigation .section {
-	  /*margin-top: -49px;*/
-	  /*padding-left: 215px;*/
+	
 
 }
 
@@ -165,7 +152,6 @@ padding-top: 5px !important;
   margin-left: 0; /* LTR */
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
-  /*height:1000px;*/
   margin-top: 18px;
   line-height: 1.5em;
   background: #4b4b4b;
@@ -228,8 +214,3 @@ padding-top: 5px !important;
  * Note: with some over-large content, this property might cause scrollbars
  * to appear on the #page-wrapper div.
  */
-/*
-#page-wrapper {
-  overflow-y: hidden;
-}
-*/

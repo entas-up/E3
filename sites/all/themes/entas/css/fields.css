@@ -46,15 +46,13 @@ line-height: 30px;*/
 .field-type-taxonomy-term-reference {
 }
 .field-name-field-catalog  {
-/*background: yellow;*/
 margin: 15px 0;
 }
 
 .field-name-field-catalog  .field-item {
 float:left;
 margin-right: 20px;
-/*padding: 5px;
-border-radius: 5px;*/
+
 }
 .field-name-field-catalog  .field-item a {
 color:#494848;
@@ -62,39 +60,25 @@ padding: 5px;
 border: 1px solid #575757;
 border-radius: 5px;
 }
-/*.field-name-field-catalog .field-item.even {
-background: #D4E7D4;
-box-shadow: 0px 0px 15px #5B545C, inset 0 0 15px #DDD;
-border: 1px solid #575757;
-}*/
+
 .field-name-field-catalog .field-item.even a {
 background: #D4E7D4;
-/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
 
 }
 
-/*.field-name-field-catalog .field-item.odd {
-background: #D4D7E7;
-box-shadow: 0px 0px 15px #5B545C, inset 0 0 15px #DDD;
-border: 1px solid #575757;
-}*/
 .field-name-field-catalog .field-item.odd a {
 background: #D4D7E7;
-/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
 
 }
-
 
 .field-name-field-catalog  .field-item.even  a:hover {
 background: #BEE9BE;
 text-decoration: none;
-/*box-shadow: 0px 0px 15px #5B545C;*/
 }
 
 .field-name-field-catalog .field-item.odd a:hover {
 background: #C5CCF1;
 text-decoration: none;
-/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
 
 }
 
@@ -209,12 +193,10 @@ border-radius: 5px;
 
 .field-name-field-location2 .field-item.even a {
 background: #FCF9B6;
-/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
 
 }
 .field-name-field-location2 .field-item.odd a {
 background: #A6F5BC;
-/*box-shadow: 0px 0px 5px #EAEAEA, inset 0 0 15px #DDD;*/
 
 }
 
