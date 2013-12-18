@@ -309,7 +309,7 @@ right: 0px;
 #block-block-7 { /* Блок адреса */
 
 padding-left: 15px;
-border-top: 1px solid #F60;
+border-top: 1px solid rgba(87, 87, 87, 0.52);
 }
 
 #block-block-8 { /* Копирайт */
