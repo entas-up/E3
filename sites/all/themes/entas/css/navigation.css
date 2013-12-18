@@ -10,7 +10,12 @@
 .menu li a.active {
   color: #F93;
   }
-
+#block-menu-block-4 a.active, #block-simplenews-61 a.active{
+color: red;
+}
+#block-simplenews-61 a.active:before {
+color:red;
+}
   
 .region-sidebar-first .expanded>a:hover {
 background: #027AC6;
@@ -274,7 +279,7 @@ cursor: pointer;
 margin-right: 4px;
 }
 .menu-mlid-1838 a.active:before {
-color:#F93;
+color:red;
 }
 .menu-mlid-1838 a.focus:before., .menu-mlid-1838 a.hover:before, .menu-mlid-1838 a.active:before {
 text-decoration: underline;
@@ -291,7 +296,7 @@ color: #F60;
 margin-right: 4px;
 }
 .menu-mlid-1839 a.active:before {
-color:#F93;
+color:red;
 
 }
 
@@ -307,7 +312,7 @@ color: #F60;
 margin-right: 4px;
 }
 .menu-mlid-1840 a.active:before {
-color:#F93;
+color:red;
 
 }
 
@@ -325,7 +330,7 @@ color: #F60;
 margin-right: 4px;
 }
 .menu-mlid-2904 a.active:before {
-color:#F93;
+color:red;
 
 }
 
