@@ -7,7 +7,7 @@
 
 
 .node /* Node wrapper */ {
-margin: 15px 0;
+/*margin: 15px 0;*/
 padding: 10px;
 }
 
@@ -78,4 +78,21 @@ font-size: 0.8em;
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 	color:#F00;
+}
+
+.field-name-field-page-prior {
+position: absolute;
+top: 1px;
+right: -20px;
+border: 1px solid #C0C0C0;
+width: 25px;
+text-align: center;
+padding: 1px 0px;
+}
+.field-name-field-pop-limit {
+position: absolute;
+top: 1px;
+right: 6px;
+border: 1px solid #C0C0C0;
+padding: 1px 6px;
 }
