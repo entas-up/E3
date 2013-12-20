@@ -159,7 +159,7 @@ position: relative;
 }
 
 .region-highlighted  .block  .block-title {
-font-size: 1.2em;
+font-size: 1.2em; /* Влияет на шрифт */
 color: #2A63DB;
 border-bottom: 1px solid;
 height: 30px;
@@ -189,7 +189,7 @@ bottom: 0;
 left: 90px;
 padding: 2px 5px;
 width: 120px;
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 
 .view-frontpage .views-field-field-image-event, .view-frontpage .views-field-field-image, .view-frontpage .views-field-field-image-work{
@@ -202,7 +202,7 @@ padding-left: 10px;
 padding-top: 10px;
 position: relative;
 overflow: hidden;
-font-size: 0.9em;
+font-size: 0.9em; /* Влияет на шрифт */
 }
 
 .view-frontpage  .views-field-title{
@@ -220,7 +220,7 @@ border-top: 1px dotted #464646;
 border-right: 1px dotted #464646;
 text-align: center;
 width: 200px;
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 .view-frontpage  .views-label  {
 float: left;
@@ -253,13 +253,13 @@ width: 80px;
 text-align: center;
 padding: 2px 5px;
 left: 0;
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
   padding-bottom: 0; /* Undo system.css */
   padding-top: 8px; /* hack for big menu */
-  font-size: 0.9em;
+  font-size: 0.7em; /* Влияет на шрифт */
 }
 
 h1.title, /* The title of the page */
@@ -395,7 +395,7 @@ padding: 0 0 6px 0;
 .region-sidebar-first .section {
 margin-bottom: 1.5em;
 height: 100%;
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 line-height: 1em;
 font-weight: normal;
 
@@ -424,7 +424,7 @@ float: left;
 background: rgba(223, 229, 233, 0.38);
 width: 959px;
 padding: 5px 0 5px 0;
-font-size: 0.9em;
+font-size: 0.9em; /* Влияет на шрифт */
 position: relative;
 border-bottom: 1px solid rgba(87, 87, 87, 0.52);
 }
@@ -522,11 +522,11 @@ display:none
 
 /* Текст (аннотация)*/
 .ent-catalog .views-field-body {
-font-size: 0.77em;
+font-size: 0.77em; /* Влияет на шрифт */
 /*text-align: justify;*/
 }
 .ent-catalog .views-field-view-node {
-font-size: 0.75em;
+font-size: 0.75em; /* Влияет на шрифт */
 position: absolute;
 bottom: 0;
 right: 6px;
@@ -745,16 +745,16 @@ margin-top: 0px;
 
 .view-files a {
 color: #575757;
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 .view-files h3{
-font-size: 0.9em;
+font-size: 0.9em; /* Влияет на шрифт */
 margin:0;
 }
 
 .view-files h3 a {
 color: #2A63DB;
-font-size: 1em;
+font-size: 1em; /* Влияет на шрифт */
 }
 
 .view-files  .views-row{

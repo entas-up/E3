@@ -40,7 +40,7 @@ background: #027AC6;
   /*padding-top: 5px;*/
   background: #414141;
   margin-top: -5px;
-  font-size: 0.8em;
+  font-size: 0.8em; /* Влияет на шрифт */
 /*
 padding-top: 5px;
 background: #FFF;

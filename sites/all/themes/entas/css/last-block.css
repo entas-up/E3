@@ -1,7 +1,7 @@
 
 /* last-блоки. Общие параметры. НАЧАЛО */
 .last-block  p {
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 
 /* Скрытие лишних полей навигации */
@@ -60,7 +60,7 @@ right: 10px;
 }
 
 .last-block .date , .last-block .text-location {
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 color: #000;
 text-align: center;
 

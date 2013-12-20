@@ -239,11 +239,16 @@ height: 40px;
 float: left;
 margin:5px 8px 5px 9px;
 opacity: 0.5;
+/*filter: sepia(70%);
+-webkit-filter: sepia(70%);
+-moz-filter: sepia(70%);
+-o-filter: sepia(70%);
+-ms-filter: sepia(70%);*/
 }
 
 
 .slide-text {
-font-size: 0.9em;
+font-size: 0.9em; /* Влияет на шрифт */
 width: 650px;
 margin-left: 260px;
 }
@@ -260,6 +265,11 @@ overflow: hidden; /* Из-за неясности от чего font-weight см
 opacity: 1;
 border: 1px solid #888;
 border-radius: 4px;
+filter: none;
+-webkit-filter: none;
+-moz-filter: none;
+-o-filter: none;
+-ms-filter: none;
 }
 
 /* Подсветка активного пункта */
@@ -268,11 +278,11 @@ position: relative;
 float: left;
 width: 113px;
 background: none;
-    -moz-transform: scale(1.5);
+/*    -moz-transform: scale(1.5);
     -ms-transform: scale(1.5); 
     -webkit-transform: scale(1.5); 
     -o-transform: scale(1.5)); 
-    transform: scale(1.5);
+    transform: scale(1.5);*/
 z-index: 20;
 opacity: 1;
 }

@@ -61,7 +61,7 @@ border: 1px solid blue;
 }
 
 h2.node-title /* Node title */ {
-font-size: 1em;
+font-size: 1em; /* Влияет на шрифт */
 }
 
 .node .user-picture /* The picture of the node author */ {
@@ -69,11 +69,11 @@ font-size: 1em;
 
 .node .submitted /* The "posted by" information */ {
 color: #555;
-font-size: 0.7em;
+font-size: 0.7em; /* Влияет на шрифт */
 }
 
 .node .content /* Node's content wrapper */ {
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
