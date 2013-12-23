@@ -4,6 +4,7 @@
 font-size: 0.8em; /* Влияет на шрифт */
 }
 
+
 /* Скрытие лишних полей навигации */
 
 .last-block  .pager-last  {display: none!important;}
@@ -22,6 +23,10 @@ border: 1px solid rgba(41, 0, 255, 0.39);
 
 
 /* Пункты навигации */
+.last-block .pager li {
+margin:0;
+}
+
 .last-block .pager li a {
 background: #E9E9E9;
 padding: 6px;
@@ -110,10 +115,12 @@ margin: 5px 13px;
 
 }
 
-#block-views-last-files-block {
-
+#block-views-last-files-block  .image_event{
+text-align: center;
 }
-
+#block-views-last-files-block  img{
+float: none;
+}
 #block-views-last-entas-block:after{
 content: " ";
 background: rgba(255, 244, 116, 0.66);
