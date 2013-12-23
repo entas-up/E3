@@ -25,8 +25,9 @@ background: #027AC6;
 	color:#bbb;
 	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
 	font-weight: normal;	
-	display: inline-block;
+	display: block;
 	line-height: 1em;
+	padding-right: 5px;
 }
 .region-sidebar-first a:hover{
 background: #027AC6;
