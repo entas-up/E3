@@ -159,13 +159,14 @@ position: relative;
 }
 
 .region-highlighted  .block  .block-title {
-font-size: 1.2em; /* Влияет на шрифт */
+font-size: 1.0em; /* Влияет на шрифт */
 color: #2A63DB;
 border-bottom: 1px solid;
 height: 30px;
 line-height: 20px;
 position: relative;
 z-index: 10;
+text-align: center;
 }
 
 .view-frontpage  .views-row{
@@ -188,8 +189,9 @@ position: absolute;
 bottom: 0;
 left: 90px;
 padding: 2px 5px;
-width: 120px;
-font-size: 0.8em; /* Влияет на шрифт */
+width: 90px;
+font-size: 0.7em; /* Влияет на шрифт */
+color: silver;
 }
 
 .view-frontpage .views-field-field-image-event, .view-frontpage .views-field-field-image, .view-frontpage .views-field-field-image-work{
@@ -214,13 +216,14 @@ font-weight: bold;
 .view-frontpage .views-field-field-type-event {
 position: absolute;
 bottom: 0px;
-left: 220px;
+left: 180px;
 padding: 2px 5px;
 border-top: 1px dotted #464646;
 border-right: 1px dotted #464646;
 text-align: center;
-width: 200px;
-font-size: 0.8em; /* Влияет на шрифт */
+width: 170px;
+font-size: 0.7em; /* Влияет на шрифт */
+color: silver;
 }
 .view-frontpage  .views-label  {
 float: left;
@@ -253,7 +256,8 @@ width: 80px;
 text-align: center;
 padding: 2px 5px;
 left: 0;
-font-size: 0.8em; /* Влияет на шрифт */
+font-size: 0.7em; /* Влияет на шрифт */
+color: silver;
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
@@ -365,6 +369,12 @@ border-radius: 3px;
 border: 1px solid #636363;
 font-weight: normal;
 }
+
+.view-frontpage  .item-list ul li {
+margin: 0;
+}
+
+
 .view-frontpage .item-list .pager {
 width: 100%;
 text-align: center;
@@ -554,6 +564,7 @@ position: relative;
 float: left;
 padding: 0 10px 10px 0;
 width: 100px;
+height: 100px;
 text-align: center;
 }
 .ent-taxonometry  .views-field-title {
@@ -640,6 +651,10 @@ margin: 15px 10px 5px 0;
 display: block;
 overflow: hidden;
 float: left;
+width: 100px;
+height: 100px;
+text-align: center;
+}
 }
 
 .event .views-field-body{
