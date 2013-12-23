@@ -26,12 +26,17 @@ background: #027AC6;
 	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
 	font-weight: normal;	
 	display: block;
-	line-height: 1em;
-	padding-right: 5px;
+	line-height: 1.1em;
+	padding: 2px 0px 6px 5px;
 }
 .region-sidebar-first a:hover{
 background: #027AC6;
 }
+  
+.region-sidebar-first li.expanded a{
+border-left: 1px dotted;
+}  
+  
   
 /*
  * Navigation bar

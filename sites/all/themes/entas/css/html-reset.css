@@ -229,9 +229,9 @@ ul.menu li,
 li.expanded,
 li.collapsed,
 li.leaf /* Drupal override */ {
-  margin: 0;
-  padding: 0 0 10px 15px;
-  line-height: 1.5em;
+margin: 2px 0px 2px 15px;
+line-height: 1.5em;
+padding: 0px;
   }
   
 li.expanded, li.collapsed, li.leaf {
