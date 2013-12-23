@@ -204,7 +204,7 @@ address {
 ul,
 ol {
   margin-left: 0; /* LTR */
-  padding-left: 1em; /* LTR */
+  padding-left: 0; /* 1em LTR */
 }
 
 .item-list ul /* Drupal overrides */ {
@@ -230,12 +230,17 @@ li.expanded,
 li.collapsed,
 li.leaf /* Drupal override */ {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 10px 15px;
   line-height: 1.5em;
+  border-left: 1px dotted #777;
 
 }
 li.expanded, li.collapsed, li.leaf {
 padding: 0;
+}
+
+ul.menu li, li.leaf {
+border: none;
 }
 
 
