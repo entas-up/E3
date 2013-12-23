@@ -143,8 +143,11 @@ list-style-image: url('../images/menu-expanded.png');
    
 .region-sidebar-first ul.menu {
 padding-top: 5px !important;
+border-left: 1px dotted #CCC;
 }
-
+.menu-block-wrapper>ul.menu  {
+border:none;
+}
 
 .region-sidebar-first {
   float: left; /* LTR */

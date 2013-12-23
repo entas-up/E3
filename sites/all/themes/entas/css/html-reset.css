@@ -232,9 +232,8 @@ li.leaf /* Drupal override */ {
   margin: 0;
   padding: 0 0 10px 15px;
   line-height: 1.5em;
-  border-left: 1px dotted #777;
-
-}
+  }
+  
 li.expanded, li.collapsed, li.leaf {
 padding: 0;
 }
