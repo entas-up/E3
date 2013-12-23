@@ -99,7 +99,7 @@ border-bottom: 1px solid #F60
  * these limitations, see http://drupal.org/project/menu_block
  */
 .region-sidebar-first .block-menu-block {
-border-bottom: 1px solid #F60
+/*border-bottom: 1px solid #F60*/
 	
 }
 .block-menu-block {  }
