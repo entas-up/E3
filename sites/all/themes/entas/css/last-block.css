@@ -15,7 +15,7 @@ font-size: 0.8em; /* Влияет на шрифт */
 .last-block .pager-current {
 background: #027AC6;
 padding: 6px!important;
-border-radius: 35%;
+border-radius: 100%;
 font-size: 0;
 border: 1px solid rgba(41, 0, 255, 0.39);
 }
@@ -25,7 +25,7 @@ border: 1px solid rgba(41, 0, 255, 0.39);
 .last-block .pager li a {
 background: #E9E9E9;
 padding: 6px;
-border-radius: 35%;
+border-radius: 100%;
 font-size: 0;
 border: 1px solid #B3B3B3;
 }
@@ -37,7 +37,7 @@ border: 1px solid #636363;
 
 .last-block .pager li.pager-current {
 background: #027AC6;
-border-radius: 35%;
+border-radius: 100%;
 border: 1px solid #636363;
 font-weight: normal;
 }
