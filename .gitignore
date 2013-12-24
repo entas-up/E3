@@ -6,11 +6,9 @@ sites/*/files
 sites/*/private
 
 tmp/*
-_base/*
 base/*
 drupal/*
 forbidden/*
-qdPM/*
 restricted/*
 test/*
 web-app/*
