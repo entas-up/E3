@@ -183,15 +183,15 @@ background: #fff;
 .view-frontpage .views-field-type {
 display: block;
 text-align: center;
-border-top: 1px dotted #464646;
-border-right: 1px dotted #464646;
+border-top: 1px dotted #727272;
+border-right: 1px dotted #727272;
 position: absolute;
 bottom: 0;
 left: 90px;
 padding: 2px 5px;
 width: 90px;
 font-size: 0.7em; /* Влияет на шрифт */
-color: silver;
+color: #727272;
 }
 
 .view-frontpage .views-field-field-image-event, .view-frontpage .views-field-field-image, .view-frontpage .views-field-field-image-work{
@@ -218,12 +218,12 @@ position: absolute;
 bottom: 0px;
 left: 190px;
 padding: 2px 5px;
-border-top: 1px dotted #464646;
-border-right: 1px dotted #464646;
+border-top: 1px dotted #727272;
+border-right: 1px dotted #727272;
 text-align: center;
 width: 170px;
 font-size: 0.7em; /* Влияет на шрифт */
-color: silver;
+color: #727272;
 }
 .view-frontpage  .views-label  {
 float: left;
@@ -247,8 +247,8 @@ bottom: 19px;
 right: -70px;
 }
 .view-frontpage  .views-field-created {
-border-top: 1px dotted #464646;
-border-right: 1px dotted #464646;
+border-top: 1px dotted #727272;
+border-right: 1px dotted #727272;
 float: left;
 position: absolute;
 bottom: 0px;
@@ -257,7 +257,7 @@ text-align: center;
 padding: 2px 5px;
 left: 0;
 font-size: 0.7em; /* Влияет на шрифт */
-color: silver;
+color: #727272;
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
