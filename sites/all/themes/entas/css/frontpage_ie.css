@@ -73,7 +73,7 @@ background-image:none;
 
 }
 .menu-path-front a {
-font-size: 1em;
+font-size: 1em; /* Влияет на шрифт */
 }
 
 #block-system-main .pager a {
@@ -81,7 +81,7 @@ border: none;
 }
 
 .last-block .pager li a{
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 border: none;
 background: none;
 
@@ -99,7 +99,7 @@ text-shadow: none;
 }
 
 #block-search-form .form-submit  {
-font-size: 0.9em;
+font-size: 0.9em; /* Влияет на шрифт */
 background: #414141;
 height: 18px;
 color: #fff;

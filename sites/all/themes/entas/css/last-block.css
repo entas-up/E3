@@ -1,8 +1,9 @@
 
 /* last-блоки. Общие параметры. НАЧАЛО */
 .last-block  p {
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
+
 
 /* Скрытие лишних полей навигации */
 
@@ -15,17 +16,21 @@ font-size: 0.8em;
 .last-block .pager-current {
 background: #027AC6;
 padding: 6px!important;
-border-radius: 35%;
+border-radius: 100%;
 font-size: 0;
 border: 1px solid rgba(41, 0, 255, 0.39);
 }
 
 
 /* Пункты навигации */
+.last-block .pager li {
+margin:0;
+}
+
 .last-block .pager li a {
 background: #E9E9E9;
 padding: 6px;
-border-radius: 35%;
+border-radius: 100%;
 font-size: 0;
 border: 1px solid #B3B3B3;
 }
@@ -37,7 +42,7 @@ border: 1px solid #636363;
 
 .last-block .pager li.pager-current {
 background: #027AC6;
-border-radius: 35%;
+border-radius: 100%;
 border: 1px solid #636363;
 font-weight: normal;
 }
@@ -60,7 +65,7 @@ right: 10px;
 }
 
 .last-block .date , .last-block .text-location {
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 color: #000;
 text-align: center;
 
@@ -110,10 +115,12 @@ margin: 5px 13px;
 
 }
 
-#block-views-last-files-block {
-
+#block-views-last-files-block  .image_event{
+text-align: right;
 }
-
+#block-views-last-files-block  img{
+float: none;
+}
 #block-views-last-entas-block:after{
 content: " ";
 background: rgba(255, 244, 116, 0.66);

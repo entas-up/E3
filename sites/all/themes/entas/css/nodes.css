@@ -7,7 +7,7 @@
 
 
 .node /* Node wrapper */ {
-margin: 15px 0;
+/*margin: 15px 0;*/
 padding: 10px;
 }
 
@@ -61,7 +61,7 @@ border: 1px solid blue;
 }
 
 h2.node-title /* Node title */ {
-font-size: 1em;
+font-size: 1em; /* Влияет на шрифт */
 }
 
 .node .user-picture /* The picture of the node author */ {
@@ -69,13 +69,30 @@ font-size: 1em;
 
 .node .submitted /* The "posted by" information */ {
 color: #555;
-font-size: 0.7em;
+font-size: 0.7em; /* Влияет на шрифт */
 }
 
 .node .content /* Node's content wrapper */ {
-font-size: 0.8em;
+font-size: 0.8em; /* Влияет на шрифт */
 }
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 	color:#F00;
+}
+
+.field-name-field-page-prior {
+position: absolute;
+top: 1px;
+right: -20px;
+border: 1px solid #C0C0C0;
+width: 25px;
+text-align: center;
+padding: 1px 0px;
+}
+.field-name-field-pop-limit {
+position: absolute;
+top: 1px;
+right: 6px;
+border: 1px solid #C0C0C0;
+padding: 1px 6px;
 }
