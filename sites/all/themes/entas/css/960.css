@@ -24,7 +24,18 @@ text-align: center;
  .view-frontpage .views-row {
  height: 155px;
  }
- 
+#block-search-form {
+float: none;
+margin: 7px;
+position: relative;
+width: auto;
+} 
+#edit-search-block-form--2 {
+width: 100%;
+padding: 0;
+}
+
+
 #block-views-last-files-block, #block-views-last-b-r-block, #block-views-last-entas-block {
 float: none;
 width: 88%;
@@ -56,18 +67,6 @@ position: relative;
 text-align: center;
 }
 
-/* underline all links */
-a:link,
-a:visited {
-  text-decoration: underline !important;
-}
-
-/* Don't underline header */
-#site-name a:link,
-#site-name a:visited {
-  text-decoration: none !important;
-}
-
 /* CSS2 selector to add visible href after links */
 #content a:link:after,
 #content a:visited:after {
@@ -78,10 +77,10 @@ a:visited {
 /* Un-float the content */
 #content,
 #content .section {
-  float: left;
+ /* float: left;
   width: 100%;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 !important;*/
 }
 
 /* Turn off any background colors or images */
@@ -95,9 +94,14 @@ body,
   /*color: #000;
   background-color: transparent !important;
   background-image: none !important;*/
+  }
+#content .section {
+margin: 50px 0 0 0 !important;
+
 }
 
 /* Hide sidebars and nav elements */
+#block-nice-menus-2,
 #skip-to-nav,
 #toolbar,
 #block-block-13,
@@ -106,7 +110,6 @@ body,
 .region-sidebar-first,
 .region-sidebar-second,
 .region-footer,
-.breadcrumb,
 div.tabs,
 .action-links,
 .links,
