@@ -8,6 +8,9 @@
     -moz-transition:all .2s linear; 
     -webkit-transition:all .2s linear;
 }
+.region-bottom .block-simpleads {
+border-right: none;
+}
 
  #page {
  background: #fff;
@@ -108,7 +111,31 @@ margin: 50px 0 0 0 !important;
 
 }
 
+.region-footer {
+float: none;
+width: 95%;
+margin: 0 auto;
+}
+#block-simplenews-61 {
+position: relative;
+display: block;
+top: 0;
+right: 0;
+padding: 0 15px;
+}
+#block-block-7 {
+padding: 0 15px;
+}
+#block-block-8 {
+float: none;
+padding: 0;
+margin: 0;
+border-top: 1px solid rgba(87, 87, 87, 0.52);
+padding: 0 15px;
+}
+
 /* Hide sidebars and nav elements */
+#block-menu-block-4,
 #block-imageblock-1,
 #block-imageblock-2,
 #block-imageblock-3,
@@ -120,7 +147,6 @@ margin: 50px 0 0 0 !important;
 #block-block-12,
 .region-sidebar-first,
 .region-sidebar-second,
-.region-footer,
 div.tabs,
 .action-links,
 .links,
