@@ -192,6 +192,7 @@ padding: 2px 5px;
 width: 90px;
 font-size: 0.7em; /* Влияет на шрифт */
 color: #727272;
+background: #fff;
 }
 
 .view-frontpage .views-field-field-image-event, .view-frontpage .views-field-field-image, .view-frontpage .views-field-field-image-work{
@@ -224,6 +225,7 @@ text-align: center;
 width: 170px;
 font-size: 0.7em; /* Влияет на шрифт */
 color: #727272;
+background: #fff;
 }
 .view-frontpage  .views-label  {
 float: left;
@@ -245,6 +247,7 @@ padding: 5px 60px 8px;
 text-align: center;
 bottom: 19px;
 right: -70px;
+
 }
 .view-frontpage  .views-field-created {
 border-top: 1px dotted #727272;
@@ -258,6 +261,7 @@ padding: 2px 5px;
 left: 0;
 font-size: 0.7em; /* Влияет на шрифт */
 color: #727272;
+background: #fff;
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
