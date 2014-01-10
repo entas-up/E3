@@ -147,8 +147,13 @@ div.tabs,
   display: none;
 }
 
-/* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
-   the content after the first page. */
-/*#page-wrapper {
-  overflow-y: visible;
-}*/
+/* Home1  */
+li.menu-path-front {
+padding: 0 20px 0 0 !important;
+}
+.menu-path-front a {
+font-size: 0.8em;
+}
+.menu-path-front a:after {
+display: none;
+}

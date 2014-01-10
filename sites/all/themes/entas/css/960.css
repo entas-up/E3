@@ -109,6 +109,9 @@ margin: 50px 0 0 0 !important;
 }
 
 /* Hide sidebars and nav elements */
+#block-imageblock-1,
+#block-imageblock-2,
+#block-imageblock-3,
 #block-nice-menus-2,
 #skip-to-nav,
 #toolbar,
@@ -131,8 +134,14 @@ div.tabs,
   display: none;
 }
 
-/* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
-   the content after the first page. */
-/*#page-wrapper {
-  overflow-y: visible;
-}*/
+
+/* Home1  */
+li.menu-path-front {
+padding: 0 20px 0 0 !important;
+}
+.menu-path-front a {
+font-size: 0.9em;
+}
+.menu-path-front a:after {
+display: none;
+}
