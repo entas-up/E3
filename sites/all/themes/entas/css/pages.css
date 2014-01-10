@@ -187,7 +187,7 @@ border-top: 1px dotted #727272;
 border-right: 1px dotted #727272;
 position: absolute;
 bottom: 0;
-left: 90px;
+left: 91px;
 padding: 2px 5px;
 width: 90px;
 font-size: 0.7em; /* Влияет на шрифт */
@@ -217,7 +217,7 @@ font-weight: bold;
 .view-frontpage .views-field-field-type-event {
 position: absolute;
 bottom: 0px;
-left: 190px;
+left: 192px;
 padding: 2px 5px;
 border-top: 1px dotted #727272;
 border-right: 1px dotted #727272;
