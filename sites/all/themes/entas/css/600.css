@@ -9,6 +9,12 @@
     -webkit-transition:all .2s linear;
 	mix-width:440px;
 }
+
+.region-highlighted {
+margin: 0 auto;
+width: 95%;
+}
+
 .view-frontpage .views-field-body {
 font-size: 0.7em;
 }
@@ -167,7 +173,6 @@ div.tabs,
 .links,
 .book-navigation,
 .forum-topic-navigation,
-.pager,
 .feed-icons,
 .toolbar-menu
  {
