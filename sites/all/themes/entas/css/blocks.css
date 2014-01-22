@@ -243,13 +243,6 @@ opacity: 0.5;
 -ms-filter: sepia(70%);*/
 }
 
-
-.slide-text {
-font-size: 0.9em; /* Влияет на шрифт */
-width: 650px;
-margin-left: 260px;
-}
-
 #block-views-news3-block-1 .views_slideshow_cycle_main {
 overflow: hidden; /* Из-за неясности от чего font-weight смещает элементы, все что смещается будет вырезано */
 }
@@ -478,7 +471,7 @@ float: left;
 position: absolute;
 top: 29px;
 font-size: 0.8em;
-left: 682px;
+left: 400px;
 text-align: center;
 color: #E7DFB5;
 background: rgba(52, 54, 70, 0.58);
