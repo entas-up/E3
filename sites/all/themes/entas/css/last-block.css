@@ -2,6 +2,7 @@
 /* last-блоки. Общие параметры. НАЧАЛО */
 .last-block  .views-field-body {
 font-size: 0.8em; /* Влияет на шрифт */
+height: 60px;
 }
 
 
@@ -48,10 +49,10 @@ font-weight: normal;
 }
 
 .last-block .views-field-field-image , .last-block .views-field-field-imagepage{
-line-height: 90px;
-height: 100px;
-width: 100px;
-float: left;
+line-height: 205px;
+height: 232px;
+width: 290px;
+/*float: left;*/
 margin: 5px;
 text-align: center;
 box-shadow: 0 0 2px;
@@ -60,14 +61,7 @@ padding: 1px;
 
 
 .last-block  img {
-/*float: left;
-margin-right: 5px;
-margin-bottom: 5px;
-z-index: 10;
-position: relative;*/
 vertical-align: middle;
-
-
 }
 
 .last-block .view-footer {
@@ -111,9 +105,9 @@ position: relative;
 
 .blocks-last/*.region-highlighted .block:not(.first)*/ {
 float: left;
-width: 31%;
+width: 298px; /*31%*/
 position: relative;
-margin: 5px 10px;
+margin: 5px 4px;
 font-size: 0.8em;
 }
 
@@ -125,6 +119,13 @@ color: #fff;
 .blocks-last .views-content-title {
 box-shadow: inset 0px 0px 2px #575757;
 padding: 0 5px;
+height: 32px;
+vertical-align: middle;
+cursor: pointer;
+text-align: center;
+margin: 5px auto;
+border: 1px solid #919191;
+box-shadow: 2px 2px 5px #A3A3A3;
 }
 
 #block-views-last-files-block  .pager{
@@ -147,6 +148,7 @@ position: relative;
 z-index: 50;
 font-size: 0.8em;
 height: 100px;
+top: 5px;
 }
 
 #block-views-last-files-block .views-field-title {
