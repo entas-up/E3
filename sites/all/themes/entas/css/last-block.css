@@ -109,6 +109,7 @@ width: 298px; /*31%*/
 position: relative;
 margin: 5px 4px;
 font-size: 0.8em;
+height: 525px;
 }
 
 .blocks-last .active {
@@ -141,14 +142,14 @@ float: none;
 
 #block-views-last-files-block {
 width: auto;
-background: #FFF;
+background: rgba(0, 0, 0, 0.5);
 margin: 0;
-padding: 0;
+padding: 3px;
 position: relative;
 z-index: 50;
 font-size: 0.8em;
 height: 100px;
-top: 5px;
+top: 3px;
 }
 
 #block-views-last-files-block .views-field-title {
