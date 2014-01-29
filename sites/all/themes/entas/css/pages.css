@@ -168,6 +168,9 @@ position: relative;
 z-index: 10;
 text-align: center;
 }
+.view-frontpage {
+font-size: 0.9em;
+}
 
 .view-frontpage  .views-row{
 border: 1px solid #919191;
@@ -176,7 +179,7 @@ margin-top: 10px;
 box-shadow: 2px 2px 5px #A3A3A3;
 overflow: hidden;
 position: relative;
-height: 150px;
+height: 125px;
 background: #fff;
 }
 
