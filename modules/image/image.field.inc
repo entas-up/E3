@@ -135,7 +135,7 @@ function image_field_instance_settings_form($field, $instance) {
   );
 
   // Remove the description option.
-  //unset($form['description_field']);
+  unset($form['description_field']);
 
   // Add title and alt configuration options.
   $form['alt_field'] = array(
