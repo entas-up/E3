@@ -5,6 +5,13 @@
  * We provide some sane print styling for Drupal using Zen's layout method.
  */
 
+.column {
+height:auto!important;
+}
+
+* {
+box-shadow:none!important;
+}
 
 /* underline all links */
 a:link,
@@ -19,13 +26,13 @@ a:visited {
 }
 
 /* CSS2 selector to add visible href after links */
-#content a:link:after,
+/*#content a:link:after,
 #content a:visited:after {
   content: " (" attr(href) ") ";
   font-size: 0.8em;
   font-weight: normal;
 }
-
+*/
 /* Un-float the content */
 #content,
 #content .section {
@@ -42,11 +49,27 @@ body,
 #main-wrapper,
 #main,
 #content,
-#content .section {
+#content .section,
+#header .section,
+.region-footer{
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
+/*Возвращает некоторые фоны */
+.view-frontpage .views-field-sticky {
+background: none repeat scroll 0% 0% rgb(27, 79, 189);
+color:white;
+}
+.blocks-last .active .views-content-title {
+    background: none repeat scroll 0% 0% orange;
+    color: rgb(255, 255, 255);
+	}
+
+#header .section{
+border-bottom:1px solid #7E7E7E;
+}
+
 
 /* Hide sidebars and nav elements */
 #skip-to-nav,
@@ -56,10 +79,11 @@ body,
 #block-uptime-uptime-widget,
 #block-block-12,
 #backtotop,
+#block-simplenews-61,
+.region-bottom,
 .region-sidebar-first,
 .region-sidebar-second,
-.region-footer,
-.breadcrumb,
+#block-menu-block-4,
 div.tabs,
 .action-links,
 .links,
