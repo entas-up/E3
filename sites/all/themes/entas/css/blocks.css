@@ -457,12 +457,16 @@ color: #fff;
 height: 48px;
 }
 
-#block-views-similarterms-block  .views-field-field-imagepage {
+#block-views-similarterms-block  .views-field-field-imagepage, #block-views-similarterms-block .views-field-field-image {
 width: 200px;
 height: 200px;
 text-align: center;
 line-height: 190px;
+margin: 0 auto;
 }
-#block-views-similarterms-block  .views-field-field-imagepage img {
+#block-views-similarterms-block  .views-field-field-imagepage img, #block-views-similarterms-block .views-field-field-image img {
 vertical-align: middle;
+width: inherit;
+height: inherit;
+
 }
