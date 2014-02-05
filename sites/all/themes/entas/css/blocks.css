@@ -451,9 +451,10 @@ margin: 0 2px;
 }
 #block-views-similarterms-block  .views-row .views-field-title {
 text-align: center;
-background: #ECECEC;
+background: #D8D8D8;
 width: 100%;
 color: #fff;
+height: 48px;
 }
 
 #block-views-similarterms-block  .views-field-field-imagepage {
