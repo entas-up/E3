@@ -82,6 +82,9 @@
 <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/entas/images/apple-touch-icon-72x72-precomposed.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/entas/images/apple-touch-icon-114x114-precomposed.png" />
 <link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/entas/images/apple-touch-icon-144x144-precomposed.png" />
+<link rel="alternate" type="application/rss+xml" title="Мероприятия ЭНТАС" href="/entas_event.xml" />
+<link rel="alternate" type="application/rss+xml" title="Новости ЭНТАС" href="/entas_news.xml" />
+
 
 
 <div id="page-wrapper"><div id="page">
