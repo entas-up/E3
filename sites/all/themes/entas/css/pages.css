@@ -438,7 +438,7 @@ padding-bottom: 20px;
 .region-footer {
 float: left;
 background: rgba(223, 229, 233, 0.38);
-width: 959px;
+width: 958px;
 padding: 5px 0 5px 0;
 font-size: 0.9em; /* Влияет на шрифт */
 position: relative;
@@ -458,7 +458,7 @@ color:#FF6600;
  * Page bottom
  */
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
-	width: 959px;
+	width: 958px;
 background: rgba(223, 229, 233, 0.38);
 overflow: hidden;
 	
