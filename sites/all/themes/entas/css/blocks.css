@@ -431,6 +431,8 @@ position: absolute;
 
 #block-views-similarterms-block {
 font-size:0.8em;
+margin: 0 auto;
+width: 700px;
 }
 #block-views-similarterms-block .block-title {
 text-align: center;
@@ -443,11 +445,10 @@ font-weight: bold;
 }
 
 #block-views-similarterms-block  .views-row{
-float: left;
-width: 32%;
-position: relative;
+display: inline-block;
+width: 214px;
 border: 1px solid rgba(87, 87, 87, 0.49);
-margin: 0 2px;
+/*margin: 0 2px;*/
 }
 #block-views-similarterms-block  .views-row .views-field-title {
 text-align: center;
