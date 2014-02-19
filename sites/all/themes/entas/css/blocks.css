@@ -446,8 +446,10 @@ font-weight: bold;
 
 #block-views-similarterms-block  .views-row{
 display: inline-block;
-width: 214px;
+width: 215px;
+height: 207px;
 border: 1px solid rgba(87, 87, 87, 0.49);
+vertical-align: top;
 /*margin: 0 2px;*/
 }
 #block-views-similarterms-block  .views-row .views-field-title {
@@ -455,17 +457,18 @@ text-align: center;
 background: #D8D8D8;
 width: 100%;
 color: #fff;
-height: 48px;
+height: 34px;
+border-bottom: 1px solid rgba(87, 87, 87, 0.49);
 }
 
-#block-views-similarterms-block  .views-field-field-imagepage, #block-views-similarterms-block .views-field-field-image {
-width: 200px;
-height: 200px;
+#block-views-similarterms-block  .views-field-field-imagepage, #block-views-similarterms-block .views-field-field-image, #block-views-similarterms-block .views-field-field-image-event {
+/*width: 200px;
+height: 200px;*/
 text-align: center;
-line-height: 190px;
+line-height: 169px;
 margin: 0 auto;
 }
-#block-views-similarterms-block  .views-field-field-imagepage img, #block-views-similarterms-block .views-field-field-image img {
+#block-views-similarterms-block  .views-field-field-imagepage img, #block-views-similarterms-block .views-field-field-image img, #block-views-similarterms-block .views-field-field-image-event img {
 vertical-align: middle;
 width: inherit;
 height: inherit;
