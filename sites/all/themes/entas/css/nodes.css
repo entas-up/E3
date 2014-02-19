@@ -81,18 +81,20 @@ font-size: 0.8em; /* Влияет на шрифт */
 }
 
 .field-name-field-page-prior {
-position: absolute;
+/*position: absolute;
 top: 1px;
 right: -20px;
 border: 1px solid #C0C0C0;
 width: 25px;
 text-align: center;
-padding: 1px 0px;
+padding: 1px 0px;*/
+display:none;
 }
 .field-name-field-pop-limit {
-position: absolute;
+/*position: absolute;
 top: 1px;
 right: 6px;
 border: 1px solid #C0C0C0;
-padding: 1px 6px;
+padding: 1px 6px;*/
+display:none;
 }
