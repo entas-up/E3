@@ -830,6 +830,6 @@ position: relative;
 
 /*Временное уменьшение изображений для главной*/
 .region-content .views-field-field-image img, .region-content .views-field-field-image-event img {
-width: 200px;
-height: 80px;
+/*width: 200px;
+height: 160px;*/
 }
