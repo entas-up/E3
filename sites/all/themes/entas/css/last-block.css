@@ -120,7 +120,7 @@ height: 525px;
 }
 
 .blocks-last .active  .views-content-title{
-background: orange;
+background: #1B4FBD;
 color: #fff;
 }
 
@@ -157,6 +157,7 @@ z-index: 50;
 font-size: 0.8em;
 height: 100px;
 top: 3px;
+color: #FFF;
 }
 
 #block-views-last-files-block .views-field-title {
