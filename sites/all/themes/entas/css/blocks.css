@@ -290,10 +290,9 @@ margin-left: 5px;
  
  /* Блок Uptime start*/
 #block-uptime-uptime-widget { 
-margin-top: 20px;
+margin-top: 5px;
 font-size: 0.7em;
 overflow: hidden;
-padding: 10px;
 }
 #block-uptime-uptime-widget table {
 margin: 0;
@@ -470,4 +469,10 @@ vertical-align: middle;
 width: inherit;
 height: inherit;
 
+}
+
+
+#block-imageblock-1, #block-imageblock-2, #block-imageblock-3 {
+float: left;
+margin: 5px;
 }
