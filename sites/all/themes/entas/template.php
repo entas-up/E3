@@ -229,6 +229,7 @@ function entas_form_alter(&$form, &$form_state, $form_id) {
     //$form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search-button.png');
 	//$form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Введите текст...'){ alert('Please enter a search'); return false; }";
   }
+  
 } 
 
 
@@ -245,5 +246,16 @@ function entas_menu_link($variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+function entas_image_field_instance_settings_form_alter($field, $instance) {
+ $form['description_field2'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable <em>Description2</em> field'),
+    '#default_value' => isset($settings['description_field2']) ? $settings['description_field2'] : '',
+    '#description' => t('The description field allows users to enter a description about the uploaded file.'),
+    '#parents' => array('instance', 'settings', 'description_field2'),
+    '#weight' => 11,
+  );
+  return $form; 
+}
 
 ?>
