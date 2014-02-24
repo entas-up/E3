@@ -149,7 +149,6 @@ float: none;
 
 
 #block-views-last-files-block {
-width: 257px;
 background: rgba(0, 0, 0, 0.5);
 margin: 0;
 padding: 3px;
@@ -159,6 +158,15 @@ font-size: 0.8em;
 height: 100px;
 top: 3px;
 color: #FFF;
+}
+
+#block-views-last-files-block .view-empty {
+text-align: center;
+}
+
+#block-views-last-files-block .content{
+width: 250px;
+height: 103px;
 }
 
 #block-views-last-files-block .views-field-title {
