@@ -38,6 +38,7 @@ color:red;
 #page {
 /*box-shadow: 0 0 5px;*/
 border: 1px solid #7E7E7E;
+margin-bottom: 20px;
 }
 
 /*
@@ -178,7 +179,7 @@ margin-top: 10px;
 box-shadow: 2px 2px 5px #A3A3A3;
 overflow: hidden;
 position: relative;
-height: 125px;
+height: 95px;
 background: #fff;
 }
 
@@ -199,11 +200,10 @@ background: #fff;
 
 .view-frontpage .views-field-field-image-event, .view-frontpage .views-field-field-image, .view-frontpage .views-field-field-image-work{
 float: left;
-padding-top: 10px;
+padding-right: 10px;
 }
 
 .view-frontpage .views-field-body {
-padding-left: 10px;
 padding-top: 10px;
 position: relative;
 overflow: hidden;
@@ -290,7 +290,7 @@ tr.odd {
 }
 
 div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
-  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
+  margin: 0; /* Drupal core uses "6px 0" margin */
   /* float: left;
 width: 91.3%;  */
 }
@@ -830,6 +830,6 @@ position: relative;
 
 /*Временное уменьшение изображений для главной*/
 .region-content .views-field-field-image img, .region-content .views-field-field-image-event img {
-/*width: 200px;
-height: 160px;*/
+width: 200px;
+height: 80px;
 }

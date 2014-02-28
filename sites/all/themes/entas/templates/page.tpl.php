@@ -95,6 +95,7 @@
 
 
 <div id="page-wrapper"><div id="page">
+<?php print $messages; ?>
   <div id="header"><div class="section clearfix">
     <?php if ($logo): ?>
         
@@ -148,10 +149,9 @@
     <div id="content" class="column"><div class="section">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
+      
       <?php print render($page['help']); ?>
 	  <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
