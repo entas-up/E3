@@ -25,7 +25,8 @@ CKEDITOR.editorConfig = function(config) {
   config.protectedSource.push(/<\?[\s\S]*?\?>/g); // PHP Code
   config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi); // Code tags
   config.extraPlugins = '';
-
+config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
+config.allowedContent = true; /* all tags */
   /*
     * Append here extra CSS rules that should be applied into the editing area.
     * Example:
@@ -99,3 +100,4 @@ Drupal.settings.cke_toolbar_DrupalFull = [
   ['Maximize', 'ShowBlocks'],
   ['DrupalBreak', 'DrupalPageBreak']
 ];
+

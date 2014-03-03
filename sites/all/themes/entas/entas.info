@@ -55,7 +55,8 @@ stylesheets[all][]        = css/last-block.css
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
 
 ;stylesheets[handheld][]  = css/mobile.css
-;stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
+;stylesheets[all and (max-width: 960px)][] = css/960.css
+;stylesheets[all and (max-width: 600px)][] = css/600.css
 
 ; Add conditional stylesheets that are processed by IE. See the css/README.txt.
 
