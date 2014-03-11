@@ -3,11 +3,11 @@
 .last-block  .views-field-body {
 font-size: 0.8em; /* Влияет на шрифт */
 height: 50px;
-border-right: 1px solid #919191;
+/*border-right: 1px solid #919191;
 border-left: 1px solid #919191;
-border-bottom: 1px solid #919191;
-width:292px;
-
+border-bottom: 1px solid #919191;*/
+/*width:292px;*/ /*временно*/
+width: 266px;
 }
 .last-block  .views-field-body  p{
 padding:2px;
@@ -56,20 +56,22 @@ font-weight: normal;
 }
 
 .last-block .views-field-field-image , .last-block .views-field-field-imagepage{
-line-height: 205px;
+/*line-height: 205px;
 height: 232px;
-width: 290px;
+width: 290px;*/
 margin: 5px 1px 0px 0px;
 text-align: center;
 padding: 1px;
-border-right: 1px solid #919191;
+/*border-right: 1px solid #919191;
 border-left: 1px solid #919191;
-border-top: 1px solid #919191;
+border-top: 1px solid #919191;*/
 }
 
 
 .last-block  img {
 vertical-align: middle;
+height: 200px; /*временно*/
+width: 266px; /*временно*/
 }
 
 .last-block .view-footer {
@@ -113,11 +115,20 @@ position: relative;
 
 .blocks-last/*.region-highlighted .block:not(.first)*/ {
 float: left;
-width: 298px; /*31%*/
+width: 268px;
+/*width: 291px;*/
 position: relative;
-margin: 5px 4px;
+margin: 5px 16px;
 font-size: 0.8em;
-height: 525px;
+/*height: 413px;*/
+height:395px;
+border: 1px solid #919191;
+background: #FFF;
+box-shadow: 3px 3px 7px #CCC;
+}
+
+.blocks-last .views-row-odd .views-content-title   {
+background: rgba(204, 204, 204, 0.5);
 }
 
 .blocks-last .active  .views-content-title{
@@ -126,15 +137,17 @@ color: #fff;
 }
 
 .blocks-last .views-content-title {
-padding: 0 2px;
-height: 32px;
+/*padding: 0 2px;*/
+padding: 0 24px 0px 1px;
+height: 24px;
 vertical-align: middle;
 cursor: pointer;
 text-align: center;
-margin: 5px 0px;
-border: 1px solid #919191;
-box-shadow: 2px 2px 5px #A3A3A3;
-width: 289px;
+/*width: 288px;*/
+width: 243px; /*временно */
+font-size: 0.8em;
+border-top: 1px solid rgba(87, 87, 87, 0.5);
+position: relative;
 }
 
 #block-views-last-files-block  .pager{
@@ -206,4 +219,31 @@ color:#fff;
 #block-views-last-files-block .view-footer  p{
 margin: 0;
 padding: 0;
+}
+
+.blocks-last  .block-title {
+font-size: 1.0em; /* Влияет на шрифт */
+color: #505050;
+height: 13px;
+line-height: 17px;
+position: relative;
+z-index: 50;
+text-align: center;
+background: #FFF;
+}
+
+.blocks-last .views-content-title a {
+font-size: 0em;
+}
+
+.blocks-last .views-content-title a:after {
+background: url(http://s1.iconbird.com/ico/1012/human02/w128h1281349047124mailforward.png);
+background-size: 25px 25px;
+background-repeat: no-repeat;
+position: absolute;
+top: 0px;
+right: 0px;
+content: " ";
+width: 25px;
+height: 25px;
 }
