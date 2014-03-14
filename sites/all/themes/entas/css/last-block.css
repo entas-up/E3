@@ -121,14 +121,14 @@ position: relative;
 margin: 5px 16px;
 font-size: 0.8em;
 /*height: 413px;*/
-height:395px;
+height:393px;
 border: 1px solid #919191;
 background: #FFF;
 box-shadow: 3px 3px 7px #CCC;
 }
 
-.blocks-last .views-row-odd .views-content-title   {
-background: rgba(204, 204, 204, 0.5);
+.blocks-last .views-content-title   {
+background: rgba(134, 134, 134, 0.5);
 }
 
 .blocks-last .active  .views-content-title{
@@ -235,10 +235,32 @@ background: #FFF;
 .blocks-last .views-content-title a {
 font-size: 0em;
 }
+/*
+#block-views-news3-block-1  .views-content-title a {
+font-size: 2em;
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+position: absolute;
+top: 1px;
+right: 0px;
+width: 20px;
+height: 20px;
+border: 1px solid;
+}
 
+#block-views-news3-block-1 .views-content-title a:hover {
+text-decoration: initial;
+}
+
+#block-views-news3-block-1  .views-content-title a:after {
+display: none!important;
+}
+*/
 .blocks-last .views-content-title a:after {
-background: url(http://s1.iconbird.com/ico/1012/human02/w128h1281349047124mailforward.png);
-background-size: 25px 25px;
+background: url(/sites/all/themes/entas/images/arrow_right_last.png);
+background-size: 22px 22px;
 background-repeat: no-repeat;
 position: absolute;
 top: 0px;
@@ -247,3 +269,4 @@ content: " ";
 width: 25px;
 height: 25px;
 }
+
