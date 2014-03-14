@@ -153,17 +153,17 @@ list-style-type:none;
 
 
 .menu-2667 a:before {
-isplay: inline-block;
+display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 line-height: 1;
 -webkit-font-smoothing: antialiased;
-content: "\f0ed""\00a0\00a0";
+content: "\f019""\00a0\00a0";
 }
 
 .menu-790 a:before {
-isplay: inline-block;
+display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
@@ -173,7 +173,7 @@ content: "\f059""\00a0\00a0";
 }
 
 .menu-3232 a:before {
-isplay: inline-block;
+display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
