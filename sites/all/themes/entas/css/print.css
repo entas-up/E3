@@ -93,7 +93,7 @@ div.tabs,
 .feed-icons
  {
   visibility: hidden;
-  display: none;
+  display: none!important;
 }
 
 /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
