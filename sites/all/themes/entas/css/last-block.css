@@ -113,19 +113,24 @@ position: relative;
 
 /* last-блоки. Общие параметры. КОНЕЦ */
 
-.blocks-last/*.region-highlighted .block:not(.first)*/ {
+.blocks-last {
 float: left;
-width: 268px;
-/*width: 291px;*/
+width: 280px;
 position: relative;
-margin: 5px 16px;
+margin: 5px 11px;
 font-size: 0.8em;
-/*height: 413px;*/
-height:393px;
+height: 426px;
 border: 1px solid #919191;
 background: #FFF;
 box-shadow: 3px 3px 7px #CCC;
 }
+
+.blocks-last .content{
+width: 267px;
+margin: 0 auto;
+position: relative;
+}
+
 
 .blocks-last .views-content-title   {
 background: rgba(134, 134, 134, 0.5);
@@ -137,16 +142,14 @@ color: #fff;
 }
 
 .blocks-last .views-content-title {
-/*padding: 0 2px;*/
 padding: 0 24px 0px 1px;
-height: 24px;
+height: 28px;
 vertical-align: middle;
-cursor: pointer;
+cursor: default;
 text-align: center;
-/*width: 288px;*/
-width: 243px; /*временно */
-font-size: 0.8em;
-border-top: 1px solid rgba(87, 87, 87, 0.5);
+width: 243px;
+font-size: .85em;
+border-top: 1px solid #FFF;
 position: relative;
 }
 
@@ -223,41 +226,19 @@ padding: 0;
 
 .blocks-last  .block-title {
 font-size: 1.0em; /* Влияет на шрифт */
-color: #505050;
-height: 13px;
+color: #FFF;
+height: 18px;
 line-height: 17px;
 position: relative;
 z-index: 50;
 text-align: center;
-background: #FFF;
+background: #414141;
 }
 
 .blocks-last .views-content-title a {
 font-size: 0em;
 }
-/*
-#block-views-news3-block-1  .views-content-title a {
-font-size: 2em;
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-position: absolute;
-top: 1px;
-right: 0px;
-width: 20px;
-height: 20px;
-border: 1px solid;
-}
 
-#block-views-news3-block-1 .views-content-title a:hover {
-text-decoration: initial;
-}
-
-#block-views-news3-block-1  .views-content-title a:after {
-display: none!important;
-}
-*/
 .blocks-last .views-content-title a:after {
 background: url(/sites/all/themes/entas/images/arrow_right_last.png);
 background-size: 22px 22px;
