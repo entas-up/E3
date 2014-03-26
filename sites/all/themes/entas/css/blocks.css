@@ -374,9 +374,14 @@ border-radius: 4px;
     transform: rotate(-15deg);
 }
 
-#main a[href^="http"]:not([HREF *= "entas.ru"]) /* Пометка внешних ссылок */{
-background: url('/sites/all/themes/entas/images/external-link.png') no-repeat right;
-padding-right: 15px;
+#main a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок */{
+content: "\00a0\00a0\f08e";
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+color:#F60;
 }
 
 .block-search-form .captcha-admin-links {
