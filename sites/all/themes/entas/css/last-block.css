@@ -235,10 +235,20 @@ text-align: center;
 background: #414141;
 }
 
-.blocks-last .views-content-title a {
-font-size: 0em;
+
+.blocks-last .fa-circle {
+color:#fff;
+font-size:1.8em;
 }
 
+.blocks-last .views-content-title a {
+width:25px;
+height:25px;
+position: absolute;
+right: 4px;
+top: 0px;
+}
+/*
 .blocks-last .views-content-title a:after {
 background: url(/sites/all/themes/entas/images/arrow_right_last.png);
 background-size: 22px 22px;
@@ -249,5 +259,4 @@ right: 0px;
 content: " ";
 width: 25px;
 height: 25px;
-}
-
+}*/
