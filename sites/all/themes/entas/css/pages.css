@@ -761,7 +761,19 @@ margin-top: 0px;
 .view-files a {
 color: #575757;
 font-size: 0.8em; /* Влияет на шрифт */
+border: 1px solid #E7E7E7;
+background: #FFF;
+margin: 1px;
+width: 99%;
+display: inline-block;
 }
+
+.view-files a:hover {
+background: #00F;
+color: #FFF;
+text-decoration: none;
+}
+
 .view-files h3{
 font-size: 0.9em; /* Влияет на шрифт */
 margin:0;
@@ -770,12 +782,17 @@ margin:0;
 .view-files h3 a {
 color: #2A63DB;
 font-size: 1em; /* Влияет на шрифт */
+background: #E7E7E7;
 }
-
+.view-files h3 a:hover {
+color:#2A63DB;
+background: #E7E7E7;
+text-decoration:underline;
+}
 .view-files  .views-row{
-border: 1px solid #E7E7E7;
+/*border: 1px solid #E7E7E7;
 margin-bottom: -1px;
-background: #FFF;
+background: #FFF;*/
 }
 
 .view-files .view-content {
@@ -861,4 +878,8 @@ font-size: 0.8em;
 #node-278 .field-name-body {
 border-top: 1px solid #F60;
 border-bottom: 1px solid #F60;
+}
+
+.field-type-file .sticky-table {
+width:100%;
 }
