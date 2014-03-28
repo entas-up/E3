@@ -458,7 +458,7 @@ overflow: hidden;
 
 
 .item-list ul {
-	float:left;
+	/*float:left;*/
 	}
 #user-login-form  .item-list ul  {
 	display: inline-block;
@@ -831,7 +831,7 @@ display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
-content: "\f046";
+content: "\f0e0";
 color: #F60;
 margin-right: 4px;
 position: relative;
