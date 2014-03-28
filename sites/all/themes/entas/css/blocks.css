@@ -327,18 +327,54 @@ border-bottom: 1px dotted #CCC;
 }
 
 #block-simplenews-61 {
-    top: 6px;
+    /*top: 6px;
     position: absolute;
     right: 4px;
-	padding: 0 2px;
+	padding: 0 2px;*/
+	text-align: center;
+	margin: 8px 0;
 }
+
+#block-simplenews-61 p {
+margin: 0;
+padding: 0;
+font-size: 1.2em;
+}
+
+#block-simplenews-61 .form-item  {
+margin: 0;
+padding: 0;
+display: inline;
+}
+
+#block-simplenews-61 .form-item label {
+display: inline;
+font-weight: normal;
+}
+#block-simplenews-61 input[type="text"] {
+display: inline;
+}
+#block-simplenews-61 input[type="submit"] {
+display: inline;
+}
+
+#block-block-16 {
+text-align: center;
+}
+
+
+.block-simplenews .issues-link {
+margin: 0;
+padding: 0;
+}
+/*
 #block-simplenews-61:hover {
 background: #027AC6;
 }
 
 #block-simplenews-61 a:hover {
 text-decoration: none;
-}
+}*/
 
 .site-map-menus {
 border: 2px solid #ededed;
