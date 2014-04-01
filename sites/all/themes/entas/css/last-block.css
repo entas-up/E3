@@ -248,15 +248,50 @@ position: absolute;
 right: 4px;
 top: 0px;
 }
+
+#block-views-banner-block {
+width:400px;
+position: relative;
+}
 /*
-.blocks-last .views-content-title a:after {
-background: url(/sites/all/themes/entas/images/arrow_right_last.png);
-background-size: 22px 22px;
-background-repeat: no-repeat;
-position: absolute;
-top: 0px;
-right: 0px;
-content: " ";
-width: 25px;
-height: 25px;
+.view-banner .views-field-field-image-event, .view-banner .views-field-field-image, .view-banner .views-field-field-imagepage {
+float: right;
+position: relative;
+right: 0;
 }*/
+.view-banner img {
+float: left;
+position: relative;
+right: 0;
+}
+.view-banner .views-field-type {
+font-size:0.8em;
+}
+
+
+.view-banner .views-slideshow-controls-top  {
+float: right;
+}
+
+.view-banner .views-slideshow-controls-top .views-field-title{
+font-size: 0;
+padding: 8px;
+background: #EBB896;
+margin: 0 5px;
+display: inline-block;
+border-radius: 100%;
+box-shadow: 0 0 2px #555252;
+}
+
+.view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date{
+font-size:0.8em;
+}
+
+
+.view-banner  .views-slideshow-controls-top .active  .views-field-title {
+background: #1B4FBD;
+}
+
+.view-banner .views-field-title {
+
+}
