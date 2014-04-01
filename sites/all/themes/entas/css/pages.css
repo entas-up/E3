@@ -821,12 +821,7 @@ display: inline-block;
 .node-webform  input {
 border:1px solid #979797;
 }
-
-.node-webform  .form-radio {
-
-}
-
-.block-simplenews a:before {
+/*.block-simplenews a:before {
 display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
@@ -835,7 +830,7 @@ content: "\f0e0";
 color: #F60;
 margin-right: 4px;
 position: relative;
-}
+}*/
 
 /*Временное уменьшение изображений для главной*/
 .region-content .views-field-field-image img, .region-content .views-field-field-image-event img {
@@ -855,9 +850,9 @@ margin: 2px 86px;
 }
 
 #node-278 a:hover {
-background: #1B4FBD;
+/*background: #1B4FBD;
 color: #FFF;
-border-color: #FFF;
+border-color: #FFF;*/
 text-decoration: none;
 }
 
