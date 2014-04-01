@@ -217,26 +217,41 @@ font-size: 0.8em;
 
 /* Меню в подвале start*/
 #block-menu-block-4 { 
-overflow: hidden;
-border-bottom: 1px solid rgba(87, 87, 87, 0.52);
+/*overflow: hidden;
+border-bottom: 1px solid rgba(87, 87, 87, 0.52);*/
 }
 #block-menu-block-4 ul {
 margin: 0px;
+/*border-bottom: 1px solid rgba(87, 87, 87, 0.52);
+border-top: 1px solid rgba(87, 87, 87, 0.52);*/
+display: flex;
+padding: 5px 0;
 }
-
+/*
 #block-menu-block-4 ul li {
 float: left;
 margin-right: 20px;
+}*/
+#block-menu-block-4 a {
+display: block;
 }
 
-#block-menu-block-4 ul.menu li {
+#block-menu-block-4 ul  li {
 list-style: none;
-padding: 3px;
+padding: 0px;
+display: inline;
+margin: 0;
+float: none;
+width: 100%;
+border-right: 1px solid rgba(87, 87, 87, 0.52);
+text-align: center;
 }
-
+#block-menu-block-4 ul  li:last-child {
+border-right: none;
+}
 #block-menu-block-4 li.collapsed, #block-menu-block-4 li.leaf {
-margin:0 20px 0 0;
-padding:0;
+/*margin:0 20px 0 0;
+padding:0;*/
 }
 
 #block-menu-block-4 li.collapsed:hover, #block-menu-block-4 li.leaf:hover {
