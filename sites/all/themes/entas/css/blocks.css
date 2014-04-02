@@ -217,8 +217,7 @@ font-size: 0.8em;
 
 /* Меню в подвале start*/
 #block-menu-block-4 { 
-/*overflow: hidden;
-border-bottom: 1px solid rgba(87, 87, 87, 0.52);*/
+border-bottom: 1px solid rgba(87, 87, 87, 0.52);
 }
 #block-menu-block-4 ul {
 margin: 0px;
@@ -342,12 +341,12 @@ border-bottom: 1px dotted #CCC;
 }
 
 #block-simplenews-61 {
-    /*top: 6px;
-    position: absolute;
-    right: 4px;
-	padding: 0 2px;*/
-	text-align: center;
-	margin: 8px 0;
+    text-align: center;
+margin: 0 auto 10px auto;
+border-bottom: 1px solid #F60;
+border-right: 1px solid #F60;
+border-left: 1px solid #F60;
+width: 50%;
 }
 
 #block-simplenews-61 p {
@@ -375,6 +374,11 @@ display: inline;
 
 #block-block-16 {
 text-align: center;
+border-top: 1px solid #F60;
+border-left: 1px solid #F60;
+border-right: 1px solid #F60;
+margin: 10px auto -2px auto;
+width: 50%;
 }
 
 
