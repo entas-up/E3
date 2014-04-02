@@ -119,7 +119,7 @@ width: 280px;
 position: relative;
 margin: 5px 11px;
 font-size: 0.8em;
-height: 426px;
+height: 430px;
 border: 1px solid #919191;
 background: #FFF;
 box-shadow: 3px 3px 7px #CCC;
@@ -149,7 +149,7 @@ cursor: default;
 text-align: center;
 width: 243px;
 font-size: .85em;
-border-top: 1px solid #FFF;
+border-top: 2px solid #FFF;
 position: relative;
 }
 
@@ -252,6 +252,7 @@ top: 0px;
 #block-views-banner-block {
 width:400px;
 position: relative;
+background: rgba(0, 0, 0, 0.5);
 }
 /*
 .view-banner .views-field-field-image-event, .view-banner .views-field-field-image, .view-banner .views-field-field-imagepage {
@@ -271,6 +272,7 @@ font-size:0.8em;
 
 .view-banner .views-slideshow-controls-top  {
 float: right;
+line-height: 22px;
 }
 
 .view-banner .views-slideshow-controls-top .views-field-title{
@@ -283,10 +285,15 @@ border-radius: 100%;
 box-shadow: 0 0 2px #555252;
 }
 
-.view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date{
+.view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date, .view-banner .views-field-field-type-event, .view-banner .views-field-field-location2{
 font-size:0.8em;
+color: #FFF;
+width: 375px;
 }
 
+.view-banner  .views-row {
+
+}
 
 .view-banner  .views-slideshow-controls-top .active  .views-field-title {
 background: #1B4FBD;
