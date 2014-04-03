@@ -341,12 +341,14 @@ border-bottom: 1px dotted #CCC;
 }
 
 #block-simplenews-61 {
-    text-align: center;
+margin-top: 10px;
+margin-bottom: 17px;
+   /* text-align: center;
 margin: 0 auto 10px auto;
 border-bottom: 1px solid #F60;
 border-right: 1px solid #F60;
 border-left: 1px solid #F60;
-width: 50%;
+width: 50%;*/
 }
 
 #block-simplenews-61 p {
@@ -373,12 +375,16 @@ display: inline;
 }
 
 #block-block-16 {
-text-align: center;
+float: left;
+margin-right: 12px;
+margin-top: 10px;
+margin-left: 15%;
+/*text-align: center;
 border-top: 1px solid #F60;
 border-left: 1px solid #F60;
 border-right: 1px solid #F60;
 margin: 10px auto -2px auto;
-width: 50%;
+width: 50%;*/
 }
 
 
