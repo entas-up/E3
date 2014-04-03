@@ -149,7 +149,7 @@ padding-left: 5px;
 }
 
 .region-highlighted {
-margin: 25px 20px 20px 20px;
+margin: 10px 20px 15px 20px;
 overflow: hidden;
 position: relative;
 /*border-bottom: 1px solid #9B9B9B;*/
@@ -877,4 +877,33 @@ border-bottom: 1px solid #F60;
 
 .field-type-file .sticky-table {
 width:100%;
+}
+
+
+/* Страница партнёров */
+
+.view-partner .views-field-field-company-logo {
+float: left;
+width: 100px;
+height: 100px;
+border: none!important;
+background: #FFF;
+padding-right: 10px;
+}
+
+.view-partner  .views-row {
+border: 1px solid #CCC;
+padding: 5px;
+box-shadow: 0 0 10px #CCC;
+margin: 11px 0;
+min-height: 105px;
+}
+
+.view-partner  .views-row .views-field {
+
+}
+
+.view-partner  .views-row .views-label {
+float: left;
+padding-right: 3px;
 }
