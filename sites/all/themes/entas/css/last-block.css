@@ -257,18 +257,18 @@ background: rgba(0, 0, 0, 0.5);
 margin-right: 26px;
 height:115px;
 }
-/*
-.view-banner .views-field-field-image-event, .view-banner .views-field-field-image, .view-banner .views-field-field-imagepage {
-float: right;
-position: relative;
-right: 0;
-}*/
-.view-banner img {
-float: left;
-position: relative;
-right: 0;
 
+.view-banner .views-field-field-image-event, .view-banner .views-field-field-image, .view-banner .views-field-field-imagepage {
+height: 110px;
+width: 110px;
+float: left;
+line-height: 113px;
+text-align: center;
 }
+.view-banner img {
+vertical-align: middle;
+}
+
 .view-banner .views-field-type {
 font-size:0.8em;
 }
