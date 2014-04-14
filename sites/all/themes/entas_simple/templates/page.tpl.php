@@ -128,7 +128,7 @@
     
 
       </div></div><!-- /.section, /#navigation -->
-    <?php endif; ?>
+   
 
     
 
