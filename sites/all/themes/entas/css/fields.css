@@ -122,30 +122,31 @@ text-decoration: none;
 
 
 /* Поля "Событий" НАЧАЛО */
-.node-event .field-name-field-location .field-label,.node-event .field-name-field-ticket-event .field-label, .node-event .field-name-field-time-event .field-label{
-float:none;
-}
+
 .node-event .field-label {
 float:left;
 }
 .node-event .field {
 margin-top: 5px;
-width: 643px;
-text-align: center;
+/*width: 643px;*/
+text-align: left;
 }
 
 .node-event .geolocation-map {
-
+margin: 0 auto;
 }
 
 .field-name-field-type-event { /* Тип события */
-float: left;
 padding: 10px;
 background: rgba(211, 229, 231, 0.5);
+text-align: center!important;
+}
+
+.field-name-field-type-event .field-label {
+float: none;
 }
 
 .field-name-field-date { /* Дата */
-float: left;
 padding: 10px;
 background: rgba(211, 229, 231, 0.5);
 }
@@ -162,11 +163,12 @@ margin-top: 15px;*/
 padding: 10px;*/
 }
 .field-name-field-link-event { /* Сссылка на сайт  */
-float: left;
 padding: 10px;
 background: rgba(211, 229, 231, 0.5);
+text-align: center!important;
 }
 
+.node-event .field-type-image {text-align: center!important;}
 .field-name-field-ticket-event { /* Билеты */
 background: rgba(230, 228, 243, 0.5);
 padding: 10px;
@@ -174,8 +176,15 @@ padding: 10px;
 }
 
 .field-name-field-location2 {
-margin-top: 20px;
+margin-top: 20px!important;
 }
+/*
+.node-event .field-name-field-location .field-label,
+.node-event .field-name-field-ticket-event .field-label,
+.node-event .field-name-field-time-event .field-label,
+.node-event .field-name-body .field-item[property="content:encoded"]{
+float:none;
+}*/
 
 
 /* Теги событий. Начало. */
