@@ -3,11 +3,11 @@
 .last-block  .views-field-body {
 font-size: 0.8em; /* Влияет на шрифт */
 height: 50px;
-border-right: 1px solid #919191;
+/*border-right: 1px solid #919191;
 border-left: 1px solid #919191;
-border-bottom: 1px solid #919191;
-width:292px;
-
+border-bottom: 1px solid #919191;*/
+/*width:292px;*/ /*временно*/
+width: 266px;
 }
 .last-block  .views-field-body  p{
 padding:2px;
@@ -55,21 +55,22 @@ border: 1px solid #636363;
 font-weight: normal;
 }
 
-.last-block .views-field-field-image , .last-block .views-field-field-imagepage{
+.last-block .views-field-field-image , .last-block .views-field-field-imagepage, .last-block .views-field-field-image-event {
 line-height: 205px;
-height: 232px;
-width: 290px;
+height: 200px;
+width: 266px;
 margin: 5px 1px 0px 0px;
 text-align: center;
 padding: 1px;
-border-right: 1px solid #919191;
+/*border-right: 1px solid #919191;
 border-left: 1px solid #919191;
-border-top: 1px solid #919191;
+border-top: 1px solid #919191;*/
 }
 
 
 .last-block  img {
 vertical-align: middle;
+
 }
 
 .last-block .view-footer {
@@ -111,13 +112,27 @@ position: relative;
 
 /* last-блоки. Общие параметры. КОНЕЦ */
 
-.blocks-last/*.region-highlighted .block:not(.first)*/ {
+.blocks-last {
 float: left;
-width: 298px; /*31%*/
+width: 280px;
 position: relative;
-margin: 5px 4px;
+margin: 5px 11px;
 font-size: 0.8em;
-height: 525px;
+height: 430px;
+border: 1px solid #919191;
+background: #FFF;
+box-shadow: 3px 3px 7px #CCC;
+}
+
+.blocks-last .content{
+width: 268px;
+margin: 0 auto;
+position: relative;
+}
+
+
+.blocks-last .views-content-title   {
+background: rgba(134, 134, 134, 0.5);
 }
 
 .blocks-last .active  .views-content-title{
@@ -126,15 +141,15 @@ color: #fff;
 }
 
 .blocks-last .views-content-title {
-padding: 0 2px;
-height: 32px;
+padding: 0 24px 0px 1px;
+height: 28px;
 vertical-align: middle;
-cursor: pointer;
+cursor: default;
 text-align: center;
-margin: 5px 0px;
-border: 1px solid #919191;
-box-shadow: 2px 2px 5px #A3A3A3;
-width: 289px;
+width: 243px;
+font-size: .85em;
+border-top: 2px solid #FFF;
+position: relative;
 }
 
 #block-views-last-files-block  .pager{
@@ -206,4 +221,97 @@ color:#fff;
 #block-views-last-files-block .view-footer  p{
 margin: 0;
 padding: 0;
+}
+
+.blocks-last  .block-title {
+font-size: 1.0em; /* Влияет на шрифт */
+color: #FFF;
+height: 18px;
+line-height: 17px;
+position: relative;
+z-index: 50;
+text-align: center;
+background: #414141;
+}
+
+
+.blocks-last .fa-circle {
+color:#fff;
+font-size:1.8em;
+}
+
+.blocks-last .views-content-title a {
+width:25px;
+height:25px;
+position: absolute;
+right: 4px;
+top: 0px;
+}
+
+#block-views-banner-block {
+width:310px;
+position: relative;
+background: rgba(0, 0, 0, 0.5);
+margin-right: 26px;
+height:115px;
+}
+
+.view-banner .views-field-field-image-event, .view-banner .views-field-field-image, .view-banner .views-field-field-imagepage {
+height: 110px;
+width: 110px;
+float: left;
+line-height: 113px;
+text-align: center;
+}
+.view-banner img {
+vertical-align: middle;
+}
+
+.view-banner .views-field-type {
+font-size:0.8em;
+}
+
+.view-banner .views-slideshow-controls-top  {
+float: right;
+line-height: 22px;
+margin-right: -26px;
+background: rgba(0, 0, 0, 0.5);
+height: 115px;
+}
+
+.view-banner .views-slideshow-controls-top .views-field-title{
+font-size: 0;
+padding: 8px;
+background: #FF833D;
+margin: 0 5px;
+display: inline-block;
+border-radius: 100%;
+box-shadow: 0 0 2px #555252;
+}
+
+.view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date, .view-banner .views-field-field-type-event, .view-banner .views-field-field-location2{
+font-size:0.8em;
+color: #FFF;
+width: 310px;
+text-shadow: 1px 1px 2px #0E0E0E;
+}
+
+.view-banner  .views-row {
+
+}
+
+.view-banner  .views-slideshow-controls-top .active  .views-field-title {
+background: #1B4FBD;
+}
+
+.view-banner .views-field-title {
+
+}
+
+.view-banner .views-field-view-node a {
+position: absolute;
+width: 310px;
+height: 115px;
+display: block;
+top: 0;
 }

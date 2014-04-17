@@ -245,17 +245,4 @@ function entas_menu_link($variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
-
-function entas_image_field_instance_settings_form_alter($field, $instance) {
- $form['description_field2'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable <em>Description2</em> field'),
-    '#default_value' => isset($settings['description_field2']) ? $settings['description_field2'] : '',
-    '#description' => t('The description field allows users to enter a description about the uploaded file.'),
-    '#parents' => array('instance', 'settings', 'description_field2'),
-    '#weight' => 11,
-  );
-  return $form; 
-}
-
 ?>

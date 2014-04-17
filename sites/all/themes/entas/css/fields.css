@@ -64,27 +64,7 @@ border: 1px solid #FF8F00;
 padding: 1px 4px;
 border-radius: 3px;
 }
-/*
-.field-name-field-catalog .field-item.even a {
-background: #D4E7D4;
 
-}
-
-.field-name-field-catalog .field-item.odd a {
-background: #D4D7E7;
-
-}
-
-.field-name-field-catalog  .field-item.even  a:hover {
-background: #BEE9BE;
-text-decoration: none;
-}
-
-.field-name-field-catalog .field-item.odd a:hover {
-background: #C5CCF1;
-text-decoration: none;
-
-}*/
 .field-name-field-catalog  .field-item a:hover{
 background: #FF7A00;
 color: #FFF;
@@ -142,48 +122,69 @@ text-decoration: none;
 
 
 /* Поля "Событий" НАЧАЛО */
+
+.node-event .field-label {
+float:left;
+}
+.node-event .field {
+margin-top: 5px;
+/*width: 643px;*/
+text-align: left;
+}
+
+.node-event .geolocation-map {
+margin: 0 auto;
+}
+
 .field-name-field-type-event { /* Тип события */
-float: left;
 padding: 10px;
+background: rgba(211, 229, 231, 0.5);
+text-align: center!important;
+}
+
+.field-name-field-type-event .field-label {
+float: none;
 }
 
 .field-name-field-date { /* Дата */
-background: rgba(211, 229, 231, 0.5);
 padding: 10px;
-border: 1px solid #757575;
-margin: 15px 0;
+background: rgba(211, 229, 231, 0.5);
 }
 
 .field-name-field-time-event{ /* Время/план события */
 background: rgba(211, 229, 231, 0.5);
 padding: 10px;
-border: 1px solid #757575;
-margin-top: 15px;
+/*border: 1px solid #757575;
+margin-top: 15px;*/
 }
 
 .field-name-field-location { /* Местоположение. Карта */
-border: 1px solid #757575;
-margin-top: 15px;
-padding: 15px;
+/*border: 1px solid #757575;
+padding: 10px;*/
 }
 .field-name-field-link-event { /* Сссылка на сайт  */
-border: 1px solid #757575;
-text-align: right;
-background: rgba(211, 229, 231, 0.5);
 padding: 10px;
+background: rgba(211, 229, 231, 0.5);
+text-align: center!important;
 }
 
+.node-event .field-type-image {text-align: center!important;}
 .field-name-field-ticket-event { /* Билеты */
 background: rgba(230, 228, 243, 0.5);
 padding: 10px;
-border: 1px solid #757575;
-margin-top: 15px;
-
+/*border: 1px solid #757575;*/
 }
 
 .field-name-field-location2 {
-margin-top: 20px;
+margin-top: 20px!important;
 }
+/*
+.node-event .field-name-field-location .field-label,
+.node-event .field-name-field-ticket-event .field-label,
+.node-event .field-name-field-time-event .field-label,
+.node-event .field-name-body .field-item[property="content:encoded"]{
+float:none;
+}*/
 
 
 /* Теги событий. Начало. */

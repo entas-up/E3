@@ -46,17 +46,11 @@ color: white;
  */
 #navigation {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-  /*padding-top: 5px;*/
+  
   background: #414141;
-  margin-top: -5px;
+  /*margin-top: -5px;*/
   font-size: 0.8em; /* Влияет на шрифт */
-/*
-padding-top: 5px;
-background: #FFF;
-margin-top: -5px;
-font-size: 0.9em;
-border-bottom: 1px solid #F60;
-*/
+
 }
 
 #navigation ul.links, /* Main menu and secondary menu links */
@@ -153,17 +147,17 @@ list-style-type:none;
 
 
 .menu-2667 a:before {
-isplay: inline-block;
+display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 line-height: 1;
 -webkit-font-smoothing: antialiased;
-content: "\f0ed""\00a0\00a0";
+content: "\f019""\00a0\00a0";
 }
 
 .menu-790 a:before {
-isplay: inline-block;
+display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
@@ -173,7 +167,7 @@ content: "\f059""\00a0\00a0";
 }
 
 .menu-3232 a:before {
-isplay: inline-block;
+display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
@@ -342,7 +336,20 @@ margin-right: 4px;
 color:red;
 
 }
+/* Subscribe  3649*/
+.menu-mlid-3649 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f0e0";
+color: #F60;
+margin-right: 4px;
+}
+.menu-mlid-3649 a.active:before {
+color:red;
 
+}
 
 #block-menu-block-4 a:hover {
 text-decoration: none;
