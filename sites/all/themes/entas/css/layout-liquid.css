@@ -83,7 +83,7 @@ position: relative;
 .sidebar-first #content .section {
  /* padding-left: 200px;*/ /* LTR */ /* The width + left margin of .region-sidebar-first. */
   padding-right: 0; /* LTR */
-  margin-top: 26px;
+  margin-top: 0px;
   
   
 }
