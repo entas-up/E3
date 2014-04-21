@@ -59,7 +59,7 @@ font-weight: normal;
 line-height: 205px;
 height: 200px;
 width: 266px;
-margin: 5px 1px 0px 0px;
+margin: 0 1px 0 0;
 text-align: center;
 padding: 1px;
 /*border-right: 1px solid #919191;
@@ -114,11 +114,11 @@ position: relative;
 
 .blocks-last {
 float: left;
-width: 280px;
+width: 276px;
 position: relative;
 margin: 5px 11px;
 font-size: 0.8em;
-height: 430px;
+height: 424px;
 border: 1px solid #919191;
 background: #FFF;
 box-shadow: 3px 3px 7px #CCC;
@@ -314,4 +314,17 @@ width: 310px;
 height: 115px;
 display: block;
 top: 0;
+}
+
+.last-block .views-field-field-date {
+    background: none repeat scroll 0 0 #0000FF;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding: 0 44px;
+    position: absolute;
+    right: 112px;
+    text-align: center;
+    top: 42px;
+    transform: rotate(-45deg);
+    width: 125px;
 }
