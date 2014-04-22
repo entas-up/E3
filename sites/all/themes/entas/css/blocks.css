@@ -107,6 +107,7 @@ position: absolute;
 right: 5px;
 top: 0px;
 }
+/*#block-search-form input[type="submit"] {font-family: FontAwesome;}*/
 
 #block-search-form a.contextual-links-trigger:hover, #block-search-form div.contextual-links-active a.contextual-links-trigger, #block-search-form a.contextual-links-trigger {
 
