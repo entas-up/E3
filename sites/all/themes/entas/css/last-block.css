@@ -3,56 +3,11 @@
 .last-block  .views-field-body {
 font-size: 0.8em; /* Влияет на шрифт */
 height: 50px;
-/*border-right: 1px solid #919191;
-border-left: 1px solid #919191;
-border-bottom: 1px solid #919191;*/
-/*width:292px;*/ /*временно*/
 width: 266px;
 }
 .last-block  .views-field-body  p{
 padding:2px;
 margin: 0;
-}
-/* Скрытие лишних полей навигации */
-
-.last-block  .pager-last  {display: none!important;}
-.last-block  .pager-next  {display: none!important;}
-.last-block  .pager-first  {display: none!important;}
-.last-block  .pager-previous  {display: none!important;}
-
-/* Текущая позиция в навигации */
-.last-block .pager-current {
-background: #027AC6;
-padding: 6px!important;
-border-radius: 100%;
-font-size: 0;
-border: 1px solid rgba(41, 0, 255, 0.39);
-}
-
-
-/* Пункты навигации */
-.last-block .pager li {
-margin:0;
-}
-
-.last-block .pager li a {
-background: #E9E9E9;
-padding: 6px;
-border-radius: 100%;
-font-size: 0;
-border: 1px solid #B3B3B3;
-}
-
-.last-block .pager li a:hover {
-background: #027AC6;
-border: 1px solid #636363;
-}
-
-.last-block .pager li.pager-current {
-background: #027AC6;
-border-radius: 100%;
-border: 1px solid #636363;
-font-weight: normal;
 }
 
 .last-block .views-field-field-image , .last-block .views-field-field-imagepage, .last-block .views-field-field-image-event {
@@ -67,37 +22,14 @@ border-left: 1px solid #919191;
 border-top: 1px solid #919191;*/
 }
 
-
 .last-block  img {
 vertical-align: middle;
-
 }
-/*
-.last-block .view-footer {
-z-index: 10;
-position: absolute;
-bottom: 16px;
-right: 10px;
-
-}*/
 
 .last-block .date , .last-block .text-location {
 font-size: 0.8em; /* Влияет на шрифт */
 color: #000;
 text-align: center;
-
-}
-.last-block .item-list { /* Пейджер last-блоков*/
-bottom: 0px;
-position: relative;
-margin: 0 0 0 100px;
-z-index: 10;
-}
-
-.last-block  .last-title{ /* Заголовок last-блоков*/
-text-align: center;
-z-index: 10;
-position: relative;
 }
 
 .last-block .views-row-1  a {
@@ -106,7 +38,7 @@ display: block;
 }
 
 .last-block  .view-content {
-z-index: 10;
+/*z-index: 10;*/
 position: relative;
 }
 
@@ -130,7 +62,6 @@ margin: 0 auto;
 position: relative;
 }
 
-
 .blocks-last .views-content-title   {
 background: rgba(134, 134, 134, 0.5);
 }
@@ -152,29 +83,6 @@ border-top: 2px solid #FFF;
 position: relative;
 }
 
-#block-views-last-files-block  .pager{
-display: none;
-}
-#block-views-last-files-block  .image_event{
-text-align: right;
-}
-#block-views-last-files-block  img{
-float: none;
-}
-
-
-#block-views-last-files-block {
-background: rgba(0, 0, 0, 0.5);
-margin: 0;
-padding: 3px;
-position: relative;
-z-index: 50;
-font-size: 0.8em;
-height: 100px;
-top: 3px;
-color: #FFF;
-}
-
 #block-views-last-files-block .view-empty {
 text-align: center;
 }
@@ -182,14 +90,6 @@ text-align: center;
 #block-views-last-files-block .content{
 width: 250px;
 height: 103px;
-}
-
-#block-views-last-files-block .views-field-title {
-position: absolute;
-top: 0;
-background:rgba(0, 0, 0, 0.52);
-color:#fff;
-z-index: 20;
 }
 
 #block-views-last-files-block .views-field-field-date {
@@ -205,23 +105,6 @@ bottom: 3px;
 background:rgba(0, 0, 0, 0.52);
 color:#fff;
  }
- /*
-#block-views-last-files-block .view-footer {
-position: absolute;
-bottom: 0px;
-right: 0;
-z-index: 20;
-background: rgba(0, 0, 0, 0.52);
-margin: 0;
-padding: 0;
-font-size: 0.9em;
-color:#fff;
-}
-
-#block-views-last-files-block .view-footer  p{
-margin: 0;
-padding: 0;
-}*/
 
 .blocks-last  .block-title {
 font-size: 1.0em; /* Влияет на шрифт */
@@ -229,7 +112,7 @@ color: #FFF;
 height: 18px;
 line-height: 17px;
 position: relative;
-z-index: 50;
+/*z-index: 50;*/
 text-align: center;
 background: #414141;
 }
