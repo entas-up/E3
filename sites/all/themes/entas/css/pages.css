@@ -76,18 +76,7 @@ border-right: 1px solid #666;*/
 
 #logo img {
   margin: 19px 30px 0px 19px;
-  z-index: 100;
 }
-#logo2 {
-float: left; /* LTR */
-position:relative;
- }
-
-#logo2 img {
-
-z-index:80;
-  /* margin: -10px 0 0 0px; */
-  }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
 color: #494949;
@@ -867,7 +856,6 @@ vertical-align: middle;
 position: absolute;
 bottom: 0;
 right: 0;
-}
 }
 
 
