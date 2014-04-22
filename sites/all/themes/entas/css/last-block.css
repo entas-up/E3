@@ -325,6 +325,10 @@ top: 0;
     right: 112px;
     text-align: center;
     top: 42px;
-    transform: rotate(-45deg);
-    width: 125px;
+    -moz-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    -webkit-transform: rotate(-45deg); 
+    -o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	width: 125px;
 }
