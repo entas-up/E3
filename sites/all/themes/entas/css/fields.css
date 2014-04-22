@@ -119,7 +119,9 @@ text-decoration: none;
 
 .field-name-field-FIELDNAME /* Underscores in field name are replaced with dashes. */ {
 }
-
+.field-label-inline .field-label, .field-label-inline .field-items {
+float: none;
+}
 
 /* Поля "Событий" НАЧАЛО */
 
