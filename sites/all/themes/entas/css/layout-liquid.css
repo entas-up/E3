@@ -83,7 +83,7 @@ position: relative;
 .sidebar-first #content .section {
  /* padding-left: 200px;*/ /* LTR */ /* The width + left margin of .region-sidebar-first. */
   padding-right: 0; /* LTR */
-  margin-top: 26px;
+  margin-top: 0px;
   
   
 }
@@ -117,9 +117,11 @@ background: #ed8d0b;
 .with-navigation #content,
 .with-navigation .region-sidebar-first,
 .with-navigation .region-sidebar-second {
+  /* Set this to the same value as the navigation height above. */
+}
+.with-navigation #content {
   margin-top: 30px; /* Set this to the same value as the navigation height above. */
 }
-
 #navigation .section {
 	
 
@@ -155,7 +157,6 @@ border:none;
   margin-left: 0; /* LTR */
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
-  margin-top: 18px;
   line-height: 1.5em;
   background: #4b4b4b;
 }

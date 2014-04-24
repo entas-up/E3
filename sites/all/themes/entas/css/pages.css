@@ -76,18 +76,7 @@ border-right: 1px solid #666;*/
 
 #logo img {
   margin: 19px 30px 0px 19px;
-  z-index: 100;
 }
-#logo2 {
-float: left; /* LTR */
-position:relative;
- }
-
-#logo2 img {
-
-z-index:80;
-  /* margin: -10px 0 0 0px; */
-  }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
 color: #494949;
@@ -149,7 +138,7 @@ padding-left: 5px;
 }
 
 .region-highlighted {
-margin: 10px 20px 15px 20px;
+margin: 2px 20px 15px 20px;
 overflow: hidden;
 position: relative;
 /*border-bottom: 1px solid #9B9B9B;*/
@@ -830,22 +819,45 @@ display: inline-block;
 .node-webform  input {
 border:1px solid #979797;
 }
-/*.block-simplenews a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f0e0";
-color: #F60;
-margin-right: 4px;
-position: relative;
-}*/
+/*Архив новостей*/
 
-/*Временное уменьшение изображений для главной*/
-.region-content .views-field-field-image img, .region-content .views-field-field-image-event img {
-width: 200px;
-height: 80px;
+.view-archive .views-row {
+/*border-bottom: 1px solid #575757;*/
+height: 220px;
+margin: 25px 0 20px 0;
+position: relative;
 }
+
+.view-archive  .views-field-created {
+color: #7C7C7C;
+font-size: 0.8em;
+}
+
+.view-archive .views-field-title {
+
+}
+
+.view-archive .views-field-body {
+font-size: 0.8em;
+}
+
+.view-archive .views-field-field-image {
+float: left;
+width: 220px;
+height: 220px;
+line-height: 220px;
+box-shadow: 0 0 2px;
+margin-right: 8px;
+}
+.view-archive .views-field-field-image img{
+vertical-align: middle;
+}
+.view-archive .views-more-link {
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
 
 /* Main page */
 #node-304 a {

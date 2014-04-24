@@ -82,15 +82,17 @@ margin-right: 15px;
 }
 
 #block-search-form  .form-submit /* The submit button */ {
-font-size: 0;
 background: none;
 border: none;
-padding: 15px 25px 2px 0px;
-z-index: 10;
 cursor: pointer;
 position: relative;
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: bold;
+font-size: 1.2em;
 }
-
+/*
 #block-search-form .form-actions:after {
 display: inline-block;
 font-family: FontAwesome;
@@ -101,12 +103,13 @@ content: "\f002";
 font-size: 1.2em;
 margin-left: -22px;
 z-index: 0;
-}
+}*/
 #block-search-form  .form-actions {
 position: absolute;
 right: 5px;
 top: 0px;
 }
+/*#block-search-form input[type="submit"] {font-family: FontAwesome;}*/
 
 #block-search-form a.contextual-links-trigger:hover, #block-search-form div.contextual-links-active a.contextual-links-trigger, #block-search-form a.contextual-links-trigger {
 
