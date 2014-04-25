@@ -62,10 +62,10 @@ stylesheets[all][]        = css/last-block.css
 
 ; To target all versions of IE with an ie.css, uncomment the following line:
 ;stylesheets-conditional[IE][all][]       = css/ie.css
-;stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
-;stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
-stylesheets-conditional[lte IE 8][all][]  = css/frontpage_ie.css
-
+stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
+stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
+;stylesheets-conditional[lte IE 8][all][]  = css/frontpage_ie.css
+stylesheets-conditional[lte IE 9][all][]  = css/ie_entas.css
 
 ; Optionally add some JavaScripts to your theme.
 
