@@ -1,0 +1,8 @@
+/* Специальный набор костылей для Internet Explorer
+в дополнение к родным средствам темы Zen. 
+ */
+.menu-path-front a:after {
+display:none;
+}
+
+/* Конец набора костылей для Internet Explorer */
