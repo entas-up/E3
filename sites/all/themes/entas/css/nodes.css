@@ -98,3 +98,12 @@ border: 1px solid #C0C0C0;
 padding: 1px 6px;*/
 display:none;
 }
+
+.node-event  .content {
+/*position: relative;*/
+}
+
+.node-event {
+/*min-height: 287px;*/
+/*background: #F00;*/
+}

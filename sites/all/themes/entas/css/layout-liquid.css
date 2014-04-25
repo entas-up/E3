@@ -121,6 +121,8 @@ background: #ed8d0b;
 }
 .with-navigation #content {
   margin-top: 30px; /* Set this to the same value as the navigation height above. */
+  overflow: visible!important; /* принудительный параметр из-за Equal Heights */
+  padding-bottom: 10px;
 }
 #navigation .section {
 	
@@ -158,7 +160,7 @@ border:none;
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
   line-height: 1.5em;
-  background: #4b4b4b;
+  background: #717171; /*#4b4b4b*/
 }
 
 .region-sidebar-first .section {

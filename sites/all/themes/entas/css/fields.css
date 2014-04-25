@@ -131,7 +131,8 @@ float:left;
 .node-event .field {
 margin-top: 5px;
 /*width: 643px;*/
-text-align: left;
+/*float: left;*/
+display: block;
 }
 
 .node-event .geolocation-map {
@@ -141,21 +142,19 @@ margin: 0 auto;
 .field-name-field-type-event { /* Тип события */
 padding: 10px;
 background: rgba(211, 229, 231, 0.5);
-text-align: center!important;
-}
-
-.field-name-field-type-event .field-label {
-float: none;
+width: 59%;
 }
 
 .field-name-field-date { /* Дата */
 padding: 10px;
 background: rgba(211, 229, 231, 0.5);
+width: 59%;
 }
 
 .field-name-field-time-event{ /* Время/план события */
 background: rgba(211, 229, 231, 0.5);
 padding: 10px;
+width: 59%;
 /*border: 1px solid #757575;
 margin-top: 15px;*/
 }
@@ -163,32 +162,42 @@ margin-top: 15px;*/
 .field-name-field-location { /* Местоположение. Карта */
 /*border: 1px solid #757575;
 padding: 10px;*/
+height: 460px;
 }
 .field-name-field-link-event { /* Сссылка на сайт  */
 padding: 10px;
 background: rgba(211, 229, 231, 0.5);
-text-align: center!important;
+width: 59%;
 }
 
-.node-event .field-type-image {text-align: center!important;}
+.node-event .field-type-image {
+position: absolute;
+right: 0;
+top: 29px;
+z-index: 0;
+/* для подстройки "изображение-описание" */
+/*width: 250px;
+height: 250px;
+border: 1px solid #CCC;*/
+float: right;
+}
 .field-name-field-ticket-event { /* Билеты */
 background: rgba(230, 228, 243, 0.5);
 padding: 10px;
-/*border: 1px solid #757575;*/
+width:666px;
 }
 
 .field-name-field-location2 {
 margin-top: 20px!important;
 }
-/*
-.node-event .field-name-field-location .field-label,
-.node-event .field-name-field-ticket-event .field-label,
-.node-event .field-name-field-time-event .field-label,
-.node-event .field-name-body .field-item[property="content:encoded"]{
-float:none;
-}*/
+.node-event .field-name-body {
+z-index: 10;
+background: #FFF;
+}
 
-
+.node-event .field-type-file {
+/*display: block;*/
+}
 /* Теги событий. Начало. */
 
 .field-name-field-location2  .field-item {

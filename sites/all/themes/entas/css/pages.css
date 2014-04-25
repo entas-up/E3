@@ -14,7 +14,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('/sites/all/themes/entas/images/linen5.png');
+  /*background-image: url('/sites/all/themes/entas/images/linen5.png');*/
   background-attachment: fixed;
 }
 
@@ -36,9 +36,9 @@ color:red;
 }
 
 #page {
-/*box-shadow: 0 0 5px;*/
+/*box-shadow: 0 0 5px;
 border: 1px solid #7E7E7E;
-margin-bottom: 20px;
+margin-bottom: 20px;*/
 }
 
 /*
@@ -311,7 +311,7 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 .region-content /* Wrapper for the actual page content */ {
-margin: 0px 20px;
+margin: 0px 0 0 20px;
 position: relative;
 }
 
@@ -386,7 +386,7 @@ text-align: center;
  * (see the layout.css file.)
  */
 .region-sidebar-first {
-padding: 0 0 6px 0;
+padding: 0 0 40px 0;
 }
 
 .region-sidebar-first .section {
@@ -418,12 +418,13 @@ padding-bottom: 20px;
  */
 .region-footer {
 float: left;
-background: rgba(223, 229, 233, 0.38);
+/*background: rgba(223, 229, 233, 0.38);*/
 width: 958px;
 padding: 0px 0 5px 0;
 font-size: 0.9em; /* Влияет на шрифт */
 position: relative;
 border-bottom: 1px solid rgba(87, 87, 87, 0.52);
+border-top: 1px solid rgba(87, 87, 87, 0.52);
 }
 .region-footer a{
 font-weight: normal;
@@ -440,7 +441,7 @@ color:#FF6600;
  */
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
 	width: 958px;
-background: rgba(223, 229, 233, 0.38);
+/*background: rgba(223, 229, 233, 0.38);*/
 overflow: hidden;
 	
 }
@@ -540,7 +541,7 @@ padding: 10px;
 height:125px;
 border-radius: 5px;
 border: 1px solid #C0C0C0;
-box-shadow: 3px 3px 6px #ccc;
+box-shadow: -3px 3px 6px #CCC;
 position: relative;
 }
 
@@ -673,7 +674,7 @@ border-bottom: 1px dotted #CCC;
 border: 1px solid #CCC;
 padding: 5px;
 margin-top: 10px;
-box-shadow: 0 0 5px #CCC;
+box-shadow: -3px 3px 6px #CCC;
 height: 141px;
 }
 
