@@ -100,7 +100,7 @@ display:none;
 }
 
 .node-event  .content {
-/*position: relative;*/
+position: relative;
 }
 
 .node-event {
