@@ -120,7 +120,7 @@ background: #414141;
 
 .blocks-last .fa-circle {
 color:#fff;
-font-size:1.8em;
+font-size:1.7em;
 }
 
 .blocks-last .views-content-title a {
@@ -134,8 +134,8 @@ top: 0px;
 #block-views-banner-block {
 width:310px;
 position: relative;
-background: rgba(0, 0, 0, 0.5);
-margin-right: 26px;
+/*background: rgba(0, 0, 0, 0.5);*/
+margin-right: 30px;
 height:115px;
 }
 
@@ -143,8 +143,9 @@ height:115px;
 height: 110px;
 width: 110px;
 float: left;
-line-height: 113px;
+/*line-height: 113px;*/
 text-align: center;
+margin-top: 4px;
 }
 .view-banner img {
 vertical-align: middle;
@@ -157,8 +158,8 @@ font-size:0.8em;
 .view-banner .views-slideshow-controls-top  {
 float: right;
 line-height: 22px;
-margin-right: -26px;
-background: rgba(0, 0, 0, 0.5);
+margin-right: -30px;
+/*background: rgba(0, 0, 0, 0.5);*/
 height: 115px;
 }
 
@@ -169,7 +170,8 @@ background: #FF833D;
 margin: 0 5px;
 display: inline-block;
 border-radius: 100%;
-box-shadow: 0 0 2px #555252;
+/*box-shadow: 0 0 2px #555252;*/
+border:1px solid #FFFFFF;
 }
 
 .view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date, .view-banner .views-field-field-type-event, .view-banner .views-field-field-location2{
@@ -184,7 +186,7 @@ text-shadow: 1px 1px 2px #0E0E0E;
 }
 
 .view-banner  .views-slideshow-controls-top .active  .views-field-title {
-background: #1B4FBD;
+background: #E6E6FA;
 }
 
 .view-banner .views-field-title {

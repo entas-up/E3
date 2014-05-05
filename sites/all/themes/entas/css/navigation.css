@@ -22,7 +22,7 @@ background: #027AC6;
 }
 
 .region-sidebar-first a{
-	color:#bbb;
+	color:#fff;
 	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
 	font-weight: normal;	
 	display: block;
