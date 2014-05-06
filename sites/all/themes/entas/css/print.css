@@ -52,7 +52,15 @@ body,
 #content .section,
 #header .section,
 .region-footer,
-.blocks-last .views-content-title{
+.blocks-last .views-content-title,
+.view-files .view-content,
+.view-files h3 a,
+.field-name-field-date,
+.field-name-field-link-event,
+.field-name-field-type-event,
+#block-views-similarterms-block .views-row .views-field-title,
+.field-name-field-time-event,
+.field-name-field-ticket-event{
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
