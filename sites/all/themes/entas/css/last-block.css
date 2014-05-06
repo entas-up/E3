@@ -120,7 +120,8 @@ background: #414141;
 
 .blocks-last .fa-circle {
 color:#fff;
-font-size:1.7em;
+font-size: 1.55em;
+margin-top: 3px;
 }
 
 .blocks-last .views-content-title a {
