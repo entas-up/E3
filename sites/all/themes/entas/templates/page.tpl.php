@@ -100,14 +100,7 @@
     <?php if ($logo): ?>
         
 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-<?php if ($page['news1000']): ?>
-      <div id="news1000" class="news1000_class">
-        <?php print render($page['news1000']); ?>
-      </div> 
-<?php endif; ?>
-<?php endif; ?>
-
-    <?php if ($site_name || $site_slogan): ?>
+<?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan">
         <?php if ($site_name): ?>
           <?php if ($title): ?>
@@ -126,6 +119,14 @@
         <?php endif; ?>
       </div><!-- /#name-and-slogan -->
     <?php endif; ?>
+<?php if ($page['news1000']): ?>
+      <div id="news1000" class="news1000_class">
+        <?php print render($page['news1000']); ?>
+      </div> 
+<?php endif; ?>
+<?php endif; ?>
+
+    
 
     <?php print theme('links__system_secondary_menu', array(
       'links' => $secondary_menu,
