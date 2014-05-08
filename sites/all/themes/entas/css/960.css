@@ -17,11 +17,28 @@ width: 95%;
 float: none;
 margin: 5px auto 15px auto;
 }
-#page-wrapper, .region-bottom {
+#page-wrapper, .region-bottom, #block-views-similarterms-block {
 min-width:300px;
 width: 95%;
 margin: 0 auto;
 }
+
+#block-views-similarterms-block .views-row {
+margin: 0 auto;
+display: block;
+}
+.field-name-field-location {
+width:90%
+overflow: hidden;
+}
+.event .views-row {
+height: inherit;
+}
+.view-archive .views-row {
+height: inherit;
+display: inline-block;
+}
+
 #navigation {
 background: #414141;
 font-size: 0.8em;
