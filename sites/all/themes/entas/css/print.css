@@ -51,7 +51,16 @@ body,
 #content,
 #content .section,
 #header .section,
-.region-footer{
+.region-footer,
+.blocks-last .views-content-title,
+.view-files .view-content,
+.view-files h3 a,
+.field-name-field-date,
+.field-name-field-link-event,
+.field-name-field-type-event,
+#block-views-similarterms-block .views-row .views-field-title,
+.field-name-field-time-event,
+.field-name-field-ticket-event{
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
@@ -90,12 +99,27 @@ div.tabs,
 .book-navigation,
 .forum-topic-navigation,
 .pager,
-.feed-icons
+.feed-icons,
+#block-block-16,
+.blocks-last .views-content-title a,
+#block-block-7 .content:hover:after,
+.view-banner .views-slideshow-controls-top
  {
   visibility: hidden;
   display: none!important;
 }
 
+.blocks-last .views-content-title {
+border-top: 1px solid #919191;
+}
+.blocks-last .active  .views-content-title {
+color: #000;
+}
+.view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date, .view-banner .views-field-field-type-event, .view-banner .views-field-field-location2{
+font-size:0.8em;
+color: #000;
+text-shadow: none;
+}
 /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
    the content after the first page. */
 #page-wrapper {

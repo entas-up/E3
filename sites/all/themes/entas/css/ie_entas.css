@@ -5,4 +5,42 @@
 display:none;
 }
 
+#header .section {
+background-color: #F98747;
+}
+#page {
+ border: 1px solid #F98747; 
+ }
+ #block-menu-block-4 {
+ margin-left:20px;
+ }
+ #block-menu-block-4 ul, #block-menu-block-4 .menu {
+display: inline;
+}
+
+ #block-menu-block-4 a {
+float: left;
+margin-right: 15px;
+}
+#block-block-15, .menu-path-front a:after {
+display: none;
+}
+
+.menu-path-front a, li.menu-path-front {
+font-size:100%;
+padding: 0.3em 5px 0.3em 5px!important;
+}
+
+
+.blocks-last .views-content-title {
+border-top: 2px solid #F98747;
+}
+
+#backtotop:after {
+font-size:80px;
+}
+#backtotop:hover:after {
+
+font-size: 80px;
+}
 /* Конец набора костылей для Internet Explorer */
