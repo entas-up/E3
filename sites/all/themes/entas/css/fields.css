@@ -248,3 +248,14 @@ display:none;
 .field-name-field-page-prior {
 
 }
+
+.field-name-field-review {
+background-image: url('/misc/message-24-error.png');
+border-color: #ED541D;
+background-color: #FEF5F1;
+margin: 0px;
+background-position: 8px 8px;
+background-repeat: no-repeat;
+border: 1px solid;
+padding: 10px 10px 10px 50px;
+}
