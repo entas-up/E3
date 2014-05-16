@@ -15,32 +15,32 @@ margin: 0 auto;
 .blocks-last {
 float: none;
 margin: 5px 0 15px 0;
-width:100%;
-height:inherit;
+width:auto;
+height:auto;
 padding:0;
 box-shadow:none;
 border:none;
 }
-.blocks-last .views_slideshow_slide {
-width:100%;
-}
+/*.blocks-last .views_slideshow_slide {
+width:auto;
+}*/
 
 .blocks-last .content {
-width: 100%;
+width: auto;
 margin:0px auto;
 }
-.blocks-last .views-row {
-width: 100%;
+/*.blocks-last .views-row {
+width: auto;
 margin:0px auto;
-}
+}*/
 .last-block .views-field-field-image, .last-block .views-field-field-imagepage, .last-block .views-field-field-image-event {
-width:100%;
-height:inherit;
+width:auto;
+height:auto;
 line-height: normal;
 }
 .last-block .views-field-body {
-width:100%;
-height:inherit;
+width:auto;
+height:auto;
 }
 .last-block .views-field-field-date {
 right: none;
