@@ -203,18 +203,18 @@ top: 0;
 }
 
 .last-block .views-field-field-date {
-    background: none repeat scroll 0 0 #0000FF;
-    color: #FFFFFF;
+    background: #FA762B;
+    color: #fff;
     font-size: 1.2em;
     padding: 0 44px;
     position: absolute;
-    right: 112px;
+    right: 105px;
     text-align: center;
-    top: 42px;
-    -moz-transform: rotate(-45deg); 
-    -ms-transform: rotate(-45deg); 
-    -webkit-transform: rotate(-45deg); 
-    -o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+    top: 20px;
+    -moz-transform: rotate(-30deg); 
+    -ms-transform: rotate(-30deg); 
+    -webkit-transform: rotate(-30deg); 
+    -o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
 	width: 125px;
 }
