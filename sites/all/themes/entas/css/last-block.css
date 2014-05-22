@@ -211,3 +211,15 @@ position: absolute;
 text-align: center;
 top: 3px;
 }
+.field-name-field-expired {
+background-color: #F8FFF0;
+color: #234600;
+background-image: url("/misc/message-24-ok.png");
+border-color: #BBEE77;
+background-position: 8px 8px;
+background-repeat: no-repeat;
+margin: 6px 0;
+padding: 10px 10px 10px 50px;
+border-width: 1px;
+border-style: solid;
+}
