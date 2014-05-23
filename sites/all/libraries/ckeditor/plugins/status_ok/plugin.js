@@ -1,4 +1,4 @@
-CKEDITOR.plugins.add( 'status ok', {
+CKEDITOR.plugins.add( 'status_ok', {
     icons: 'ok',
     init: function( editor ) {
         editor.addCommand( 'status ok', {

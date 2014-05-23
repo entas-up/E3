@@ -1,4 +1,4 @@
-CKEDITOR.plugins.add( 'status alert', {
+CKEDITOR.plugins.add( 'status_alert', {
     icons: 'alert',
     init: function( editor ) {
         editor.addCommand( 'status alert', {

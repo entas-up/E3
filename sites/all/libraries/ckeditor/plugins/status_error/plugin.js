@@ -1,4 +1,4 @@
-CKEDITOR.plugins.add( 'status error', {
+CKEDITOR.plugins.add( 'status_error', {
     icons: 'error',
     init: function( editor ) {
         editor.addCommand( 'status error', {
