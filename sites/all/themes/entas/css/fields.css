@@ -256,6 +256,7 @@ background-color: #FEF5F1;
 margin: 0px;
 background-position: 8px 8px;
 background-repeat: no-repeat;
-border: 1px solid red;
+border: 1px solid;
 padding: 10px 10px 10px 50px;
+border-color: #ED541D;
 }
