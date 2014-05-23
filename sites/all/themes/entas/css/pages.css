@@ -950,3 +950,19 @@ right: 0;
 }
 
 #node-23 {height:500px;}
+
+.view-prior-pages .views-row {
+border-bottom:1px solid #000;
+margin-bottom:15px;
+}
+
+.view-prior-pages .views-row  .views-field-title,.view-prior-pages .views-row  .views-label-field-page-prior {
+float:left;
+padding-right: 12px;
+}
+.view-prior-pages .views-row .views-field-edit-node{
+padding: 0 9px;
+background: rgba(182, 249, 120, 1);
+display: initial;
+border-radius: 5px;
+}
