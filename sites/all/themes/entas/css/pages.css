@@ -966,3 +966,11 @@ background: rgba(182, 249, 120, 1);
 display: initial;
 border-radius: 5px;
 }
+.node-article .field-name-field-image {
+float: left;
+padding: 6px;
+}
+
+.node-article .field-name-field-link {
+display: inline-block;
+}
