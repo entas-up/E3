@@ -63,3 +63,7 @@ Disallow: /?q=node/220
 Disallow: /?q=copy
 Disallow: /node/220/
 Disallow: /copy/
+# pager
+Disallow: /*?page=*
+# old doc
+/base/*
