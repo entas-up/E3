@@ -66,4 +66,4 @@ Disallow: /copy/
 # pager
 Disallow: /*?page=*
 # old doc
-/base/*
+Disallow: /base/*
