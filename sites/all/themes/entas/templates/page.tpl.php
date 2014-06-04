@@ -119,10 +119,10 @@
         <?php endif; ?>
       </div><!-- /#name-and-slogan -->
     <?php endif; ?>
-<?php if ($page['news1000']): ?>
+<?php if ($page['news1000']): ?><noindex>
       <div id="news1000" class="news1000_class">
         <?php print render($page['news1000']); ?>
-      </div> 
+      </div> </noindex>
 <?php endif; ?>
 <?php endif; ?>
 
@@ -148,7 +148,7 @@
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
     <div id="content" class="column"><div class="section">
-      <?php print render($page['highlighted']); ?>
+      <noindex><?php print render($page['highlighted']); ?></noindex>
       <?php print $breadcrumb; ?>
       <?php print render($title_prefix); ?>
       <?php print render($title_suffix); ?>
