@@ -393,11 +393,11 @@ text-align: center;
  * (see the layout.css file.)
  */
 .region-sidebar-first {
-padding: 0 0 40px 0;
+/*padding: 0 0 40px 0;*/
 }
 
 .region-sidebar-first .section {
-margin-bottom: 1.5em;
+/*margin-bottom: 1.5em;*/
 height: 100%;
 font-size: 0.8em; /* Влияет на шрифт */
 line-height: 1em;
@@ -423,10 +423,6 @@ padding-bottom: 20px;
 /*
  * Footer
  */
- .wrap-footer {
- background-color: #F7F7F7;
-border-top: 1px solid rgba(87, 87, 87, 0.52); 
- }
 .region-footer {
 width: 960px;
 padding: 0px 0 5px 0;
@@ -450,7 +446,7 @@ color:#FF6600;
  * Page bottom
  */
  .wrap-bottom {
- background-color: #F7F7F7;
+  background: linear-gradient(to top, #FFF, #FAE4C4);
  }
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
 overflow: hidden;

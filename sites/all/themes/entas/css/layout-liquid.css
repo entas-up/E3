@@ -150,11 +150,11 @@ border:none;
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
   line-height: 1.5em;
-  background: #717171; /*#4b4b4b*/
+  /*background: #717171; */
 }
 
 .region-sidebar-first .section {
-  padding: 7px 0px;
+  /*padding: 7px 0px;*/
   
 }
 
