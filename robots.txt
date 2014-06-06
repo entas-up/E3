@@ -67,3 +67,5 @@ Disallow: /copy/
 Disallow: /*?page=*
 # old doc
 Disallow: /base/*
+# partners bode
+Disallow: /company/*
