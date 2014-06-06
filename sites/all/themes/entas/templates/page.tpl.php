@@ -193,8 +193,8 @@
 
   </div></div><!-- /#main, /#main-wrapper -->
 
-  <div class="wrap-footer"><?php print render($page['footer']); ?></div>
-  <div class="wrap-bottom"><?php print render($page['bottom']); ?></div>
+  <div class="wrap-bottom"><?php print render($page['footer']); ?>
+  <?php print render($page['bottom']); ?></div>
 </div></div><!-- /#page, /#page-wrapper -->
 
 
