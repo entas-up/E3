@@ -533,7 +533,7 @@ padding: 2px 2px 2px 10px;
 
 .ent-taxonometry { }
 
-.ent-taxonometry .views-row {
+.ent-taxonometry > .view-content > .views-row {
 margin:10px 0;
 padding: 10px;
 height:125px;
@@ -541,6 +541,24 @@ border-radius: 5px;
 border: 1px solid #C0C0C0;
 box-shadow: -3px 3px 6px #CCC;
 position: relative;
+}
+
+.ent-taxonometry  .view-header .view-display-id-term_review{
+background-image: url('/misc/message-24-error.png');
+border-color: #ED541D;
+background-color: #FEF5F1;
+margin: 5px 0px;
+background-position: 8px 8px;
+background-repeat: no-repeat;
+border: 1px solid;
+padding: 10px 10px 10px 50px;
+border-color: #ED541D;
+}
+.ent-taxonometry .view-display-id-term_storage, .ent-taxonometry .view-display-id-term_desc {
+background-color: aliceblue;
+margin: 5px 0;
+    padding: 10px;
+	border: 1px solid #9ACDFF;
 }
 
 .ent-taxonometry .view-id-sklad .views-row {
@@ -949,4 +967,28 @@ top: 0;
 right: 0;
 }
 
-.node-23 {height:500px;}
+#node-23 {height:1300px!important;}
+
+.view-prior-pages .views-row {
+border-bottom:1px solid #000;
+margin-bottom:15px;
+}
+
+.view-prior-pages .views-row  .views-field-title,.view-prior-pages .views-row  .views-label-field-page-prior {
+float:left;
+padding-right: 12px;
+}
+.view-prior-pages .views-row .views-field-edit-node{
+padding: 0 9px;
+background: rgba(182, 249, 120, 1);
+display: initial;
+border-radius: 5px;
+}
+.node-article .field-name-field-image {
+float: left;
+padding: 6px;
+}
+
+.node-article .field-name-field-link {
+display: inline-block;
+}

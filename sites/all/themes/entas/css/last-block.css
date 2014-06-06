@@ -203,18 +203,23 @@ top: 0;
 }
 
 .last-block .views-field-field-date {
-    background: none repeat scroll 0 0 #0000FF;
-    color: #FFFFFF;
-    font-size: 1.2em;
-    padding: 0 44px;
-    position: absolute;
-    right: 112px;
-    text-align: center;
-    top: 42px;
-    -moz-transform: rotate(-45deg); 
-    -ms-transform: rotate(-45deg); 
-    -webkit-transform: rotate(-45deg); 
-    -o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	width: 125px;
+    background: #FA762B;
+color: #FFF;
+font-size: 1.2em;
+padding: 0 44px;
+position: absolute;
+text-align: center;
+top: 3px;
+}
+.field-name-field-expired {
+background-color: #F8FFF0;
+color: #234600;
+background-image: url("/misc/message-24-ok.png");
+border-color: #BBEE77;
+background-position: 8px 8px;
+background-repeat: no-repeat;
+margin: 6px 0;
+padding: 10px 10px 10px 50px;
+border-width: 1px;
+border-style: solid;
 }

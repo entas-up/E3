@@ -79,14 +79,14 @@
 	
 <!--Иконки для iOS -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/entas/images/apple-touch-icon/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
 
 <!-- RSS потоки -->
 <link rel="alternate" type="application/rss+xml" title="Мероприятия ЭНТАС" href="/entas_event.xml" />
@@ -95,7 +95,7 @@
 
 
 <div id="page-wrapper"><div id="page">
-<?php print $messages; ?>
+
   <div id="header"><div class="section clearfix">
     <?php if ($logo): ?>
         
@@ -119,10 +119,10 @@
         <?php endif; ?>
       </div><!-- /#name-and-slogan -->
     <?php endif; ?>
-<?php if ($page['news1000']): ?>
+<?php if ($page['news1000']): ?><noindex>
       <div id="news1000" class="news1000_class">
         <?php print render($page['news1000']); ?>
-      </div> 
+      </div> </noindex>
 <?php endif; ?>
 <?php endif; ?>
 
@@ -148,11 +148,11 @@
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
     <div id="content" class="column"><div class="section">
-      <?php print render($page['highlighted']); ?>
+      <noindex><?php print render($page['highlighted']); ?></noindex>
       <?php print $breadcrumb; ?>
       <?php print render($title_prefix); ?>
       <?php print render($title_suffix); ?>
-      
+      <?php print $messages; ?>
       <?php print render($page['help']); ?>
 	  <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>

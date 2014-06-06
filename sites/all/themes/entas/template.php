@@ -245,4 +245,18 @@ function entas_menu_link($variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
+function drupal_urlencode($text) {
+  if (variable_get('clean_url', '0')) {
+    return str_replace(array('%2F', '%26', '%2523'),
+                       array('/', '&', '#'),
+                       urlencode($text));
+  }
+  else {
+    return str_replace('%2F', '/', urlencode($text));
+  }
+}
+
+
 ?>
