@@ -15,7 +15,10 @@ body {
   margin: 0;
   padding: 0;
   /*background-image: url('/sites/all/themes/entas/images/linen5.png');*/
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
+  /*background-image: linear-gradient(to bottom, #F70 115px, #292929 175px, #FFF 0%,#FFF 90%, #F70 95%);
+  background-repeat:no-repeat;*/
+
 }
 
 a:link,
@@ -59,11 +62,15 @@ margin-bottom: 20px;*/
  * Header
  */
 #header {
+background-color: #FA762B;
 }
 
 #header .section {
 /*border-left: 1px solid #666;
 border-right: 1px solid #666;*/
+width: 960px;
+margin: 0 auto;
+position: relative;
 }
 
 #logo /* Wrapping link for logo */ {
@@ -120,13 +127,15 @@ background: white;
 }
 
 #main {
+margin: 0 auto;
+width: 960px;
 }
 
 /*
  * Content
  */
 #content {
-/*margin-bottom: 1.5em;*/
+
 }
 
 #content .section {
@@ -136,7 +145,7 @@ padding-left: 5px;
 }
 
 .region-highlighted {
-margin: 2px 20px 15px 20px;
+margin: 2px 0px 15px 0px;
 overflow: hidden;
 position: relative;
 /*border-bottom: 1px solid #9B9B9B;*/
@@ -309,7 +318,7 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 .region-content /* Wrapper for the actual page content */ {
-margin: 0px 0 0 20px;
+/*margin: 0px 0 0 20px;*/
 position: relative;
 }
 
@@ -414,15 +423,18 @@ padding-bottom: 20px;
 /*
  * Footer
  */
+ .wrap-footer {
+ background-color: #F7F7F7;
+border-top: 1px solid rgba(87, 87, 87, 0.52); 
+ }
 .region-footer {
-float: left;
-/*background: rgba(223, 229, 233, 0.38);*/
-width: 958px;
+width: 960px;
 padding: 0px 0 5px 0;
 font-size: 0.9em; /* Влияет на шрифт */
 position: relative;
-border-bottom: 1px solid rgba(87, 87, 87, 0.52);
-border-top: 1px solid rgba(87, 87, 87, 0.52);
+/*border-bottom: 1px solid rgba(87, 87, 87, 0.52);
+border-top: 1px solid rgba(87, 87, 87, 0.52);*/
+margin:0 auto;
 }
 .region-footer a{
 font-weight: normal;
@@ -437,11 +449,13 @@ color:#FF6600;
 /*
  * Page bottom
  */
+ .wrap-bottom {
+ background-color: #F7F7F7;
+ }
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
-	width: 958px;
-/*background: rgba(223, 229, 233, 0.38);*/
 overflow: hidden;
-	
+margin: 0 auto;
+width: 960px;	
 }
 
 
@@ -878,32 +892,15 @@ right: 0;
 
 /* Main page */
 #node-304 a {
-/*height: 3.2em;
-display: inline-block;
-padding: 4px 3px;
-vertical-align: middle;
-width: 123px;
-text-align: center;
-margin: 2px 86px;*/
 height: 3.2em;
 padding: 4px 3px;
 text-align: center;
-/* float: left; */
 display: inline-block;
 min-width: 300px;
-
 }
 
-#node-304 a:hover {
-/*background: #1B4FBD;
-color: #FFF;
-border-color: #FFF;*/
-text-decoration: none;
-}
-
-#node-304 .print_mail, #node-304 #page-title  {
-display: none;
-}
+#node-304 a:hover {text-decoration: none;}
+#node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
 
 #node-304 i {
 display: block;
@@ -919,10 +916,10 @@ font-size: 0.8em;
 border-top: 1px solid #F60;
 border-bottom: 1px solid #F60;
 }
-
-.field-type-file .sticky-table {
-width:100%;
+#node-304 .content {
+margin:0;
 }
+.field-type-file .sticky-table {width:100%;}
 
 
 /* Страница партнёров */
@@ -991,4 +988,11 @@ padding: 6px;
 
 .node-article .field-name-field-link {
 display: inline-block;
+}
+
+.no-sidebars #main .section{
+margin-left:0px!important;
+}
+.no-sidebars #content .section {
+padding-left: 0px!important;
 }

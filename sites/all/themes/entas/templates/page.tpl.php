@@ -145,26 +145,7 @@
 
   </div></div><!-- /.section, /#header -->
 
-  <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
-
-    <div id="content" class="column"><div class="section">
-      <noindex><?php print render($page['highlighted']); ?></noindex>
-      <?php print $breadcrumb; ?>
-      <?php print render($title_prefix); ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($page['help']); ?>
-	  <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-	  <?php print render($page['content']); ?>
-      
-	  <?php if ($tabs = render($tabs)): ?>
-        <div class="tabs"><?php print $tabs; ?></div>
-      <?php endif; ?>
-    </div></div><!-- /.section, /#content -->
-
-    <?php if ($page['navigation'] || $main_menu): ?>
+  <?php if ($page['navigation'] || $main_menu): ?>
       <div id="navigation"><div class="section clearfix">
 
         <?php print theme('links__system_main_menu', array(
@@ -184,6 +165,27 @@
 
       </div></div><!-- /.section, /#navigation -->
     <?php endif; ?>
+  
+  <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
+
+    <div id="content" class="column"><div class="section">
+      <noindex><?php print render($page['highlighted']); ?></noindex>
+      <?php print $breadcrumb; ?>
+      <?php print render($title_prefix); ?>
+      <?php print render($title_suffix); ?>
+      <?php print $messages; ?>
+      <?php print render($page['help']); ?>
+	  <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+	  <?php print render($page['content']); ?>
+      
+	  <?php if ($tabs = render($tabs)): ?>
+        <div class="tabs"><?php print $tabs; ?></div>
+      <?php endif; ?>
+    </div></div><!-- /.section, /#content -->
+
+    
 
     <?php print render($page['sidebar_first']); ?>
 
@@ -191,8 +193,8 @@
 
   </div></div><!-- /#main, /#main-wrapper -->
 
-  <?php print render($page['footer']); ?>
-<?php print render($page['bottom']); ?>
+  <div class="wrap-footer"><?php print render($page['footer']); ?></div>
+  <div class="wrap-bottom"><?php print render($page['bottom']); ?></div>
 </div></div><!-- /#page, /#page-wrapper -->
 
 
