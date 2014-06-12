@@ -63,6 +63,7 @@ margin-bottom: 20px;*/
  */
 #header {
 background-color: #FA762B;
+padding-top: 33px;
 }
 
 #header .section {
@@ -446,7 +447,8 @@ color:#FF6600;
  * Page bottom
  */
  .wrap-bottom {
-  background: linear-gradient(to top, #FFF, #FAE4C4);
+  background: linear-gradient(to top, #FFF, #ECECEC);
+  border-top: 1px solid #D8D8D8;
  }
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
 overflow: hidden;
@@ -783,7 +785,7 @@ margin-top: 0px;
 /*border-radius: 10px;*/
 }
 
-.view-files a {
+.view-files .view-content a {
 color: #575757;
 font-size: 0.8em; /* Влияет на шрифт */
 border: 1px solid #E7E7E7;
@@ -920,7 +922,7 @@ margin:0;
 
 /* Страница партнёров */
 
-.view-partner .views-field-field-company-logo {
+.view-partner.view-display-id-page .views-field-field-company-logo {
 float: left;
 width: 100px;
 height: 100px;
@@ -929,7 +931,7 @@ background: #FFF;
 padding-right: 10px;
 }
 
-.view-partner  .views-row {
+.view-partner.view-display-id-page .views-row {
 border: 1px solid #CCC;
 padding: 5px;
 box-shadow: 0 0 10px #CCC;
@@ -937,11 +939,7 @@ margin: 11px 0;
 min-height: 105px;
 }
 
-.view-partner  .views-row .views-field {
-
-}
-
-.view-partner  .views-row .views-label {
+.view-partner.view-display-id-page .views-row .views-label {
 float: left;
 padding-right: 3px;
 }
