@@ -545,3 +545,11 @@ margin-left: 15px;
 #block-block-20 {
 position: fixed;
 }
+.view-display-id-block_1  .views-row{
+float:left;
+width: 100px;
+height: 100px;
+text-align: center;
+line-height: 132px;
+padding-left:3%;
+}
