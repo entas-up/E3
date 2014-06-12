@@ -95,7 +95,27 @@
 
 
 <div id="page-wrapper"><div id="page">
+<?php if ($page['navigation'] || $main_menu): ?>
+      <div id="navigation"><div class="section clearfix">
 
+        <?php print theme('links__system_main_menu', array(
+          'links' => $main_menu,
+          'attributes' => array(
+            'id' => 'main-menu',
+            'class' => array('links', 'inline', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => t('Main menu'),
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+
+        <?php print render($page['navigation']); ?>
+
+      </div></div><!-- /.section, /#navigation -->
+    <?php endif; ?>
+	
   <div id="header"><div class="section clearfix">
     <?php if ($logo): ?>
         
@@ -144,28 +164,7 @@
     <?php print render($page['header']); ?>
 
   </div></div><!-- /.section, /#header -->
-
-  <?php if ($page['navigation'] || $main_menu): ?>
-      <div id="navigation"><div class="section clearfix">
-
-        <?php print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-
-        <?php print render($page['navigation']); ?>
-
-      </div></div><!-- /.section, /#navigation -->
-    <?php endif; ?>
-  
+   
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
     <div id="content" class="column"><div class="section">

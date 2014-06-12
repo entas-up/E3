@@ -50,6 +50,8 @@ color: white;
   background: #414141;
   /*margin-top: -5px;*/
   font-size: 0.8em; /* Влияет на шрифт */
+    position: fixed;
+    z-index: 300;
 
 }
 #navigation .section {
