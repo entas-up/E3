@@ -71,7 +71,7 @@ stylesheets-conditional[lte IE 9][all][]  = css/ie_entas.css
 ;scripts[] = js/script.js
 ;scripts[] = js/snow.js 
 scripts[] = js/clear_search.js
-scripts[] = js/fixed_menu2.js
+scripts[] = js/fixed_menu3.js
 
 
 ; The regions defined in Zen's default page.tpl.php file.  The name in
