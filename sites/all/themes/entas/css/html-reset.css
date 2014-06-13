@@ -310,7 +310,9 @@ colgroup {
 
 col {
 }
-
+tr.even, tr.odd {
+background:#fff;
+}
 tr {
 }
 
