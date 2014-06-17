@@ -14,11 +14,15 @@
 body {
   margin: 0;
   padding: 0;
+  
   /*background-image: url('/sites/all/themes/entas/images/linen5.png');*/
   /*background-attachment: fixed;*/
   /*background-image: linear-gradient(to bottom, #F70 115px, #292929 175px, #FFF 0%,#FFF 90%, #F70 95%);
   background-repeat:no-repeat;*/
 
+}
+body.toolbar  {
+padding-top: 0px !important;
 }
 
 a:link,
@@ -63,7 +67,7 @@ margin-bottom: 20px;*/
  */
 #header {
 background-color: #FA762B;
-padding-top: 33px;
+/*padding-top: 33px;*/
 }
 
 #header .section {
@@ -123,8 +127,8 @@ div#site-name /* The name of the website */ {
  * Main (container for everything else)
  */
 #main-wrapper {
-/*border: 1px solid #666;*/
 background: white;
+/*margin-top: 30px;*/
 }
 
 #main {
@@ -141,7 +145,7 @@ width: 960px;
 
 #content .section {
 margin-left: 250px;
-margin-top: 34px;
+/*margin-top: 34px;*/
 padding-left: 5px;
 }
 
