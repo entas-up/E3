@@ -46,13 +46,10 @@ color: white;
  */
 #navigation {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-  
   background: #FA762B;
   /*margin-top: -5px;*/
   font-size: 0.8em; /* Влияет на шрифт */
-    position: fixed;
-    z-index: 300;
-	box-shadow: 0px 3px 20px #FF4700;
+  z-index: 300;	
 	}
 	
 #navigation .section {
