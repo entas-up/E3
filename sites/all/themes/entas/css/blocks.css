@@ -555,13 +555,29 @@ text-align: center;
 line-height: 132px;
 padding-left:3%;
 }
+#block-imageblock-5.fixed-logo{
+display:block!important;
+}
 #block-imageblock-5 {
 float:left;
 height: 30px;
 line-height: 45px;
-margin-right:1px;
+margin-right:7px;
+display:none;
 }
 #block-imageblock-5 img {
 width: 25px;
 height: 25px;
 }
+
+/*#block-menu-block-1 .item-list ul li,#block-menu-block-1 ul.menu li,#block-menu-block-1 li.expanded,#block-menu-block-1 li.collapsed,#block-menu-block-1 li.leaf  {
+margin: 2px 0px 2px 15px;
+}
+
+.region-sidebar-first ul.menu ul.menu {
+
+}
+
+.menu-block-1 + .menu  li {
+margin-left:0!important;
+}*/
