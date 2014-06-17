@@ -368,11 +368,3 @@ text-decoration: none;
 	z-index:200;
 	
 }
-.fixed-logo {
-position: fixed;
-top: -19px;
-left: 213px;
-height: 30px;
-z-index: 301;
-
-}
