@@ -1,4 +1,4 @@
-var num = 50; //number of pixels before modifying styles
+var num = 115; //number of pixels before modifying styles
 
 jQuery(window).bind('scroll', function () {
     if (jQuery(window).scrollTop() > num) {
