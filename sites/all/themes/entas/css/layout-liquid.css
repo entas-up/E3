@@ -96,7 +96,7 @@ margin-top: 30px;
  * Navigation
  */
 #navigation {
-  background: #ed8d0b;
+  
   width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
@@ -209,3 +209,9 @@ border:none;
  * Note: with some over-large content, this property might cause scrollbars
  * to appear on the #page-wrapper div.
  */
+ 
+ #toolbar {
+ bottom:0;
+ top:initial;
+ }
+ 
