@@ -559,7 +559,7 @@ box-shadow: -3px 3px 6px #CCC;
 position: relative;
 }
 
-.ent-taxonometry  .view-header .view-display-id-term_review{
+.ent-taxonometry  .view-header .view-display-id-term_review .view-content{
 background-image: url('/misc/message-24-error.png');
 border-color: #ED541D;
 background-color: #FEF5F1;
@@ -570,7 +570,7 @@ border: 1px solid;
 padding: 10px 10px 10px 50px;
 border-color: #ED541D;
 }
-.ent-taxonometry .view-display-id-term_storage, .ent-taxonometry .view-display-id-term_desc {
+.ent-taxonometry .view-display-id-term_storage .view-content, .ent-taxonometry .view-display-id-term_desc .view-content{
 background-color: aliceblue;
 margin: 5px 0;
     padding: 10px;
