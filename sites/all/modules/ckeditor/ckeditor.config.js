@@ -28,6 +28,11 @@ CKEDITOR.editorConfig = function(config) {
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
   config.extraPlugins = '';
 
+  //My seeting for entas.ru
+  config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
+  config.allowedContent = true; /* all tags */
+  
+  
   /*
     * Append here extra CSS rules that should be applied into the editing area.
     * Example:

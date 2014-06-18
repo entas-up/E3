@@ -76,7 +76,7 @@
   <a href="http://www.google.ru/support/bin/answer.py?answer=23852">Как?</a></div>
 </noscript>
 </div>
-	
+
 <!--Иконки для iOS -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
@@ -144,7 +144,26 @@
     <?php print render($page['header']); ?>
 
   </div></div><!-- /.section, /#header -->
+   <?php if ($page['navigation'] || $main_menu): ?>
+      <div id="navigation" class="scroll-menu"><div class="section clearfix">
 
+        <?php print theme('links__system_main_menu', array(
+          'links' => $main_menu,
+          'attributes' => array(
+            'id' => 'main-menu',
+            'class' => array('links', 'inline', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => t('Main menu'),
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+
+        <?php print render($page['navigation']); ?>
+
+      </div></div><!-- /.section, /#navigation -->
+    <?php endif; ?>
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
     <div id="content" class="column"><div class="section">
@@ -164,26 +183,7 @@
       <?php endif; ?>
     </div></div><!-- /.section, /#content -->
 
-    <?php if ($page['navigation'] || $main_menu): ?>
-      <div id="navigation"><div class="section clearfix">
-
-        <?php print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-
-        <?php print render($page['navigation']); ?>
-
-      </div></div><!-- /.section, /#navigation -->
-    <?php endif; ?>
+    
 
     <?php print render($page['sidebar_first']); ?>
 
@@ -191,8 +191,8 @@
 
   </div></div><!-- /#main, /#main-wrapper -->
 
-  <?php print render($page['footer']); ?>
-<?php print render($page['bottom']); ?>
+  <div class="wrap-bottom"><?php print render($page['footer']); ?>
+  <?php print render($page['bottom']); ?></div>
 </div></div><!-- /#page, /#page-wrapper -->
 
 

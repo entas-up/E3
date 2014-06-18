@@ -14,8 +14,15 @@
 body {
   margin: 0;
   padding: 0;
+  
   /*background-image: url('/sites/all/themes/entas/images/linen5.png');*/
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
+  /*background-image: linear-gradient(to bottom, #F70 115px, #292929 175px, #FFF 0%,#FFF 90%, #F70 95%);
+  background-repeat:no-repeat;*/
+
+}
+body.toolbar  {
+padding-top: 0px !important;
 }
 
 a:link,
@@ -59,11 +66,16 @@ margin-bottom: 20px;*/
  * Header
  */
 #header {
+background-color: #FA762B;
+/*padding-top: 33px;*/
 }
 
 #header .section {
 /*border-left: 1px solid #666;
 border-right: 1px solid #666;*/
+width: 960px;
+margin: 0 auto;
+position: relative;
 }
 
 #logo /* Wrapping link for logo */ {
@@ -74,7 +86,7 @@ border-right: 1px solid #666;*/
 }
 
 #logo img {
-  margin: 19px 0px 0px 19px;
+  margin: 19px 0px 0px 0px;
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
@@ -115,28 +127,30 @@ div#site-name /* The name of the website */ {
  * Main (container for everything else)
  */
 #main-wrapper {
-/*border: 1px solid #666;*/
 background: white;
+/*margin-top: 30px;*/
 }
 
 #main {
+margin: 0 auto;
+width: 960px;
 }
 
 /*
  * Content
  */
 #content {
-/*margin-bottom: 1.5em;*/
+
 }
 
 #content .section {
 margin-left: 250px;
-margin-top: 34px;
+/*margin-top: 34px;*/
 padding-left: 5px;
 }
 
 .region-highlighted {
-margin: 2px 20px 15px 20px;
+margin: 2px 0px 15px 0px;
 overflow: hidden;
 position: relative;
 /*border-bottom: 1px solid #9B9B9B;*/
@@ -309,7 +323,7 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 .region-content /* Wrapper for the actual page content */ {
-margin: 0px 0 0 20px;
+/*margin: 0px 0 0 20px;*/
 position: relative;
 }
 
@@ -384,11 +398,11 @@ text-align: center;
  * (see the layout.css file.)
  */
 .region-sidebar-first {
-padding: 0 0 40px 0;
+/*padding: 0 0 40px 0;*/
 }
 
 .region-sidebar-first .section {
-margin-bottom: 1.5em;
+/*margin-bottom: 1.5em;*/
 height: 100%;
 font-size: 0.8em; /* Влияет на шрифт */
 line-height: 1em;
@@ -415,14 +429,13 @@ padding-bottom: 20px;
  * Footer
  */
 .region-footer {
-float: left;
-/*background: rgba(223, 229, 233, 0.38);*/
-width: 958px;
+width: 960px;
 padding: 0px 0 5px 0;
 font-size: 0.9em; /* Влияет на шрифт */
 position: relative;
-border-bottom: 1px solid rgba(87, 87, 87, 0.52);
-border-top: 1px solid rgba(87, 87, 87, 0.52);
+/*border-bottom: 1px solid rgba(87, 87, 87, 0.52);
+border-top: 1px solid rgba(87, 87, 87, 0.52);*/
+margin:0 auto;
 }
 .region-footer a{
 font-weight: normal;
@@ -437,11 +450,14 @@ color:#FF6600;
 /*
  * Page bottom
  */
+ .wrap-bottom {
+  background: linear-gradient(to top, #FFF, #ECECEC);
+  border-top: 1px solid #D8D8D8;
+ }
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
-	width: 958px;
-/*background: rgba(223, 229, 233, 0.38);*/
 overflow: hidden;
-	
+margin: 0 auto;
+width: 960px;	
 }
 
 
@@ -543,7 +559,7 @@ box-shadow: -3px 3px 6px #CCC;
 position: relative;
 }
 
-.ent-taxonometry  .view-header .view-display-id-term_review{
+.ent-taxonometry  .view-header .view-display-id-term_review .view-content{
 background-image: url('/misc/message-24-error.png');
 border-color: #ED541D;
 background-color: #FEF5F1;
@@ -554,7 +570,7 @@ border: 1px solid;
 padding: 10px 10px 10px 50px;
 border-color: #ED541D;
 }
-.ent-taxonometry .view-display-id-term_storage, .ent-taxonometry .view-display-id-term_desc {
+.ent-taxonometry .view-display-id-term_storage .view-content, .ent-taxonometry .view-display-id-term_desc .view-content{
 background-color: aliceblue;
 margin: 5px 0;
     padding: 10px;
@@ -773,7 +789,7 @@ margin-top: 0px;
 /*border-radius: 10px;*/
 }
 
-.view-files a {
+.view-files .view-content a {
 color: #575757;
 font-size: 0.8em; /* Влияет на шрифт */
 border: 1px solid #E7E7E7;
@@ -878,32 +894,15 @@ right: 0;
 
 /* Main page */
 #node-304 a {
-/*height: 3.2em;
-display: inline-block;
-padding: 4px 3px;
-vertical-align: middle;
-width: 123px;
-text-align: center;
-margin: 2px 86px;*/
 height: 3.2em;
 padding: 4px 3px;
 text-align: center;
-/* float: left; */
 display: inline-block;
 min-width: 300px;
-
 }
 
-#node-304 a:hover {
-/*background: #1B4FBD;
-color: #FFF;
-border-color: #FFF;*/
-text-decoration: none;
-}
-
-#node-304 .print_mail, #node-304 #page-title  {
-display: none;
-}
+#node-304 a:hover {text-decoration: none;}
+#node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
 
 #node-304 i {
 display: block;
@@ -919,15 +918,15 @@ font-size: 0.8em;
 border-top: 1px solid #F60;
 border-bottom: 1px solid #F60;
 }
-
-.field-type-file .sticky-table {
-width:100%;
+#node-304 .content {
+margin:0;
 }
+.field-type-file .sticky-table {width:100%;}
 
 
 /* Страница партнёров */
 
-.view-partner .views-field-field-company-logo {
+.view-partner.view-display-id-page .views-field-field-company-logo {
 float: left;
 width: 100px;
 height: 100px;
@@ -936,7 +935,7 @@ background: #FFF;
 padding-right: 10px;
 }
 
-.view-partner  .views-row {
+.view-partner.view-display-id-page .views-row {
 border: 1px solid #CCC;
 padding: 5px;
 box-shadow: 0 0 10px #CCC;
@@ -944,11 +943,7 @@ margin: 11px 0;
 min-height: 105px;
 }
 
-.view-partner  .views-row .views-field {
-
-}
-
-.view-partner  .views-row .views-label {
+.view-partner.view-display-id-page .views-row .views-label {
 float: left;
 padding-right: 3px;
 }
@@ -991,4 +986,11 @@ padding: 6px;
 
 .node-article .field-name-field-link {
 display: inline-block;
+}
+
+.no-sidebars #main .section{
+margin-left:0px!important;
+}
+.no-sidebars #content .section {
+padding-left: 0px!important;
 }

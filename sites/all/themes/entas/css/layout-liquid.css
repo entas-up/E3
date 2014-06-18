@@ -25,8 +25,8 @@
 
 #page-wrapper,
 .region-bottom {
-  width: 960px; /* Don't allow the browser to make the site unreadable. */
-  margin: 0 auto; /* Центрирование */
+ /* width: 960px;*/ /* Don't allow the browser to make the site unreadable. */
+/*  margin: 0 auto;*/ /* Центрирование */
 }
 
 #page {
@@ -39,17 +39,8 @@
 position: relative;
 }
 
-#header .section {
-background-color:rgba(250, 118, 43, 0.86);
-/*height: 115px;*/
-position: relative;
-	}
-
 .region-header {
-	/*float:left;*/ /*right стандарт*/
-	/* margin: 30px 0px 0 80%;
-	position:absolute; */
-	
+
 }
 
 /*
@@ -76,8 +67,8 @@ position: relative;
 
 #content .section,
 .no-sidebars #content .section {
-  margin: 0;
-  padding: 0;
+/*  margin: 0;
+  padding: 0;*/
 }
 
 .sidebar-first #content .section {
@@ -105,8 +96,7 @@ margin-top: 30px;
  * Navigation
  */
 #navigation {
-  float: left; /* LTR */
-background: #ed8d0b;
+  
   width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
@@ -120,7 +110,7 @@ background: #ed8d0b;
   /* Set this to the same value as the navigation height above. */
 }
 .with-navigation #content {
-  margin-top: 30px; /* Set this to the same value as the navigation height above. */
+  /*margin-top: 30px; *//* Set this to the same value as the navigation height above. */
   overflow: visible!important; /* принудительный параметр из-за Equal Heights */
   padding-bottom: 10px;
 }
@@ -147,7 +137,7 @@ list-style-image: url('../images/menu-expanded.png');
    
 .region-sidebar-first ul.menu {
 padding-top: 5px !important;
-/*border-left: 1px dotted #CCC;*/
+margin: 0px !important;
 }
 .menu-block-wrapper>ul.menu  {
 border:none;
@@ -160,11 +150,11 @@ border:none;
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
   line-height: 1.5em;
-  background: #717171; /*#4b4b4b*/
+  /*background: #717171; */
 }
 
 .region-sidebar-first .section {
-  padding: 7px 0px;
+  /*padding: 7px 0px;*/
   
 }
 
@@ -219,3 +209,9 @@ border:none;
  * Note: with some over-large content, this property might cause scrollbars
  * to appear on the #page-wrapper div.
  */
+ 
+ #toolbar {
+ bottom:0;
+ top:initial;
+ }
+ 

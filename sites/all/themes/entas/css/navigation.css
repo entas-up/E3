@@ -8,7 +8,7 @@
  * The active item in a Drupal menu
  */
 .menu li a.active {
-  color: #F93;
+  color: #F60;
   }
 #block-menu-block-4 a.active, #block-simplenews-61 a.active{
 color: red;
@@ -22,8 +22,8 @@ background: #027AC6;
 }
 
 .region-sidebar-first a{
-	color:#fff;
-	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
+	color:#585858;
+	/*text-shadow: 1px 1px 1px #000; *//* тень шрифта в левой колонке */
 	font-weight: normal;	
 	display: block;
 	line-height: 1.1em;
@@ -46,11 +46,15 @@ color: white;
  */
 #navigation {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-  
-  background: #414141;
+  background: #FA762B;
   /*margin-top: -5px;*/
   font-size: 0.8em; /* Влияет на шрифт */
-
+  z-index: 300;	
+	}
+	
+#navigation .section {
+width: 960px;
+margin: 0 auto;
 }
 
 #navigation ul.links, /* Main menu and secondary menu links */
@@ -211,7 +215,7 @@ line-height: 1;
 -webkit-font-smoothing: antialiased;
 content: "\f111""\00a0\00a0\00a0\00a0";
 font-size: 7px;
-text-shadow: 0px 0px 4px #000;
+/*text-shadow: 0px 0px 4px #000;*/
 vertical-align: middle;
 }
 
@@ -355,3 +359,12 @@ color:red;
 text-decoration: none;
 } 
 
+.fixed{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    margin:0;
+	z-index:200;
+	
+}
