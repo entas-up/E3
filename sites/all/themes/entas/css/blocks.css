@@ -488,7 +488,7 @@ font-weight: bold;
 }
 
 #block-views-similarterms-block  .views-field-path a{
-height: 100px;
+/*height: 100px;*/
 width: 100%;
 position:absolute;
 top:0;
@@ -504,6 +504,16 @@ color:#fff;
 .simillar-title {
 vertical-align: top;
 margin-left: 15px;
+}
+.simillar-image {
+width:100px;
+float: left;
+text-align: center;
+line-height: 100px;
+background: #fff;
+}
+.simillar-image img{
+vertical-align: middle;
 }
 #block-views-similarterms-block  .views-row{
 /*display: inline-block;
