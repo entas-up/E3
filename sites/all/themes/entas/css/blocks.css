@@ -512,6 +512,11 @@ text-align: center;
 line-height: 100px;
 background: #fff;
 }
+.simillar-body {
+color:black;
+margin-left: 115px;
+}
+
 .simillar-image img{
 vertical-align: middle;
 }
