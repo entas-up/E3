@@ -513,9 +513,14 @@ line-height: 100px;
 background: #fff;
 }
 .simillar-body {
-color:black;
+color:#575757;
 margin-left: 115px;
 }
+/*
+.simillar-body:hover {
+color:#575757;
+
+}*/
 
 .simillar-image img{
 vertical-align: middle;
