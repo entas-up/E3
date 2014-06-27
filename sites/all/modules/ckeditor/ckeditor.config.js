@@ -31,7 +31,9 @@ CKEDITOR.editorConfig = function(config) {
   //My seeting for entas.ru
   config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
   config.allowedContent = true; /* all tags */
-  
+  // ALLOW <i></i>
+	config.protectedSource.push( /<i[\s\S]*?\>/g ); //allows beginning <i> tag
+	config.protectedSource.push( /<\/i[\s\S]*?\>/g ); //allows ending </i> tag
   
   /*
     * Append here extra CSS rules that should be applied into the editing area.
