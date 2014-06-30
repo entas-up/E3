@@ -582,7 +582,7 @@ border: none;
 box-shadow: none;
 }
 
-.ent-taxonometry  .views-field-field-imagepage {
+.ent-taxonometry  .views-field-field-imagepage, .ent-taxonometry  .views-field-field-image {
 float: left;
 padding: 0 10px 10px 0;
 width: 100px;
