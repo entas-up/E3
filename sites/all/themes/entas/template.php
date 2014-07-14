@@ -247,7 +247,7 @@ function entas_menu_link($variables) {
 }
 
 
-function drupal_urlencode($text) {
+function entas_drupal_urlencode($text) {
   if (variable_get('clean_url', '0')) {
     return str_replace(array('%2F', '%26', '%2523'),
                        array('/', '&', '#'),
@@ -258,5 +258,6 @@ function drupal_urlencode($text) {
   }
 }
 
+ 
 
 ?>
