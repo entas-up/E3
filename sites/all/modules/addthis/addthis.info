@@ -11,9 +11,9 @@ files[] = classes/AddThisJson.php
 
 configure = admin/config/user-interface/addthis
 
-; Information added by Drupal.org packaging script on 2014-02-11
-version = "7.x-4.0-alpha4+4-dev"
+; Information added by Drupal.org packaging script on 2014-01-22
+version = "7.x-4.0-alpha4"
 core = "7.x"
 project = "addthis"
-datestamp = "1392106413"
+datestamp = "1390384409"
 
