@@ -25,7 +25,7 @@ background: #027AC6;
 	color:#585858;
 	/*text-shadow: 1px 1px 1px #000; *//* тень шрифта в левой колонке */
 	font-weight: normal;	
-	display: flex;
+	display: block;
 	line-height: 1.1em;
 	padding: 2px 0px 6px 5px;
 }
@@ -92,13 +92,15 @@ color:#414141;
 .region-sidebar-first .expanded > a:before, .region-sidebar-first ul li.leaf a:before, .region-sidebar-first .collapsed a:before  {
 /*background: red;*/
 padding-right:3px;
-display: inline-block;
+display: block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 line-height: 1;
 -webkit-font-smoothing: antialiased;
 color:#414141;
+float:left;
+padding-bottom: 5px;
 }
 
 .region-sidebar-first .collapsed a:before {
