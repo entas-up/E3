@@ -589,13 +589,22 @@ margin-left: 15px;
 #block-block-20 {
 position: fixed;
 }
-.view-partner .view-display-id-block_1  .views-row{
+/*.view-partner .view-display-id-block_1  .views-row{
 float:left;
 width: 100px;
 height: 100px;
 text-align: center;
 line-height: 132px;
 padding-left:3%;
+}*/
+.jcarousel-skin-default .jcarousel-item {
+line-height:90px;
+}
+.jcarousel-skin-default .jcarousel-item-horizontal  img{
+margin:0;
+text-align:center;
+vertical-align: middle;
+
 }
 #block-imageblock-5.fixed-logo{
 display:block!important;
