@@ -992,3 +992,27 @@ margin-left:0px!important;
 .no-sidebars #content .section {
 padding-left: 0px!important;
 }
+
+strong.faq-question-label, strong.faq-answer-label {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+}
+.faq .print-link {
+display:none;
+}
+.faq-answer {
+padding-left: 20px;
+border: 1px solid #DDD;
+margin: 0 10px 20px 10px;
+}
+.faq-question {
+border: 1px solid #DDD;
+margin: 0 10px;
+}
+.faq .links  {
+display:none!important;
+}
