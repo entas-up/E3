@@ -1016,3 +1016,41 @@ margin: 0 10px;
 .faq .links  {
 display:none!important;
 }
+
+.form-item-items-per-page  {
+ /*background-image: url('http://www.clker.com/cliparts/5/7/2/2/13099636781085637687dropdown.svg.med.png'); 
+ background-size:30px;
+ background-repeat: no-repeat;
+ background-position: right;
+ z-index:10;*/
+ }
+/*.form-item-items-per-page:after {
+content: "\f160";
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+border: 1px solid #A9A9A9;
+padding: 5px 5px 6px 5px;
+margin-left: -27px;
+background: #fff;
+pointer-events:none;
+border-left: none;
+}*/
+.form-item-items-per-page select {
+height: 28px;
+
+}
+.form-item-items-per-page label {
+padding-bottom: 0.5em;
+}
+.views-exposed-form select {
+width:180px;
+}
+#views-exposed-form-files-page-1 .form-item-shs-term-node-tid-depth select {
+display:block!important;
+}
+.view-files .views-exposed-form .views-exposed-widget {
+float:none;
+}
