@@ -620,3 +620,35 @@ display:none;
 width: 25px;
 height: 25px;
 }
+.print_html img ,.print_mail img{display:none;}
+
+.print_html a:before {
+content: "\f02f";
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+color:#F60;
+padding: .2em .25em .15em;
+border: solid 0.06em;
+border-radius: .1em;
+font-size:2em;
+}
+.print_mail a:before {
+content: "\f0e0";
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+color:#F60;
+padding: .2em .25em .15em;
+border: solid 0.06em;
+border-radius: .1em;
+font-size:2em;
+}
+.print_html a:hover:before, .print_mail a:hover:before{
+background:#F60;
+color:#fff;
+}
