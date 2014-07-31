@@ -226,8 +226,10 @@ li {
   margin: 0;
   padding: 0;
 }
+.item-list ul li {
+margin: 0px 0px 0.25em 0.001em;
+}
 
-.item-list ul li,
 ul.menu li,
 li.expanded,
 li.collapsed,
