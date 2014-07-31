@@ -201,12 +201,15 @@ address {
  *
  * We need to standardize the list item indentation.
  */
-ul,
-ol {
+ul
+{
   margin-left: 0; /* LTR */
   padding-left: 0; /* 1em LTR */
 }
-
+ol {
+  margin-left: 0; /* LTR */
+  padding-left: 3em; /* 1em LTR */
+}
 .item-list ul /* Drupal overrides */ {
   margin: 0.5em 0;
   padding: 0 0 0 0.5em; /* LTR */
@@ -229,11 +232,13 @@ ul.menu li,
 li.expanded,
 li.collapsed,
 li.leaf /* Drupal override */ {
-margin: 2px 0px 2px 15px;
+margin: 0px 0px 0px 15px;
 line-height: 1.5em;
 padding: 0px;
   }
+  ul.menu li {
   
+  }
 li.expanded, li.collapsed, li.leaf {
 padding: 0;
 }

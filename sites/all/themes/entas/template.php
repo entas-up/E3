@@ -246,17 +246,15 @@ function entas_menu_link($variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
-
-function drupal_urlencode($text) {
+function entas_drupal_urlencode($text) {
   if (variable_get('clean_url', '0')) {
-    return str_replace(array('%2F', '%26', '%2523'),
-                       array('/', '&', '#'),
+    return str_replace(array('%2F', '%26', '%2523', '%2B'),
+                       array('/', '&', '#','+'),
                        urlencode($text));
   }
   else {
     return str_replace('%2F', '/', urlencode($text));
   }
 }
-
 
 ?>
