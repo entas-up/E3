@@ -98,23 +98,8 @@ font-style: normal;
 font-weight: bold;
 font-size: 1.2em;
 }
-/*
-#block-search-form .form-actions:after {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: bold;
-color: #000;
-content: "\f002";
-font-size: 1.2em;
-margin-left: -22px;
-z-index: 0;
-}*/
-#block-search-form  .form-actions {
-/*position: absolute;
-right: 5px;
-top: 0px;*/
 
+#block-search-form  .form-actions {
 }
 /*#block-search-form input[type="submit"] {font-family: FontAwesome;}*/
 
@@ -170,21 +155,7 @@ padding: 1px 5px;
 
 #block-system-main /* "Main page content" block */ {
 }
-#block-system-main .pager {
-color:#F93;	
-}
-#block-system-main .pager a {
-color: #F93;
-/*background: #575757;*/
-padding: 1px 11px;
-border-radius: 3px;	
-border: 1px solid #B3B3B3;
-background: #FFF;
-}
-#block-system-main .pager a:hover {
-background: #027AC6;
-text-decoration: none;
-}
+
 #block-system-powered-by /* "Powered by Drupal" block */ {
 }
 
