@@ -623,3 +623,19 @@ font-size:2em;
 background:#F60;
 color:#fff;
 }
+#block-views-last-changes-block {
+text-align: center;
+font-size: 0.8em;
+}
+.view-last-changes.view-display-id-page_1 {
+ font-size: 0.9em;
+ }
+ 
+.view-last-changes .views-row {
+ margin-top: 14px;
+}
+
+.views-field-changed {
+    float: left;
+    width: 13em;
+}
