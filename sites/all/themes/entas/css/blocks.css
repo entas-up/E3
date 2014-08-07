@@ -631,11 +631,12 @@ font-size: 0.8em;
  font-size: 0.9em;
  }
  
-.view-last-changes .views-row {
+.view-display-id-page_1 .view-last-changes .views-row {
  margin-top: 14px;
+ border-bottom: 1px solid #ccc;
 }
 
-.views-field-changed {
+.view-display-id-page_1 .views-field-changed {
     float: left;
     width: 13em;
 }
