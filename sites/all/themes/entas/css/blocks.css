@@ -640,3 +640,8 @@ font-size: 0.8em;
     float: left;
     width: 13em;
 }
+
+.atss a {
+width: initial!important;
+padding: 2px 0px!important;
+}
