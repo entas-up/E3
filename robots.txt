@@ -71,3 +71,5 @@ Disallow: /*?page=*
 Disallow: /base/*
 # partners bode
 Disallow: /company/*
+#taxonometry rss
+Disallow: */term/*/feed
