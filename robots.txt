@@ -19,6 +19,7 @@
 User-agent: *
 Crawl-delay: 10
 # Directories
+Disallow: /test/
 Disallow: /includes/
 Disallow: /misc/
 Disallow: /modules/
@@ -70,3 +71,5 @@ Disallow: /*?page=*
 Disallow: /base/*
 # partners bode
 Disallow: /company/*
+#taxonometry rss
+Disallow: */term/*/feed
