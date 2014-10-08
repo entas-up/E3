@@ -623,6 +623,21 @@ font-size:2em;
 background:#F60;
 color:#fff;
 }
+
+#google-qr-code  a {
+display: block;
+text-align:center;
+border-radius: .1em;
+padding: .2em .25em .15em;
+border: solid 0.04em #F60;
+}
+#google-qr-code  a:hover {
+background:#F60;
+color:#fff;
+text-decoration: none;
+font-weight: 600;
+}
+
 #block-views-last-changes-block {
 text-align: center;
 font-size: 0.8em;
