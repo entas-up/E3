@@ -1,8 +1,8 @@
-function q3_onclick()
+function qr_show()
 {
 document.getElementById('google-qr-code').style.display='block';
 }
-/*function q3_onclick()
+function qr_hide()
 {
 document.getElementById('google-qr-code').style.display='none';
-}*/
+}
