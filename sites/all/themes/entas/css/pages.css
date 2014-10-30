@@ -919,7 +919,7 @@ min-width: 300px;
 
 #node-304 a:hover {text-decoration: none;}
 #node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
-
+.front ul.links {display: none;}
 #node-304 i {
 display: block;
 margin-left: 0.2em;
