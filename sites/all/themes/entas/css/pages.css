@@ -338,7 +338,7 @@ ul.menu li{
 }
 ul.links.inline {
   display: block; /* Let the links be inline, but the container be a block. */
-  float: right;
+  float: left;
 }
 
 ul.links li {
