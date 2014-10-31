@@ -339,6 +339,7 @@ ul.menu li{
 ul.links.inline {
   display: block; /* Let the links be inline, but the container be a block. */
   float: left;
+  padding-left: 19px;
 }
 
 ul.links li {
@@ -1069,4 +1070,9 @@ display:block!important;
 }
 .view-files .views-exposed-form .views-exposed-widget {
 float:none;
+}
+
+
+.node-article h1:before {
+content:"Новости: ";
 }
