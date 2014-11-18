@@ -671,7 +671,14 @@ width: initial!important;
 padding: 2px 0px!important;
 }
 
-#google-qr-code {display:none;}
+/*#google-qr-code */#block-google-qr-code-qr-code{
+display:none;
+margin-left: 20px;
+}
+#block-google-qr-code-qr-code .block-title {
+font-size:0.8em;
+margin-left: 12px;
+}
 #block-block-22 {
 color:#F60;
 margin: 1.4em 0px;

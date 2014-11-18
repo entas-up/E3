@@ -1,8 +1,8 @@
 function qr_show()
 {
-document.getElementById('google-qr-code').style.display='block';
+document.getElementById('block-google-qr-code-qr-code').style.display='block';
 }
 function qr_hide()
 {
-document.getElementById('google-qr-code').style.display='none';
+document.getElementById('block-google-qr-code-qr-code').style.display='none';
 }
