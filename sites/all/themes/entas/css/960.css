@@ -164,7 +164,8 @@ div.tabs,
 .book-navigation,
 .forum-topic-navigation,
 .feed-icons,
-.toolbar-menu
+.toolbar-menu,
+#block-block-22
  {
   visibility: hidden;
   display: none;
