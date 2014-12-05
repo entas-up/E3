@@ -8,7 +8,7 @@
  * The active item in a Drupal menu
  */
 .menu li a.active {
-  color: #F60;
+  color: #F60!important;
   }
 #block-menu-block-4 a.active, #block-simplenews-61 a.active{
 color: red;
@@ -28,6 +28,7 @@ background: #027AC6;
 	display: block;
 	line-height: 1.1em;
 	padding: 2px 0px 6px 5px;
+	border-bottom: 1px solid #C8C8C8;
 }
 .region-sidebar-first a:hover{
 background: #027AC6;
@@ -104,11 +105,19 @@ padding-bottom: 5px;
 }
 
 .region-sidebar-first .collapsed a:before {
-content: "\f0fe";
+content: "\f101";
+font-size:1.35em;
 }
 
 .region-sidebar-first .expanded>a:before {
-content: "\f146";
+content: "\f103";
+font-size:1.35em;
+}
+
+.region-sidebar-first ul li.leaf a:before {
+content: "\f105";
+/*vertical-align: middle;*/
+font-size:1.35em;
 }
 
 .region-sidebar-first ul li.expanded, .region-sidebar-first ul li.collapsed, ul li.leaf {
@@ -168,17 +177,6 @@ right: 0px;
 #backtotop:hover:after {
 color: #f60;
 font-size: 63em;
-}
-
-
-
-
-.region-sidebar-first ul li.leaf a:before {
-/*content: "\f111";*/
-/*font-size: 7px;*/
-content: "\f0c8";
-vertical-align: middle;
-/*color:red;*/
 }
 
 /* Home1  */
@@ -314,3 +312,40 @@ text-decoration: none;
 	z-index:200;
 	
 }
+
+
+.region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
+color:#000;
+}
+/*1st level*//*
+.region-sidebar-first ul.menu li a:before{
+content: "\f101";
+font-size:1.2em;
+}
+.region-sidebar-first li.expanded.active-trail::last-child  a::before{
+content: "-";
+font-size:1.35em;
+}
+*/
+/*
+.region-sidebar-first li.active-trail > a:last-child{
+background:blue;
+}*/
+.menu li a.active:before {
+color:#F60!important;
+}
+/*
+.region-sidebar-first .collapsed a:before {
+content: "\f101"!important;
+}
+
+.region-sidebar-first .expanded>a:before {
+content: "\f101"!important;
+}*/
+/*2nd level */
+.region-sidebar-first ul.menu li li a:before{
+
+}
+
+
+
