@@ -23,3 +23,4 @@ mailru*.html
 sites/all/modules/security_review/file_write_test*
 sites/all/modules/security_review/IGNOREME.txt
 BingSiteAuth.xml
+wmail*.html

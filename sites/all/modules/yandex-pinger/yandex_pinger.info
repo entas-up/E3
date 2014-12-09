@@ -1,0 +1,7 @@
+name = "Yandex Site Search Pinger"
+description = "Плагин оповещает сервис Яндекс.Поиск для сайта о новых и измененных документах"
+version = "1.5"
+core = 7.x
+configure = admin/config/services/yandex_pinger
+files[]= yandex_pinger.install
+files[]= yandex_pinger.module

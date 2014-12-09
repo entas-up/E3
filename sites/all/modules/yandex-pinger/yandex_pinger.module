@@ -1,0 +1,275 @@
+<?php
+
+/**
+ * @file
+ * Generates requests for indexing all new or modified documents.
+ */
+
+/*
+  Plugin Name: Яндекс.ПДС Пингер
+  Plugin URI: http://site.yandex.ru/cms-plugins/
+  Description: Плагин оповещает сервис Яндекс.Поиск для сайта о новых и измененных
+  документах.
+  Version: 1.5
+  Author: ООО "ЯНДЕКС"
+  Author URI: http://www.yandex.ru/
+  License: GPL2
+ */
+
+/*
+  Copyright 2012 Yandex LLC
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+  (Это свободная программа: вы можете перераспространять ее и/или изменять
+  ее на условиях Стандартной общественной лицензии GNU в том виде, в каком
+  она была опубликована Фондом свободного программного обеспечения; либо
+  версии 2 лицензии, либо (по вашему выбору) любой более поздней версии.
+
+  Эта программа распространяется в надежде, что она будет полезной,
+  но БЕЗО ВСЯКИХ ГАРАНТИЙ; даже без неявной гарантии ТОВАРНОГО ВИДА
+  или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Подробнее см. в Стандартной
+  общественной лицензии GNU.
+
+  Вы должны были получить копию Стандартной общественной лицензии GNU
+  вместе с этой программой. Если это не так, см.
+  <http://www.gnu.org/licenses/>.)
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function yandex_pinger_permission() {
+  return array(
+    'administer yandex_pinger' => array(
+      'title' => t('Administer yandex pinger'),
+    ),
+  );
+}
+
+/**
+ * Node update API hook.
+ *
+ * @param      $node
+ */
+function yandex_pinger_node_update($node) {
+  _yandex_pinger_doping($node);
+}
+
+/**
+ * Node insert API hook.
+ *
+ * @param      $node
+ */
+function yandex_pinger_node_insert($node) {
+  _yandex_pinger_doping($node);
+}
+
+/**
+ * Pings Yandex.
+ *
+ * This function fires on node insert or update.
+ *
+ * @param $node
+ * @return bool
+ * @throws Exception
+ */
+function _yandex_pinger_doping($node) {
+  global $base_url;
+
+  $url = $base_url . url('node/' . $node->nid);
+
+  //if node is not public
+  if ($node->status != 1) {
+    return false;
+  }
+
+  $prefix = 'yandex_pinger_';
+
+  $postdata = array(
+    'key'         => (variable_get($prefix . 'key', '')),
+    'login'       => (variable_get($prefix . 'login', '')),
+    'search_id'   => (variable_get($prefix . 'searchId', '')),
+    'pluginid'    => (variable_get($prefix . 'pluginId', '')),
+    'urls'        => urlencode($url),
+    'publishdate' => 0,
+    'cmsver'      => VERSION."_v1.5"
+  );
+  $tarr = array();
+  foreach ($postdata as $key => $val) {
+    $tarr[] = $key . '=' . $val;
+  }
+
+  $postdata = implode('&', $tarr);
+  unset($tarr);
+
+  $host = 'site.yandex.ru';
+  $length = strlen($postdata);
+
+  $out = "POST /ping.xml HTTP/1.0\r\n";
+  $out .= "HOST: " . $host . "\r\n";
+  $out .= "Content-Type: application/x-www-form-urlencoded\r\n";
+  $out .= "Content-Length: " . $length . "\r\n\r\n";
+  $out .= $postdata . "\r\n\r\n";
+
+  try {
+    $errno = '';
+    $errstr = '';
+    $result = '';
+    $socket = @fsockopen($host, 80, $errno, $errstr, 30);
+    if ($socket) {
+      if (!fwrite($socket, $out)) {
+        throw new Exception("unable to write");
+      } else {
+        while ($in = @fgets($socket, 1024)) {
+          $result .= $in;
+        }
+      }
+    } else {
+      throw new Exception("unable to create socket");
+    }
+    fclose($socket);
+
+    $result_xml = array();
+
+    preg_match('/(<.*>)/u', $result, $result_xml);
+    if (count($result_xml)) {
+      $result = array_pop($result_xml);
+
+      $dom = new DOMDocument;
+      $dom->loadXML($result);
+      if (!$dom) {
+        throw new Exception('Error while parsing the document');
+      }
+      $xml = simplexml_import_dom($dom);
+
+      if (isset($xml->error) && isset($xml->error->code)) {
+        if ($xml->error->code) {
+          $errorcode = (string)$xml->error->code;
+
+          if (($errorcode == "ILLEGAL_VALUE_TYPE")
+            || ($errorcode == "SEARCH_NOT_OWNED_BY_USER")
+              || ($errorcode == "NO_SUCH_USER_IN_PASSPORT")) {
+                $message = "Один или несколько параметров в настройках"
+                  . " плагина указаны неверно - ключ (key),"
+                  . " логин (login) или ID поиска (searchid).";
+              } elseif ($errorcode == "TOO_DELAYED_PUBLISH")
+				$message = "Максимальный срок отложенной публикации - 6 месяцев";
+				elseif ($errorcode == "USER_NOT_PERMITTED") {
+                $errorparam = (string)$xml->error->param;
+                $errorvalue = (string)$xml->error->value;
+                if ($errorparam == "key") {
+                  $message = "Неверный ключ (key) " . $errorvalue
+                    . ". Проверьте настройки плагина.";
+                } elseif ($errorparam == "ip") {
+                  $message = "Запрос приходит с IP адреса "
+                    . $errorvalue . ", который не указан в"
+                    . " списке адресов в настройках вашего"
+                    . " поиска";
+                } else {
+                  $message = "Запрос приходит с IP адреса, который не"
+                    . " указан в списке адресов в настройках"
+                    . " вашего поиска, либо Вы указали"
+                    . " неправильный ключ (key) в настройках"
+                    . " плагина.";
+                }
+              } else {
+                $message = $errorcode;
+              }
+        }
+      } elseif (isset($xml->invalid)) {
+        $invalidurl = $xml->invalid->url;
+        $errorcode = $xml->invalid["reason"];
+        if ($errorcode == "NOT_CONFIRMED_IN_WMC") {
+          $message = "Сайт не подтвержден в сервисе Яндекс."
+            . "Вебмастер для указанного имени"
+            . " пользователя.";
+        } elseif ($errorcode == "OUT_OF_SEARCH_AREA"){
+          $message = "Адрес " . $invalidurl . " не принадлежит"
+            . " области поиска вашей поисковой площадки.";
+        } elseif ($errorcode == "MALFORMED_URLS") {
+          $message = "Невозможно принять некорректный адрес: "
+            . $invalidurl;
+        } else {
+          $message = $errorcode;
+        }
+      } elseif (isset($xml->added)
+        && isset($xml->added['count'])
+          && $xml->added['count'] > 0) {
+				$addedaddress = $xml->added->url;
+				$message = "Плагин работает корректно. Последний принятый адрес: ".$addedaddress;
+          }
+
+      if (isset($message)
+        && $message
+          && user_access('access administration pages')) {
+            variable_set($prefix . 'message', $message);
+            drupal_set_message("Яндекс.ПДС: " . $message);
+          }
+
+      return true;
+    }
+  } catch (exception $e) {
+    return false;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function yandex_pinger_menu() {
+  $items = array();
+
+  $items['admin/config/services/yandex_pinger'] = array(
+    'title'            => 'Яндекс.ПДС',
+    'description'      => t('Настройки плагина Яндекс.ПДС пингер'),
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('yandex_pinger_settings'),
+    'access arguments' => array('administer yandex_pinger'),
+    'type'             => MENU_NORMAL_ITEM,
+    'menu_name'        => 'Яндекс.ПДС',
+  );
+
+  return $items;
+}
+
+/**
+ * Plugin settings hook.
+ *
+ * @return array
+ */
+function yandex_pinger_settings() {
+  $form['yandex_pinger_key'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Ключ'),
+    '#default_value' => variable_get('yandex_pinger_key', ''),
+  );
+  $form['yandex_pinger_searchId'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('ID поиска'),
+    '#default_value' => variable_get('yandex_pinger_searchId', ''),
+  );
+  $form['yandex_pinger_login'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Логин'),
+    '#default_value' => variable_get('yandex_pinger_login', ''),
+  );
+  $form['yandex_pinger_message'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Сообщение о Статусе плагина'),
+    '#default_value' => variable_get('yandex_pinger_message', ''),
+  );
+
+  return system_settings_form($form);
+}
