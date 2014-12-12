@@ -7,6 +7,11 @@
 /*
  * The active item in a Drupal menu
  */
+ 
+ .region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
+color:#000;
+}
+ 
 .menu li a.active {
   color: #F60!important;
   }
@@ -33,7 +38,7 @@ background: #027AC6;
 .region-sidebar-first a:hover{
 background: #027AC6;
 text-shadow: none;
-color: white;
+color: white!important;
 text-decoration: none;
 }
 /* explorer style in menu*/  
@@ -313,39 +318,6 @@ text-decoration: none;
 	
 }
 
-
-.region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
-color:#000;
-}
-/*1st level*//*
-.region-sidebar-first ul.menu li a:before{
-content: "\f101";
-font-size:1.2em;
-}
-.region-sidebar-first li.expanded.active-trail::last-child  a::before{
-content: "-";
-font-size:1.35em;
-}
-*/
-/*
-.region-sidebar-first li.active-trail > a:last-child{
-background:blue;
-}*/
 .menu li a.active:before {
 color:#F60!important;
 }
-/*
-.region-sidebar-first .collapsed a:before {
-content: "\f101"!important;
-}
-
-.region-sidebar-first .expanded>a:before {
-content: "\f101"!important;
-}*/
-/*2nd level */
-.region-sidebar-first ul.menu li li a:before{
-
-}
-
-
-
