@@ -69,7 +69,7 @@ stylesheets-conditional[lte IE 9][all][]  = css/ie_entas.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
-;scripts[] = js/snow.js 
+scripts[] = js/snow2.js 
 ;scripts[] = js/clear_search.js
 scripts[] = js/fixed_menu3.js
 scripts[] = js/qr_hide.js
