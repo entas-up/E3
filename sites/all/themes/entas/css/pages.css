@@ -910,12 +910,17 @@ right: 0;
 
 
 /* Main page */
+#node-304 p {
+text-align: center;
+}
+
 #node-304 a {
 /*height: 3.2em;
 padding: 4px 3px;*/
+border: 1px solid;
 text-align: center;
 display: inline-block;
-min-width: 314.5px;
+/*min-width: 314.5px;*/
 margin-right:5px;
 }
 #node-304 a:last-child {
@@ -923,6 +928,9 @@ margin-right:0;
 }
 #node-304 a:hover {
 color:#F60;
+background: none repeat scroll 0% 0% #F60;
+color: #FFF;
+border-color: #F60;
 }
 
 #node-304 a:hover {text-decoration: none;}
@@ -932,22 +940,23 @@ color:#F60;
 /*display: block;
 margin-left: 0.2em;*/
 display: inherit;
-border: 1px solid;
-width: 1.6em;
-border-radius: 100%;
-height: 1.6em;
+/*border: 1px solid;*/
+width: 5.6em;
+/*border-radius: 100%;*/
+height: 1.0em;
 line-height: 1.6em;
 text-indent: 6px;
 }
 #node-304 i:hover{
-background: #f60;
+/*background: #f60;
 color:white;
-border-color:#f60;
+border-color:#f60;*/
 }
 
 #node-304 .front-link {
 display: block;
 font-size: 0.8em;
+line-height: 2em;
 }
 
 #node-304 .field-name-body {
