@@ -130,6 +130,9 @@ list-style-image:none;
 list-style-type:none;
 }
 
+ .region-sidebar-first  a:hover:before{
+color:#fff!important;
+}
 /* Downloads menu item */
 .menu-2667 a:before {
 display: inline-block;
