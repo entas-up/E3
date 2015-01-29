@@ -279,7 +279,7 @@ color:red;
 text-decoration: underline;
 }
 /* Feedback  */
-.menu-mlid-2904 a:before {
+/*.menu-mlid-2904 a:before {
 display: inline-block;
 font-family: FontAwesome;
 font-style: normal;
@@ -291,7 +291,7 @@ margin-right: 4px;
 .menu-mlid-2904 a.active:before {
 color:red;
 
-}
+}*/
 /* Subscribe  3649*/
 .menu-mlid-3649 a:before {
 display: inline-block;
