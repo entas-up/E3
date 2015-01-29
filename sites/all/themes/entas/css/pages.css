@@ -908,7 +908,17 @@ bottom: 0;
 right: 0;
 }
 
+
+/* Main page */
+
+
+#node-304 a:hover {text-decoration: none;}
+#node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
+.front ul.links {display: none;}
+
+
 .field-type-file .sticky-table {width:100%;}
+
 
 /* Страница партнёров */
 
