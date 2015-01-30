@@ -7,6 +7,11 @@
 /*
  * The active item in a Drupal menu
  */
+ 
+ .region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
+color:#000;
+}
+ 
 .menu li a.active {
   color: #F60!important;
   }
@@ -33,7 +38,7 @@ background: #027AC6;
 .region-sidebar-first a:hover{
 background: #027AC6;
 text-shadow: none;
-color: white;
+color: white!important;
 text-decoration: none;
 }
 /* explorer style in menu*/  
@@ -125,6 +130,9 @@ list-style-image:none;
 list-style-type:none;
 }
 
+ .region-sidebar-first  a:hover:before{
+color:#fff!important;
+}
 /* Downloads menu item */
 .menu-2667 a:before {
 display: inline-block;
@@ -210,95 +218,6 @@ font-size: 1.2em;
 color: antiquewhite;
 }
 
-/* Home2  */
-.menu-mlid-1838 a {
-/*font-size: 0;*/
-}
-
-.menu-mlid-1838 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f015";
-color: #F60;
-vertical-align: middle;
-text-align: center;
-margin-top: -5px;
-font-size: 1.2em;
-cursor: pointer;
-margin-right: 4px;
-}
-.menu-mlid-1838 a.active:before {
-color:red;
-}
-.menu-mlid-1838 a.focus:before., .menu-mlid-1838 a.hover:before, .menu-mlid-1838 a.active:before {
-text-decoration: underline;
-}
-
-/* Sitemap  */
-.menu-mlid-1839 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f0e8";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-1839 a.active:before {
-color:red;
-
-}
-
-
-/* Search  */
-.menu-mlid-1840 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f002";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-1840 a.active:before {
-color:red;
-
-}
-
-.menu-mlid-1839 a.hover:before{
-text-decoration: underline;
-}
-/* Feedback  */
-.menu-mlid-2904 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f044";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-2904 a.active:before {
-color:red;
-
-}
-/* Subscribe  3649*/
-.menu-mlid-3649 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f0e0";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-3649 a.active:before {
-color:red;
-
-}
-
 #block-menu-block-4 a:hover {
 text-decoration: none;
 } 
@@ -313,39 +232,6 @@ text-decoration: none;
 	
 }
 
-
-.region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
-color:#000;
-}
-/*1st level*//*
-.region-sidebar-first ul.menu li a:before{
-content: "\f101";
-font-size:1.2em;
-}
-.region-sidebar-first li.expanded.active-trail::last-child  a::before{
-content: "-";
-font-size:1.35em;
-}
-*/
-/*
-.region-sidebar-first li.active-trail > a:last-child{
-background:blue;
-}*/
 .menu li a.active:before {
 color:#F60!important;
 }
-/*
-.region-sidebar-first .collapsed a:before {
-content: "\f101"!important;
-}
-
-.region-sidebar-first .expanded>a:before {
-content: "\f101"!important;
-}*/
-/*2nd level */
-.region-sidebar-first ul.menu li li a:before{
-
-}
-
-
-

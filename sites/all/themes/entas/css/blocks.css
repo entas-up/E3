@@ -181,7 +181,7 @@ position: relative;
 
 
 #block-block-7 { /* Блок адреса */
-font-size: 0.7em;
+/*font-size: 0.7em;*/
 padding-left: 15px;
 display: inline-block;
 /*border-top: 1px solid rgba(87, 87, 87, 0.52);*/
@@ -192,6 +192,7 @@ float: right;
 margin-top: 10px;
 padding-right: 15px;
 font-size: 0.8em;
+display: inline-block;
 }
 
 
@@ -439,7 +440,19 @@ color:#F60;
 display: none;
 }
 
-#block-block-7 .content:hover:after {
+#block-block-7 .contact {
+display:inline-block;
+float:left;
+}
+#block-block-7 .bottom-qr {
+float: left;
+padding-right: 5px;
+color:#F60;
+}
+#block-block-7 .bottom-qr:hover {
+color:#000;
+}
+#block-block-7 .bottom-qr:hover:after {
 background: url('/sites/all/themes/entas/images/qr-entas.png');
 width: 250px;
 height: 250px;
@@ -449,6 +462,7 @@ z-index: 100;
 bottom: 0;
 left: 0;
 position: absolute;
+
 }
 
 
@@ -578,15 +592,22 @@ text-align: center;
 line-height: 132px;
 padding-left:3%;
 }*/
+
 .jcarousel-skin-default .jcarousel-item {
-line-height:90px;
+line-height:55px;
+width: 60px;
+height:60px;
+border:none;
 }
 .jcarousel-skin-default .jcarousel-item-horizontal  img{
 margin:0;
 text-align:center;
 vertical-align: middle;
-
 }
+.jcarousel-skin-default .jcarousel-prev-horizontal, .jcarousel-skin-default .jcarousel-next-horizontal {
+top: 35px;
+}
+
 #block-imageblock-5.fixed-logo{
 display:block!important;
 }
@@ -601,6 +622,9 @@ display:none;
 width: 25px;
 height: 25px;
 }
+#block-block-23 i , #block-block-22 i {
+font-size:1.5em;
+}
 .print_html img ,.print_mail img{display:none;}
 
 .print_html a:before {
@@ -614,7 +638,7 @@ color:#F60;
 padding: .2em .25em .15em;
 border: solid 0.04em;
 border-radius: .1em;
-font-size:2em;
+font-size:1.5em;
 }
 .print_mail a:before {
 content: "\f0e0";
@@ -627,7 +651,7 @@ color:#F60;
 padding: .2em .25em .15em;
 border: solid 0.04em;
 border-radius: .1em;
-font-size:2em;
+font-size:1.5em;
 }
 .print_html a:hover:before, .print_mail a:hover:before{
 background:#F60;
@@ -651,6 +675,7 @@ font-weight: 600;
 #block-views-last-changes-block {
 text-align: center;
 font-size: 0.8em;
+display: block;
 }
 .view-last-changes.view-display-id-page_1 {
  font-size: 0.9em;
@@ -693,6 +718,24 @@ border: 0.04em solid;
 cursor:pointer;
 }
 #block-block-22 i:hover,#block-block-22 i:active {
+background: none repeat scroll 0% 0% #F60;
+color: #FFF;
+}
+#block-block-23 {
+color:#F60;
+margin: 1.4em 0px;
+display: inline-block;
+}
+
+#block-block-23 i {
+border-color:#F60;
+border-radius: 0.1em;
+padding: 0.2em 0.25em 0.15em;
+border: 0.04em solid;
+cursor:pointer;
+}
+
+#block-block-23 i:hover {
 background: none repeat scroll 0% 0% #F60;
 color: #FFF;
 }

@@ -34,7 +34,7 @@
     <hr class="print-hr" />
     <div class="print-source_url"><?php print $print['source_url']; ?></div>
 	<?php 
-			$block = block_load('google_qr_code', qr_code);
+			$block = block_load('google_qr_code', 'qr_code');
 			$block_content = _block_get_renderable_array(_block_render_blocks(array($block)));
 print render($block_content);
 			?>

@@ -910,53 +910,13 @@ right: 0;
 
 
 /* Main page */
-#node-304 a {
-/*height: 3.2em;
-padding: 4px 3px;*/
-text-align: center;
-display: inline-block;
-min-width: 314.5px;
-margin-right:5px;
-}
-#node-304 a:last-child {
-margin-right:0;
-}
-#node-304 a:hover {
-color:#F60;
-}
+
 
 #node-304 a:hover {text-decoration: none;}
 #node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
 .front ul.links {display: none;}
-#node-304 i {
-/*display: block;
-margin-left: 0.2em;*/
-display: inherit;
-border: 1px solid;
-width: 1.6em;
-border-radius: 100%;
-height: 1.6em;
-line-height: 1.6em;
-text-indent: 6px;
-}
-#node-304 i:hover{
-background: #f60;
-color:white;
-border-color:#f60;
-}
 
-#node-304 .front-link {
-display: block;
-font-size: 0.8em;
-}
 
-#node-304 .field-name-body {
-/*border-top: 1px solid #F60;
-border-bottom: 1px solid #F60;*/
-}
-#node-304 .content {
-margin:0;
-}
 .field-type-file .sticky-table {width:100%;}
 
 
