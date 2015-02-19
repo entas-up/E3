@@ -180,7 +180,7 @@ position: relative;
 }
 
 
-#block-block-7 { /* Блок адреса */
+#block-block-7 { /* Блок адреса Минск*/
 /*font-size: 0.7em;*/
 padding-left: 15px;
 display: inline-block;
@@ -443,6 +443,7 @@ display: none;
 #block-block-7 .contact {
 display:inline-block;
 float:left;
+font-size: 0.8em;
 }
 #block-block-7 .bottom-qr {
 float: left;
