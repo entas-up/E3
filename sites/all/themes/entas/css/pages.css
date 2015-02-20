@@ -1072,9 +1072,7 @@ table {
 	-webkit-border-radius:3px;
 	border-radius:3px;
 
-	-moz-box-shadow: 0 1px 2px #d1d1d1;
-	-webkit-box-shadow: 0 1px 2px #d1d1d1;
-	box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: none;
 }
 
 table th {
@@ -1109,14 +1107,11 @@ table tr td:first-child{
 	text-align: left;
 	padding-left:20px;
 	border-left: 0;
+	border-right: 1px solid #C3C3C3;
 }
 table tr td {
 	padding:1px;
-	border-top: 1px solid #ffffff;
-	border-bottom:1px solid #e0e0e0;
-	border-left: 1px solid #e0e0e0;
-	
-	background: #fafafa;
+	border: none;
 	background: #fff;
 	
 }
