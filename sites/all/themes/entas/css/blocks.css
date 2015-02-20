@@ -788,9 +788,12 @@ color:#F93;
 top: 0.225em;
 left: 0.325em;
 }
-
+.ya-site-form table {
+margin: 0!important;
+}
 .ya-site-form table tr td:first-child{
-	border-right: none;
+	border-right: none!important;
+	padding-left: 8px!important;
 }
 #ya-site-form0 .ya-site-form__submit {
 margin: 0!important;
