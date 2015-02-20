@@ -21,14 +21,47 @@
 
 .field-type-image {
 }
-
+/* таблица файлов */
 .field-type-file {
-background: #F1F1F1;
+background: #fff; /*#F1F1F1;*/
 padding: 5px;
-border: 1px solid #CFCFCF;
+/*border: 1px solid #CFCFCF;*/
 margin: 15px 0;
 
 }
+/* таблица файлов. отмена общего дизайна таблиц */
+.field-type-file  table {
+color: #000;
+font-size: 12px;
+text-shadow: none;
+margin: 1.5em 0px;
+border: 1px solid #969696;
+border-collapse: collapse;
+border-radius: 0px;
+box-shadow: none;
+}
+.field-type-file  table tr td {
+padding: 8px;
+}
+.field-type-file table th {
+border-top: 1px solid #969696;
+border-bottom: 1px solid #9E9E9E;
+background: #fff;
+}
+.field-type-file tr.even, tr.odd {
+border-bottom: 1px solid #9E9E9E;
+
+}
+.field-type-file .field-label {
+display:none;
+}
+
+.field-type-file  thead th:first-child{
+
+border-right:1px solid #ccc;
+}
+/*  таблица файлов. конец */
+
 .field-name-field-filelink-page {
 padding: 10px;
 border: 1px solid #757575;
