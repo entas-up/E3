@@ -28,8 +28,9 @@ CKEDITOR.editorConfig = function(config) {
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
   config.extraPlugins = '';
 
-  //My seeting for entas.ru
+  //My settings for entas.ru
   config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
+  config.protectedSource.push( /<noindex[\s\S]*?noindex>/g ); /* noindex tags */
   config.allowedContent = true; /* all tags */
   // ALLOW <i></i>
 	config.protectedSource.push( /<i[\s\S]*?\>/g ); //allows beginning <i> tag
