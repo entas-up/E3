@@ -23,19 +23,17 @@ CKEDITOR.editorConfig = function(config) {
   // side
   // (as does Drupal), so just leave this line as is.
   config.protectedSource.push(/<\?[\s\S]*?\?>/g); // PHP Code
-
+//My settings for entas.ru
+-  config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
+-  config.protectedSource.push( /<noindex[\s\S]*?noindex>/g ); /* noindex tags */
+-  config.allowedContent = true; /* all tags */
+-  // ALLOW <i></i>
+-	config.protectedSource.push( /<i[\s\S]*?\>/g ); //allows beginning <i> tag
+-	config.protectedSource.push( /<\/i[\s\S]*?\>/g ); //allows ending </i> tag
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
   config.extraPlugins = '';
 
-  //My settings for entas.ru
-  config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
-  config.protectedSource.push( /<noindex[\s\S]*?noindex>/g ); /* noindex tags */
-  config.allowedContent = true; /* all tags */
-  // ALLOW <i></i>
-	config.protectedSource.push( /<i[\s\S]*?\>/g ); //allows beginning <i> tag
-	config.protectedSource.push( /<\/i[\s\S]*?\>/g ); //allows ending </i> tag
-  
   /*
     * Append here extra CSS rules that should be applied into the editing area.
     * Example:
@@ -66,6 +64,11 @@ CKEDITOR.editorConfig = function(config) {
   if (Drupal.settings.ckeditor.theme == "marinelli") {
     config.bodyClass = 'singlepage';
     config.bodyId = 'primary';
+  }
+
+  // Make CKEditor's edit area as high as the textarea would be.
+  if (this.element.$.rows > 0) {
+    config.height = this.element.$.rows * 20 + 'px';
   }
 }
 
