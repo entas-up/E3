@@ -24,12 +24,12 @@ CKEDITOR.editorConfig = function(config) {
   // (as does Drupal), so just leave this line as is.
   config.protectedSource.push(/<\?[\s\S]*?\?>/g); // PHP Code
 //My settings for entas.ru
--  config.protectedSource.push( /<script[\s\S]*?script>/g ); /* script tags */
--  config.protectedSource.push( /<noindex[\s\S]*?noindex>/g ); /* noindex tags */
--  config.allowedContent = true; /* all tags */
--  // ALLOW <i></i>
--	config.protectedSource.push( /<i[\s\S]*?\>/g ); //allows beginning <i> tag
--	config.protectedSource.push( /<\/i[\s\S]*?\>/g ); //allows ending </i> tag
+config.protectedSource.push( /<script[\s\S]*?script>/g ); 
+config.protectedSource.push( /<noindex[\s\S]*?noindex>/g ); 
+//config.allowedContent = true; 
+
+config.protectedSource.push(/<i[^>]*><\/i>/g); //allows  <i>
+//config.protectedSource.push( /<\/i[\s\S]*?\>/g ); //allows ending </i> tag
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
   config.extraPlugins = '';
