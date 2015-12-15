@@ -27,7 +27,6 @@ CKEDITOR.editorConfig = function(config) {
 config.protectedSource.push( /<script[\s\S]*?script>/g ); 
 config.protectedSource.push( /<noindex[\s\S]*?noindex>/g ); 
 //config.allowedContent = true; 
-
 config.protectedSource.push(/<i[^>]*><\/i>/g); //allows  <i>
 //config.protectedSource.push( /<\/i[\s\S]*?\>/g ); //allows ending </i> tag
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
@@ -64,11 +63,6 @@ config.protectedSource.push(/<i[^>]*><\/i>/g); //allows  <i>
   if (Drupal.settings.ckeditor.theme == "marinelli") {
     config.bodyClass = 'singlepage';
     config.bodyId = 'primary';
-  }
-
-  // Make CKEditor's edit area as high as the textarea would be.
-  if (this.element.$.rows > 0) {
-    config.height = this.element.$.rows * 20 + 'px';
   }
 }
 
