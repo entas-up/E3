@@ -149,7 +149,7 @@ function uptime_contents($which_block) {
   $year = variable_get('uptime_year', '');
   // If the notice is enabled we want it..
   if (variable_get('uptime_notice_enabled', 0)) {
-    $notice = ' ' . variable_get('uptime_prepend', '') . ' © ' . (($year != date('Y') && !empty($year)) ? $year . '-' . date('Y') : date('Y'));
+    $notice = ' ' . variable_get('uptime_prepend', 'All rights reserved') . ' © ' . (($year != date('Y') && !empty($year)) ? $year . '-' . date('Y') : date('Y'));
   }
   else {
     // ..and leave it empty if disabled.

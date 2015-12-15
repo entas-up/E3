@@ -46,7 +46,16 @@ To change the style of the widget (e.g. colors):
 2. Make your changes.
 3. Clear both your browser and site cache.
 
+Alternatively you can install and enable the helper module
+https://www.drupal.org/project/style_settings. This will make many CSS
+attributes configurable through the settings page (UI).
+
 To override the string "Uptime" use 
 http://drupal.org/project/stringoverrides which provides an easy way to replace 
 any text on your site that's wrapped in the t() function.
 
+
+-- TROUBLESHOOTING --
+
+Many issues can be resolved by clearing the site's cache at
+'admin/config/development/performance'.
