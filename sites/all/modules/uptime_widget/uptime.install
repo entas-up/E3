@@ -24,8 +24,7 @@ function uptime_install() {
 function uptime_uninstall() {
   // Delete all variables set in variable table.
   db_delete('variable')
-  ->condition('name', 'uptime_%', 'LIKE')
-  ->execute();
+    ->condition('name', 'uptime_%', 'LIKE')
+    ->execute();
   cache_clear_all('variables', 'cache_bootstrap');
 }
-

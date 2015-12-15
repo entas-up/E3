@@ -33,7 +33,7 @@
         <?php
           $host = variable_get('uptime_url_name', parse_url($GLOBALS['base_url'], PHP_URL_HOST));
           $year = variable_get('uptime_year', '');
-          $notice = ' ' . variable_get('uptime_prepend', '') . ' © ' . (($year != date('Y') && !empty($year)) ? $year . '-' . date('Y') : date('Y'));
+          $notice = ' ' . variable_get('uptime_prepend', 'All rights reserved') . ' © ' . (($year != date('Y') && !empty($year)) ? $year . '-' . date('Y') : date('Y'));
           print $notice . ' ' . $host;
         ?>
       </td>
@@ -42,4 +42,3 @@
   </table>
 <?php endif; ?>
 </div>
-
