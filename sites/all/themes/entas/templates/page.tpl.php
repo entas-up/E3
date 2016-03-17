@@ -91,9 +91,6 @@
 <!-- RSS потоки -->
 <link rel="alternate" type="application/rss+xml" title="Мероприятия ЭНТАС" href="/entas_event.xml" />
 <link rel="alternate" type="application/rss+xml" title="Новости ЭНТАС" href="/entas_news.xml" />
-<!-- addthis tool -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53108998150bcddc" async="async"></script>
-
 
 
 <div id="page-wrapper"><div id="page">
