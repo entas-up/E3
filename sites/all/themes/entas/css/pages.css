@@ -1158,3 +1158,24 @@ table a:hover {
 	color: #bd5a35;
 	text-decoration:underline;
 }
+
+/* maintenance */
+
+.maintenance-page #main {
+margin: 18px auto!important;
+}
+
+.maintenance-page #main .title {
+    text-align: center;
+	font-size: 2em;
+    border-bottom: 1px dashed;
+    margin: 10px 0;
+}
+.maintenance-text{
+    text-align: center;
+	font-size: 1.2em;
+    }
+.maintenance-page #main  img{
+    margin: 20px auto;
+    display: block;
+}
