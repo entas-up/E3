@@ -5,7 +5,7 @@ CKEDITOR.plugins.add( 'status_error', {
             
                 exec: function( editor ) {
 
-                editor.insertHtml( '<div class="messages error">&nbsp</div>' );
+                editor.insertHtml( '<div class="messages error">&nbspЗамените текст сообщения&nbsp</div>' );
             }
         });
         editor.ui.addButton( 'status error', {
