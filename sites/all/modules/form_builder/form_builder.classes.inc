@@ -51,7 +51,7 @@ class FormBuilderLoader {
   public function getElementTypeInfo($form_type, $form_id) {
     if (!isset($this->elementTypeInfo[$form_type][$form_id])) {
       $element_types = module_invoke_all('form_builder_element_types', $form_type, $form_id);
-      $groups = $this->getPaletteGroupInfo($form_type);
+      $groups = $this->getPaletteGroupInfo($form_type, $form_id);
       // Add default values for undefined properties.
       foreach ($element_types as $key => &$type) {
         $type += array(
@@ -90,9 +90,9 @@ class FormBuilderLoader {
     return $this->elementTypeInfo[$form_type][$form_id];
   }
 
-  public function getPaletteGroupInfo($form_type, $reset = FALSE) {
+  public function getPaletteGroupInfo($form_type, $form_id, $reset = FALSE) {
     if (!isset($this->paletteGroupInfo[$form_type]) || $reset) {
-      $this->paletteGroupInfo[$form_type] = module_invoke_all('form_builder_palette_groups', $form_type);
+      $this->paletteGroupInfo[$form_type] = module_invoke_all('form_builder_palette_groups', $form_type, $form_id);
     }
     return $this->paletteGroupInfo[$form_type];
   }
@@ -552,6 +552,9 @@ class FormBuilderFormBase implements Serializable {
    * {@inheritdoc}
    */
   public function getElement($element_id) {
+    if (!isset($this->elementArrays[$element_id])) {
+      return NULL;
+    }
     $element = &$this->elementArrays[$element_id];
     return FormBuilderLoader::instance()
       ->getElement($this->formType, $this->formId, $element['#form_builder']['element_type'], $this, $element);
@@ -663,6 +666,22 @@ class FormBuilderFormBase implements Serializable {
     unset($this->elementArrays[$element_id]);
     $parent = &$this->elementArrays[$element['#form_builder']['parent_id']];
     unset($parent[$element['#key']]);
+  }
+
+  private function preOrderElementArrays(&$elements, &$e) {
+    foreach (element_children($e, TRUE) as $key) {
+      $elements[$e[$key]['#form_builder']['element_id']] = $e[$key];
+      $this->preOrderElementArrays($elements, $e[$key]);
+    }
+  }
+
+  /**
+   * Get list of elements in depth-first pre-order.
+   */
+  public function getElementArraysInPreOrder() {
+    $elements = array();
+    $this->preOrderElementArrays($elements, $this->form);
+    return $elements;
   }
 
   /**
