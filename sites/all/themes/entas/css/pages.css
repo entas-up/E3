@@ -910,14 +910,16 @@ right: 0;
 
 .special-button {
 border: 2px solid rgb(0, 39, 255);
-color: rgb(255, 255, 255);
-background: rgb(42, 99, 219) none repeat scroll 0% 0%;
+color: rgb(0, 39, 255);
 padding: 5px 20px;
 border-radius: 5px;
 margin: 10px;
 display: block !important;
+text-align: center;
 }
-
+.special-button a {
+color: rgb(0, 39, 255);
+}
 /* Main page */
 #node-304 a:hover {text-decoration: none;}
 #node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
