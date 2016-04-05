@@ -722,10 +722,15 @@ cursor:pointer;
 background: none repeat scroll 0% 0% #F60;
 color: #FFF;
 }
+
 #block-block-23 {
 color:#F60;
 margin: 1.4em 0.5em;
 display: inline-block;
+}
+
+#block-block-23 p {
+margin: 0!important;
 }
 
 #block-block-23 i {
@@ -810,3 +815,9 @@ margin: 0!important;
 #ya-site-form0 .ya-site-form__submit {
 margin: 0!important;
 }
+
+#block-print-print-links {
+	float: left;
+    display: inline-block;
+    margin: 1.4em 0.5em;
+	}
