@@ -150,15 +150,17 @@ class FormBuilderFormBaseTest extends DrupalUnitTestCase {
     $this->assertNotEmpty($element->fieldset);
     $fieldset_id = $data['elementId'];
 
+    // Add a textfield to the form.
     $data = _form_builder_add_element('webform', 'test', 'textfield', NULL, 'test', TRUE);
     $this->assertNotEquals($fieldset_id, $data['elementId']);
     $textfield_id = $data['elementId'];
 
     $form = $loader->fromCache('webform', 'test', 'test');
+    // Move the textfield inside the fieldset.
     $element = $form->getElementArray($textfield_id);
     $element['#weight'] = 1;
     $element['#form_builder']['parent_id'] = $fieldset_id;
-    $form->setElementArray($element);
+    $this->assertEqual($textfield_id, $form->setElementArray($element));
 
     $form_array = $form->getFormArray();
     $this->assertEqual(array($fieldset_id), element_children($form_array));
@@ -185,12 +187,13 @@ class FormBuilderFormBaseTest extends DrupalUnitTestCase {
     );
   }
 
-  public function test_getElementArraysInPreOrder() {
+  public function test_getElementsInPreOrder() {
     $form['a'] = $this->eArray('textfield', 'a', 'a', 1);
     $form['fieldset'] = $this->eArray('fieldset', 'fs', 'fieldset');
     $form['fieldset']['b'] = $this->eArray('textfield', 'b', 'b', 0, 'fs');
+    $form['fieldset']['c'] = array('#markup' => 'Not a form_builder element');
     $form_obj = new FormBuilderFormBase('webform', 'test', NULL, array(), $form);
     $expected = array('fs', 'b', 'a');
-    $this->assertEqual($expected, array_keys($form_obj->getElementArraysInPreOrder()));
+    $this->assertEqual($expected, array_keys($form_obj->getElementsInPreOrder()));
   }
 }
