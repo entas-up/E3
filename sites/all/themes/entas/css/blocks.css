@@ -689,7 +689,8 @@ display: block;
 
 .view-display-id-page_1 .views-field-changed {
     float: left;
-    width: 13em;
+    /*width: 13em;*/
+	padding-right: 20px;
 }
 
 .atss a {

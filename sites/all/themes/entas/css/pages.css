@@ -1078,7 +1078,7 @@ table {
 	background:#eaebec;
 	margin:20px;
 	border:#ccc 1px solid;
-	border-collapse:separate;
+	/*border-collapse:separate;*/
 
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
@@ -1167,6 +1167,10 @@ table a:hover {
 	text-decoration:underline;
 }
 
+.view-a-file2 table {
+width:97%;
+}
+
 /* maintenance */
 
 .maintenance-page #main {
@@ -1186,4 +1190,9 @@ margin: 18px auto!important;
 .maintenance-page #main  img{
     margin: 20px auto;
     display: block;
+}
+
+.view-display-id-page_1 .views-row {
+border-top: 1px dotted;
+padding: 10px 0;
 }
