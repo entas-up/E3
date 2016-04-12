@@ -1085,7 +1085,7 @@ table {
 
 table th {
 	font-weight:bold;
-	padding:8px 25px 8px 25px;
+	padding:5px 25px 5px 25px;
 	border-top:1px solid #fafafa;
 	border-bottom:1px solid #e0e0e0;
 	border-left: none;
@@ -1189,8 +1189,8 @@ margin: 18px auto!important;
 }
 
 .view-display-id-page_1 .views-row {
-border-top: 1px dotted;
-padding: 10px 0;
+/*border-top: 1px dotted;
+padding: 10px 0;*/
 }
 
 ul.quicktabs-tabs.quicktabs-style-zen li.active a, ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover {
