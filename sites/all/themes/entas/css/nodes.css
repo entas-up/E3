@@ -7,8 +7,9 @@
 
 
 .node /* Node wrapper */ {
-/*margin: 15px 0;
-padding: 10px;*/
+margin: 0 0 5px 0;
+/*padding: 10px;*/
+
 }
 
 .preview .node /* Preview of the content before submitting new or updated content */ {
@@ -77,6 +78,11 @@ font-size: 0.8em; /* Влияет на шрифт */
 margin-left: 20px;
 }
 
+#quicktabs-tabpage-testtab-0 .view-content {
+font-size: 0.8em; /* Влияет на шрифт */
+margin-left: 20px;
+}
+
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 	color:#F00;
 }
@@ -107,4 +113,8 @@ position: relative;
 .node-event {
 /*min-height: 287px;*/
 /*background: #F00;*/
+}
+
+.print-link {
+display:none;
 }
