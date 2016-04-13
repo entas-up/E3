@@ -5,7 +5,7 @@ CKEDITOR.plugins.add( 'sbutton', {
             
                 exec: function( editor ) {
 
-                editor.insertHtml( '<div class="special-button fa fa-file-o fa-2x">&nbspЗамените текст сообщения&nbsp</div>' );
+                editor.insertHtml( '<div class="special-button fa fa-file-o fa-2x">&nbspЗамените&nbspтекст&nbspсообщения&nbsp</div>' );
             }
         });
         editor.ui.addButton( 'special button', {
