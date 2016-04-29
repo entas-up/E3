@@ -691,6 +691,8 @@ border: 1px solid #7A7A7A;
 
 .event .type {
 border-bottom: 1px dotted #CCC;
+z-index: 10;
+position: relative;
 
 }
 
@@ -698,15 +700,31 @@ border-bottom: 1px dotted #CCC;
 margin: 4px 10px 5px 0;
 display: block;
 float: left;
-width: 110px;
-height: 110px;
+/*width: 110px;
+height: 110px;*/
 text-align: center;
 background: #FFF;
+z-index: 15;
+position: relative;
 }
+.event .date-display-range {
+display: initial;
 }
+/*.event .image {
+    margin: 4px 10px 45px 0px;
+    display: block;
+    float: left;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    background: #FFF;
+    z-index: 10;
+    position: relative;*/
 
 .event .views-field-body{
-margin: 15px 0 0 0;
+/*margin: 15px 0 0 0;*/
+z-index: 10;
+position: relative;
 }
 
 .event .image  img{
@@ -715,9 +733,13 @@ box-shadow: 0px 0px 6px #353535;
 
 .event .title {
 border-bottom: 1px dotted #CCC;
+z-index: 10;
+position: relative;
 }
 .event .date {
 border-bottom: 1px dotted #CCC;
+z-index: 10;
+position: relative;
 }
 
 .event .views-row{
@@ -726,11 +748,16 @@ padding: 5px;
 margin-top: 10px;
 box-shadow: -3px 3px 6px #CCC;
 height: 141px;
+position: relative;
 }
 
-
-.event .views-row a {
-display: block;
+.event .views-row .views-field-body a {
+/*display: block;*/
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+font-size: 1.3em;
 }
 
 .error2 {
@@ -1062,12 +1089,7 @@ display:block!important;
 .view-files .views-exposed-form .views-exposed-widget {
 float:none;
 }
-
-
-.node-article h1:before {
-content:"Новости: ";
-}
-
+.node-article h1:before {content:"Новости: ";}
 
 /* Таблицы 2015 http://blog.harrix.org/?p=513 */
 table {
@@ -1192,14 +1214,14 @@ margin: 18px auto!important;
 /*border-top: 1px dotted;
 padding: 10px 0;*/
 }
-
+/*
 ul.quicktabs-tabs.quicktabs-style-zen li.active a, ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover {
 background: #027ac6;
 color: white;
 font-family: inherit;
 font-style: inherit;
 font-weight: inherit;
-/*font-weight: normal!important;*/
+
 font-size: 0.8em;
 }
 ul.quicktabs-tabs.quicktabs-style-zen li {
@@ -1224,4 +1246,38 @@ background: none;
 ul.quicktabs-tabs.quicktabs-style-zen li:hover a {
 background: #027ac6;
 color: white;
+}
+*/
+#block-views-last-files-block-1 .image {
+display: block;
+float: left;
+padding-right: 15px;
+}
+
+#block-views-last-files-block-1  .views-row {
+    overflow: hidden;
+}
+#block-views-last-files-block-1 , #block-views-last-files-block-2{
+    font-size: 0.8em;
+}
+
+#block-views-last-files-block-1  .date-display-range {
+display: inline;
+}
+
+#block-views-last-files-block-2 .views-row {
+text-align: center;
+line-height: 43px;
+font-size: 1.2em;
+height: 50px;
+}
+
+.notexpired-event {
+width: 99%;
+height: 95%;
+position: absolute;
+z-index: 1;
+border: 5px solid #63d463;
+left: 0;
+top: 0;
 }
