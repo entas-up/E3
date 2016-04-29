@@ -79,8 +79,13 @@ margin-left: 20px;
 }
 
 #quicktabs-tabpage-testtab-0 .view-content {
-font-size: 0.8em; /* Влияет на шрифт */
 margin-left: 20px;
+}
+#block-quicktabs-testtab {
+font-size: 0.75em; /* Влияет на шрифт */
+}
+#block-quicktabs-testtab .node .content {
+font-size: inherit; /* Влияет на шрифт */
 }
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
