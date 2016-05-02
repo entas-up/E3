@@ -484,8 +484,8 @@ font-weight: bold;
 }
 
 #block-views-similarterms-block  .views-field-path a{
-/*width: 100%;
-position:absolute;
+width: 100%;
+/*position:absolute;
 top:0;
 right:0;
 border: 1px solid rgba(2, 122, 198, 0.18); старый вариант */
