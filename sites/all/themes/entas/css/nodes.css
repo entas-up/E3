@@ -87,7 +87,30 @@ font-size: 0.75em; /* Влияет на шрифт */
 #block-quicktabs-testtab .node .content {
 font-size: inherit; /* Влияет на шрифт */
 }
-
+#block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row {
+   /* margin: 3px 0px;
+    padding: 10px;
+    height: 93px;
+    border-radius: 5px;
+    border: 1px solid #C0C0C0;
+    box-shadow: -3px 3px 6px #CCC;
+    position: relative;*/
+}
+#block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row  a {
+text-decoration:none;
+ margin: 3px 0px;
+    padding: 10px;
+    height: 93px;
+    border-radius: 5px;
+    border: 1px solid #C0C0C0;
+    box-shadow: -3px 3px 6px #CCC;
+    position: relative;
+	display: block;
+}
+#block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row  a:hover {
+background:rgba(2, 122, 198, 1);
+color:white!important;
+}
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 	color:#F00;
 }
