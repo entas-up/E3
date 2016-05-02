@@ -937,16 +937,34 @@ right: 0;
 }
 /* Special button */
 .special-button {
-border: 2px solid rgb(0, 39, 255);
-color: rgb(0, 39, 255);
-padding: 5px 20px;
-border-radius: 5px;
-margin: 10px;
-display: block !important;
-text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #C0C0C0;
+    box-shadow: -3px 3px 6px #CCC;
+    position: relative;
+    width: 95%;
+    display: inline-block;
+	font-size:1.6em;
 }
+/*
 .special-button a {
 color: rgb(0, 39, 255);
+}
+*/
+.special-button::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    content: "\f0c5";
+    font-size: 2em;
+	margin-right: 20px;
+    
+}
+.special-button:hover {
+background:rgba(2, 122, 198, 1);
+color:white;
+text-decoration:none;
 }
 
 .special-button a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок */{
