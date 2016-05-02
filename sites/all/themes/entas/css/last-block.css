@@ -129,11 +129,13 @@ margin-top: 3px;
 }
 
 .blocks-last .views-content-title a {
-width:25px;
-height:25px;
+width: 26px;
+height: 28px;
 position: absolute;
-right: 4px;
+right: 0px;
 top: 0px;
+font-size:1.8em;
+border-left: 1px solid white;
 }
 
 #block-views-banner-block {
