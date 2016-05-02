@@ -140,7 +140,7 @@ width: 960px;
  * Content
  */
 #content {
-
+font-size:0.8em; /* Влияет на шрифт */
 }
 
 #content .section {
@@ -744,10 +744,10 @@ position: relative;
 
 .event .views-row{
 border: 1px solid #CCC;
-padding: 5px;
+padding: 5px 10px;
 margin-top: 10px;
 box-shadow: -3px 3px 6px #CCC;
-height: 141px;
+height: 124px; /*141px при 100% шрифте*/
 position: relative;
 }
 
