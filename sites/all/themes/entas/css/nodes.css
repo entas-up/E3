@@ -82,7 +82,7 @@ margin-left: 20px;
 margin-left: 20px;
 }
 #block-quicktabs-testtab {
-font-size: 0.75em; /* Влияет на шрифт */
+/*font-size: 0.75em; *//* Влияет на шрифт */
 overflow: hidden;
 }
 #block-quicktabs-testtab .node .content {
