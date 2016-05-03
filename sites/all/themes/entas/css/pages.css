@@ -958,8 +958,7 @@ color: rgb(0, 39, 255);
     font-weight: normal;
     content: "\f0c5";
     font-size: 2em;
-	margin-right: 20px;
-    
+	margin-right: 20px;   
 }
 .special-button:hover {
 background:rgba(2, 122, 198, 1);
@@ -967,7 +966,7 @@ color:white;
 text-decoration:none;
 }
 
-.special-button a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок */{
+.special-button a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок. Проверить */{
 
 color:rgb(0, 39, 255)!important;
 }

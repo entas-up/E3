@@ -83,6 +83,7 @@ margin-left: 20px;
 }
 #block-quicktabs-testtab {
 font-size: 0.75em; /* Влияет на шрифт */
+overflow: hidden;
 }
 #block-quicktabs-testtab .node .content {
 font-size: inherit; /* Влияет на шрифт */
@@ -95,12 +96,13 @@ font-size: inherit; /* Влияет на шрифт */
     border: 1px solid #C0C0C0;
     box-shadow: -3px 3px 6px #CCC;
     position: relative;*/
+	margin-bottom: 6px;
 }
 #block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row  a {
 text-decoration:none;
  margin: 3px 0px;
     padding: 10px;
-    height: 93px;
+    height: 98px;
     border-radius: 5px;
     border: 1px solid #C0C0C0;
     box-shadow: -3px 3px 6px #CCC;
@@ -114,7 +116,14 @@ color:white!important;
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 	color:#F00;
 }
-
+#block-quicktabs-testtab .view-display-id-block_3  img{
+float:left;
+border: 1px solid #8F8F8F;
+margin: 5px 30px 10px 0px;
+}
+.next-tab  i{
+font-size:1.5em;
+}
 .field-name-field-page-prior {
 /*position: absolute;
 top: 1px;
