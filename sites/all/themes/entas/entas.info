@@ -95,6 +95,7 @@ regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 regions[news1000] = Блок супер новости
+regions[system_area]    = Системная область
 
 
 

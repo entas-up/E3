@@ -262,7 +262,7 @@ background: #fff;
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
   padding-bottom: 0; /* Undo system.css */
-  padding-top: 32px; /* hack for big menu */
+  /*padding-top: 32px;  hack for big menu */
   font-size: 0.7em; /* Влияет на шрифт */
 }
 
