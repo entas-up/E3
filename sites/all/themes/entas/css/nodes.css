@@ -78,17 +78,17 @@ font-size: 0.8em; /* Влияет на шрифт */
 margin-left: 20px;
 }
 
-#quicktabs-tabpage-testtab-0 .view-content {
+#quicktabs-tabpage-maintab-0 .view-content {
 margin-left: 20px;
 }
-#block-quicktabs-testtab {
+#block-quicktabs-maintab {
 /*font-size: 0.75em; *//* Влияет на шрифт */
 overflow: hidden;
 }
-#block-quicktabs-testtab .node .content {
+#block-quicktabs-maintab .node .content {
 font-size: inherit; /* Влияет на шрифт */
 }
-#block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row {
+#block-quicktabs-maintab .view-similarterms.view-display-id-block_1  .views-row {
    /* margin: 3px 0px;
     padding: 10px;
     height: 93px;
@@ -98,7 +98,7 @@ font-size: inherit; /* Влияет на шрифт */
     position: relative;*/
 	margin-bottom: 6px;
 }
-#block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row  a {
+#block-quicktabs-maintab .view-similarterms.view-display-id-block_1  .views-row  a {
 text-decoration:none;
  margin: 3px 0px;
     padding: 10px;
@@ -109,14 +109,14 @@ text-decoration:none;
     position: relative;
 	display: block;
 }
-#block-quicktabs-testtab .view-similarterms.view-display-id-block_1  .views-row  a:hover {
+#block-quicktabs-maintab .view-similarterms.view-display-id-block_1  .views-row  a:hover {
 background:rgba(2, 122, 198, 1);
 color:white!important;
 }
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 	color:#F00;
 }
-#block-quicktabs-testtab .view-display-id-block_3  img{
+#block-quicktabs-maintab .view-display-id-block_3  img{
 float:left;
 border: 1px solid #8F8F8F;
 margin: 5px 30px 10px 0px;
