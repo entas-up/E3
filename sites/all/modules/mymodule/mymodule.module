@@ -1,0 +1,4 @@
+<?php 
+	function mymodule_mail_alter(&$message) {
+  	$message['headers']['X-Postmaster-Msgtype'] = 'reg01';
+  }
