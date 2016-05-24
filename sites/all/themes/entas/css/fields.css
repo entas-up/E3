@@ -79,24 +79,31 @@ line-height: 30px;*/
 
 .field-type-taxonomy-term-reference {
 }
-.field-name-field-catalog  {
-margin: 5px 0;;
+.field-name-field-catalog , .field-name-field-tags {
+margin: 5px 0;
+background: #e1fff8;
+border: 1px solid #7faaa0;
+padding: 10px;
+overflow: hidden;
 }
 
 .field-name-field-catalog  .field-item {
-float:left;
+/*float:left;
 margin-right: 8px;
-font-size: 0.9em;
+font-size: 0.9em;*/
 }
-.field-name-field-catalog  .field-item a {
-/*color:#494848;
-padding: 5px;
-border: 1px solid #575757;
-border-radius: 5px;*/
+.field-name-field-catalog  .field-item a , .field-name-field-tags .field-item a {
+/*
 margin-right: 10px;
 border: 1px solid #FF8F00;
 padding: 1px 4px;
-border-radius: 3px;
+border-radius: 3px;*/
+margin-right: 10px;
+border: 1px solid #FF8F00;
+padding: 1px 4px;
+background: white;
+float: left;
+display: block;
 }
 
 .field-name-field-catalog  .field-item a:hover{
@@ -147,10 +154,6 @@ text-decoration: none;
 
 .field-name-field-image {
 }
-
-.field-name-field-tags {
-}
-
 .field-name-field-FIELDNAME /* Underscores in field name are replaced with dashes. */ {
 }
 .field-label-inline .field-label, .field-label-inline .field-items {
