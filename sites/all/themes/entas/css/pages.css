@@ -660,7 +660,7 @@ text-decoration: none;
 #page-title {
 clear: both;
 padding: 0 20px;
-border-bottom: 1px dotted;
+/*border-bottom: 1px dotted;*/
 }
 
 /* Страница ошибки 404. НАЧАЛО 
@@ -682,7 +682,7 @@ text-align: center;
 
 .error404-img  img{
 border-radius: 10px;
-box-shadow: 0 0 80px #2C2C2C, inset 0 0 10px #000;
+box-shadow: 0 0 8px #000, inset 0 0 8px #000;
 border: 1px solid #7A7A7A;
 }
 /* Страница ошибки 404. КОНЕЦ */
@@ -1183,9 +1183,13 @@ table tr:last-child td:last-child{
 	border-bottom-right-radius:3px;
 }
 table tr:hover td{
-	background: #f2f2f2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+	background: #027ac6;
+	color:white;
+}
+
+table td:hover  a, table tr:hover td a {
+	background: #027ac6;
+	color:white;
 }
 
 table a:link {
@@ -1198,9 +1202,10 @@ table a:visited {
 	font-weight:bold;
 	text-decoration:none;
 }
+
 table a:active,
 table a:hover {
-	color: #bd5a35;
+	color: white /*#bd5a35*/;
 	text-decoration:underline;
 }
 
