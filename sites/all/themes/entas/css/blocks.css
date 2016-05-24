@@ -753,10 +753,12 @@ background: none repeat scroll 0% 0% #027ac6;
 color: #FFF;
 }
 #block-block-24 {
-/*padding: 12px 20px 0px;*/
+/*padding: 12px 20px 0px;
 right: 0;
-position: absolute;
+position: absolute;*/
 border: 1px solid #ccc;
+float:right;
+
 }
 #google_translate_element {
 font-size: 0.9em;
@@ -824,7 +826,7 @@ margin: 0!important;
 }
 
 #block-print-print-links {
-	float: left;
+	float: right;
     display: inline-block;
     /*margin: 1.4em 0.5em;*/
 	}
