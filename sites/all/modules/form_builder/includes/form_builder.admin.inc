@@ -193,7 +193,7 @@ function form_builder_field_palette() {
     $form_id = $active['form_id'];
     $loader = FormBuilderLoader::instance();
     $fields = $loader->getElementTypeInfo($form_type, $form_id);
-    $groups = $loader->getPaletteGroupInfo($form_type);
+    $groups = $loader->getPaletteGroupInfo($form_type, $form_id);
     // TODO: We shouldn't have to clear the cache here.
     $form = $loader->fromCache($form_type, $active['form_id'], NULL, TRUE);
     $active_fields = $form->getElementTypes();
@@ -222,7 +222,7 @@ function form_builder_preview($f, &$form_state, $form_obj, $form_type, $form_id)
   // Make modifications to all form elements recursively.
   $element_ids = $form_obj->getElementIds();
 
-  $form = $form_obj->getFormArray();
+  $form = $form_obj->preview();
   // Record all the element IDs within the entire form.
   $form['#form_builder']['element_ids'] = $element_ids;
   $form['#form_builder']['form_type'] = $form_type;
@@ -673,7 +673,6 @@ function form_builder_field_configure_submit(&$form, &$form_state) {
   $element_obj->configurationSubmit($form, $form_state);
 
   // Update the form builder cache.
-  $form_obj->setElementArray($element_obj->render());
   $form_obj->save();
 
   if (isset($_GET['js'])) {
@@ -693,13 +692,13 @@ function form_builder_field_configure_submit(&$form, &$form_state) {
  * Form for removing a field.
  */
 function form_builder_field_remove($form, $form_state, $form_type, $form_id, $element_id) {
-  module_load_include('inc', 'form_builder', 'includes/form_builder.api');
-  module_load_include('inc', 'form_builder', 'includes/form_builder.cache');
-  $element = form_builder_cache_field_load($form_type, $form_id, $element_id);
+  $form_obj = FormBUilderLoader::instance()->fromCache($form_type, $form_id);
+  $element_obj = $form_obj->getElement($element_id);
+  $title = $element_obj->title();
 
-  $question = t('Remove the field %title?', array('%title' => $element['#title']));
+  $question = t('Remove the field %title?', array('%title' => $title));
   $path = isset($_GET['destination']) ? $_GET['destination'] : NULL;
-  $description = t('Remove the field %title? This field will not be permanently removed until the form configuration is saved.', array('%title' => isset($element['#title']) ? $element['#title'] : $element['#form_builder']['element_id']));
+  $description = t('Remove the field %title? This field will not be permanently removed until the form configuration is saved.', array('%title' => $title));
   $yes = t('Remove');
 
   return confirm_form($form, $question, $path, $description, $yes);

@@ -72,8 +72,6 @@ stylesheets-conditional[lte IE 9][all][]  = css/ie_entas.css
 ;scripts[] = js/snow2.js 
 ;scripts[] = js/clear_search.js
 scripts[] = js/fixed_menu3.js
-scripts[] = js/qr_hide.js
-
 
 ; The regions defined in Zen's default page.tpl.php file.  The name in
 ; brackets is the name of the region in the $page variable in the page.tpl.php

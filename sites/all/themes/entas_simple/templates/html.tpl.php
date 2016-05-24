@@ -62,7 +62,7 @@
  * @see template_process()
  */
 ?>
-  
+<!DOCTYPE html>  
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
@@ -72,7 +72,7 @@
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($jump_link_text && $jump_link_target): ?>
     <div id="skip-link">
-      <a href="#<?php print $jump_link_target; ?>" class="element-invisible element-focusable"><?php print $jump_link_text; ?></a>
+     <a href="#<?php print $jump_link_target; ?>" class="element-invisible element-focusable"><?php print $jump_link_text; ?></a>
     </div>
   <?php endif; ?>
   <?php print $page_top; ?>
