@@ -581,10 +581,15 @@ font-size: 0.8em;
 text-align: center;
 }
 
-.view-display-id-block_1  .views-field-field-tag-img {
+.view-display-id-block_1  .views-field-field-tag-img /*уточнить селектор*/{
     float: right;
     height: 100px;
     width: 100px;
+}
+.view-tag-on-tag  .views-field-field-tag-img {
+float: none;
+height: inherit;
+width: inherit;
 }
 
 #block-block-18 {

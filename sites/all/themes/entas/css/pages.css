@@ -576,6 +576,11 @@ border: 1px solid #C0C0C0;
 box-shadow: -3px 3px 6px #CCC;
 position: relative;
 }
+.view-tag-on-tag.ent-taxonometry > .view-content > .views-row {
+height: inherit;
+border-color: #ffb400;
+border-width: 2px;
+}
 
 .ent-taxonometry  .view-header .view-display-id-term_review .view-content{
 background-image: url('/misc/message-24-error.png');
