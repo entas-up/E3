@@ -7,11 +7,11 @@
 /*
  * The active item in a Drupal menu
  */
- 
+
  .region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
 color:#000;
 }
- 
+
 .menu li a.active {
   color: #F60!important;
   }
@@ -21,7 +21,7 @@ color: red;
 #block-simplenews-61 a.active:before {
 color:red;
 }
-  
+
 .region-sidebar-first .expanded>a:hover {
 background: #027AC6;
 }
@@ -29,11 +29,11 @@ background: #027AC6;
 .region-sidebar-first a{
 	color:#585858;
 	/*text-shadow: 1px 1px 1px #000; *//* тень шрифта в левой колонке */
-	font-weight: normal;	
+	font-weight: normal;
 	display: block;
 	line-height: 1.1em;
 	padding: 2px 0px 6px 5px;
-	border-bottom: 1px solid #C8C8C8;
+	/*border-bottom: 1px solid #C8C8C8;*/
 }
 .region-sidebar-first a:hover{
 background: #027AC6;
@@ -41,12 +41,12 @@ text-shadow: none;
 color: white!important;
 text-decoration: none;
 }
-/* explorer style in menu*/  
+/* explorer style in menu*/
 .region-sidebar-first li.expanded a{
-border-left: 1px dotted; 
-}  
-  
-  
+/*border-left: 1px dotted;*/
+}
+
+
 /*
  * Navigation bar
  */
@@ -55,9 +55,9 @@ border-left: 1px dotted;
   background: #FA762B;
   /*margin-top: -5px;*/
   font-size: 0.8em; /* Влияет на шрифт */
-  z-index: 300;	
+  z-index: 300;
 	}
-	
+
 #navigation .section {
 width: 960px;
 margin: 0 auto;
@@ -65,7 +65,7 @@ margin: 0 auto;
 
 #navigation ul.links, /* Main menu and secondary menu links */
 #navigation .content ul /* Menu block links */ {
- /* margin: 0px 0 0 25px;*/ 
+ /* margin: 0px 0 0 25px;*/
   padding: 0;
   text-align: left; /* LTR */
  z-index: 500;
@@ -220,7 +220,7 @@ color: antiquewhite;
 
 #block-menu-block-4 a:hover {
 text-decoration: none;
-} 
+}
 
 .fixed{
     position:fixed;
@@ -229,7 +229,7 @@ text-decoration: none;
     right:0;
     margin:0;
 	z-index:200;
-	
+
 }
 
 .menu li a.active:before {
