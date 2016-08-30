@@ -116,7 +116,6 @@ fieldset {
    */
 
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-  
 }
 input {}
 pre,
@@ -237,10 +236,8 @@ li.leaf /* Drupal override */ {
 margin: 0px 0px 0px 15px;
 line-height: 1.5em;
 padding: 0px;
-  }
-  ul.menu li {
-  
-  }
+}
+ul.menu li {}
 li.expanded, li.collapsed, li.leaf {
 padding: 0;
 }
@@ -249,8 +246,11 @@ ul.menu li, li.leaf {
 border: none;
 }
 
+.menu-block-1 > .menu > li {
+margin-left:0px;
+}
 
- li.collapsed:hover, 
+ li.collapsed:hover,
  li.leaf:hover
 {
 	background: #027AC6;
