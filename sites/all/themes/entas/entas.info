@@ -50,6 +50,7 @@ stylesheets[print][]      = css/print.css
 stylesheets[all][]        = css/nice-menu.css
 stylesheets[all][]        = css/last-block.css
 stylesheets[all][]        = /css/font-awesome.css
+stylesheets[all][]        = css/anti_views_slideshow_cycle.css
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
@@ -69,7 +70,7 @@ stylesheets-conditional[lte IE 9][all][]  = css/ie_entas.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
-;scripts[] = js/snow2.js 
+;scripts[] = js/snow2.js
 ;scripts[] = js/clear_search.js
 scripts[] = js/fixed_menu3.js
 
