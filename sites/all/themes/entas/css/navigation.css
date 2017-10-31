@@ -120,7 +120,7 @@ font-size:1.35em;
 }
 
 .region-sidebar-first ul li.leaf a:before {
-content: "\f105";
+content: "•";
 /*vertical-align: middle;*/
 font-size:1.35em;
 }

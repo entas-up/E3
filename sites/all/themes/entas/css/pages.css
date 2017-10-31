@@ -568,7 +568,7 @@ padding: 2px 2px 2px 10px;
 
 .ent-taxonometry { }
 
-.ent-taxonometry > .view-content > .views-row {
+.ent-taxonometry > .view-content > .views-row  {
 /*margin: 3px 0px;
 padding: 10px;
 height: 93px;
@@ -589,7 +589,7 @@ float: left;
 font-size: 0.85em;
 }
 
-.view-tag-on-tag.ent-taxonometry > .view-content > .views-row {
+.view-tag-on-tag.ent-taxonometry > .view-content > .views-row{
 height: inherit;
 border-color: #ffb400;
 border-width: 2px;
@@ -1305,4 +1305,23 @@ z-index: 1;
 border: 5px solid #63d463;
 left: 0;
 top: 0;
+}
+
+.view-tag-on-tag .views-column {
+margin: 3px 3px;
+padding: 10px;
+/*height: 100px;*/
+border-radius: 5px;
+border: 2px solid #ffb400;
+box-shadow: -3px 3px 6px #CCC;
+position: relative;
+width: 86%;
+float: left;
+font-size: 0.85em;
+}
+
+.view-tag-on-tag {
+border-bottom: 2px solid #ffb400;
+margin-bottom: 10px;
+padding-bottom: 10px;
 }

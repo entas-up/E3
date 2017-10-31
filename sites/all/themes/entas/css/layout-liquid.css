@@ -132,7 +132,7 @@ list-style-image: url('../images/menu-expanded.png');
    }
 
 .region-sidebar-first ul.menu {
-padding-top: 5px !important;
+/*padding-top: 5px !important;*/
 /*margin: 0px !important;*/
 }
 .menu-block-1  > ul.menu  {
