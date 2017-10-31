@@ -19,7 +19,7 @@
 /*
  * Body
  */
- body {  
+ body {
 
 }
 
@@ -75,8 +75,6 @@ position: relative;
  /* padding-left: 200px;*/ /* LTR */ /* The width + left margin of .region-sidebar-first. */
   padding-right: 0; /* LTR */
   margin-top: 0px;
-  
-  
 }
 
 .sidebar-second #content .section {
@@ -96,12 +94,10 @@ margin-top: 30px;
  * Navigation
  */
 #navigation {
-  
   width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
- 
 }
 
 .with-navigation #content,
@@ -115,7 +111,7 @@ margin-top: 30px;
   padding-bottom: 10px;
 }
 #navigation .section {
-	
+
 
 }
 
@@ -134,13 +130,17 @@ list-style-image: url('../images/menu-expanded.png');
 .region-sidebar-first ul li.leaf     {
 /*list-style-image: none;*/
    }
-   
+
 .region-sidebar-first ul.menu {
-padding-top: 5px !important;
-margin: 0px !important;
+/*padding-top: 5px !important;*/
+/*margin: 0px !important;*/
 }
-.menu-block-wrapper>ul.menu  {
-border:none;
+.menu-block-1  > ul.menu  {
+/*border:none;*/
+border: 1px solid #a2a2a2;
+margin-top: 10px;
+font-size: 0.9em;
+/*background: #d5d5d5;*/
 }
 
 .region-sidebar-first {
@@ -155,7 +155,7 @@ border:none;
 
 .region-sidebar-first .section {
   /*padding: 7px 0px;*/
-  
+
 }
 
 /*
@@ -209,9 +209,9 @@ border:none;
  * Note: with some over-large content, this property might cause scrollbars
  * to appear on the #page-wrapper div.
  */
- 
+
  #toolbar {
  bottom:0;
  top:initial;
  }
- 
+

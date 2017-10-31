@@ -166,6 +166,7 @@
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
     <div id="content" class="column"><div class="section">
+      <noindex><div class="clearfix"><?php print render($page['system_area']); ?></div></noindex>
       <noindex><?php print render($page['highlighted']); ?></noindex>
       <?php print $breadcrumb; ?>
       <?php print render($title_prefix); ?>
