@@ -32,7 +32,7 @@ background: #027AC6;
 	font-weight: normal;
 	display: block;
 	line-height: 1.1em;
-	padding: 2px 0px 6px 5px;
+	padding: 2px 0px 5px 5px;
 	/*border-bottom: 1px solid #C8C8C8;*/
 }
 .region-sidebar-first a:hover{
@@ -87,11 +87,13 @@ margin: 0 auto;
 .region-sidebar-first .block-menu {border-bottom: 1px solid #F60}
 
 li.menu-path-front {
-padding: 7px 10px!important;
+/*padding: 7px 10px!important;*/
 }
 .menu-path-front  a {
-font-size: 1pt;
+font-size: 0pt;
 color:#414141;
+margin: 0 auto;
+    padding:5px 5px 5px 12px!important;
 }
 
 /* Icons from Font Awesome  */
@@ -111,18 +113,21 @@ padding-bottom: 5px;
 
 .region-sidebar-first .collapsed a:before {
 content: "\f101";
-font-size:1.35em;
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first .expanded>a:before {
 content: "\f103";
-font-size:1.35em;
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first ul li.leaf a:before {
 content: "•";
 /*vertical-align: middle;*/
-font-size:1.35em;
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first ul li.expanded, .region-sidebar-first ul li.collapsed, ul li.leaf {
@@ -194,12 +199,16 @@ font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 content: "\f015";
-color: #FFF;
+color: #fff;
 
-font-size: 15em;
-position: absolute;
+font-size: 24px;
+/*position: absolute;
 top: 17%;
-left: 25%;
+left: 25%;*/
+margin-top: -2px;
+}
+.menu-path-front.active-trail a:after{
+color:#666;
 }
 
 /* Стрелка вправо  */
