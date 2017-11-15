@@ -74,7 +74,7 @@ font-size: 0.7em; /* Влияет на шрифт */
 }
 
 .node .content /* Node's content wrapper */ {
-font-size: 0.8em; /* Влияет на шрифт */
+/*font-size: 0.8em; *//* Влияет на шрифт */
 margin-left: 20px;
 }
 
