@@ -758,12 +758,10 @@ background: none repeat scroll 0% 0% #027ac6;
 color: #FFF;
 }
 #block-block-24 {
-/*padding: 12px 20px 0px;
-right: 0;
-position: absolute;*/
-border: 1px solid #ccc;
-float:right;
-
+    border: 1px solid #414141;
+    float: right;
+    margin-left: 4px;
+    padding: 1px;
 }
 #google_translate_element {
 font-size: 0.9em;
