@@ -626,7 +626,8 @@ height: 100px;
 text-align: center;
 }
 .ent-taxonometry  .views-field-title {
-
+font-size: 1.1em;
+font-weight: 600;
 }
 
 .ent-taxonometry  .views-field-body {
