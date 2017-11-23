@@ -3,17 +3,17 @@
 
 
 #block-nice-menus-1 li.active-trail > a.active{
-color: #000;
-text-shadow: -1px -1px 0px #E0E0E0,
+color: red!important;
+/*text-shadow: -1px -1px 0px #E0E0E0,
 			1px -1px 0px #E0E0E0,
 			-1px 1px 0px #E0E0E0,
-			1px 1px 0px #E0E0E0;
+			1px 1px 0px #E0E0E0;*/
 font-weight: 800;
 }
 
 #block-nice-menus-1 li.active-trail > a{
 color: #000;
-font-weight: 400;
+font-weight: 600;
 }
 
 #block-nice-menus-1 li .active-trail {

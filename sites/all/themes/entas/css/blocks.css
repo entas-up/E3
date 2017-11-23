@@ -471,6 +471,7 @@ position: absolute;
 #block-views-similarterms-block {
 /*font-size:0.8em;*/
 margin-left: 20px;
+margin-top:50px;
 /*margin: 0 auto;
 width: 700px;*/
 }
@@ -498,7 +499,7 @@ padding: 8px;
 height: 98px;
 border-radius: 5px;
 border: 1px solid #C0C0C0;
-box-shadow: -3px 3px 6px #CCC;
+/*box-shadow: -3px 3px 6px #CCC;*/
 }
 #block-views-similarterms-block  .views-field-path a:hover {
 background: rgba(2, 122, 198, 1);

@@ -13,7 +13,8 @@ color:#000;
 }
 
 .menu li a.active {
-  color: #F60!important;
+  /*color: #F60!important;*/
+  font-weight:600;
   }
 #block-menu-block-4 a.active, #block-simplenews-61 a.active{
 color: red;
@@ -243,4 +244,13 @@ text-decoration: none;
 
 .menu li a.active:before {
 color:#F60!important;
+}
+
+li.active a {
+    color: red!important;
+}
+
+ul.quicktabs-tabs.quicktabs-style-excel li a {
+/*font-weight:300!important;*/
+color:grey;
 }
