@@ -620,10 +620,10 @@ box-shadow: none;
 
 .ent-taxonometry  .views-field-field-imagepage, .ent-taxonometry  .views-field-field-image, .ent-taxonometry  .views-field-field-image-event {
 float: left;
-padding: 0 10px 10px 0;
-width: 100px;
+padding: 0 10px 5px 0;
+/*width: 100px;
 height: 100px;
-text-align: center;
+text-align: center;*/
 }
 .ent-taxonometry  .views-field-title {
 font-size: 1.1em;
@@ -1313,8 +1313,8 @@ margin: 3px 3px;
 padding: 10px;
 /*height: 100px;*/
 border-radius: 5px;
-border: 2px solid #ffb400;
-box-shadow: -3px 3px 6px #CCC;
+border: 2px solid #e0e0e0;
+/*box-shadow: -3px 3px 6px #CCC;*/
 position: relative;
 width: 86%;
 float: left;
@@ -1325,4 +1325,13 @@ font-size: 0.85em;
 border-bottom: 2px solid #ffb400;
 margin-bottom: 10px;
 padding-bottom: 10px;
+}
+
+#block-views-tag-on-tag-block-1 .views-field.views-field-name {
+    background: #FAEBD7;
+    padding: 5px;
+}
+
+.view-sklad {
+    width: 90%;
 }
