@@ -225,6 +225,9 @@ li {
   margin: 0;
   padding: 0;
 }
+#content li {
+margin-left:15px;
+}
 .item-list ul li {
 margin: 0px 0px 0.25em 0.001em;
 }
