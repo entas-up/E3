@@ -254,3 +254,6 @@ ul.quicktabs-tabs.quicktabs-style-excel li a {
 /*font-weight:300!important;*/
 color:grey;
 }
+ul.quicktabs-tabs.quicktabs-style-excel li {
+margin: 0 -5px -5px -5px!important;
+}
