@@ -588,9 +588,10 @@ text-align: center;
     width: 100px;
 }
 .view-tag-on-tag  .views-field-field-tag-img {
-float: none;
+float: left;
 height: initial;
-    width: initial;
+width: initial;
+padding-right: 10px;
 }
 
 #block-block-18 {
@@ -838,3 +839,6 @@ margin: 0!important;
 #block-print-print-links  a {
 color:#414141;
 }
+
+.partner-footer ul{}
+.partner-footer ul li{}
