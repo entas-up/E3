@@ -840,6 +840,9 @@ margin: 0!important;
 #block-print-print-links  a {
 color:#414141;
 }
+#block-menu-block-3 {
+display:none;
+}
 
 .partner-footer ul{}
 .partner-footer ul li{}

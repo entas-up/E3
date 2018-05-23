@@ -1,11 +1,11 @@
 /**
 "Небольшой" костыль для адаптивности сайта
  */
- 
- body { 
-    transition:all .2s linear; 
-    -o-transition:all .2s linear; 
-    -moz-transition:all .2s linear; 
+
+ body {
+    transition:all .2s linear;
+    -o-transition:all .2s linear;
+    -moz-transition:all .2s linear;
     -webkit-transition:all .2s linear;
 	mix-width:440px;
 }
@@ -61,7 +61,7 @@ float: none;
 margin: 7px;
 position: relative;
 width: auto;
-} 
+}
 #edit-search-block-form--2 {
 width: 100%;
 padding: 0;
@@ -189,4 +189,7 @@ font-size: 0.8em;
 }
 .menu-path-front a:after {
 display: none;
+}
+#block-menu-block-3 {
+display: block;
 }
