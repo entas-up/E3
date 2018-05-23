@@ -1318,11 +1318,17 @@ border-radius: 5px;
 border: 2px solid #e0e0e0;
 /*box-shadow: -3px 3px 6px #CCC;*/
 position: relative;
-width: 45%;
-max-height: 245px;
-float: left;
+/*float: left;
+width: 45%;*/
+/*max-height: 245px;*/
+
 font-size: 0.85em;
 }
+
+.view-tag-on-tag .views-column  .views-field-description{
+min-height: 60px;
+}
+
 .view-tag-on-tag .views-column a {
 font-size:1.3em;
 font-weight: bold;
