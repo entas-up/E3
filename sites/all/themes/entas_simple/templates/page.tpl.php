@@ -73,7 +73,7 @@
 <div id="page-wrapper"><div id="page">
 
   <div id="header" style="background:#FA762B;padding:10px;">
-      <a href="http://entas.ru" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="https://entas.ru/sites/all/themes/entas/logo.png" alt="<?php print t('Home'); ?>" /></a>
+      <a href="http://entas.ru" title="<?php print t('Home'); ?>" rel="home" id="logo"><img height="32" width="100" src="https://entas.ru/sites/all/themes/entas/logo.png" alt="<?php print t('Home'); ?>" /></a>
        <div id="name-and-slogan"><div id="site-slogan"><h1><?php print $site_slogan; ?></h1></div></div><!-- /#name-and-slogan -->
 
   </div>
