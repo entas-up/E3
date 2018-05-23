@@ -35,6 +35,11 @@ DirectoryIndex index.php index.html index.htm
   php_value upload_max_filesize 200M
   php_value post_max_size 200M
   php_value memory_limit 128M
+php_value session.cookie_httponly on
+php_value session.use_only_cookies on
+php_value max_execution_time 30
+
+
 </IfModule>
 
 # Requires mod_expires to be enabled.
@@ -58,12 +63,36 @@ DirectoryIndex index.php index.html index.htm
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+RewriteCond %{SERVER_PORT} !^443
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ https://entas.ru%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP:X-SSL-Emu} !on
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
+
+
+#work1
+#RewriteCond %{HTTPS} off 
+#RewriteCond %{HTTP_HOST} ^www\.entas\.ru*
+#RewriteRule ^(.*)$ https://entas.ru/$1 [L,R=301]
+#work1-end
+
+  #  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteCond %{HTTPS} off
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+#RewriteCond %{HTTP:X-Forwarded-Proto} https [OR]
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
   RewriteRule ^ - [E=protossl]
+  
+  
   RewriteCond %{HTTPS} on
+  #RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   RewriteRule ^ - [E=protossl:s]
 
   # Make sure Authorization HTTP header is available to PHP
@@ -99,9 +128,9 @@ DirectoryIndex index.php index.html index.htm
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
   # uncomment the following:
-   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-   RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
-   RewriteRule ^node/43/(.+)$ /news [L,R=301]
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ https%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+  # RewriteRule ^node/43/(.+)$ /news [L,R=301]
 
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
@@ -112,7 +141,7 @@ DirectoryIndex index.php index.html index.htm
   #
   # If your site is running in a VirtualDocumentRoot at http://example.com/,
   # uncomment the following line:
-   RewriteBase /
+  # RewriteBase /
 
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
