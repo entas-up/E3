@@ -72,23 +72,22 @@
 
 <div id="page-wrapper"><div id="page">
 
-  <div id="header">
-      <a href="http://entas.ru" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="http://entas.ru/sites/all/themes/entas/logo.png" alt="<?php print t('Home'); ?>" /></a>
+  <div id="header" style="background:#FA762B;padding:10px;">
+      <a href="http://entas.ru" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="https://entas.ru/sites/all/themes/entas/logo.png" alt="<?php print t('Home'); ?>" /></a>
        <div id="name-and-slogan"><div id="site-slogan"><h1><?php print $site_slogan; ?></h1></div></div><!-- /#name-and-slogan -->
-        
+
   </div>
+  <br/>
    <div id="content" class="column"><div class="section">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($page['content']); ?>
-      
+
     </div></div>
-      
+
   </div></div>
-<hr>
-  <?php print render($page['footer']); ?>
-
-
+<div style="font-size:0.8em;">
 <?php print render($page['bottom']); ?>
+</div>
