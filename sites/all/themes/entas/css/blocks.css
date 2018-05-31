@@ -846,3 +846,7 @@ display:none;
 
 .partner-footer ul{}
 .partner-footer ul li{}
+
+.jcarousel-skin-default .jcarousel-next, .jcarousel-skin-default .jcarousel-prev {
+display:none;
+}
