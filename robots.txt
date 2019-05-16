@@ -19,7 +19,7 @@
 User-agent: *
 Crawl-delay: 10
 host: entas.ru
-Sitemap: http://entas.ru/sitemap.xml
+Sitemap: https://entas.ru/sitemap.xml
 # Directories
 Disallow: /test/
 Disallow: /includes/
@@ -85,3 +85,5 @@ Disallow: /base/*
 Disallow: /company/*
 #taxonometry rss
 Disallow: */term/*/feed
+#spam
+Disallow: */sites/all/modules/pubdlcnt/
