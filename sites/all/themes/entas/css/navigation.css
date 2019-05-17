@@ -55,7 +55,7 @@ text-decoration: none;
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
   background: #FA762B;
   /*margin-top: -5px;*/
-  font-size: 0.8em; /* Влияет на шрифт */
+  font-size: 0.9em; /* Влияет на шрифт */
   z-index: 300;
 	}
 
@@ -69,7 +69,7 @@ margin: 0 auto;
  /* margin: 0px 0 0 25px;*/
   padding: 0;
   text-align: left; /* LTR */
- z-index: 500;
+ z-index: 10;
 }
 
 
