@@ -144,7 +144,7 @@ hr, table, fieldset {
 
 /* Headings */
 h1 {
-font-size:  1.2em; /* Влияет на шрифт */
+font-size:  1.9em; /* Влияет на шрифт */
   line-height: 1.5em;
   margin: 0.75em 0;
   /* 0.75em is equivalent to 1.5em in the page's base font. font. Remember, a
@@ -156,8 +156,12 @@ color: #2A63DB;
 }
 
 h2 {
-  font-size: 1.5em; /* Влияет на шрифт */
+  font-size: 1.3em; /* Влияет на шрифт */
   margin: 1em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.5 = 1em */
+  color: #656464;
+      color: #1D1D1D;
+    background: #FFD397;
+
 }
 
 h3 {
@@ -224,6 +228,10 @@ ol ol, ol ul,
 li {
   margin: 0;
   padding: 0;
+}
+#content li {
+margin-left:15px;
+list-style-position: inside;
 }
 .item-list ul li {
 margin: 0px 0px 0.25em 0.001em;

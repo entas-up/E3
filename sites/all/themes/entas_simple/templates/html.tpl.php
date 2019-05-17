@@ -62,12 +62,11 @@
  * @see template_process()
  */
 ?>
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <?php print $scripts; ?>
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php print $page_top; ?>

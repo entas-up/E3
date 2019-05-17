@@ -90,11 +90,11 @@ position: relative;
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
-color: #494949;
-font-size: 1.2em;
-text-shadow: -1px -1px 1px #ECBE9A;
-margin: 19px 0px 0px 19px;
-float:left;
+  color: #494949;
+  font-size: 1.3em;
+  /* text-shadow: -1px -1px 1px #ECBE9A; */
+  margin: 19px 0px 0px 19px;
+  float: left;
 }
 
 
@@ -153,7 +153,7 @@ padding-left: 5px;
 margin: 2px 0px 0px 0px;
 /*overflow: hidden;*/
 position: relative;
-z-index: 100;
+z-index: 9;
 /*border-bottom: 1px solid #9B9B9B;*/
 }
 
@@ -261,9 +261,11 @@ background: #fff;
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
-  padding-bottom: 0; /* Undo system.css */
+ 
   /*padding-top: 32px;  hack for big menu */
-  font-size: 0.7em; /* Влияет на шрифт */
+ /* font-size: 0.7em; *//* Влияет на шрифт */
+    padding: 4px 16px;
+    margin-top: 11px;
 }
 
 h1.title, /* The title of the page */
@@ -584,7 +586,7 @@ border-radius: 5px;
 border: 1px solid #C0C0C0;
 box-shadow: -3px 3px 6px #CCC;
 position: relative;
-width: 41%;
+width: 45%;
 float: left;
 font-size: 0.85em;
 }
@@ -607,12 +609,15 @@ padding: 10px 10px 10px 50px;
 border-color: #ED541D;
 }
 .ent-taxonometry .view-display-id-term_storage .view-content, .ent-taxonometry .view-display-id-term_desc .view-content{
-background-color: aliceblue;
+/*background-color: aliceblue;*/
 margin: 5px 0;
     padding: 10px;
-	border: 1px solid #9ACDFF;
+	/*border: 1px solid #9ACDFF;*/
 }
-
+.ent-taxonometry .view-display-id-term_storage img.view-content, .ent-taxonometry .view-display-id-term_desc .view-content img{
+float: left;
+padding: 0 10px 10px 0;
+}
 .ent-taxonometry .view-id-sklad .views-row {
 border: none;
 box-shadow: none;
@@ -620,13 +625,14 @@ box-shadow: none;
 
 .ent-taxonometry  .views-field-field-imagepage, .ent-taxonometry  .views-field-field-image, .ent-taxonometry  .views-field-field-image-event {
 float: left;
-padding: 0 10px 10px 0;
-width: 100px;
+padding: 0 10px 5px 0;
+/*width: 100px;
 height: 100px;
-text-align: center;
+text-align: center;*/
 }
 .ent-taxonometry  .views-field-title {
-
+font-size: 1.1em;
+font-weight: 600;
 }
 
 .ent-taxonometry  .views-field-body {
@@ -941,49 +947,67 @@ font-size: 0.8em;
 float: left;
 width: 220px;
 height: 220px;
-line-height: 220px;
-box-shadow: 0 0 2px;
+/*line-height: 220px;
+box-shadow: 0 0 2px;*/
 margin-right: 8px;
 }
 .view-archive .views-field-field-image img{
-vertical-align: middle;
+/*vertical-align: middle;*/
 }
 .view-archive .views-more-link {
-position: absolute;
+/*position: absolute;
 bottom: 0;
-right: 0;
+right: 0;*/
 }
 /* Special button */
 .special-button {
+background:#FA762B;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #C0C0C0;
+    /* border: 1px solid #C0C0C0;
     box-shadow: -3px 3px 6px #CCC;
     position: relative;
-    width: 95%;
-    display: inline-block;
-	font-size:1.6em;
+    max-width: 95%;
+    display: inline-block; 
+	font-size:1.6em;*/
+	color:#fff;
+	line-height: 1.5em!important;
 }
-/*
+
 .special-button a {
-color: rgb(0, 39, 255);
+font-family: sans-serif;
+color:#fff;
+font-weight: bold;
+padding: 0 10px;
 }
-*/
+
 .special-button::before {
-    display: inline-block;
+/*     display: inline-block;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     content: "\f0c5";
-    font-size: 2em;
 	width: 100px;
-    float: left;
-    text-align: center;
+	text-align: center;
+ */   
+	float: left;
+    font-size: 2em;
+	
 }
-.special-button:hover {
-background:rgba(2, 122, 198, 1);
-color:white;
+/* .special-button:hover {
+
+color:black;
 text-decoration:none;
+}
+ */
+.special-button a:hover {
+
+color:black;
+text-decoration:none;
+}
+/*undo :((( 2x */
+.special-button.fa-2x  {
+font-size: 1em!important;
 }
 
 .special-button a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок. Проверить */{
@@ -1000,11 +1024,12 @@ color:rgb(0, 39, 255)!important;
 /* Страница партнёров */
 .view-partner.view-display-id-page .views-field-field-company-logo {
 float: left;
-width: 100px;
+width: 220px;
 height: 100px;
-border: none!important;
 background: #FFF;
 padding-right: 10px;
+text-align: center;
+line-height: 9em;
 }
 
 .view-partner.view-display-id-page .views-row {
@@ -1312,16 +1337,50 @@ margin: 3px 3px;
 padding: 10px;
 /*height: 100px;*/
 border-radius: 5px;
-border: 2px solid #ffb400;
-box-shadow: -3px 3px 6px #CCC;
+border: 2px solid #e0e0e0;
+/*box-shadow: -3px 3px 6px #CCC;*/
 position: relative;
-width: 86%;
-float: left;
+/*float: left;
+width: 45%;*/
+/*max-height: 245px;*/
+/*min-height:110px;*/
+overflow:hidden;
 font-size: 0.85em;
 }
 
+.view-tag-on-tag .views-column  .views-field-description{
+min-height: 60px;
+}
+
+.view-tag-on-tag .views-column a {
+font-size:1.3em;
+font-weight: bold;
+}
 .view-tag-on-tag {
-border-bottom: 2px solid #ffb400;
+/* border-bottom: 2px solid #ffb400; */
 margin-bottom: 10px;
 padding-bottom: 10px;
+}
+.view-tag-on-tag  .views-field-field-tag-img {
+float: left;
+height: initial;
+width: initial;
+padding-right: 10px;
+}
+#block-views-tag-on-tag-block-1 .views-field.views-field-name {
+    background: #FAEBD7;
+    padding: 5px;
+}
+
+.view-sklad {
+    width: 98%;
+}
+
+.view-display-id-term_desc {
+    /* min-height: 308px; */
+	overflow:hidden;
+}
+
+.webform-client-form-266 .form-item{
+margin:0.6em 0;
 }

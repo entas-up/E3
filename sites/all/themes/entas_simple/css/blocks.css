@@ -36,6 +36,17 @@ position: absolute;
 #block-block-4 a {
 color: black;
 }
+.clearfix*:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#block-views-news3-block* {
+font-size: 0.8em;
+}
 
 #block-aggregator-category-1 /* Block for the latest news items in the first category */ {
 }
@@ -102,21 +113,21 @@ font-size: 0.75em;
 #block-views-news3-block .field-item /* Блок новостей НОВЫЙ podcherkivania megdy novostiami*/  {
 	border-bottom:#F00;
 	border-bottom-style:double;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 	/*line-height: 1.4em;*/
 	/* text-align:justify; */
          font-size: 0.75em;
 	}
-	
+
 #block-views-news3-block  .pager li/* kostil' pager v odny stroky*/{
-		
+
 }
 #block-views-news3-block  .pager /* kostil' cvet pager'a */{
 	color:#CE6904;
 	margin: 0 20px 10px -40px;
 }
 #block-views-news3-block  .more-links /* kostil' cvet pager'a */{
-	
+
 }
 /*#block-views-news3-block .content a:hover{
 	background:#666;}
@@ -173,20 +184,20 @@ list-style-type:none !important;
 .pane-news3 .field-item /* Блок новостей НОВЫЙ podcherkivania megdy novostiami*/  {
 	border-bottom:#F00;
 	border-bottom-style:double;
-	margin-bottom:10px;	
-	
+	margin-bottom:10px;
+
 		}
-	
+
 .pane-news3  .pager li/* kostil' pager v odny stroky*/{
 		margin: 0;
 }
 .pane-news3  .pager /* kostil' cvet pager'a */{
 	color:#CE6904;
-	
+
 }
 .pane-news3 .more-links /* kostil' cvet pager'a */{
 	margin:30px;
-	
+
 }
 
 .pane-news3  a/* Блок новостей НОВЫЙ */ {
@@ -243,10 +254,10 @@ padding: 0 6px;
 #block-system-main /* "Main page content" block */ {
 }
 #block-system-main .pager /* "Main page content" block */ {
-color:#F93;	
+color:#F93;
 }
 #block-system-main .pager a /* "Main page content" block */ {
-color:#F93;	
+color:#F93;
 }
 #block-system-powered-by /* "Powered by Drupal" block */ {
 }
@@ -274,20 +285,20 @@ font-weight: 400;
 color: #027AC6;
 font-weight: 400;
 }
- 
+
 #block-nice-menus-1 li .active-trail {
 color: #027AC6;
 background-color: #fff;
 border-color:#595959;
 font-weight: 400;
 }
- 
+
 #block-nice-menus-1 .active-trail {
 color: #027AC6;
 background-color: #fff;
 border-color:#595959 #595959 #fff #595959;
 }
- 
+
 
 ul.nice-menu a {
 display: block;
@@ -304,7 +315,7 @@ ul.nice-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  
+
 }
 
 ul.nice-menu li {
@@ -351,7 +362,7 @@ border: 1px solid #BBB;  /* #3B3B3B */
 }
 
 ul.nice-menu-down li li {
-  
+
 }
 
 ul.nice-menu-down ul {
@@ -377,7 +388,7 @@ font-weight: 400;
 
 ul.nice-menu-down li.menuparent {
   background: #595959 url(../images/arrow-down.png) right center no-repeat; /* LTR *//* first level */
-   
+
 }
 
 ul.nice-menu-down li.menuparent:hover {
@@ -389,7 +400,7 @@ font-weight: 400;
 ul.nice-menu-down li.menuparent:hover > a {
 color: #027AC6;
 font-weight: 400;
-   
+
 }
 
 
@@ -402,12 +413,12 @@ ul.nice-menu-down li li.menuparent {
 ul.nice-menu-down li li.menuparent:hover {
   background: #fff url(../images/arrow-right.png) right center no-repeat; /* LTR */
   border-color: #3B3B3B;
-} 
+}
 
 ul.nice-menu-down li li.menuparent:hover > a {
   color: #027AC6;
 font-weight: 400;
-} 
+}
 
 ul.nice-menu-down li.first:hover {
 border-color: #000 #000 #fff #000;
@@ -416,7 +427,7 @@ border-color: #000 #000 #fff #000;
 ul.nice-menu-down li.first:hover > a {
   color: #027AC6;
 font-weight: 400;
-} 
+}
 ul.nice-menu-down li.first a {
 padding-left: 10px;
 padding-top: 7px;

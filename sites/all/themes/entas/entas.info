@@ -51,6 +51,7 @@ stylesheets[all][]        = css/nice-menu.css
 stylesheets[all][]        = css/last-block.css
 stylesheets[all][]        = /css/font-awesome.css
 stylesheets[all][]        = css/anti_views_slideshow_cycle.css
+;stylesheets[all][]        = css/deal-by.css
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/

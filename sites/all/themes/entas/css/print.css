@@ -105,7 +105,9 @@ div.tabs,
 #block-block-7 .content:hover:after,
 .view-banner .views-slideshow-controls-top,
 #block-block-22, #block-views-last-changes-block,
-.field-name-field-page-prior
+.field-name-field-page-prior,
+#block-block-24, .field-name-field-review, .field-name-field-catalog,
+#block-print-print-links, #block-block-23
  {
   visibility: hidden;
   display: none!important;

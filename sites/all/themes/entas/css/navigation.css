@@ -13,7 +13,8 @@ color:#000;
 }
 
 .menu li a.active {
-  color: #F60!important;
+  /*color: #F60!important;*/
+  font-weight:600;
   }
 #block-menu-block-4 a.active, #block-simplenews-61 a.active{
 color: red;
@@ -32,7 +33,7 @@ background: #027AC6;
 	font-weight: normal;
 	display: block;
 	line-height: 1.1em;
-	padding: 2px 0px 6px 5px;
+	padding: 2px 0px 5px 5px;
 	/*border-bottom: 1px solid #C8C8C8;*/
 }
 .region-sidebar-first a:hover{
@@ -54,7 +55,7 @@ text-decoration: none;
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
   background: #FA762B;
   /*margin-top: -5px;*/
-  font-size: 0.8em; /* Влияет на шрифт */
+  font-size: 0.9em; /* Влияет на шрифт */
   z-index: 300;
 	}
 
@@ -68,7 +69,7 @@ margin: 0 auto;
  /* margin: 0px 0 0 25px;*/
   padding: 0;
   text-align: left; /* LTR */
- z-index: 500;
+ z-index: 10;
 }
 
 
@@ -87,11 +88,13 @@ margin: 0 auto;
 .region-sidebar-first .block-menu {border-bottom: 1px solid #F60}
 
 li.menu-path-front {
-padding: 7px 10px!important;
+/*padding: 7px 10px!important;*/
 }
 .menu-path-front  a {
-font-size: 1pt;
+font-size: 0pt;
 color:#414141;
+margin: 0 auto;
+    padding:5px 5px 5px 12px!important;
 }
 
 /* Icons from Font Awesome  */
@@ -111,18 +114,21 @@ padding-bottom: 5px;
 
 .region-sidebar-first .collapsed a:before {
 content: "\f101";
-font-size:1.35em;
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first .expanded>a:before {
 content: "\f103";
-font-size:1.35em;
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first ul li.leaf a:before {
 content: "•";
 /*vertical-align: middle;*/
-font-size:1.35em;
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first ul li.expanded, .region-sidebar-first ul li.collapsed, ul li.leaf {
@@ -194,12 +200,16 @@ font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 content: "\f015";
-color: #FFF;
+color: #fff;
 
-font-size: 15em;
-position: absolute;
+font-size: 24px;
+/*position: absolute;
 top: 17%;
-left: 25%;
+left: 25%;*/
+margin-top: -2px;
+}
+.menu-path-front.active-trail a:after{
+color:#666;
 }
 
 /* Стрелка вправо  */
@@ -234,4 +244,16 @@ text-decoration: none;
 
 .menu li a.active:before {
 color:#F60!important;
+}
+
+li.active a {
+    color: red!important;
+}
+
+ul.quicktabs-tabs.quicktabs-style-excel li a {
+/*font-weight:300!important;*/
+color:grey;
+}
+ul.quicktabs-tabs.quicktabs-style-excel li {
+margin: 0 -5px -5px -5px!important;
 }
