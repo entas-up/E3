@@ -90,11 +90,11 @@ position: relative;
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
-color: #494949;
-font-size: 1.2em;
-text-shadow: -1px -1px 1px #ECBE9A;
-margin: 19px 0px 0px 19px;
-float:left;
+  color: #494949;
+  font-size: 1.3em;
+  /* text-shadow: -1px -1px 1px #ECBE9A; */
+  margin: 19px 0px 0px 19px;
+  float: left;
 }
 
 
