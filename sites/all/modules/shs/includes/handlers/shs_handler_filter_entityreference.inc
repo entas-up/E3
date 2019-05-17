@@ -12,10 +12,8 @@
  */
 class shs_handler_filter_entityreference extends views_handler_filter_numeric {
 
-  /**
-   * Define filter options.
-   */
-  public function option_definition() {
+  // Define filter options.
+  function option_definition() {
     $options = parent::option_definition();
 
     $options['shs_enabled'] = array('default' => FALSE);
@@ -32,7 +30,7 @@ class shs_handler_filter_entityreference extends views_handler_filter_numeric {
    * @param array $form_state
    *   Current form state.
    */
-  public function options_form(&$form, &$form_state) {
+  function options_form(&$form, &$form_state) {
     parent::options_form($form, $form_state);
 
     $form['shs_enabled'] = array(
@@ -60,9 +58,9 @@ class shs_handler_filter_entityreference extends views_handler_filter_numeric {
   }
 
   /**
-   * Provide a simple textfield for equality.
+   * Provide a simple textfield for equality
    */
-  public function value_form(&$form, &$form_state) {
+  function value_form(&$form, &$form_state) {
     global $language;
 
     parent::value_form($form, $form_state);
@@ -95,7 +93,7 @@ class shs_handler_filter_entityreference extends views_handler_filter_numeric {
     if (empty($form_state['input'][$identifier])) {
       $form_state['input'][$identifier] = 'All';
     }
-    $default_value = check_plain($form_state['input'][$identifier]);
+    $default_value = $form_state['input'][$identifier];
     if (!is_array($default_value) && $multiple) {
       $default_value = explode('+', $default_value);
       foreach ($default_value as $delta => $value) {
@@ -209,7 +207,7 @@ class shs_handler_filter_entityreference extends views_handler_filter_numeric {
    * @return string
    *   Short summary explaining the settings.
    */
-  public function admin_summary() {
+  function admin_summary() {
     $summary = parent::admin_summary();
 
     // @todo: add "shs".

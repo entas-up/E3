@@ -42,6 +42,32 @@ function shs_js() {
 }
 
 /**
+ * Implements hook_requirements().
+ */
+function shs_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  if ($phase !== 'runtime' || !module_exists('chosen')) {
+    return $requirements;
+  }
+  if (($info = drupal_get_library('chosen', 'chosen')) === FALSE) {
+    return $requirements;
+  }
+  // Chosen version should be at least 1.0.
+  if (version_compare($info['version'], '1.1.0') < 0) {
+    $requirements['shs'] = array(
+      'title' => $t('Simple hierarchical select: chosen integration'),
+      'description' => $t('If you would like to use chosen with Simple hierarchical select you need to install at least version 1.1.0 of !chosen_library.', array('!chosen_library' => l('Chosen', 'http://harvesthq.github.io/chosen/'))),
+      'severity' => REQUIREMENT_WARNING,
+      'value' => $t('Chosen library too old (installed version is !version)', array('!version' => $info['version'])),
+    );
+  }
+
+  return $requirements;
+}
+
+/**
  * Menu callback to get data in JSON format.
  */
 function shs_json() {
@@ -71,7 +97,7 @@ function shs_json() {
 /**
  * Get a list of supported JSON callbacks.
  *
- * @return array
+ * @return <array>
  *   List of valid callbacks with the following structure:
  *   - [name of callback]
  *     - 'callback': function to call
@@ -92,12 +118,6 @@ function shs_json_callbacks() {
     'shs_json_term_add' => array(
       'callback' => 'shs_json_term_add',
       'arguments' => array(
-        'token' => array(
-          'callback' => 'shs_json_valid_token',
-          'arguments' => array(
-            'field_name' => '@field',
-          ),
-        ),
         'vid' => 'shs_json_validation_vocabulary_identifier',
         'parent' => 'is_numeric',
         'name' => 'is_string',
@@ -111,45 +131,18 @@ function shs_json_callbacks() {
 }
 
 /**
- * Wrapper around drupal_valid_token().
- *
- * @param string $token
- *   The token to validate.
- * @param array $params
- *   Additional params to generate the token key.
- *   - field_name: (required) Name of field the token has been generated for.
- *
- * @return bool
- *   TRUE if the token is valid, FALSE otherwise.
- *
- * @see drupal_valid_token()
- */
-function shs_json_valid_token($token, array $params) {
-  if (empty($params['field_name'])) {
-    $t_args = array(
-      '%param' => 'field_name',
-      '%function' => 'shs_json_valid_token',
-    );
-    watchdog('shs', 'Missing mandantory token parameter "%param" in %function', $t_args, WATCHDOG_ERROR);
-    return FALSE;
-  }
-  $token_key = 'shs-' . $params['field_name'];
-  return drupal_valid_token($token, $token_key);
-}
-
-/**
  * Helper function to get the (validated) arguments for a JSON callback.
  *
- * @param array $callback
- *   Callback definition from shs_json_callbacks().
- * @param array $arguments
+ * @param <array> $callback
+ *   Callback definition from campus_events_json_callbacks().
+ * @param <array> $arguments
  *   Unfiltered arguments posted with $.ajax().
  *
- * @return array
+ * @return <array>
  *   List of (validated) arguments for this callback. Any arguments not defined
  *   for this callback will be removed.
  */
-function _shs_json_callback_get_arguments(array $callback, array $arguments) {
+function _shs_json_callback_get_arguments($callback, $arguments) {
   $result = array();
   // Get arguments from callback definition.
   $callback_arguments = $callback['arguments'];
@@ -158,40 +151,9 @@ function _shs_json_callback_get_arguments(array $callback, array $arguments) {
       continue;
     }
     $argument_valid = TRUE;
-    if (($validation_function = $callback_arguments[$key]) === FALSE) {
-      $argument_valid = FALSE;
-      continue;
-    }
-    $validation_arguments = array();
-    if (is_array($validation_function)) {
-      if (!isset($validation_function['callback'])) {
-        $argument_valid = FALSE;
-        watchdog('shs', 'Invalid structure for shs_json validation callback %key', array('%key' => $key), WATCHDOG_ERROR);
-        // Stop validation right now.
-        return $result;
-      }
-      foreach ($validation_function['arguments'] as $validation_argument_key => $validation_argument) {
-        if (strpos($validation_argument, '@') === 0) {
-          // Back-reference to callback argument.
-          $argument_name = substr($validation_argument, 1);
-          if (isset($arguments[$argument_name])) {
-            $validation_arguments[$validation_argument_key] = $arguments[$argument_name];
-          }
-        }
-        else {
-          $validation_arguments[$validation_argument_key] = $validation_argument;
-        }
-      }
-      $validation_function = $validation_function['callback'];
-    }
-    if (function_exists($validation_function)) {
+    if ((($validation_function = $callback_arguments[$key]) !== FALSE) && function_exists($validation_function)) {
       // Validate argument.
-      if (empty($validation_arguments)) {
-        $argument_valid = call_user_func($validation_function, $value);
-      }
-      else {
-        $argument_valid = call_user_func($validation_function, $value, $validation_arguments);
-      }
+      $argument_valid = $validation_function($value);
     }
     if ($argument_valid) {
       // Add argument and its value to the result list.
@@ -344,7 +306,7 @@ function shs_form_field_ui_field_edit_form_alter(&$form, &$form_state, $form_id)
  * @return array
  *   Processed form structure.
  */
-function shs_entityreference_field_settings_process(array $form, array $form_state) {
+function shs_entityreference_field_settings_process($form, $form_state) {
   if (!empty($form['target_type'])) {
     // Reduce list of available target types to taxonomy terms.
     $form['target_type']['#options'] = array(
@@ -475,7 +437,7 @@ function shs_field_widget_form(&$form, &$form_state, $field, $instance, $langcod
   }
 
   // Check if term exists (the term could probably be deleted meanwhile).
-  if ($element_value && (taxonomy_term_load($element_value) === FALSE)) {
+  if ($element_value && (($term = taxonomy_term_load($element_value)) === FALSE)) {
     $element_value = 0;
   }
 
@@ -495,7 +457,7 @@ function shs_field_widget_form(&$form, &$form_state, $field, $instance, $langcod
     $options = array(
       '_none' => empty($element['#required']) ? t('- None -', array(), array('context' => 'shs')) : t('- Select a value -', array(), array('context' => 'shs')),
     );
-    foreach ($referencable_entities as $terms) {
+    foreach ($referencable_entities as $v_name => $terms) {
       $options += $terms;
     }
   }
@@ -586,9 +548,6 @@ function shs_field_widget_afterbuild($element, &$form_state) {
       );
     }
 
-    // Create token to prevent against CSRF attacks.
-    $token = drupal_get_token('shs-' . $element['#name']);
-
     // Create settings needed for our js magic.
     $settings_js = array(
       'shs' => array(
@@ -600,7 +559,6 @@ function shs_field_widget_afterbuild($element, &$form_state) {
             'parents' => array_reverse($parents),
             'any_label' => empty($element['#required']) ? t('- None -', array(), array('context' => 'shs')) : t('- Select a value -', array(), array('context' => 'shs')),
             'any_value' => '_none',
-            'token' => $token,
           ),
         ),
       ),
@@ -673,12 +631,7 @@ function shs_field_widget_validate($element, &$form_state, $form) {
     foreach ($vocabulary_names as $vocabulary_name) {
       if (($vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary_name)) === FALSE) {
         // Vocabulary not found. Stop here.
-        $t_args = array(
-          '%machine_name' => $vocabulary_name,
-          '%field_name' => $instance['label'],
-          '%field_machine_name' => $field_name,
-        );
-        form_error($element, t('Vocabulary %machine_name is configured as source for field %field_name but could not be found.', $t_args));
+        form_error($element, t('Vocabulary %machine_name is configured as source for field %field_name but could not be found.', array('%machine_name' => $vocabulary_name, '%field_name' => $instance['label'], '%field_machine_name' => $field_name)));
         return;
       }
       // Does the selected term has any children?
@@ -831,20 +784,20 @@ function shs_field_formatter_view($entity_type, $entity, $field, $instance, $lan
  *   [$parent] => array(),
  * </code>
  *
- * @param mixed $identifier
+ * @param <mixed> $identifier
  *   Either a vocabulary ID or an array with the following keys:
  *   - field_name: Name of field which sends the request.
- * @param int $parent
+ * @param <int> $parent
  *   ID of parent term.
- * @param array $settings
+ * @param <array> $settings
  *   Additional settings (for example "language", etc.,).
- * @param bool $reset
+ * @param <boolean> $reset
  *   If TRUE, rebuild the cache for the given $vid and $parent.
  *
- * @return array
+ * @return <array>
  *   List of child terms keyed by term id.
  */
-function shs_term_get_children($identifier, $parent = 0, array $settings = array(), $reset = FALSE) {
+function shs_term_get_children($identifier, $parent = 0, $settings = array(), $reset = FALSE) {
   global $language;
   $langcode = $language->language;
   if (empty($settings['language']->language)) {
@@ -898,7 +851,7 @@ function shs_term_get_children($identifier, $parent = 0, array $settings = array
         }
       }
 
-      foreach ($vocabularies as $vid) {
+      foreach ($vocabularies as $name => $vid) {
         // Get term children (only first level).
         // Only load entities if i18n_taxonomy or entity_translation is
         // installed.
@@ -909,7 +862,7 @@ function shs_term_get_children($identifier, $parent = 0, array $settings = array
           if (module_exists('i18n_taxonomy')) {
             $term_name = i18n_taxonomy_term_name($term, $langcode);
           }
-          elseif (module_exists('entity_translation')) {
+          else if (module_exists('entity_translation')) {
             $term_name = entity_label('taxonomy_term', $term);
           }
           $terms[$vocabulary_cache_key][$langcode][$parent][$term->tid] = $term_name;
@@ -951,7 +904,7 @@ function shs_term_get_children($identifier, $parent = 0, array $settings = array
  *
  * @see shs_term_get_children()
  */
-function shs_json_term_get_children($vid, array $parent = array(), array $settings = array(), $field = NULL) {
+function shs_json_term_get_children($vid, $parent = array(), $settings = array(), $field = NULL) {
   $scope = $result = array();
   foreach ($parent as $tid) {
     $scope[] = shs_term_get_children($vid, $tid, $settings);
@@ -1022,8 +975,6 @@ function shs_add_term_access($vid, $parent = NULL, $field = NULL, $account = NUL
 /**
  * Adds a term with ajax.
  *
- * @param string $token
- *   Custom validation token.
  * @param int $vid
  *   ID of vocabulary to create the term in.
  * @param int $parent
@@ -1036,24 +987,18 @@ function shs_add_term_access($vid, $parent = NULL, $field = NULL, $account = NUL
  * @return mixed
  *   Array with tid and name or FALSE on error.
  */
-function shs_json_term_add($token, $vid, $parent, $term_name, $field = NULL) {
+function shs_json_term_add($vid, $parent, $term_name, $field = NULL) {
   global $language_content;
-  if (empty($token)) {
-    return FALSE;
-  }
-  if (!is_numeric($vid)) {
-    return FALSE;
-  }
   if (!shs_add_term_access($vid, $parent, $field)) {
     // Sorry, but this user may not add a term to this vocabulary.
     return FALSE;
   }
 
   $term = (object) array(
-    'vid' => $vid,
-    'parent' => $parent,
-    'name' => str_replace('&amp;', '&', filter_xss($term_name)),
-    'language' => $language_content->language,
+            'vid' => $vid,
+            'parent' => $parent,
+            'name' => str_replace('&amp;', '&', filter_xss($term_name)),
+            'language' => $language_content->language,
   );
   // Save term.
   $status = taxonomy_term_save($term);
@@ -1123,12 +1068,12 @@ function shs_form_taxonomy_form_term_submit(&$form, &$form_state) {
 /**
  * Helper function to get all instances of widgets with type "taxonomy_shs".
  *
- * @param string $entity_type
+ * @param <string> $entity_type
  *   Name of entity type.
- * @param string $bundle
+ * @param <string> $bundle
  *   Name of bundle (optional).
  *
- * @return array
+ * @return <array>
  *   List of instances keyed by field name.
  */
 function _shs_get_instances($entity_type, $bundle = NULL) {
@@ -1157,10 +1102,10 @@ function _shs_get_instances($entity_type, $bundle = NULL) {
 /**
  * Helper function to create a pseudo hash needed for javascript settings.
  *
- * @param int $length
+ * @param <int> $length
  *   Lenght of string to return.
  *
- * @return string
+ * @return <string>
  *   Random string.
  *
  * @see DrupalTestCase::randomName()
@@ -1182,7 +1127,7 @@ function _shs_create_hash($length = 8) {
  *   Either a vocabulary ID or an array with the following keys:
  *   - field_name: Name of field which sends the request.
  *
- * @return bool
+ * @return boolean
  *   TRUE if validation passes, otherwise FALSE.
  */
 function shs_json_validation_vocabulary_identifier($identifier) {
@@ -1190,14 +1135,15 @@ function shs_json_validation_vocabulary_identifier($identifier) {
 }
 
 /**
- * Helper function to get the vocabularies used in entityreference views.
+ * Helper function to get the vocabularies used as filter in entityreference
+ * views.
  *
  * @param string $view_name
  *   Name of view.
  * @param string $display_id
  *   Name of display.
  *
- *   return string[]
+ * return string[]
  *   List of vocabulary identifiers.
  */
 function _shs_entityreference_views_get_vocabularies($view_name, $display_id) {

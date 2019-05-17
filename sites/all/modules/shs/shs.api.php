@@ -2,7 +2,6 @@
 
 /**
  * @file
- * Hooks for the shs module.
  *
  * This file contains no working PHP code; it exists to provide additional
  * documentation for doxygen as well as to document hooks in the standard Drupal
@@ -14,10 +13,9 @@
  *
  * @param array $settings
  *   Settings for js module.
- *
- * @see hook_js()
+ *   @see hook_js()
  */
-function hook_shs_js_info_alter(array &$settings) {
+function hook_shs_js_info_alter(&$settings) {
   // Add pathauto as dependency for the default json callback.
   $settings['json']['dependencies'][] = 'pathauto';
   // Change the access callback.
@@ -36,7 +34,7 @@ function hook_shs_js_info_alter(array &$settings) {
  * @param object $account
  *   The user to check access for.
  *
- * @return bool
+ * @return boolean
  *   <code>FALSE</code> if no new terms should be created below the given
  *   parent, otherwise <code>TRUE</code>.
  */
@@ -57,7 +55,7 @@ function hook_shs_add_term_access($vid, $parent, $field, $account) {
  * @param array $callbacks
  *   List of callback definitions.
  */
-function hook_shs_json_callbacks_alter(array &$callbacks) {
+function hook_shs_json_callbacks_alter(&$callbacks) {
   // Use custom callback for adding new terms.
   $callbacks['shs_json_term_add']['callback'] = 'my_custom_shs_json_term_add';
 }
@@ -72,7 +70,7 @@ function hook_shs_json_callbacks_alter(array &$callbacks) {
  *   - parent: ID of parent term
  *   - settings: Additional settings (for example "language", etc.,)
  */
-function hook_shs_term_get_children_alter(array &$terms, array &$alter_options) {
+function hook_shs_term_get_children_alter(&$terms, &$alter_options) {
 
 }
 
@@ -86,11 +84,11 @@ function hook_shs_term_get_children_alter(array &$terms, array &$alter_options) 
  * @param int|string $vocabulary_identifier
  *   ID or machine_name of vocabulary the settings are used for.
  */
-function hook_shs_js_settings_alter(array &$settings_js, $field_name, $vocabulary_identifier) {
+function hook_shs_js_settings_alter(&$settings_js, $field_name, $vocabulary_identifier) {
   if ($field_name == 'field_article_terms') {
     foreach ($settings_js['shs'] as $field => $container) {
       foreach ($container as $identifier => $settings) {
-        $settings_js['shs'][$field][$identifier]['any_label'] = t('- Select an item -');
+        $settings_js['shs'][$field][$identifier]['any_label'] = t(' - Select an item - ');
       }
     }
   }
@@ -106,13 +104,12 @@ function hook_shs_js_settings_alter(array &$settings_js, $field_name, $vocabular
  * @param int|string $vocabulary_identifier
  *   ID or machine_name of vocabulary the settings are used for.
  */
-function hook_shs_FIELDNAME_js_settings_alter(array &$settings_js, $field_name, $vocabulary_identifier) {
+function hook_shs_FIELDNAME_js_settings_alter(&$settings_js, $field_name, $vocabulary_identifier) {
   foreach ($settings_js['shs'] as $field => &$container) {
     foreach ($container as $identifier => &$settings) {
       // Define labels for each level.
       $settings['labels'] = array(
-        // No label for first level.
-        FALSE,
+        FALSE, // No label for first level.
         t('Country'),
         t('City'),
       );
