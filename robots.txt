@@ -17,7 +17,6 @@
 # http://www.sxw.org.uk/computing/robots/check.html
 
 User-agent: *
-Crawl-delay: 10
 host: entas.ru
 Sitemap: https://entas.ru/sitemap.xml
 # Directories
@@ -65,18 +64,15 @@ Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 # copyright
-Disallow: /?q=node/220
 Disallow: /?q=node/134
 Disallow: /?q=node/135
 Disallow: /?q=node/173
 Disallow: /?q=node/172
 Disallow: /?q=copy
-Disallow: /node/220
 Disallow: /node/134
 Disallow: /node/135
 Disallow: /node/173
 Disallow: /node/172
-Disallow: /copy
 # pager
 Disallow: /*?page=*
 # old doc
