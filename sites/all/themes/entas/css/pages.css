@@ -1219,12 +1219,12 @@ table td:hover  a, table tr:hover td a {
 }
 
 table a:link {
-	color: #666;
+	color: #FF6600;
 	font-weight: bold;
 	text-decoration:none;
 }
 table a:visited {
-	color: #999999;
+	color: #FF6600;
 	font-weight:bold;
 	text-decoration:none;
 }
