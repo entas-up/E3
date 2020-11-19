@@ -1010,7 +1010,7 @@ text-decoration:none;
 font-size: 1em!important;
 }
 
-.special-button a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок. Проверить */{
+.special-button a[href^="https://"]:not([HREF *= "entas.by"]):after /* Пометка внешних ссылок. Проверить */{
 
 color:rgb(0, 39, 255)!important;
 }
