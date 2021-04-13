@@ -17,9 +17,11 @@ xampp/*
 xfiles/*
 Thumbs.db
 yandex*.txt
+yandex*.html
 mywotbd*.html
 google*.html
 mailru*.html
 sites/all/modules/security_review/file_write_test*
 sites/all/modules/security_review/IGNOREME.txt
 BingSiteAuth.xml
+wmail*.html

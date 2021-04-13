@@ -17,8 +17,10 @@
 # http://www.sxw.org.uk/computing/robots/check.html
 
 User-agent: *
-Crawl-delay: 10
+host: entas.ru
+Sitemap: https://entas.ru/sitemap.xml
 # Directories
+Disallow: /test/
 Disallow: /includes/
 Disallow: /misc/
 Disallow: /modules/
@@ -49,6 +51,8 @@ Disallow: /user/register/
 Disallow: /user/password/
 Disallow: /user/login/
 Disallow: /user/logout/
+Disallow: /user/*
+Disallow: /user
 # Paths (no clean URLs)
 Disallow: /?q=admin/
 Disallow: /?q=comment/reply/
@@ -60,13 +64,22 @@ Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 # copyright
-Disallow: /?q=node/220
+Disallow: /?q=node/134
+Disallow: /?q=node/135
+Disallow: /?q=node/173
+Disallow: /?q=node/172
 Disallow: /?q=copy
-Disallow: /node/220/
-Disallow: /copy/
+Disallow: /node/134
+Disallow: /node/135
+Disallow: /node/173
+Disallow: /node/172
 # pager
 Disallow: /*?page=*
 # old doc
 Disallow: /base/*
 # partners bode
 Disallow: /company/*
+#taxonometry rss
+Disallow: */term/*/feed
+#spam
+Disallow: */sites/all/modules/pubdlcnt/

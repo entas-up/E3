@@ -62,16 +62,14 @@
  * @see template_process()
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
-
+<!DOCTYPE html>
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
  
-
+<meta name="google-translate-customization" content="25a4888f1323dbe0-d385b5c6e8f79de4-gb3856dbee6e81863-8"></meta>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($jump_link_text && $jump_link_target): ?>

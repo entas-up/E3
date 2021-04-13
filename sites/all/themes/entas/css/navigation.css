@@ -7,8 +7,14 @@
 /*
  * The active item in a Drupal menu
  */
+
+ .region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
+color:#000;
+}
+
 .menu li a.active {
-  color: #F60;
+  /*color: #F60!important;*/
+  font-weight:600;
   }
 #block-menu-block-4 a.active, #block-simplenews-61 a.active{
 color: red;
@@ -16,7 +22,7 @@ color: red;
 #block-simplenews-61 a.active:before {
 color:red;
 }
-  
+
 .region-sidebar-first .expanded>a:hover {
 background: #027AC6;
 }
@@ -24,23 +30,24 @@ background: #027AC6;
 .region-sidebar-first a{
 	color:#585858;
 	/*text-shadow: 1px 1px 1px #000; *//* тень шрифта в левой колонке */
-	font-weight: normal;	
+	font-weight: normal;
 	display: block;
 	line-height: 1.1em;
-	padding: 2px 0px 6px 5px;
+	padding: 2px 0px 5px 5px;
+	/*border-bottom: 1px solid #C8C8C8;*/
 }
 .region-sidebar-first a:hover{
 background: #027AC6;
 text-shadow: none;
-color: white;
+color: white!important;
 text-decoration: none;
 }
-  
+/* explorer style in menu*/
 .region-sidebar-first li.expanded a{
 /*border-left: 1px dotted;*/
-}  
-  
-  
+}
+
+
 /*
  * Navigation bar
  */
@@ -48,10 +55,10 @@ text-decoration: none;
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
   background: #FA762B;
   /*margin-top: -5px;*/
-  font-size: 0.8em; /* Влияет на шрифт */
-  z-index: 300;	
+  font-size: 0.9em; /* Влияет на шрифт */
+  z-index: 300;
 	}
-	
+
 #navigation .section {
 width: 960px;
 margin: 0 auto;
@@ -59,10 +66,10 @@ margin: 0 auto;
 
 #navigation ul.links, /* Main menu and secondary menu links */
 #navigation .content ul /* Menu block links */ {
- /* margin: 0px 0 0 25px;*/ 
+ /* margin: 0px 0 0 25px;*/
   padding: 0;
   text-align: left; /* LTR */
- z-index: 500;
+ z-index: 10;
 }
 
 
@@ -70,78 +77,58 @@ margin: 0 auto;
 #navigation .content li {
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
-
-}
-
+  }
 
 .region-navigation {
-/* margin: 50px 0 0 45px; */
 }
-
-/*
- * Main menu and Secondary menu links
- */
 #main-menu {
 }
+#secondary-menu {  float: right;}
 
-#secondary-menu {
-  float: right;
-}
-
-/*
- * Menu blocks
- */
-
-.block-menu {
-}
-.region-sidebar-first .block-menu {
-border-bottom: 1px solid #F60
-	
-}
-
-/*
- * "Menu block" blocks
- *
- * Drupal core has limited ways in which it can display its menus. To get around
- * these limitations, see http://drupal.org/project/menu_block
- */
-.region-sidebar-first .block-menu-block {
-/*border-bottom: 1px solid #F60*/
-	
-}
-.block-menu-block {  }
+.region-sidebar-first .block-menu {border-bottom: 1px solid #F60}
 
 li.menu-path-front {
-padding: 7px 10px!important;
+/*padding: 7px 10px!important;*/
 }
 .menu-path-front  a {
-font-size: 1pt;
+font-size: 0pt;
 color:#414141;
+margin: 0 auto;
+    padding:5px 5px 5px 12px!important;
 }
 
-
-
 /* Icons from Font Awesome  */
-
-
-.region-sidebar-first .collapsed a:before {
-display: inline-block;
+.region-sidebar-first .expanded > a:before, .region-sidebar-first ul li.leaf a:before, .region-sidebar-first .collapsed a:before  {
+/*background: red;*/
+padding-right:3px;
+display: block;
 font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 line-height: 1;
 -webkit-font-smoothing: antialiased;
-content: "\f0fe""\00a0\00a0\00a0";
+color:#414141;
+float:left;
+padding-bottom: 5px;
+}
+
+.region-sidebar-first .collapsed a:before {
+content: "\f101";
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first .expanded>a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-line-height: 1;
--webkit-font-smoothing: antialiased;
-content: "\f146""\00a0\00a0\00a0";
+content: "\f103";
+font-size:1.15em;
+color: #F00!important;
+}
+
+.region-sidebar-first ul li.leaf a:before {
+content: "•";
+/*vertical-align: middle;*/
+font-size:1.15em;
+color: #F00!important;
 }
 
 .region-sidebar-first ul li.expanded, .region-sidebar-first ul li.collapsed, ul li.leaf {
@@ -149,7 +136,10 @@ list-style-image:none;
 list-style-type:none;
 }
 
-
+ .region-sidebar-first  a:hover:before{
+color:#fff!important;
+}
+/* Downloads menu item */
 .menu-2667 a:before {
 display: inline-block;
 font-family: FontAwesome;
@@ -159,7 +149,7 @@ line-height: 1;
 -webkit-font-smoothing: antialiased;
 content: "\f019""\00a0\00a0";
 }
-
+/* FAQ manu item */
 .menu-790 a:before {
 display: inline-block;
 font-family: FontAwesome;
@@ -169,7 +159,7 @@ line-height: 1;
 -webkit-font-smoothing: antialiased;
 content: "\f059""\00a0\00a0";
 }
-
+/* Training manu item */
 .menu-3232 a:before {
 display: inline-block;
 font-family: FontAwesome;
@@ -203,22 +193,6 @@ color: #f60;
 font-size: 63em;
 }
 
-
-
-
-.region-sidebar-first ul li.leaf a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-line-height: 1;
--webkit-font-smoothing: antialiased;
-content: "\f111""\00a0\00a0\00a0\00a0";
-font-size: 7px;
-/*text-shadow: 0px 0px 4px #000;*/
-vertical-align: middle;
-}
-
 /* Home1  */
 .menu-path-front a:after {
 display: inline-block;
@@ -226,12 +200,16 @@ font-family: FontAwesome;
 font-style: normal;
 font-weight: normal;
 content: "\f015";
-color: #FFF;
+color: #fff;
 
-font-size: 15em;
-position: absolute;
+font-size: 24px;
+/*position: absolute;
 top: 17%;
-left: 25%;
+left: 25%;*/
+margin-top: -2px;
+}
+.menu-path-front.active-trail a:after{
+color:#666;
 }
 
 /* Стрелка вправо  */
@@ -250,114 +228,9 @@ font-size: 1.2em;
 color: antiquewhite;
 }
 
-/* стрелка вниз *//*
-ul.nice-menu-down li.menuparent:after {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-line-height: 1;
--webkit-font-smoothing: antialiased;
-content: "\f078";
-right: 5px;
-position: absolute;
-top: 30%;
-font-size: 1.2em;
-color: antiquewhite;
-}*/
-
-/* Home2  */
-.menu-mlid-1838 a {
-/*font-size: 0;*/
-}
-
-.menu-mlid-1838 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f015";
-color: #F60;
-vertical-align: middle;
-text-align: center;
-margin-top: -5px;
-font-size: 1.2em;
-cursor: pointer;
-margin-right: 4px;
-}
-.menu-mlid-1838 a.active:before {
-color:red;
-}
-.menu-mlid-1838 a.focus:before., .menu-mlid-1838 a.hover:before, .menu-mlid-1838 a.active:before {
-text-decoration: underline;
-}
-
-/* Sitemap  */
-.menu-mlid-1839 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f0e8";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-1839 a.active:before {
-color:red;
-
-}
-
-
-/* Search  */
-.menu-mlid-1840 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f002";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-1840 a.active:before {
-color:red;
-
-}
-
-.menu-mlid-1839 a.hover:before{
-text-decoration: underline;
-}
-/* Feedback  */
-.menu-mlid-2904 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f044";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-2904 a.active:before {
-color:red;
-
-}
-/* Subscribe  3649*/
-.menu-mlid-3649 a:before {
-display: inline-block;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-content: "\f0e0";
-color: #F60;
-margin-right: 4px;
-}
-.menu-mlid-3649 a.active:before {
-color:red;
-
-}
-
 #block-menu-block-4 a:hover {
 text-decoration: none;
-} 
+}
 
 .fixed{
     position:fixed;
@@ -366,5 +239,21 @@ text-decoration: none;
     right:0;
     margin:0;
 	z-index:200;
-	
+
+}
+
+.menu li a.active:before {
+color:#F60!important;
+}
+
+li.active a {
+    color: red!important;
+}
+
+ul.quicktabs-tabs.quicktabs-style-excel li a {
+/*font-weight:300!important;*/
+color:grey;
+}
+ul.quicktabs-tabs.quicktabs-style-excel li {
+margin: 0 -5px -5px -5px!important;
 }

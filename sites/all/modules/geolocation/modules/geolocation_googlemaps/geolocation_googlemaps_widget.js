@@ -52,9 +52,36 @@
    * @param i
    *   the index from the maps array we are working on
    */
-  Drupal.geolocation.codeAddress = function(i) {
+  Drupal.geolocation.codeAddress = function(i, suggest_flag) {
+    suggest_flag = suggest_flag || false;
     var address = $('#geolocation-address-' + i + ' input').val();
+
+    // If it's a URL, try to get the coords from a Google Maps URL.
+    var matches_url = address.match(/^(https?):/i);
+    if (matches_url) {
+
+      // Get the coords, i.e. '41.4069724,2.20136' from 'https://www.google.es/maps/place/Barcelona/@41.39479,2.1487679,12z/data=!3...'
+      var matches_google = address.match(/@([^,]*,[^,]*)/);
+      if (matches_google && matches_google[0] && matches_google[1]) {
+        address =  matches_google[1];
+      }
+    }
+
     geocoder.geocode( { 'address': address }, function(results, status) {
+      if (suggest_flag == 1) {
+        var sug_str = '<div class="suggestion-options">';
+        if (results == '') {
+          sug_str += '<div class="suggessions">Not found</div>';
+        }
+        else {
+          $.each(results, function(index, value){
+            sug_str += '<div class="suggessions">' + value.formatted_address + '</div>';
+          })
+        }
+        sug_str += '</div>';
+        $('#geolocation-address-geocode-suggestions-' + i + ' .suggestion-options').replaceWith(Drupal.t(sug_str)).fadeIn(1500);
+        return;
+      }
       if (status == google.maps.GeocoderStatus.OK) {
         Drupal.geolocation.maps[i].setCenter(results[0].geometry.location);
         Drupal.geolocation.setMapMarker(results[0].geometry.location, i);
@@ -199,6 +226,10 @@
             Drupal.geolocation.codeAddress(i);
           });
 
+          $('#geolocation-address-geocode-' + i).parent().find('input').keyup(function(e) {
+            Drupal.geolocation.codeAddress(i, 1);
+          });
+
           $('#geolocation-remove-' + i).click(function(e) {
             Drupal.geolocation.clearLocation(i);
           });
@@ -273,6 +304,20 @@
           google.maps.event.addListener(Drupal.geolocation.maps[i], 'dblclick', function(me) {
             clearTimeout(singleClick);
           });
+
+          // Fix the grey area bug when the map was initially hidden by vertical
+          // tabs or a collapsible fieldset.
+          google.maps.event.addListenerOnce(Drupal.geolocation.maps[i], 'idle', function(){
+            $("#geolocation-map-" + i).closest('div.vertical-tabs').find('.vertical-tab-button a').click(function() {
+              google.maps.event.trigger(Drupal.geolocation.maps[i], "resize");
+              Drupal.geolocation.maps[i].setCenter(mapOptions.center);
+            });
+            $("#geolocation-map-" + i).closest('fieldset.collapsible').find('a.fieldset-title').click(function() {
+              google.maps.event.trigger(Drupal.geolocation.maps[i], "resize");
+              Drupal.geolocation.maps[i].setCenter(mapOptions.center);
+            });
+          });
+
         })
       });
     }

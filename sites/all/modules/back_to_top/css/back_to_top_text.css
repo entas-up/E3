@@ -21,13 +21,7 @@
   background: #EEEEEE;
 }
 
-<!--[if lte IE 6]>
-html {
-  overflow-x: auto;
-  overflow-y: hidden;
+#backtotop:focus {
+  opacity: 0.6;
+  outline: none;
 }
-
-* html #backtotop {
-  position:absolute;
-}
-<![endif]-->

@@ -3,12 +3,13 @@ description = A block showing the uptime ratio of the site using the free servic
 core = 7.x
 configure = admin/structure/block
 
-test_dependencies[] = uptime_widget_test
+simplytest_dependencies[] = uptime_simplytest
+simplytest_dependencies[] = style_settings
+soft_dependencies[] = style_settings
 
-
-; Information added by drupal.org packaging script on 2013-10-18
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2015-08-06
+version = "7.x-1.1"
 core = "7.x"
 project = "uptime_widget"
-datestamp = "1382089559"
+datestamp = "1438863420"
 

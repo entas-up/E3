@@ -21,7 +21,7 @@ a:visited {
   text-decoration: none;
   color:#FF6600;/*#F93;#E67403;*/
  /* text-shadow: 1px 2px 2px #999; */
-    
+
 }
 a:hover,
 a:active,
@@ -57,24 +57,23 @@ color:red;
  * Header
  */
 #header {
+    background-color: #FA762B;
 }
 
 #header .section {
-	
+
 }
 
 #logo /* Wrapping link for logo */ {
   float: left; /* LTR */
 /*  margin: 15px 30px 5px 10px; */
   padding: 0;
-  
+
 
 }
 
 #logo img {
-  vertical-align: bottom;
-  margin: 40px 30px 0px -715px;
-z-index:100;
+
 }
 #logo2 {
 float: left; /* LTR */ }
@@ -82,20 +81,14 @@ float: left; /* LTR */ }
 #logo2 img {
 
 z-index:80;
-  /* margin: -10px 0 0 0px; */
+
   }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
   float: left;
- /* margin: 0 0 0 -715px; */
-  position: absolute;
-  /*font-family: Comic Sans MS;*/
   color: #FFE800;
   font-size: 1.7em;
   text-shadow: -1px -1px 1px #999;
-/*  font-weight: bold;*/
-  
-  
   }
 
 h1#site-name,
@@ -117,10 +110,6 @@ div#site-name /* The name of the website */ {
 }
 
 #site-slogan /* The slogan (or tagline) of a website */ {
-}
-
-.region-header /* Wrapper for any blocks placed in the header region */ {
-  clear: both; /* Clear the logo */
 }
 
 /*
@@ -210,7 +199,7 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 ul.links /* List of links */ {
-	
+
 }
 ul.menu {
 	margin-left: 5px;
@@ -257,26 +246,26 @@ ul.links li {
 
 .region-sidebar-first .section {
 margin-bottom: 1.5em;
-  background: #414141; 
+  background: #414141;
 /*background: url("/base/pic/bo_play_pattern.png") repeat scroll 0% 0% transparent; /* эксперимент */ */
 	height: 100%;
 font-size: 0.9em;
 line-height: 1em;
 font-weight: normal;
 /*box-shadow: 5px 5px 10px #7B7B7B;*/
-	
+
 }
 .region-sidebar-first a{
 	color:#bbb;
 	text-shadow: 1px 1px 1px #000; /* тень шрифта в левой колонке */
-	font-weight: normal;	
+	font-weight: normal;
 }
 /*.region-sidebar-first li:hover,*/
 /*.region-sidebar-first li li:hover*/
 /*.region-sidebar-first li li li:hover*/
 /* {
 	background:#FF0;
-	
+
 	}*/ /* Попытка сделать подсветку строчек маркерованного списка */
 /*
  * Second sidebar (on right in LTR languages, on left in RTL)
@@ -288,7 +277,7 @@ font-weight: normal;
 }
 
 .region-sidebar-second .section {
-	 background: #ccc;  
+	 background: #ccc;
 margin-bottom: 1.5em;
 
 /*background: url("/base/pic/white_carbonfiber.png") repeat scroll 0% 0% transparent;  /* эксперимент */ */
@@ -323,7 +312,7 @@ color:#FF6600;
 	text-align:center;
 	text-decoration:bold;
 
-	
+
 }
 
 
@@ -344,73 +333,6 @@ color:#FF6600;
   padding: 0;
 }
 
-
-
-/* Страница каталога тестовая. Для новых страниц скопировать код и заменить test-pages на нужное название  */
-
-/* Попытка дать фон всему блоку */
-.ent-catalog {
-background: red;
+body.toolbar, body.toolbar-drawer {
+padding:0!important;
 }
-/* Настройка элемента */
-.ent-catalog .views-row {
-background: #E3e3e3; /*#fff даёт шахматы!!!*/
-width: 250px;
-float:left;
-margin:10px;
-padding: 10px;
-height:300px;
-border-radius: 5px;
-border: 3px solid #AEAEAE;
-box-shadow: 5px 5px 10px #ccc;
-}
-/* Цвет нечетного элемента*/
-.ent-catalog .views-row-odd {
-background:#E3E3E3;
-}
-/* Выстраивание полей вертикально */
-.ent-catalog .views-row .views-field {
-display: block;
-
-}
-/* Заголовок*/
-.ent-catalog .views-field-title {
-font-weight: bold;
-margin: 8px 0 8px 0;
-color: red;
-/*text-align: center;*/
-}
-.ent-catalog .views-field-title a:hover{
-font-weight: none;
-/*text-align: center;*/
-}
-/* Изображение*/
-.ent-catalog .views-field-field-imagepage {
-text-align: center;
-}
-/* Отключение подписи для изображения*/
-
-.ent-catalog  .views-label-field-imagepage {
-display:none
-}
-
-/* отключение подписи для текста*/
-.ent-catalog .views-label-body {
-display:none
-}
-
-/* Текст (аннотация)*/
-.ent-catalog .views-field-body {
-font-size: 0.77em;
-/*text-align: justify;*/
-}
-.ent-catalog .views-field-view-node {
-text-align: right;
-font-size: 0.75em;
-}
-
-/*
-.ent-catalog .tr .td{
-margin:10px;
-background: red;
-}*/

@@ -3,34 +3,37 @@
 
 
 #block-nice-menus-1 li.active-trail > a.active{
-color: #F93;
-text-shadow: 1px 1px 2px #000;
-font-weight: 400;
+color: red!important;
+/*text-shadow: -1px -1px 0px #E0E0E0,
+			1px -1px 0px #E0E0E0,
+			-1px 1px 0px #E0E0E0,
+			1px 1px 0px #E0E0E0;*/
+font-weight: 800;
 }
 
 #block-nice-menus-1 li.active-trail > a{
-color: #FFF;
-font-weight: 400;
+color: #000;
+font-weight: 600;
 }
- 
+
 #block-nice-menus-1 li .active-trail {
-color: #fff;
-background-color: #027AC6;
+color: #000;
+background-color: #ffd397;
 border-color:#595959;
 font-weight: 400;
 }
- 
+
 #block-nice-menus-1 .active-trail {
 
-color: #fff;
-background-color: #027AC6;
+color: #000;
+background-color: #ffd397;
 
 
 }
- 
+
 #block-nice-menus-1 ul li {
 
-} 
+}
 
  ul.nice-menu li:hover
 {
@@ -77,14 +80,14 @@ ul.nice-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  
-  
+
+
 }
 
 ul.nice-menu li {
   border-top: none;
 border-bottom: none;
-border-right: none; 
+border-right: none;
 border-left: none;
   float: left; /* LTR */
   background-color: #414141;
@@ -134,7 +137,7 @@ ul.nice-menu-down li {
 }
 
 ul.nice-menu-down li li {
-  
+
 }
 
 ul.nice-menu-down ul {
@@ -151,19 +154,19 @@ ul.nice-menu-down ul li {
 }
 
 ul.nice-menu-down li ul li ul {
-  left: 14.0em; /* LTR */
+  left: 13.4em; /* LTR */
   top: -1px;
 }
 
 ul.nice-menu-down .menuparent a {
   padding-right: 1px; /* LTR */
   padding-left: 10px;
-padding-top: 7px;
-padding-bottom: 7px;
+padding-top: 6px;
+padding-bottom: 3px;
 font-weight: 400;
 display: inline-block; /* убирает эффект дерганья */
-}
 
+}
 ul.nice-menu-down li.menuparent {
   background: #414141; /* LTR *//* first level */
     /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
@@ -171,6 +174,17 @@ ul.nice-menu-down li.menuparent {
 background-position:  right center;
 background-repeat: 	no-repeat;
 cursor: pointer;
+
+}
+ul.nice-menu-down li.menuparent a {
+
+}
+#nice-menu-1 > li {
+height:30px;
+/*margin: 4px auto;*/
+}
+#nice-menu-2  li{
+    padding-bottom: 5px!important;
 }
 ul.nice-menu-down li li.menuparent {border-right:none;}
 ul.nice-menu-down li.menuparent:hover {
@@ -186,7 +200,7 @@ ul.nice-menu-down li li.menuparent:hover {border-right:none;}
 ul.nice-menu-down li.menuparent:hover > a {
 color: #fff;
 font-weight: 400;
-   
+
 }
 
 ul.nice-menu-down li li.menuparent {
@@ -196,12 +210,12 @@ ul.nice-menu-down li li.menuparent {
 ul.nice-menu-down li li.menuparent:hover {
  background: #027AC6; /* LTR */
   border-color: #ccc;
-} 
+}
 
 ul.nice-menu-down li li.menuparent:hover > a {
 color: #fff;
 font-weight: 400;
-} 
+}
 
 ul.nice-menu-down li.first:hover {
 
@@ -210,11 +224,11 @@ ul.nice-menu-down li.first:hover {
 ul.nice-menu-down li.first:hover > a {
 color: #fff;
 font-weight: 400;
-} 
+}
 ul.nice-menu-down li.first a {
 padding-left: 10px;
-padding-top: 7px;
-padding-bottom: 7px;
+/*padding-top: 7px;
+padding-bottom: 7px;*/
 font-weight: 400;
 }
 
@@ -226,7 +240,7 @@ color: orange;
 /* nice menu end */
 
 ul.nice-menu-down li.menu-path-front {
-background: #414141; 
+background: #414141;
 /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
 	border-right:2px solid #FA762B;
 background-position: right center;
@@ -234,8 +248,8 @@ background-repeat: 	no-repeat;
 }
 
 ul.nice-menu-down li.menu-path-front:hover {
-  
-background: #027AC6; 
+
+background: #027AC6;
 /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
 	border-right:2px solid #FA762B;
 background-position: right center;

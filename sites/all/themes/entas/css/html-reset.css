@@ -116,7 +116,6 @@ fieldset {
    */
 
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-  
 }
 input {}
 pre,
@@ -145,7 +144,7 @@ hr, table, fieldset {
 
 /* Headings */
 h1 {
-font-size:  1.2em; /* Влияет на шрифт */
+font-size:  1.9em; /* Влияет на шрифт */
   line-height: 1.5em;
   margin: 0.75em 0;
   /* 0.75em is equivalent to 1.5em in the page's base font. font. Remember, a
@@ -157,8 +156,12 @@ color: #2A63DB;
 }
 
 h2 {
-  font-size: 1.5em; /* Влияет на шрифт */
+  font-size: 1.3em; /* Влияет на шрифт */
   margin: 1em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.5 = 1em */
+  color: #656464;
+      color: #1D1D1D;
+    background: #FFD397;
+
 }
 
 h3 {
@@ -201,12 +204,15 @@ address {
  *
  * We need to standardize the list item indentation.
  */
-ul,
-ol {
+ul
+{
   margin-left: 0; /* LTR */
   padding-left: 0; /* 1em LTR */
 }
-
+ol {
+  margin-left: 0; /* LTR */
+  padding-left: 3em; /* 1em LTR */
+}
 .item-list ul /* Drupal overrides */ {
   margin: 0.5em 0;
   padding: 0 0 0 0.5em; /* LTR */
@@ -223,17 +229,23 @@ li {
   margin: 0;
   padding: 0;
 }
+#content li {
+margin-left:15px;
+list-style-position: inside;
+}
+.item-list ul li {
+margin: 0px 0px 0.25em 0.001em;
+}
 
-.item-list ul li,
 ul.menu li,
 li.expanded,
 li.collapsed,
 li.leaf /* Drupal override */ {
-margin: 2px 0px 2px 15px;
+margin: 0px 0px 0px 15px;
 line-height: 1.5em;
 padding: 0px;
-  }
-  
+}
+ul.menu li {}
 li.expanded, li.collapsed, li.leaf {
 padding: 0;
 }
@@ -242,8 +254,11 @@ ul.menu li, li.leaf {
 border: none;
 }
 
+.menu-block-1 > .menu > li {
+margin-left:0px;
+}
 
- li.collapsed:hover, 
+ li.collapsed:hover,
  li.leaf:hover
 {
 	background: #027AC6;

@@ -9,7 +9,7 @@ height: 52px;
 /*width: 266px;*/
 }
 .last-block  .views-field-body  p{
-padding:2px;
+padding:0px;
 margin: 0;
 }
 
@@ -52,11 +52,12 @@ float: left;
 width: 314.5px;
 position: relative;
 margin: 5px 0px;
-font-size: 0.8em;
+/*font-size: 0.8em;*/
 height: 456px;
 border: 1px solid #919191;
 background: #FFF;
-/*box-shadow: 3px 3px 7px #CCC;*/
+/*margin-top: 28px;
+box-shadow: 3px 3px 7px #CCC;*/
 }
 
 .blocks-last .content{
@@ -128,11 +129,13 @@ margin-top: 3px;
 }
 
 .blocks-last .views-content-title a {
-width:25px;
-height:25px;
+width: 26px;
+height: 28px;
 position: absolute;
-right: 4px;
+right: 0px;
 top: 0px;
+font-size:1.8em;
+border-left: 1px solid white;
 }
 
 #block-views-banner-block {
@@ -147,7 +150,7 @@ height:115px;
 height: 110px;
 width: 110px;
 float: left;
-/*line-height: 113px;*/
+line-height: 91px;
 text-align: center;
 margin-top: 4px;
 }
@@ -179,14 +182,21 @@ border:1px solid #FFFFFF;
 }
 
 .view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date, .view-banner .views-field-field-type-event, .view-banner .views-field-field-location2{
-font-size:0.8em;
-color: #FFF;
-width: 310px;
-/*text-shadow: 1px 1px 2px #0E0E0E;*/
+    font-size: 0.8em;
+    color: #000;
+    width: 310px;
+    background: #FFF;
+    /*height: 26px;*/
+    line-height: 23px;
+    padding-top: 3px;
+
+    /* border: 1px solid; */
 }
 
 .view-banner  .views-row {
-
+    border-top: 3px solid #FA762B;
+    background: white;
+    height: 106px;
 }
 
 .view-banner  .views-slideshow-controls-top .active  .views-field-title {
@@ -206,7 +216,7 @@ top: 0;
 }
 
 .last-block .views-field-field-date {
-    background: #FA762B;
+    background: red;
 color: #FFF;
 font-size: 1.2em;
 padding: 0 44px;

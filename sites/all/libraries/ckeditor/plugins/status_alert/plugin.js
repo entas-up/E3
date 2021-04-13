@@ -5,7 +5,7 @@ CKEDITOR.plugins.add( 'status_alert', {
             
                 exec: function( editor ) {
 
-                editor.insertHtml( '<div class="messages warning">&nbsp</div>' );
+                editor.insertHtml( '<div class="messages warning">&nbspЗамените&nbspтекст&nbspсообщения&nbsp</div>' );
             }
         });
         editor.ui.addButton( 'status alert', {

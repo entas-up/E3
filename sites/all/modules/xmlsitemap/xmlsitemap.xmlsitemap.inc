@@ -5,36 +5,69 @@
  * XML sitemap integration functions for xmlsitemap.module.
  */
 
-class XMLSitemapException extends Exception {}
+/**
+ * Class for XML Sitemap Exception.
+ */
+class XMLSitemapException extends Exception {
 
-class XMLSitemapGenerationException extends XMLSitemapException {}
+}
+
+/**
+ * Class for XML Sitemap Generation Exception.
+ */
+class XMLSitemapGenerationException extends XMLSitemapException {
+
+}
 
 /**
  * Extended class for writing XML sitemap files.
  */
 class XMLSitemapWriter extends XMLWriter {
+
   protected $uri = NULL;
   protected $sitemapElementCount = 0;
   protected $linkCountFlush = 500;
   protected $sitemap = NULL;
+
+  /**
+   * Sitemap Page.
+   *
+   * @var string
+   *
+   * @codingStandardsIgnoreStart
+   */
   protected $sitemap_page = NULL;
+
+  /**
+   * Root Element.
+   *
+   * @var string.
+   *
+   * @codingStandardsIgnoreEnd
+   */
   protected $rootElement = 'urlset';
 
   /**
    * Constructor.
    *
-   * @param $sitemap
+   * @param array $sitemap
    *   The sitemap array.
-   * @param $page
+   * @param string $page
    *   The current page of the sitemap being generated.
+   *
+   * @codingStandardsIgnoreStart
    */
-  function __construct(stdClass $sitemap, $page) {
+  public function __construct(stdClass $sitemap, $page) {
+    // @codingStandardsIgnoreEnd
     $this->sitemap = $sitemap;
     $this->sitemap_page = $page;
     $this->uri = xmlsitemap_sitemap_get_file($sitemap, $page);
     $this->openUri($this->uri);
   }
 
+  /**
+   * Open URI.
+   */
   public function openUri($uri) {
     $return = parent::openUri($uri);
     if (!$return) {
@@ -43,6 +76,9 @@ class XMLSitemapWriter extends XMLWriter {
     return $return;
   }
 
+  /**
+   * Start Document.
+   */
   public function startDocument($version = '1.0', $encoding = 'UTF-8', $standalone = NULL) {
     $this->setIndent(FALSE);
     $result = parent::startDocument($version, $encoding);
@@ -57,10 +93,31 @@ class XMLSitemapWriter extends XMLWriter {
   }
 
   /**
+   * Get Sitemap URL.
+   */
+  public function getSitemapUrl($path, array $options = array()) {
+    global $base_url;
+    $options += $this->sitemap->uri['options'];
+    $options += array(
+      'absolute' => TRUE,
+      'base_url' => variable_get('xmlsitemap_base_url', $base_url),
+      'language' => language_default(),
+      'alias' => TRUE,
+    );
+    if (!empty($options['protocol_relative'])) {
+      $options['base_url'] = preg_replace('~^https?:~', '', $options['base_url']);
+    }
+    return url($path, $options);
+  }
+
+  /**
    * Add the XML stylesheet to the XML page.
+   *
+   * @codingStandardsIgnoreStart
    */
   public function writeXSL() {
-    $this->writePi('xml-stylesheet', 'type="text/xsl" href="' . url('sitemap.xsl', $this->sitemap->uri['options']) . '"');
+    // @codingStandardsIgnoreEnd
+    $this->writePi('xml-stylesheet', 'type="text/xsl" href="' . $this->getSitemapUrl('sitemap.xsl', array('absolute' => FALSE)) . '"');
     $this->writeRaw(PHP_EOL);
   }
 
@@ -73,13 +130,25 @@ class XMLSitemapWriter extends XMLWriter {
       $attributes['xmlns:xsi'] = 'http://www.w3.org/2001/XMLSchema-instance';
       $attributes['xsi:schemaLocation'] = 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd';
     }
+
+    drupal_alter('xmlsitemap_root_attributes', $attributes, $this->sitemap);
+
     return $attributes;
   }
 
+  /**
+   * Generate XML.
+   *
+   * @codingStandardsIgnoreStart
+   */
   public function generateXML() {
+    // @codingStandardsIgnoreEnd
     return xmlsitemap_generate_chunk($this->sitemap, $this, $this->sitemap_page);
   }
 
+  /**
+   * Start Element.
+   */
   public function startElement($name, $root = FALSE) {
     parent::startElement($name);
 
@@ -94,9 +163,9 @@ class XMLSitemapWriter extends XMLWriter {
   /**
    * Write an full XML sitemap element tag.
    *
-   * @param $name
+   * @param string $name
    *   The element name.
-   * @param $element
+   * @param array $element
    *   An array of the elements properties and values.
    */
   public function writeSitemapElement($name, array &$element) {
@@ -114,32 +183,47 @@ class XMLSitemapWriter extends XMLWriter {
   /**
    * Write full element tag including support for nested elements.
    *
-   * @param $name
+   * @param string $name
    *   The element name.
-   * @param $content
+   * @param string|array $content
    *   The element contents or an array of the elements' sub-elements.
+   *
+   * @todo Missing a return value since XMLWriter::writeElement() has one.
    */
-  public function writeElement($name, $content = '') {
+  public function writeElement($name, $content = NULL) {
     if (is_array($content)) {
       $this->startElement($name);
-      foreach ($content as $sub_name => $sub_content) {
-        $this->writeElement($sub_name, $sub_content);
-      }
+      $xml_content = format_xml_elements($content);
+      // Remove additional spaces from the output.
+      $xml_content = str_replace(array(" <", ">\n"), array("<", ">"), $xml_content);
+      $this->writeRaw($xml_content);
       $this->endElement();
     }
     else {
-      parent::writeElement($name, $content);
+      parent::writeElement($name, check_plain((string) $content));
     }
   }
 
+  /**
+   * Get URI.
+   *
+   * @codingStandardsIgnoreStart
+   */
   public function getURI() {
+    // @codingStandardsIgnoreEnd
     return $this->uri;
   }
 
+  /**
+   * Get Count Sitemap Element.
+   */
   public function getSitemapElementCount() {
     return $this->sitemapElementCount;
   }
 
+  /**
+   * Document.
+   */
   public function endDocument() {
     $return = parent::endDocument();
 
@@ -147,56 +231,65 @@ class XMLSitemapWriter extends XMLWriter {
       throw new XMLSitemapGenerationException(t('Unknown error occurred while writing to file @file.', array('@file' => $this->uri)));
     }
 
-    //if (xmlsitemap_var('gz')) {
+    // @code
+    // If (xmlsitemap_var('gz')) {
     //  $file_gz = $file . '.gz';
     //  file_put_contents($file_gz, gzencode(file_get_contents($file), 9));
-    //}
-
-    if (!filesize($this->uri)) {
-      throw new XMLSitemapGenerationException(t('Generated @file resulted in an empty file.', array('@file' => $this->uri)));
-    }
-
+    // }
+    // @endcode
     return $return;
   }
+
 }
 
+/**
+ * XML Sitemap Index Writer.
+ */
 class XMLSitemapIndexWriter extends XMLSitemapWriter {
+
   protected $rootElement = 'sitemapindex';
 
-  function __construct(stdClass $sitemap, $page = 'index') {
+  /**
+   * Construct.
+   */
+  public function __construct(stdClass $sitemap, $page = 'index') {
     parent::__construct($sitemap, 'index');
   }
 
+  /**
+   * Get Root Attributes.
+   */
   public function getRootAttributes() {
     $attributes['xmlns'] = 'http://www.sitemaps.org/schemas/sitemap/0.9';
     if (variable_get('xmlsitemap_developer_mode', 0)) {
       $attributes['xmlns:xsi'] = 'http://www.w3.org/2001/XMLSchema-instance';
       $attributes['xsi:schemaLocation'] = 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd';
     }
+
+    drupal_alter('xmlsitemap_root_attributes', $attributes, $this->sitemap);
+
     return $attributes;
   }
 
+  /**
+   * Generate XML.
+   *
+   * @codingStandardsIgnoreStart
+   */
   public function generateXML() {
+    // @codingStandardsIgnoreEnd
     $lastmod_format = variable_get('xmlsitemap_lastmod_format', XMLSITEMAP_LASTMOD_MEDIUM);
 
-    $url_options = $this->sitemap->uri['options'];
-    $url_options += array(
-      'absolute' => TRUE,
-      'base_url' => variable_get('xmlsitemap_base_url', $GLOBALS['base_url']),
-      'language' => language_default(),
-      'alias' => TRUE,
-    );
-
     for ($i = 1; $i <= $this->sitemap->chunks; $i++) {
-      $url_options['query']['page'] = $i;
       $element = array(
-        'loc' => url('sitemap.xml', $url_options),
+        'loc' => $this->getSitemapUrl('sitemap.xml', array('query' => array('page' => $i))),
         // @todo Use the actual lastmod value of the chunk file.
         'lastmod' => gmdate($lastmod_format, REQUEST_TIME),
       );
       $this->writeSitemapElement('sitemap', $element);
     }
   }
+
 }
 
 /**
@@ -275,7 +368,7 @@ function xmlsitemap_xmlsitemap_sitemap_operations() {
 /**
  * XML sitemap operation callback; regenerate sitemap files using the batch API.
  *
- * @param $smids
+ * @param array $smids
  *   An array of XML sitemap IDs.
  *
  * @see xmlsitemap_regenerate_batch()

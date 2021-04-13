@@ -5,9 +5,9 @@ package = Sharing
 dependencies[] = addthis
 files[] = addthis_displays.field.inc
 
-; Information added by Drupal.org packaging script on 2014-02-11
-version = "7.x-4.0-alpha4+4-dev"
+; Information added by Drupal.org packaging script on 2014-05-07
+version = "7.x-4.0-alpha4+19-dev"
 core = "7.x"
 project = "addthis"
-datestamp = "1392106413"
+datestamp = "1399466631"
 

@@ -20,7 +20,7 @@ description = Entas theme (c) (<a href="http://drupal.org/node/873778">Read</a> 
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
 
 core        = 7.x
-base theme  = zen
+
 
 
 
@@ -33,20 +33,14 @@ base theme  = zen
 ; useful feature. See the excellent Drupal 7 Theme Guide at
 ; http://drupal.org/node/263967 for more details.
 
-stylesheets[all][]        = css/html-reset.css
-stylesheets[all][]        = css/wireframes.css
-stylesheets[all][]        = css/layout-liquid.css
-stylesheets[all][]        = css/page-backgrounds.css
-stylesheets[all][]        = css/tabs.css
+
+
+
+
+
 stylesheets[all][]        = css/pages.css
 stylesheets[all][]        = css/blocks.css
-stylesheets[all][]        = css/navigation.css
-stylesheets[all][]        = css/views-styles.css
-stylesheets[all][]        = css/nodes.css
-stylesheets[all][]        = css/comments.css
-stylesheets[all][]        = css/forms.css
-stylesheets[all][]        = css/fields.css
-stylesheets[print][]      = css/print.css
+
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
@@ -66,8 +60,6 @@ stylesheets[print][]      = css/print.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
-;scripts[] = js/snow.js 
-
 
 ; The regions defined in Zen's default page.tpl.php file.  The name in
 ; brackets is the name of the region in the $page variable in the page.tpl.php
@@ -79,7 +71,6 @@ stylesheets[print][]      = css/print.css
 ; add a line line to this file, and then add the new $page['REGION'] variable
 ; to your page.tpl.php template.
 
-regions[help]           = Help
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[navigation]     = Navigation bar
@@ -90,7 +81,6 @@ regions[footer]         = Footer
 regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
-regions[news1000] = Блок супер новости
 
 
 

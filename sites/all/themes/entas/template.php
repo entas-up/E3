@@ -224,10 +224,11 @@ function entas_form_alter(&$form, &$form_state, $form_id) {
     //$form['search_block_form']['#title'] = t('Поиск_label'); // Change the text on the label element
     //$form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
     //$form['search_block_form']['#size'] = 40;  // define size of the textfield
-    $form['search_block_form']['#default_value'] = t('Поиск...'); // Set a default value for the textfield
+    //$form['search_block_form']['#default_value'] = t('Поиск...'); // Set a default value for the textfield
     $form['actions']['submit']['#value'] = html_entity_decode("&#xf002;", ENT_COMPAT, 'UTF-8'); // Change the text on the submit button
     //$form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search-button.png');
 	//$form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Введите текст...'){ alert('Please enter a search'); return false; }";
+	$form['search_block_form']['#attributes']['placeholder'] = t('Поиск...');
   }
   
 } 
@@ -246,17 +247,15 @@ function entas_menu_link($variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
-
-function drupal_urlencode($text) {
+function entas_drupal_urlencode($text) {
   if (variable_get('clean_url', '0')) {
-    return str_replace(array('%2F', '%26', '%2523'),
-                       array('/', '&', '#'),
+    return str_replace(array('%2F', '%26', '%2523', '%2B'),
+                       array('/', '&', '#','+'),
                        urlencode($text));
   }
   else {
     return str_replace('%2F', '/', urlencode($text));
   }
 }
-
 
 ?>

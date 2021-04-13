@@ -1,0 +1,95 @@
+<?php
+
+function init_settings()
+{
+	$settings = drupal_get_path('module','yandex_pinger').'/settings.ini'; 
+	try{
+		if(!is_file($settings)) throw new Exception("file does not exist");
+		
+		if(!$file = parse_ini_file($settings)) throw new Exception("parse error");
+		
+		if( key_exists('key', $file) 
+			&& key_exists('login', $file)
+			&& key_exists('searchId', $file)
+			&& key_exists('message', $file)
+			&& key_exists('pluginId', $file)
+			) {
+
+			$key = $file['key'];
+			$login = $file['login'];
+			$searchId = $file['searchId'];				
+			$message = $file['message'];
+			$pluginId = $file['pluginId'];
+			
+			return $file;
+		} else {
+			throw new Exception("incorrect ini");
+		}
+	} catch(exception $e){
+		return false;
+	}
+}
+
+function yandex_pinger_install()
+{
+	$t = get_t();
+	$prefix = 'yandex_pinger_';
+	variable_initialize();
+	if($settings = init_settings()) {
+		variable_set($prefix.'key', $settings['key']);
+		variable_set($prefix.'login', $settings['login']);
+		variable_set($prefix.'searchId', $settings['searchId']);
+		variable_set($prefix.'message', $settings['message']);
+		variable_set($prefix.'pluginId', $settings['pluginId']);
+	}
+	
+	db_update('system')
+    ->fields(array(
+      'weight' => 88,
+    ))
+    ->condition('type', 'module')
+    ->condition('name', 'yandex_pinger')
+    ->execute();
+    
+    
+    if (module_exists('menu')) {
+	    $menu = array(
+	      'menu_name' => 'yandex_pinger',
+	      'title' => $t('Development'),
+	      'description' => $t('yp')
+	    );
+	    menu_save($menu);
+ 	}
+}
+
+function yandex_pinger_uninstall() 
+{
+	#db_query("DELETE FROM {system} WHERE name = 'yandex_pinger'");
+	// Delete the development menu.
+	if (module_exists('menu')) {
+		if ($yandex_pinger_menu = menu_load('yandex_pinger')) {
+	    	menu_delete($yandex_pinger_menu);
+		}
+	}
+	menu_rebuild();
+}
+
+function yandex_pinger_disable()
+{
+  	$prefix = 'yandex_pinger_';
+	variable_del($prefix.'key');
+	variable_del($prefix.'login');
+	variable_del($prefix.'searchId');
+	variable_del($prefix.'message');
+	variable_del($prefix.'pluginId');
+	
+	cache_clear_all('*', 'cache', TRUE);
+  	cache_clear_all('*', 'cache_filter', TRUE);
+  	cache_clear_all('*', 'cache_menu', TRUE);
+  	cache_clear_all('*', 'cache_page', TRUE);
+}
+
+function yandex_pinger_enable()
+{
+	yandex_pinger_install();
+}
