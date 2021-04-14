@@ -436,7 +436,7 @@ border-radius: 4px;
     transform: rotate(-15deg);
 }
 
-#main a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок */{
+#main a[href^="http"]:not([HREF *= "entas.by"]):after /* Пометка внешних ссылок */{
 content: "\00a0\00a0\f08e";
 display: inline-block;
 font-family: FontAwesome;

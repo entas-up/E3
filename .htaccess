@@ -23,8 +23,8 @@ DirectoryIndex index.php index.html index.htm
 # sites/default/default.settings.php and drupal_environment_initialize() in
 # includes/bootstrap.inc for settings that can be changed at runtime.
 
-# PHP 5, Apache 1 and 2.
-<IfModule mod_php5.c>
+# PHP 7, Apache 1 and 2.
+<IfModule mod_php7.c>
   php_flag magic_quotes_gpc                 off
   php_flag magic_quotes_sybase              off
   php_flag register_globals                 off
@@ -71,7 +71,7 @@ RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
 RewriteCond %{SERVER_PORT} !^443
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ https://entas.ru%{REQUEST_URI} [R=301,L]
+RewriteRule ^ https://entas.by%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP:X-SSL-Emu} !on
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 #work0-end
@@ -79,7 +79,7 @@ RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
 #work1
 #RewriteCond %{HTTPS} off 
-#RewriteCond %{HTTP_HOST} ^www\.entas\.ru*
+#RewriteCond %{HTTP_HOST} ^www\.entas\.by*
 #RewriteRule ^(.*)$ https://entas.ru/$1 [L,R=301]
 #work1-end
 

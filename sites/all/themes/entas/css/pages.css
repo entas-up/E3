@@ -1010,7 +1010,7 @@ text-decoration:none;
 font-size: 1em!important;
 }
 
-.special-button a[href^="http"]:not([HREF *= "entas.ru"]):after /* Пометка внешних ссылок. Проверить */{
+.special-button a[href^="https://"]:not([HREF *= "entas.by"]):after /* Пометка внешних ссылок. Проверить */{
 
 color:rgb(0, 39, 255)!important;
 }
@@ -1219,12 +1219,12 @@ table td:hover  a, table tr:hover td a {
 }
 
 table a:link {
-	color: #666;
+	color: #FF6600;
 	font-weight: bold;
 	text-decoration:none;
 }
 table a:visited {
-	color: #999999;
+	color: #FF6600;
 	font-weight:bold;
 	text-decoration:none;
 }
