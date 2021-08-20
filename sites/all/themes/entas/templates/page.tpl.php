@@ -76,7 +76,7 @@
   <a href="http://www.google.ru/support/bin/answer.py?answer=23852">Как?</a></div>
 </noscript>
 </div>
-<meta name="theme-color" content="#FA762B">
+
 <!--Иконки для iOS -->
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
