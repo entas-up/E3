@@ -68,7 +68,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-<meta name="theme-color" content="#FA762B">
+<meta name="theme-color" content="#FA762B"> <!-- Safari theme test  -->
 <meta name="google-translate-customization" content="25a4888f1323dbe0-d385b5c6e8f79de4-gb3856dbee6e81863-8">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
