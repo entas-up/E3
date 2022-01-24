@@ -247,7 +247,7 @@ color:#F60!important;
 }
 
 li.active a {
-    color: red!important;
+    /*color: red!important;*/
 }
 
 ul.quicktabs-tabs.quicktabs-style-excel li a {
