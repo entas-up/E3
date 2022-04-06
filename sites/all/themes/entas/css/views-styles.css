@@ -3,4 +3,41 @@
  * Views Styling
  */
 
+ .view-display-id-files_tab li {
+	background: #f6f6f6;
+    margin: 0 !important;
+	list-style: none;
+	border: 1px solid #ccc;
+	padding: 5px 5px 5px 20px !important;
+	font-weight: bold;
+	font-size: 1.2em;
+    border-style: inset;
+    
+}
 
+.view-display-id-files_tab .views-label {
+    background: #5A738C;
+    color: white;
+    padding: 5px 0;
+    margin-left: 6px;
+    text-align: center;
+}
+
+.view-display-id-files_tab li:nth-child(2n) {
+    background: #ccc;
+}
+
+
+.view-display-id-files_tab li:hover {
+
+	background: #027ac6;
+	color: white;
+}
+
+.view-display-id-files_tab li a:hover {
+text-decoration: none;
+}
+
+.view-display-id-files_tab .item-list ul {
+margin:0 !important;
+}

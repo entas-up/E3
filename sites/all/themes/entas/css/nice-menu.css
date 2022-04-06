@@ -3,7 +3,7 @@
 
 
 #block-nice-menus-1 li.active-trail > a.active{
-color: red!important;
+/*color: red!important;*/
 /*text-shadow: -1px -1px 0px #E0E0E0,
 			1px -1px 0px #E0E0E0,
 			-1px 1px 0px #E0E0E0,
@@ -170,7 +170,7 @@ display: inline-block; /* убирает эффект дерганья */
 ul.nice-menu-down li.menuparent {
   background: #414141; /* LTR *//* first level */
     /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
-	border-right:2px solid #FA762B;
+	/*border-right:2px solid #FA762B;*/
 background-position:  right center;
 background-repeat: 	no-repeat;
 cursor: pointer;
@@ -181,6 +181,7 @@ ul.nice-menu-down li.menuparent a {
 }
 #nice-menu-1 > li {
 height:30px;
+margin-right: 3px;
 /*margin: 4px auto;*/
 }
 #nice-menu-2  li{
@@ -190,7 +191,7 @@ ul.nice-menu-down li li.menuparent {border-right:none;}
 ul.nice-menu-down li.menuparent:hover {
     background: #027AC6; /* LTR *//* first level */
     /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
-	border-right:2px solid #FA762B;
+	/*border-right:2px solid #FA762B;*/
 background-position:  right center;
 background-repeat: 	no-repeat;
   font-weight: 400;
@@ -242,7 +243,7 @@ color: orange;
 ul.nice-menu-down li.menu-path-front {
 background: #414141;
 /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
-	border-right:2px solid #FA762B;
+	/*border-right:2px solid #FA762B;*/
 background-position: right center;
 background-repeat: 	no-repeat;
 }
@@ -251,7 +252,7 @@ ul.nice-menu-down li.menu-path-front:hover {
 
 background: #027AC6;
 /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
-	border-right:2px solid #FA762B;
+	/*border-right:2px solid #FA762B;*/
 background-position: right center;
 background-repeat: 	no-repeat;
 font-weight: 400;
