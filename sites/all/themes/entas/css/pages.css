@@ -1176,6 +1176,9 @@ table td{
 	border-color: #5A738C;
   padding:3px 0px 3px 10px;
 }
+td.active {
+   background-color: #ffebba  !important;
+ }
 table tr td:first-child{
 	/*text-align: left;*/
 	/*padding-left:20px;*/
@@ -1190,7 +1193,7 @@ table tr td:first-child{
 }
 table tr:nth-child(even) td{
 	background: #f6f6f6;
-	background: #ddd;
+	background: #eaeaea;
 
 }
 table tr:last-child td{

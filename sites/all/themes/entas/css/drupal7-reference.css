@@ -2966,7 +2966,8 @@ th.active img {
   display: inline;
 }
 td.active {
-  background-color: #ddd;
+ /* background-color: #ddd !important;*/
+ background-color: lightgreen !important;
 }
 
 /**
