@@ -41,3 +41,28 @@ text-decoration: none;
 .view-display-id-files_tab .item-list ul {
 margin:0 !important;
 }
+
+.view-id-goods .view-filters {    
+    background: #5a738c;
+    margin: 20px 20px -1px 21px;
+    width: 108.6%;
+    border-radius: 6px 6px 0 0;
+    float: left;
+  }
+  .view-id-goods .views-exposed-form label {
+    float: left;
+    margin: 12px;
+  }
+
+  .view-id-goods .views-exposed-form select {
+    font-size: 1.5em;
+    margin: 6px;
+  }
+
+  .view-id-goods .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 0.6em;
+  }
+
+  .view-id-goods .views-widget {
+    float: left;
+  }
