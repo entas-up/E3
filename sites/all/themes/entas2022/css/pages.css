@@ -1,0 +1,1384 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+
+  /*background-image: url('/sites/all/themes/entas/images/linen5.png');*/
+  /*background-attachment: fixed;*/
+  /*background-image: linear-gradient(to bottom, #F70 115px, #292929 175px, #FFF 0%,#FFF 90%, #F70 95%);
+  background-repeat:no-repeat;*/
+
+}
+body.toolbar  {
+padding-top: 0px !important;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color:#FF6600;/*#F93;#E67403;*/
+ /* text-shadow: 1px 2px 2px #999; */
+
+}
+a:hover,
+a:active,
+a:focus {
+text-decoration: underline;
+color:red;
+}
+
+#page-wrapper {
+}
+
+#page {
+/*box-shadow: 0 0 5px;
+border: 1px solid #7E7E7E;
+margin-bottom: 20px;*/
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+#header {
+background-color: #BAD0D9;
+/*padding-top: 33px;*/
+}
+
+#header .section {
+/*border-left: 1px solid #666;
+border-right: 1px solid #666;*/
+width: 960px;
+margin: 0 auto;
+position: relative;
+}
+
+#logo /* Wrapping link for logo */ {
+  margin: 0;
+  padding: 0;
+  position:relative;
+  float:left;
+}
+
+#logo img {
+  margin: 19px 0px 0px 0px;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+  color: #494949;
+  font-size: 1.3em;
+  /* text-shadow: -1px -1px 1px #ECBE9A; */
+  margin: 19px 0px 0px 19px;
+  float: left;
+}
+
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+  clear: both; /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+background: white;
+/*margin-top: 30px;*/
+}
+
+#main {
+margin: 0 auto;
+width: 960px;
+}
+
+/*
+ * Content
+ */
+#content {
+font-size:0.8em; /* Влияет на шрифт */
+}
+
+#content .section {
+margin-left: 265px;
+/*margin-top: 34px;*/
+padding-left: 5px;
+}
+
+.region-highlighted {
+margin: 2px 0px 0px 0px;
+/*overflow: hidden;*/
+position: relative;
+z-index: 9;
+/*border-bottom: 1px solid #9B9B9B;*/
+}
+
+.region-highlighted  .block {
+
+}
+
+
+.view-frontpage {
+font-size: 0.9em;
+}
+
+.view-frontpage  .views-row{
+border: 1px solid #919191;
+padding: 5px;
+margin-top: 10px;
+box-shadow: 2px 2px 5px #A3A3A3;
+overflow: hidden;
+position: relative;
+height: 95px;
+background: #fff;
+}
+
+.view-frontpage .views-field-type {
+display: block;
+text-align: center;
+border-top: 1px dotted #727272;
+border-right: 1px dotted #727272;
+position: absolute;
+bottom: 0;
+left: 91px;
+padding: 2px 5px;
+width: 90px;
+font-size: 0.7em; /* Влияет на шрифт */
+color: #727272;
+background: #fff;
+}
+
+.view-frontpage .views-field-field-image-event, .view-frontpage .views-field-field-image, .view-frontpage .views-field-field-image-work{
+float: left;
+padding-right: 10px;
+}
+
+.view-frontpage .views-field-body {
+padding-top: 10px;
+position: relative;
+overflow: hidden;
+font-size: 0.9em; /* Влияет на шрифт */
+}
+
+.view-frontpage  .views-field-title{
+border-bottom: 1px dotted #464646;
+}
+.view-frontpage  .views-field-title a{
+font-weight: bold;
+}
+.view-frontpage .views-field-field-type-event {
+position: absolute;
+bottom: 0px;
+left: 192px;
+padding: 2px 5px;
+border-top: 1px dotted #727272;
+border-right: 1px dotted #727272;
+text-align: center;
+width: 170px;
+font-size: 0.7em; /* Влияет на шрифт */
+color: #727272;
+background: #fff;
+}
+.view-frontpage  .views-label  {
+float: left;
+}
+
+
+.view-frontpage .views-field-sticky {
+background: #1B4FBD;
+color: #FFF508;
+display: block;
+-webkit-transform: rotate(-45deg);
+  -moz-transform:    rotate(-45deg);
+  -ms-transform:     rotate(-45deg);
+  -o-transform:      rotate(-45deg);
+width: 100px;
+position: absolute;
+overflow: hidden;
+padding: 5px 60px 8px;
+text-align: center;
+bottom: 19px;
+right: -70px;
+
+}
+.view-frontpage  .views-field-created {
+border-top: 1px dotted #727272;
+border-right: 1px dotted #727272;
+float: left;
+position: absolute;
+bottom: 0px;
+width: 80px;
+text-align: center;
+padding: 2px 5px;
+left: 0;
+font-size: 0.7em; /* Влияет на шрифт */
+color: #727272;
+background: #fff;
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+ 
+  /*padding-top: 32px;  hack for big menu */
+ /* font-size: 0.7em; *//* Влияет на шрифт */
+    padding: 4px 16px;
+    margin-top: 11px;
+}
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title /* Comment title */ {
+  margin: 0;
+}
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+  margin: 0; /* Drupal core uses "6px 0" margin */
+  /* float: left;
+width: 91.3%;  */
+}
+
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.status /* Normal priority messages */ {
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+}
+
+.region-help /* Help text on a page */ {
+}
+
+.more-help-link /* Link to more help */ {
+}
+
+.region-content /* Wrapper for the actual page content */ {
+/*margin: 0px 0 0 20px;*/
+position: relative;
+}
+
+ul.links /* List of links */ {
+
+}
+ul.menu {
+
+}
+ul.menu li{
+
+}
+ul.links.inline {
+  display: block; /* Let the links be inline, but the container be a block. */
+  float: left;
+  padding-left: 19px;
+}
+
+ul.links li {
+ padding:0;
+ margin:0;
+/* padding: 0 1em 0 0;*/ /* LTR */
+}
+
+.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
+ padding:0;
+/* margin:0; */
+}
+
+.item-list .pager li /* Each page number in the pager list */ {
+padding:0;
+}
+
+.item-list .pager li a {
+
+}
+.item-list .pager li.pager-current {
+background: #027AC6;
+padding: 5px 8px;
+/*border-radius: 3px;*/
+/*border: 1px solid #636363;*/
+font-weight: normal;
+color: #fff;
+}
+#block-system-main .pager {
+/*color:#F93;	*/
+font-size:0.9em;
+margin-top: 13px;
+padding-top:10px;
+}
+#block-system-main .pager a {
+color: #fff/*F93*/;
+padding: 5px 8px;
+/*border-radius: 3px;	*/
+/*border: 1px solid #B3B3B3;*/
+background: #414141;
+}
+#block-system-main .pager a:hover {
+background: #027AC6;
+text-decoration: none;
+color:#fff;
+}
+
+.view-frontpage  .item-list ul li {
+margin: 0;
+}
+
+
+.view-frontpage .item-list .pager {
+width: 100%;
+text-align: center;
+}
+
+.item-list  .pager-current {
+}
+
+
+
+
+.feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {
+/*padding: 0 0 40px 0;*/
+}
+
+.region-sidebar-first .section {
+/*margin-bottom: 1.5em;*/
+height: 100%;
+font-size: 0.8em; /* Влияет на шрифт */
+line-height: 1em;
+font-weight: normal;
+
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+}
+
+.region-sidebar-second .section {
+	 background: #ccc;
+margin-bottom: 1.5em;
+padding-bottom: 20px;
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+width: 960px;
+padding: 0px 0 5px 0;
+font-size: 0.9em; /* Влияет на шрифт */
+position: relative;
+/*border-bottom: 1px solid rgba(87, 87, 87, 0.52);
+border-top: 1px solid rgba(87, 87, 87, 0.52);*/
+margin:0 auto;
+}
+.region-footer a{
+font-weight: normal;
+color:#FF6600;
+}
+
+.region-page-top a{
+font-weight: normal;
+color:#FF6600;
+}
+
+/*
+ * Page bottom
+ */
+ .wrap-bottom {
+  background:#D9D6A4 ;
+  border-top: 1px solid #ff0000;
+ }
+.region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
+overflow: hidden;
+margin: 0 auto;
+width: 960px;
+}
+
+
+.item-list ul {
+	/*float:left;*/
+	}
+#user-login-form  .item-list ul  {
+	display: inline-block;
+    list-style-type: none;
+    float: right;
+	}
+
+
+.item-list ul li {
+  /*margin: 0 0 0.25em 1.5em; *//* LTR */
+  padding: 0;
+}
+
+
+
+/* Страница каталога тестовая. Для новых страниц скопировать код и заменить test-pages на нужное название  */
+
+/* Попытка дать фон всему блоку */
+.ent-catalog {
+/*background: red;*/
+}
+/* Настройка элемента */
+.ent-catalog .views-row {
+background: #E3e3e3; /*#fff даёт шахматы!!!*/
+width: 250px;
+float:left;
+margin:10px;
+padding: 10px;
+height:300px;
+border-radius: 5px;
+border: 3px solid #AEAEAE;
+box-shadow: 5px 5px 10px #ccc;
+position: relative;
+}
+/* Цвет нечетного элемента*/
+.ent-catalog .views-row-odd {
+background:#E3E3E3;
+}
+/* Выстраивание полей вертикально */
+.ent-catalog .views-row .views-field {
+display: block;
+
+}
+/* Заголовок*/
+.ent-catalog .views-field-title {
+font-weight: bold;
+margin: 8px 0 8px 0;
+color: red;
+/*text-align: center;*/
+}
+.ent-catalog .views-field-title a:hover{
+font-weight: none;
+/*text-align: center;*/
+}
+/* Изображение*/
+.ent-catalog .views-field-field-imagepage {
+text-align: center;
+}
+/* Отключение подписи для изображения*/
+
+.ent-catalog  .views-label-field-imagepage {
+display:none
+}
+
+/* отключение подписи для текста*/
+.ent-catalog .views-label-body {
+display:none
+}
+
+/* Текст (аннотация)*/
+.ent-catalog .views-field-body {
+font-size: 0.77em; /* Влияет на шрифт */
+/*text-align: justify;*/
+}
+.ent-catalog .views-field-view-node {
+font-size: 0.75em; /* Влияет на шрифт */
+position: absolute;
+bottom: 0;
+right: 6px;
+background: #E3E3E3;
+padding: 2px 2px 2px 10px;
+}
+
+
+.ent-taxonometry { }
+
+.ent-taxonometry > .view-content > .views-row  {
+/*margin: 3px 0px;
+padding: 10px;
+height: 93px;
+border-radius: 5px;
+border: 1px solid #C0C0C0;
+box-shadow: -3px 3px 6px #CCC;
+position: relative;
+*/
+ margin: 3px 3px;
+padding: 10px;
+height: 135px;
+border-radius: 5px;
+border: 1px solid #C0C0C0;
+box-shadow: -3px 3px 6px #CCC;
+position: relative;
+width: 45%;
+float: left;
+font-size: 0.85em;
+}
+
+.view-tag-on-tag.ent-taxonometry > .view-content > .views-row{
+height: inherit;
+border-color: #ffb400;
+border-width: 2px;
+}
+
+.ent-taxonometry  .view-header .view-display-id-term_review .view-content{
+background-image: url('/misc/message-24-error.png');
+border-color: #ED541D;
+background-color: #FEF5F1;
+margin: 5px 0px;
+background-position: 8px 8px;
+background-repeat: no-repeat;
+border: 1px solid;
+padding: 10px 10px 10px 50px;
+border-color: #ED541D;
+}
+.ent-taxonometry .view-display-id-term_storage .view-content, .ent-taxonometry .view-display-id-term_desc .view-content{
+/*background-color: aliceblue;*/
+margin: 5px 0;
+    padding: 10px;
+	/*border: 1px solid #9ACDFF;*/
+}
+.ent-taxonometry .view-display-id-term_storage img.view-content, .ent-taxonometry .view-display-id-term_desc .view-content img{
+float: left;
+padding: 0 10px 10px 0;
+}
+.ent-taxonometry .view-id-sklad .views-row {
+border: none;
+box-shadow: none;
+}
+
+.ent-taxonometry  .views-field-field-imagepage, .ent-taxonometry  .views-field-field-image, .ent-taxonometry  .views-field-field-image-event {
+float: left;
+padding: 0 10px 5px 0;
+/*width: 100px;
+height: 100px;
+text-align: center;*/
+}
+.ent-taxonometry  .views-field-title {
+font-size: 1.1em;
+font-weight: 600;
+}
+
+.ent-taxonometry  .views-field-body {
+/*font-size: 0.75em;*/
+}
+
+.ent-taxonometry  .views-field-field-file1 {
+top: 10px;
+position: absolute;
+right: 10px;
+}
+
+.ent-taxonometry  .views-field-field-file1 {
+display: inline-block;
+}
+
+.views-field-term-node-tid {
+position: absolute;
+bottom: 10px;
+right: 10px;
+font-size:0.8em;
+color: #707070;
+}
+
+.views-field-term-node-tid a {
+margin-right: 10px;
+border: 1px solid #FF8F00;
+padding: 1px 2px;
+border-radius: 3px;
+font-size: 0.8em;
+}
+.views-field-term-node-tid a.active {
+background: #027AC6;
+color: #FFF;
+
+}
+
+.views-field-term-node-tid a:hover {
+background: #FF7A00;
+color: #FFF;
+text-decoration: none;
+}
+
+
+.feed-icon {
+/*float: right;*/
+}
+
+#page-title {
+clear: both;
+padding: 0 20px;
+/*border-bottom: 1px dotted;*/
+}
+
+/* Страница ошибки 404. НАЧАЛО
+Всё ради обезьянки */
+
+.error404 {
+
+}
+
+.error404  h1, .error404 h2, .error404 h3{
+text-align: center;
+color: black;
+}
+
+
+.error404-img {
+text-align: center;
+}
+
+.error404-img  img{
+border-radius: 10px;
+box-shadow: 0 0 8px #000, inset 0 0 8px #000;
+border: 1px solid #7A7A7A;
+}
+/* Страница ошибки 404. КОНЕЦ */
+
+/* Страница всех событий. НАЧАЛО */
+
+.event .type {
+border-bottom: 1px dotted #CCC;
+z-index: 10;
+position: relative;
+
+}
+
+.event .image {
+margin: 4px 10px 5px 0;
+display: block;
+float: left;
+/*width: 110px;
+height: 110px;*/
+text-align: center;
+background: #FFF;
+z-index: 15;
+position: relative;
+}
+.event .date-display-range {
+display: initial;
+}
+/*.event .image {
+    margin: 4px 10px 45px 0px;
+    display: block;
+    float: left;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    background: #FFF;
+    z-index: 10;
+    position: relative;*/
+
+.event .views-field-body{
+/*margin: 15px 0 0 0;*/
+z-index: 10;
+position: relative;
+}
+
+.event .image  img{
+box-shadow: 0px 0px 6px #353535;
+}
+
+.event .title {
+border-bottom: 1px dotted #CCC;
+z-index: 10;
+position: relative;
+}
+.event .date {
+border-bottom: 1px dotted #CCC;
+z-index: 10;
+position: relative;
+}
+
+.event .views-row{
+border: 1px solid #CCC;
+padding: 5px 10px;
+margin-top: 10px;
+box-shadow: -3px 3px 6px #CCC;
+height: 124px; /*141px при 100% шрифте*/
+position: relative;
+}
+
+.event .views-row .views-field-body a {
+/*display: block;*/
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+font-size: 1.3em;
+}
+
+.error2 {
+background-image: none!important;
+
+background: #FFF;
+padding: 5px;
+border: 1px solid #575757;
+box-shadow: 0 0 5px #CCC;
+margin: 0 auto;
+position: absolute;
+top: 35px;
+width: 100%;
+text-align: center;
+}
+
+.partner_card {
+border: 1px solid #CCC;
+padding: 5px;
+box-shadow: 0 0 10px #CCC;
+margin-bottom: 11px;
+}
+
+.partner_name {
+background: #E7E7E7;
+padding: 2px 10px;
+border-bottom: 1px solid #CCC;
+}
+
+.partner_logo {
+float: left;
+background: #FFF;
+padding: 2px 5px 2px 0px;
+}
+
+.partner_site {
+border-bottom: 1px solid #CCC;
+}
+
+.partner_mail {
+border-bottom: 1px solid #CCC;
+}
+
+.partner_phone {
+border-bottom: 1px solid #CCC;
+}
+.partner_fax {
+border-bottom: 1px solid #CCC;
+}
+.logo_cust {
+float: left;
+display: block;
+width: 158px;
+height: 100px;
+border: 1px solid #C0C0C0;
+border-collapse: collapse;
+text-align: center;
+line-height: 100px;
+}
+.image-logo {
+padding: 10px 0;
+vertical-align: middle;
+}
+
+.logo_clear {
+clear:both;
+}
+
+
+.view-files {
+/*background: #ECEBEB;*/
+padding: 20px 0px;
+margin-top: 0px;
+/*border-radius: 10px;*/
+}
+
+.view-files .view-content a {
+color: #575757;
+font-size: 0.8em; /* Влияет на шрифт */
+border: 1px solid #E7E7E7;
+background: #FFF;
+margin: 1px;
+width: 99%;
+display: inline-block;
+}
+
+.view-files a:hover {
+background: #00F;
+color: #FFF;
+text-decoration: none;
+}
+
+.view-files h3{
+font-size: 0.9em; /* Влияет на шрифт */
+margin:0;
+}
+
+.view-files h3 a {
+color: #2A63DB;
+font-size: 1em; /* Влияет на шрифт */
+background: #E7E7E7;
+}
+.view-files h3 a:hover {
+color:#2A63DB;
+background: #E7E7E7;
+text-decoration:underline;
+}
+.view-files  .views-row{
+/*border: 1px solid #E7E7E7;
+margin-bottom: -1px;
+background: #FFF;*/
+}
+
+.view-files .view-content {
+background: #E6E6E6;
+padding: 5px 3px;
+border-radius: 5px;
+}
+
+.node-webform {
+
+}
+.node-webform .webform-component--about {
+
+}
+
+.node-webform .legend {
+background: #E4E4E4;
+border-radius: 5px;
+border: 1px solid #8B8B8B;
+}
+
+.node-webform .label {
+display: inline-block;
+}
+
+.node-webform  input {
+border:1px solid #979797;
+}
+/*Архив новостей*/
+
+.view-archive .views-row {
+/*border-bottom: 1px solid #575757;*/
+height: 220px;
+margin: 25px 0 20px 0;
+position: relative;
+}
+
+.view-archive  .views-field-created {
+color: #7C7C7C;
+font-size: 0.8em;
+}
+
+.view-archive .views-field-title {
+
+}
+
+.view-archive .views-field-body {
+font-size: 0.8em;
+}
+
+.view-archive .views-field-field-image {
+float: left;
+width: 220px;
+height: 220px;
+/*line-height: 220px;
+box-shadow: 0 0 2px;*/
+margin-right: 8px;
+}
+.view-archive .views-field-field-image img{
+/*vertical-align: middle;*/
+}
+.view-archive .views-more-link {
+/*position: absolute;
+bottom: 0;
+right: 0;*/
+}
+/* Special button */
+.special-button {
+background:#FA762B;
+    padding: 10px;
+    border-radius: 5px;
+    /* border: 1px solid #C0C0C0;
+    box-shadow: -3px 3px 6px #CCC;
+    position: relative;
+    max-width: 95%;
+    display: inline-block; 
+	font-size:1.6em;*/
+	color:#fff;
+	line-height: 1.5em!important;
+}
+
+.special-button a {
+font-family: sans-serif;
+color:#fff;
+font-weight: bold;
+padding: 0 10px;
+}
+
+.special-button::before {
+/*     display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    content: "\f0c5";
+	width: 100px;
+	text-align: center;
+ */   
+	float: left;
+    font-size: 2em;
+	
+}
+/* .special-button:hover {
+
+color:black;
+text-decoration:none;
+}
+ */
+.special-button a:hover {
+
+color:black;
+text-decoration:none;
+}
+/*undo :((( 2x */
+.special-button.fa-2x  {
+font-size: 1em!important;
+}
+
+.special-button a[href^="https://"]:not([HREF *= "entas.by"]):after /* Пометка внешних ссылок. Проверить */{
+
+color:rgb(0, 39, 255)!important;
+}
+/* Main page */
+#node-304 a:hover {text-decoration: none;}
+#node-304 .print_mail, #node-304 #page-title ,#node-304  ul.links {display: none;}
+.front ul.links {display: none;}
+
+.field-type-file .sticky-table {width:100%;}
+
+/* Страница партнёров */
+.view-partner.view-display-id-page .views-field-field-company-logo {
+float: left;
+width: 220px;
+height: 100px;
+background: #FFF;
+padding-right: 10px;
+text-align: center;
+line-height: 9em;
+}
+
+.view-partner.view-display-id-page .views-row {
+border: 1px solid #CCC;
+padding: 5px;
+box-shadow: 0 0 10px #CCC;
+margin: 11px 0;
+min-height: 105px;
+}
+
+.view-partner.view-display-id-page .views-row .views-label {
+float: left;
+padding-right: 3px;
+}
+
+#block-system-main {
+position: relative;
+}
+
+.image-large:after {
+content: attr(title);
+position: absolute;
+width: 100px;
+height: 100px;
+color: #F00;
+top: 0;
+right: 0;
+}
+
+.view-prior-pages .views-row {
+border-bottom:1px solid #000;
+margin-bottom:15px;
+}
+
+.view-prior-pages .views-row  .views-field-title,.view-prior-pages .views-row  .views-label-field-page-prior {
+float:left;
+padding-right: 12px;
+}
+.view-prior-pages .views-row .views-field-edit-node{
+padding: 0 9px;
+background: rgba(182, 249, 120, 1);
+display: initial;
+border-radius: 5px;
+}
+.node-article .field-name-field-image {
+float: left;
+padding: 6px;
+}
+
+.node-article .field-name-field-link {
+display: inline-block;
+}
+
+.no-sidebars #main .section{
+margin-left:0px!important;
+}
+.no-sidebars #content .section {
+padding-left: 0px!important;
+}
+
+strong.faq-question-label, strong.faq-answer-label {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+}
+.faq .print-link {
+display:none;
+}
+.faq-answer {
+padding-left: 20px;
+border: 1px solid #DDD;
+margin: 0 10px 20px 10px;
+}
+.faq-question {
+border: 1px solid #DDD;
+margin: 0 10px;
+}
+.faq .links  {
+display:none!important;
+}
+
+.form-item-items-per-page  {
+
+ }
+
+.form-item-items-per-page select {
+height: 28px;
+
+}
+.form-item-items-per-page label {
+padding-bottom: 0.5em;
+}
+.views-exposed-form select {
+width:180px;
+}
+#views-exposed-form-files-page-1 .form-item-shs-term-node-tid-depth select {
+display:block!important;
+}
+.view-files .views-exposed-form .views-exposed-widget {
+float:none;
+}
+.node-article h1:before {content:"Новости: ";}
+
+/* Таблицы 2015 http://blog.harrix.org/?p=513 */
+table {
+	/*font-family:Arial, Helvetica, sans-serif;*/
+	font-size:12px;
+	/*background:#eaebec;*/
+	margin:20px;
+	border:#ccc 1px solid;
+	/*border-collapse:separate;*/
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	box-shadow: none;
+}
+
+table th {
+	font-weight:bold;
+	padding:5px 25px 5px 25px;
+	background: #5A738C;
+	color:white;
+  text-align: center;
+}
+/*table th:first-child{
+	text-align: center;
+
+}*/
+table tr:first-child th:first-child{
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child{
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+	text-align: center;
+}
+table td{
+	border-color: #5A738C;
+  padding:3px 0px 3px 10px;
+}
+table tr td:first-child{
+	/*text-align: left;*/
+	/*padding-left:20px;*/
+	border-left: 0;
+	/*border-right: 1px solid #C3C3C3;*/
+}
+.field-name-body table tr td {
+	padding:1px;
+	border: none;
+	background: #fff;
+
+}
+table tr:nth-child(even) td{
+	background: #f6f6f6;
+	background: #ddd;
+
+}
+table tr:last-child td{
+	border-bottom:0;
+}
+table tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child{
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table tr:hover td{
+	background: #027ac6;
+	color:white;
+}
+
+table td:hover  a, table tr:hover td a {
+	background: #027ac6;
+	color:white;
+}
+
+table a:link {
+	color: #FF6600;
+	font-weight: bold;
+	text-decoration:none;
+}
+table a:visited {
+	color: #FF6600;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+table a:active,
+table a:hover {
+	color: white /*#bd5a35*/;
+	text-decoration:underline;
+}
+
+.view-a-file2 table {
+width:97%;
+}
+
+/* maintenance */
+
+.maintenance-page #main {
+margin: 18px auto!important;
+}
+
+.maintenance-page #main .title {
+    text-align: center;
+	font-size: 2em;
+    border-bottom: 1px dashed;
+    margin: 10px 0;
+}
+.maintenance-text{
+    text-align: center;
+	font-size: 1.2em;
+    }
+.maintenance-page #main  img{
+    margin: 20px auto;
+    display: block;
+}
+
+.view-display-id-page_1 .views-row {
+/*border-top: 1px dotted;
+padding: 10px 0;*/
+}
+/*
+ul.quicktabs-tabs.quicktabs-style-zen li.active a, ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover {
+background: #027ac6;
+color: white;
+font-family: inherit;
+font-style: inherit;
+font-weight: inherit;
+
+font-size: 0.8em;
+}
+ul.quicktabs-tabs.quicktabs-style-zen li {
+background: none!important;
+margin: 0!important;
+padding: 0 0 0 2px!important;
+}
+
+ul.quicktabs-tabs.quicktabs-style-zen li a {
+background: #414141;
+color: white;
+font-family: inherit;
+font-style: inherit;
+font-weight: inherit;
+font-size: 0.8em;
+padding: 4px 17px 4px 12px;
+}
+ul.quicktabs-tabs.quicktabs-style-zen {
+background: none;
+}
+
+ul.quicktabs-tabs.quicktabs-style-zen li:hover a {
+background: #027ac6;
+color: white;
+}
+*/
+#block-views-last-files-block-1 .image {
+display: block;
+float: left;
+padding-right: 15px;
+}
+
+#block-views-last-files-block-1  .views-row {
+    overflow: hidden;
+}
+#block-views-last-files-block-1 , #block-views-last-files-block-2{
+    font-size: 0.8em;
+}
+
+#block-views-last-files-block-1  .date-display-range {
+display: inline;
+}
+
+#block-views-last-files-block-2 .views-row {
+text-align: center;
+line-height: 43px;
+font-size: 1.2em;
+height: 50px;
+}
+
+.notexpired-event {
+width: 99%;
+height: 95%;
+position: absolute;
+z-index: 1;
+border: 5px solid #63d463;
+left: 0;
+top: 0;
+}
+
+.view-tag-on-tag .views-column {
+margin: 3px 3px;
+padding: 10px;
+/*height: 100px;*/
+border-radius: 5px;
+border: 2px solid #e0e0e0;
+/*box-shadow: -3px 3px 6px #CCC;*/
+position: relative;
+/*float: left;
+width: 45%;*/
+/*max-height: 245px;*/
+/*min-height:110px;*/
+overflow:hidden;
+font-size: 0.85em;
+}
+
+.view-tag-on-tag .views-column  .views-field-description{
+min-height: 60px;
+}
+
+.view-tag-on-tag .views-column a {
+font-size:1.3em;
+font-weight: bold;
+}
+.view-tag-on-tag {
+/* border-bottom: 2px solid #ffb400; */
+margin-bottom: 10px;
+padding-bottom: 10px;
+}
+.view-tag-on-tag  .views-field-field-tag-img {
+float: left;
+height: initial;
+width: initial;
+padding-right: 10px;
+}
+#block-views-tag-on-tag-block-1 .views-field.views-field-name {
+    background: #FAEBD7;
+    padding: 5px;
+}
+
+.view-sklad {
+    width: 98%;
+}
+
+.view-display-id-term_desc {
+    /* min-height: 308px; */
+	overflow:hidden;
+}
+
+.webform-client-form-266 .form-item{
+margin:0.6em 0;
+}

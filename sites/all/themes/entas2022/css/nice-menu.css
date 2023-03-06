@@ -1,0 +1,259 @@
+
+/* Nice-menu */
+
+
+#block-nice-menus-1 li.active-trail > a.active{
+/*color: red!important;*/
+/*text-shadow: -1px -1px 0px #E0E0E0,
+			1px -1px 0px #E0E0E0,
+			-1px 1px 0px #E0E0E0,
+			1px 1px 0px #E0E0E0;*/
+font-weight: 800;
+}
+
+#block-nice-menus-1 li.active-trail > a{
+color: #000;
+font-weight: 600;
+}
+
+#block-nice-menus-1 li .active-trail {
+color: #000;
+background-color: #ffd397;
+border-color:#595959;
+font-weight: 400;
+}
+
+#block-nice-menus-1 .active-trail {
+
+color: #000;
+background-color: #ffd397;
+
+
+}
+
+#block-nice-menus-1 ul li {
+
+}
+
+ ul.nice-menu li:hover
+{
+background:#027AC6;
+background-position: right center;
+background-repeat: no-repeat;
+}
+
+#block-nice-menus-1 .menu-path-user-logout a{
+padding-right: 1px;
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+#block-nice-menus-1 .menu-path-user-login  a{
+padding-right: 1px;
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+ul.nice-menu-down li li {
+
+}
+
+ul.nice-menu a {
+display: block;
+color: #fff;
+text-decoration: none;
+}
+
+ul.nice-menu a:hover {
+color: #FFF;
+text-decoration: none;
+font-weight: 400;
+
+}
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+
+}
+
+ul.nice-menu li {
+  border-top: none;
+border-bottom: none;
+border-right: none;
+border-left: none;
+  float: left; /* LTR */
+  background-color: #414141;
+background-position: right center;
+background-repeat: no-repeat;
+
+}
+
+ul.nice-menu a {
+  padding-right: 1px;
+padding-left: 10px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-weight: 400;
+}
+
+ul.nice-menu ul {
+  top: 2.0em; /* 2.4em with JS */
+  left: -1px; /* LTR */
+  border: 0;
+    margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+border-radius: 0;
+}
+
+ul.nice-menu li .first {
+border-top-left-radius:2px;
+border-top-right-radius:2px;
+}
+
+ul.nice-menu li .last {
+border-bottom-left-radius:2px;
+border-bottom-right-radius:2px;
+}
+
+/* nice-menu next step */
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+
+}
+
+ul.nice-menu-down li li {
+
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+  border-left: 2px solid #F60;
+  border-top: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-radius: 2px;
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+  border-bottom: 1px solid #BBB;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 13.4em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 1px; /* LTR */
+  padding-left: 10px;
+padding-top: 6px;
+padding-bottom: 3px;
+font-weight: 400;
+display: inline-block; /* убирает эффект дерганья */
+
+}
+ul.nice-menu-down li.menuparent {
+  background: #414141; /* LTR *//* first level */
+    /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
+	/*border-right:2px solid #FA762B;*/
+background-position:  right center;
+background-repeat: 	no-repeat;
+cursor: pointer;
+
+}
+ul.nice-menu-down li.menuparent a {
+
+}
+#nice-menu-1 > li {
+height:30px;
+margin-right: 3px;
+/*margin: 4px auto;*/
+}
+#nice-menu-2  li{
+    padding-bottom: 5px!important;
+}
+ul.nice-menu-down li li.menuparent {border-right:none;}
+ul.nice-menu-down li.menuparent:hover {
+    background: #027AC6; /* LTR *//* first level */
+    /*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
+	/*border-right:2px solid #FA762B;*/
+background-position:  right center;
+background-repeat: 	no-repeat;
+  font-weight: 400;
+}
+ul.nice-menu-down li li.menuparent:hover {border-right:none;}
+
+ul.nice-menu-down li.menuparent:hover > a {
+color: #fff;
+font-weight: 400;
+
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: #414141; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+ background: #027AC6; /* LTR */
+  border-color: #ccc;
+}
+
+ul.nice-menu-down li li.menuparent:hover > a {
+color: #fff;
+font-weight: 400;
+}
+
+ul.nice-menu-down li.first:hover {
+
+}
+
+ul.nice-menu-down li.first:hover > a {
+color: #fff;
+font-weight: 400;
+}
+ul.nice-menu-down li.first a {
+padding-left: 10px;
+/*padding-top: 7px;
+padding-bottom: 7px;*/
+font-weight: 400;
+}
+
+
+ul.nice-menu a.active   {
+color: orange;
+}
+
+/* nice menu end */
+
+ul.nice-menu-down li.menu-path-front {
+background: #414141;
+/*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
+	/*border-right:2px solid #FA762B;*/
+background-position: right center;
+background-repeat: 	no-repeat;
+}
+
+ul.nice-menu-down li.menu-path-front:hover {
+
+background: #027AC6;
+/*background-image: url(/sites/all/themes/entas/images/separator5.png);*/
+	/*border-right:2px solid #FA762B;*/
+background-position: right center;
+background-repeat: 	no-repeat;
+font-weight: 400;
+}

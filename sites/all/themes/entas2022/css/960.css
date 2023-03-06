@@ -1,0 +1,209 @@
+/**
+"Небольшой" костыль для адаптивности сайта
+ */
+
+ body {
+    transition:all .2s linear;
+    -o-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+}
+
+.region-highlighted {
+margin: 0 auto;
+}
+.blocks-last {
+float: none;
+margin: 5px 0 15px 0;
+width:auto;
+height:auto;
+padding:0;
+box-shadow:none;
+border:none;
+}
+
+.blocks-last .content {
+width: auto;
+margin:0px auto;
+}
+
+.last-block .views-field-field-image, .last-block .views-field-field-imagepage, .last-block .views-field-field-image-event {
+width:auto;
+height:auto;
+line-height: normal;
+}
+.last-block .views-field-body {
+width:auto;
+height:auto;
+}
+.last-block .views-field-field-date {
+right: none;
+left: -45px;
+
+}
+.blocks-last .views-content-title {
+width:inherit;
+}
+
+#page-wrapper, .region-bottom, #block-views-similarterms-block {
+min-width:300px;
+margin: 0 auto;
+width: inherit;
+}
+
+#header .section, #main,#navigation  .section{
+width: inherit;
+
+}
+
+#block-views-similarterms-block .views-row {
+margin: 0 auto;
+display: block;
+}
+.field-name-field-location {
+width:90%
+overflow: hidden;
+}
+.event .views-row {
+height: inherit;
+}
+.view-archive .views-row {
+height: inherit;
+display: inline-block;
+}
+
+#navigation {
+/*background: #414141;
+font-size: 0.8em;
+float: left;*/
+}
+
+#block-search-form {
+float: left;
+margin: 7px;
+position: relative;
+width: 95%;
+}
+#edit-search-block-form--2 {
+width: 82%;
+}
+#block-search-form .form-actions {
+
+}
+
+/* CSS2 selector to add visible href after links */
+#content a:link:after,
+#content a:visited:after {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+/* Un-float the content */
+#content,
+#content .section {
+
+}
+
+/* Turn off any background colors or images */
+body,
+#page-wrapper,
+#page,
+#main-wrapper,
+#main,
+#content,
+#content .section {
+
+  }
+
+  .region-content {
+margin: 0;
+}
+#content .section {
+margin: 50px 0 0 0 !important;
+
+}
+
+.region-footer {
+float: none;
+margin: 0 auto;
+width: inherit;
+}
+
+#block-block-7 {
+padding: 0 15px;
+}
+#block-block-8 {
+float: none;
+padding: 0;
+margin: 0;
+border-top: 1px solid rgba(87, 87, 87, 0.52);
+padding: 0 15px;
+}
+#node-304 a {
+display: block;
+}
+#block-imageblock-1, #block-imageblock-2, #block-imageblock-3, #block-imageblock-4 {
+float:none;
+text-align: center;
+}
+table.uptime-table {
+float:none;
+}
+#block-uptime-uptime-widget table {
+margin: 0 auto;
+}
+/* Hide sidebars and nav elements */
+#block-nice-menus-2,
+#skip-to-nav,
+#toolbar,
+.region-sidebar-first,
+.region-sidebar-second,
+div.tabs,
+.action-links,
+.links,
+.book-navigation,
+.forum-topic-navigation,
+.feed-icons,
+.toolbar-menu,
+#block-block-22
+ {
+  visibility: hidden;
+  display: none;
+}
+
+
+/* Home1  */
+li.menu-path-front {
+padding: 0 20px 0px 0 !important;
+}
+.menu-path-front a {
+font-size: 0.9em;
+}
+.menu-path-front a:after {
+display: none;
+}
+
+#backtotop {
+bottom: 40px!important;
+}
+
+.responsive-menus.responsified span.toggler {
+box-shadow: none;
+}
+
+#content {
+height:initial!important;
+}
+.block-nice-menus {
+float: left;
+width: 100%;
+height: 30px;
+}
+.block-nice-menus .content {
+width: 100%;
+margin:0 auto;
+}
+#block-imageblock-5 {margin-top: -4px;}
+#block-menu-block-3 {
+display: block;
+}

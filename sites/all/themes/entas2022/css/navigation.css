@@ -1,0 +1,259 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+
+ .region-sidebar-first li.expanded.active-trail  a, .region-sidebar-first li.expanded.active-trail a:before{
+color:#000;
+}
+
+.menu li a.active {
+  /*color: #F60!important;*/
+  font-weight:600;
+  }
+#block-menu-block-4 a.active, #block-simplenews-61 a.active{
+color: red;
+}
+#block-simplenews-61 a.active:before {
+color:red;
+}
+
+.region-sidebar-first .expanded>a:hover {
+background: #027AC6;
+}
+
+.region-sidebar-first a{
+	color:#585858;
+	/*text-shadow: 1px 1px 1px #000; *//* тень шрифта в левой колонке */
+	font-weight: normal;
+	display: block;
+	line-height: 1.1em;
+	padding: 2px 0px 5px 5px;
+	/*border-bottom: 1px solid #C8C8C8;*/
+}
+.region-sidebar-first a:hover{
+background: #027AC6;
+text-shadow: none;
+color: white!important;
+text-decoration: none;
+}
+/* explorer style in menu*/
+.region-sidebar-first li.expanded a{
+/*border-left: 1px dotted;*/
+}
+
+
+/*
+ * Navigation bar
+ */
+#navigation {
+  /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
+  background: #BAD0D9;
+  /*margin-top: -5px;*/
+  font-size: 0.9em; /* Влияет на шрифт */
+  z-index: 300;
+	}
+
+#navigation .section {
+width: 960px;
+margin: 0 auto;
+}
+
+#navigation ul.links, /* Main menu and secondary menu links */
+#navigation .content ul /* Menu block links */ {
+ /* margin: 0px 0 0 25px;*/
+  padding: 0;
+  text-align: left; /* LTR */
+ z-index: 10;
+}
+
+
+#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
+#navigation .content li {
+  float: left; /* LTR */
+  padding: 0 10px 0 0; /* LTR */
+  }
+
+.region-navigation {
+}
+#main-menu {
+}
+#secondary-menu {  float: right;}
+
+.region-sidebar-first .block-menu {border-bottom: 1px solid #F60}
+
+li.menu-path-front {
+/*padding: 7px 10px!important;*/
+}
+.menu-path-front  a {
+font-size: 0pt;
+color:#414141;
+margin: 0 auto;
+    padding:5px 5px 5px 12px!important;
+}
+
+/* Icons from Font Awesome  */
+.region-sidebar-first .expanded > a:before, .region-sidebar-first ul li.leaf a:before, .region-sidebar-first .collapsed a:before  {
+/*background: red;*/
+padding-right:3px;
+display: block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+color:#414141;
+float:left;
+padding-bottom: 5px;
+}
+
+.region-sidebar-first .collapsed a:before {
+content: "\f101";
+font-size:1.15em;
+color: #F00!important;
+}
+
+.region-sidebar-first .expanded>a:before {
+content: "\f103";
+font-size:1.15em;
+color: #F00!important;
+}
+
+.region-sidebar-first ul li.leaf a:before {
+content: "•";
+/*vertical-align: middle;*/
+font-size:1.15em;
+color: #F00!important;
+}
+
+.region-sidebar-first ul li.expanded, .region-sidebar-first ul li.collapsed, ul li.leaf {
+list-style-image:none;
+list-style-type:none;
+}
+
+ .region-sidebar-first  a:hover:before{
+color:#fff!important;
+}
+/* Downloads menu item */
+.menu-2667 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f019""\00a0\00a0";
+}
+/* FAQ manu item */
+.menu-790 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f059""\00a0\00a0";
+}
+/* Training manu item */
+.menu-3232 a:before {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f02d""\00a0\00a0";
+}
+
+
+/* back to top */
+
+#backtotop:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f139";
+color: #FF820F;
+font-size: 61em;
+top: -5px;
+position: absolute;
+right: 0px;
+}
+
+#backtotop:hover:after {
+color: #f60;
+font-size: 63em;
+}
+
+/* Home1  */
+.menu-path-front a:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+content: "\f015";
+color: #fff;
+
+font-size: 24px;
+/*position: absolute;
+top: 17%;
+left: 25%;*/
+margin-top: -2px;
+}
+.menu-path-front.active-trail a:after{
+color:#666;
+}
+
+/* Стрелка вправо  */
+ul.nice-menu-down li li.menuparent:after {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+content: "\f054";
+right: 5px;
+position: absolute;
+top: 30%;
+font-size: 1.2em;
+color: antiquewhite;
+}
+
+#block-menu-block-4 a:hover {
+text-decoration: none;
+}
+
+.fixed{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    margin:0;
+	z-index:200;
+
+}
+
+.menu li a.active:before {
+color:#F60!important;
+}
+
+li.active a {
+    /*color: red!important;*/
+}
+
+ul.quicktabs-tabs.quicktabs-style-excel li a {
+/*font-weight:300!important;*/
+color:grey;
+}
+ul.quicktabs-tabs.quicktabs-style-excel li {
+margin: 0 -5px -5px -5px!important;
+}

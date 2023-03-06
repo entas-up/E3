@@ -1,0 +1,299 @@
+/**
+ * @file
+ * Field Styling
+ */
+
+
+.field /* Wrapper for any field. */ {
+}
+
+/*
+ * Field types (Core)
+ */
+.field-type-text {
+}
+
+.field-type-text-long {
+}
+
+.field-type-text-with-summary {
+}
+
+.field-type-image {
+}
+/* таблица файлов */
+.field-type-file {
+background: #fff; /*#F1F1F1;*/
+padding: 5px;
+/*border: 1px solid #CFCFCF;*/
+margin: 15px 0;
+
+}
+/* таблица файлов. отмена общего дизайна таблиц */
+.field-type-file  table {
+color: #000;
+font-size: 12px;
+text-shadow: none;
+margin: 1.5em 0px;
+border: 1px solid #969696;
+border-collapse: collapse;
+border-radius: 0px;
+box-shadow: none;
+}
+.field-type-file  table tr td {
+padding: 2px;
+}
+.field-type-file table th {
+/*border-top: 1px solid #969696;
+border-bottom: 1px solid #9E9E9E;
+background: #5A738C;*/
+}
+.field-type-file tr.even, tr.odd {
+/*border-bottom: 1px solid #9E9E9E;*/
+
+}
+.field-type-file .field-label {
+display:none;
+}
+
+/*.field-type-file*/  thead th:first-child{
+
+border-right:1px solid #ccc;
+}
+/*  таблица файлов. конец */
+
+.field-name-field-filelink-page {
+padding: 10px;
+border: 1px solid #757575;
+margin: 15px 0;
+box-shadow: inset 0 0 15px #B9B9B9;
+}
+
+.field-type-link-field {
+/* Что это за код?*//*padding: 10px;
+border: 1px solid #757575;
+margin: 15px 0;
+box-shadow: inset 0 0 15px #B9B9B9;
+line-height: 30px;*/
+}
+
+.field-type-taxonomy-term-reference {
+}
+.field-name-field-catalog , .field-name-field-tags {
+margin: 5px 0;
+background: #e1fff8;
+border: 1px solid #7faaa0;
+padding: 10px;
+overflow: hidden;
+}
+
+.field-name-field-catalog  .field-item {
+/*float:left;
+margin-right: 8px;
+font-size: 0.9em;*/
+}
+.field-name-field-catalog  .field-item a , .field-name-field-tags .field-item a {
+/*
+margin-right: 10px;
+border: 1px solid #FF8F00;
+padding: 1px 4px;
+border-radius: 3px;*/
+margin-right: 10px;
+border: 1px solid #FF8F00;
+padding: 1px 4px;
+background: white;
+float: left;
+display: block;
+}
+
+.field-name-field-catalog  .field-item a:hover{
+background: #FF7A00;
+color: #FFF;
+text-decoration: none;
+}
+
+.field-type-number-integer {
+}
+
+.field-type-number-decimal {
+}
+
+.field-type-number-float {
+}
+
+.field-type-list-text {
+}
+
+.field-type-list-boolean {
+}
+
+.field-type-list-integer {
+}
+
+.field-type-list-float {
+}
+
+/*
+ * Field types (Contrib)
+ */
+.field-type-datetime /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */ {
+}
+
+.field-type-node-reference {
+}
+
+.field-type-user-reference {
+}
+
+
+/*
+ * Named fields
+ */
+.field-name-body {
+}
+
+.field-name-field-image {
+}
+.field-name-field-FIELDNAME /* Underscores in field name are replaced with dashes. */ {
+}
+.field-label-inline .field-label, .field-label-inline .field-items {
+float: none;
+}
+
+/* Поля "Событий" НАЧАЛО */
+
+.node-event .field-label {
+float:left;
+}
+.node-event .field {
+margin-top: 5px;
+/*width: 643px;*/
+/*float: left;*/
+display: block;
+}
+
+.node-event .geolocation-map {
+margin: 0 auto;
+}
+
+.field-name-field-type-event { /* Тип события */
+padding: 10px;
+background: rgba(211, 229, 231, 0.5);
+margin-left: 230px;
+/*width: 59%;
+float: left;*/
+}
+.field-name-field-link-event { /* Сссылка на сайт  */
+padding: 10px;
+background: rgba(211, 229, 231, 0.5);
+margin-left: 230px;
+/*width: 59%;
+float: left;*/
+}
+.field-name-field-date { /* Дата */
+padding: 10px;
+background: rgba(211, 229, 231, 0.5);
+margin-left: 230px;
+/*width: 59%;
+float: left;*/
+}
+
+.field-name-field-time-event{ /* Время/план события */
+background: rgba(211, 229, 231, 0.5);
+padding: 10px;
+margin-left: 230px;
+/*border: 1px solid #757575;
+margin-top: 15px;
+float: left;*/
+}
+
+.field-name-field-location { /* Местоположение. Карта */
+/*border: 1px solid #757575;
+padding: 10px;*/
+/*height: 460px;*/
+display: block!important;
+}
+
+.node-event .field-type-image {
+right: 0;
+top: 7px;
+float: left;
+margin-right: 10px;
+/* для подстройки "изображение-описание" */
+width: 220px;
+/*height: 220px;
+border: 1px solid #CCC;*/
+}
+
+.node-event .field-type-image img{
+z-index: 0;
+}
+.field-name-field-ticket-event { /* Билеты */
+background: rgba(230, 228, 243, 0.5);
+padding: 10px;
+width:666px;
+}
+
+.field-name-field-location2 {
+margin-top: 20px!important;
+display: block!important;
+}
+.node-event .field-name-body {
+z-index: 10;
+background: #FFF;
+display: inline-block;
+}
+
+.node-event .field-type-file {
+display: block;
+}
+/* Теги событий. Начало. */
+
+.field-name-field-location2  .field-item {
+float:left;
+margin-right: 8px;
+
+}
+.field-name-field-location2  .field-item a {
+margin-right: 10px;
+border: 1px solid #FF8F00;
+padding: 1px 4px;
+border-radius: 3px;
+}
+
+.field-name-field-location2  .field-item a:hover {
+background: #FF7A00;
+color: #FFF;
+text-decoration: none;
+}
+.field-name-field-location2  .field-item a.active {
+background: #027AC6;
+color: #FFF;
+}
+
+/* Теги событий. КОНЕЦ. */
+/* Поля "Событий" КОНЕЦ. */
+
+#block-search-form .captcha-admin-links {
+display:none;
+}
+
+.field-name-field-pop-limit {
+
+}
+
+.field-name-field-page-prior {
+
+}
+
+.field-name-field-review {
+background-image: url('/misc/message-24-error.png');
+border-color: #ED541D;
+background-color: #FEF5F1;
+margin: 0px;
+background-position: 8px 8px;
+background-repeat: no-repeat;
+border: 1px solid;
+padding: 10px 10px 10px 50px;
+border-color: #ED541D;
+}
