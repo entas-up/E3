@@ -75,6 +75,7 @@ function search_config_install() {
  */
 function search_config_uninstall() {
   variable_del('search_config');
+  variable_del('search_config_string_overrides');
 }
 
 /**
@@ -116,33 +117,45 @@ function search_config_update_7000() {
  * Creates entity search exclusion table.
  */
 function search_config_update_7001() {
-  $schema = array(
-    'description' => 'Provides a way to exclude specific entities from the search results. Note that this does not stop the entities from being indexed.',
-    'fields' => array(
-      'entity_id' => array(
-        'description' => 'The {node}.nid to exclude.',
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-        'default' => 0,
+  if (!db_table_exists('search_config_exclude')) {
+    $schema = array(
+      'description' => 'Provides a way to exclude specific entities from the search results. Note that this does not stop the entities from being indexed.',
+      'fields' => array(
+        'entity_id' => array(
+          'description' => 'The {node}.nid to exclude.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'entity_type' => array(
+          'description' => 'The entity type to exclude.',
+          'type' => 'varchar',
+          'length' => 128,
+          'not null' => TRUE,
+          'default' => '',
+        ),
+        'exclude' => array(
+          'description' => 'Exclusion flag. Default 1: exclude from public searches.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'default' => 1,
+          'size' => 'tiny',
+        ),
       ),
-      'entity_type' => array(
-        'description' => 'The entity type to exclude.',
-        'type' => 'varchar',
-        'length' => 128,
-        'not null' => TRUE,
-        'default' => '',
-      ),
-      'exclude' => array(
-        'description' => 'Exclusion flag. Default 1: exclude from public searches.',
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-        'default' => 1,
-        'size' => 'tiny',
-      ),
-    ),
-    'primary key' => array('entity_id', 'entity_type'),
-  );
-  db_create_table('search_config_exclude', $schema);
+      'primary key' => array('entity_id', 'entity_type'),
+    );
+    db_create_table('search_config_exclude', $schema);
+  }
+}
+
+/**
+ * Corrected permissions spelling.
+ */
+function search_config_update_7002() {
+  db_update('role_permission')
+    ->fields(array('permission' => 'admin node search exclusions'))
+    ->condition('permission', 'admin node search exlusions')
+    ->execute();
 }
