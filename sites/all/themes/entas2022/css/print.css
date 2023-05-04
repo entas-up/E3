@@ -1,0 +1,137 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling for Drupal using Zen's layout method.
+ */
+
+.column {
+height:auto!important;
+}
+
+* {
+box-shadow:none!important;
+}
+
+/* underline all links */
+a:link,
+a:visited {
+  text-decoration: underline !important;
+}
+
+/* Don't underline header */
+#site-name a:link,
+#site-name a:visited {
+  text-decoration: none !important;
+}
+
+/* CSS2 selector to add visible href after links */
+/*#content a:link:after,
+#content a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 0.8em;
+  font-weight: normal;
+}
+*/
+/* Un-float the content */
+#content,
+#content .section {
+  float: none;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Turn off any background colors or images */
+body,
+#page-wrapper,
+#page,
+#main-wrapper,
+#main,
+#content,
+#content .section,
+#header .section,
+.region-footer,
+.blocks-last .views-content-title,
+.view-files .view-content,
+.view-files h3 a,
+.field-name-field-date,
+.field-name-field-link-event,
+.field-name-field-type-event,
+#block-views-similarterms-block .views-row .views-field-title,
+.field-name-field-time-event,
+.field-name-field-ticket-event{
+  color: #000;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+/*Возвращает некоторые фоны */
+.view-frontpage .views-field-sticky {
+background: none repeat scroll 0% 0% rgb(27, 79, 189);
+color:white;
+}
+.blocks-last .active .views-content-title {
+    background: none repeat scroll 0% 0% orange;
+    color: rgb(255, 255, 255);
+	}
+
+#header .section{
+border-bottom:1px solid #7E7E7E;
+}
+
+
+/* Hide sidebars and nav elements */
+#skip-to-nav,
+#toolbar,
+#navigation,
+#block-block-13,
+#block-uptime-uptime-widget,
+#block-block-12,
+#backtotop,
+#block-simplenews-61,
+.region-bottom,
+.region-sidebar-first,
+.region-sidebar-second,
+#block-menu-block-4,
+div.tabs,
+.action-links,
+.links,
+.book-navigation,
+.forum-topic-navigation,
+.pager,
+.feed-icons,
+#block-block-16,
+.blocks-last .views-content-title a,
+#block-block-7 .content:hover:after,
+.view-banner .views-slideshow-controls-top,
+#block-block-22, #block-views-last-changes-block,
+.field-name-field-page-prior,
+#block-block-24, .field-name-field-review, .field-name-field-catalog,
+#block-print-print-links, #block-block-23
+ {
+  visibility: hidden;
+  display: none!important;
+}
+
+.blocks-last .views-content-title {
+border-top: 1px solid #919191;
+}
+.blocks-last .active  .views-content-title {
+color: #000;
+}
+.view-banner .views_slideshow_main .views-field-title, .view-banner .views-field-field-date, .view-banner .views-field-field-type-event, .view-banner .views-field-field-location2{
+font-size:0.8em;
+color: #000;
+text-shadow: none;
+}
+/* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
+   the content after the first page. */
+#page-wrapper {
+  overflow-y: visible;
+}
+
+
+.print-footer {
+border-top: 1px solid #CCC;
+margin-top: 19px;
+}

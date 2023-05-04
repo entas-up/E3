@@ -274,7 +274,7 @@ function _search_config_advanced_form(&$form, $form_state) {
         $gkey = implode(',', $filtered_gtypes);
         // Potentially, filtering will cause key overlaps. Keep the first label.
         if (!empty($gkey) && !isset($filtered_groupings[$gkey])) {
-          $filtered_groupings[$gkey] = $glabel;
+          $filtered_groupings[$gkey] = t($glabel);
           if ($is_selected) {
             $grouping_selected_types[$gkey] = $gkey;
           }
@@ -341,7 +341,7 @@ function _parse_search_expression($expression) {
     foreach ($keywords as $match) {
       $phrase = FALSE;
       // Strip off phrase quotes.
-      if ($match[2]{0} == '"') {
+      if ($match[2][0] == '"') {
         $match[2] = substr($match[2], 1, -1);
         $phrase = TRUE;
       }

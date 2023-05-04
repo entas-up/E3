@@ -169,6 +169,9 @@ on the number of content types that are configured.
   permission to "Search all content", then they will need this permission to
   see content items of this type showing up in the search results.
 
+* Modules which define custom search mechanisms may want to override the 
+  restrictions put in place by Search Configuration. To do so, add the tag
+  'bypass_search_configuration' to the search query.
   
 TODO
 ====

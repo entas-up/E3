@@ -287,10 +287,16 @@ function _search_config_form_search_admin_settings_alter(&$form, $form_state) {
     '#title' => t('Restrictions'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
+    'remove_advanced' => array(
+      '#type' => 'checkbox',
+      '#title' => t('Remove advanced search unconditionally'),
+      '#description' => t('This option removes the advanced search form irrespective of any other setting or user permission.'),
+      '#default_value' => $settings['restrictions']['remove_advanced'],
+    ),
     'admin_bypass' => array(
       '#type' => 'checkbox',
       '#title' => t('Admin bypass (primary user with id 1)'),
-      '#description' => t('This option bypasses the form configuration settings. This user always be able to search all content types irrespective of this setting.'),
+      '#description' => t('This option bypasses all form configuration settings; i.e. the entire advanced form unaltered.'),
       '#default_value' => $settings['restrictions']['admin_bypass'],
     ),
     'type_restrictions' => array(

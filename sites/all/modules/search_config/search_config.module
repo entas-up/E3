@@ -56,6 +56,7 @@ function search_config_node_settings() {
   );
   $settings['restrictions'] += array(
     'admin_bypass' => 1,
+    'remove_advanced' => 0,
   );
 
   foreach ($settings['fields'] as $field => $info) {
@@ -120,7 +121,7 @@ function search_config_string_overrides($key = NULL) {
  */
 function search_config_permission() {
   $permissions = array(
-    'admin node search exlusions' => array(
+    'admin node search exclusions' => array(
       'title' => t('Exclude nodes from search results'),
       'description' => t('This allows users with this permission to flag content as not to be searched.'),
     ),
@@ -148,7 +149,8 @@ function search_config_permission() {
  */
 function search_config_query_node_access_alter(QueryAlterableInterface $query) {
   global $user;
-  if ($user->uid == 1) {
+  // Provides a tag option to bypass any changes.
+  if ($query->hasTag('bypass_search_configuration')) {
     return;
   }
   $search = FALSE;
@@ -163,29 +165,32 @@ function search_config_query_node_access_alter(QueryAlterableInterface $query) {
   }
 
   if ($node && $search) {
-    if (!user_access('search all content')) {
-      $excluded_content_types = array();
-      foreach (search_config_content_types() as $type => $label) {
-        if (!user_access("search $type content")) {
-          $excluded_content_types[] = $type;
+    // Only conditionally restrict the query if not admin (user.uid = 1).
+    if ($user->uid != 1) {
+      if (!user_access('search all content')) {
+        $excluded_content_types = array();
+        foreach (search_config_content_types() as $type => $label) {
+          if (!user_access("search $type content")) {
+            $excluded_content_types[] = $type;
+          }
+        }
+
+        // A core bug results in a DB error if we use the following: Ref: #1210072
+        // $query->condition($node . '.type', array($excluded_content_types), 'NOT IN');
+        if (!empty($excluded_content_types)) {
+          $db_and = db_and();
+          foreach ($excluded_content_types as $type) {
+            $db_and->condition($node . '.type', $type, '!=');
+          }
+          $query->condition($db_and);
         }
       }
 
-      // A core bug results in a DB error if we use the following: Ref: #1210072
-      // $query->condition($node . '.type', array($excluded_content_types), 'NOT IN');
-      if (!empty($excluded_content_types)) {
-        $db_and = db_and();
-        foreach ($excluded_content_types as $type) {
-          $db_and->condition($node . '.type', $type, '!=');
-        }
-        $query->condition($db_and);
+      if (!user_access('search all excluded entities')) {
+        // Join into the {} table to see if it is excluded.
+        $query->leftJoin('search_config_exclude', 'sc', $node .'.nid = sc.entity_id AND sc.entity_type = :type', array(':type' => 'node'));
+        $query->isNull('sc.entity_id');
       }
-    }
-
-    if (!user_access('search all excluded entities')) {
-      // Join into the {} table to see if it is excluded.
-      $query->leftJoin('search_config_exclude', 'sc', $node .'.nid = sc.entity_id AND sc.entity_type = :type', array(':type' => 'node'));
-      $query->isNull('sc.entity_id');
     }
 
     if (get_class($query) == 'PagerDefault' || is_subclass_of($query, 'PagerDefault')) {
@@ -229,7 +234,13 @@ function search_config_form_search_form_alter(&$form, $form_state) {
     module_load_include('inc', 'search_config', 'search_config.node');
     _search_config_set_string_overrides($form, $form_state);
     if (isset($form['advanced'])) {
-      _search_config_advanced_form($form, $form_state);
+      $settings = search_config_node_settings();
+      if (!empty($settings['restrictions']['remove_advanced'])) {
+        $form['advanced']['#access'] = FALSE;
+      }
+      else {
+        _search_config_advanced_form($form, $form_state);
+      }
     }
   }
 }
@@ -294,7 +305,7 @@ function search_config_get_roles_by_permission($permission) {
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function search_config_form_node_form_alter(&$form, $form_state) {
-  if (!user_access('admin node search exlusions')) {
+  if (!user_access('admin node search exclusions')) {
     return;
   }
 
@@ -310,11 +321,15 @@ function search_config_form_node_form_alter(&$form, $form_state) {
   );
 
   // Align with normal publishing options if possible.
-  if (user_access('administer nodes')) {
+  if (isset($form['options']) && (!isset($form['options']['#access']) || $form['options']['#access'])) {
     $form['options']['search_config_exclude'] = $element;
   }
   else {
     $form['search_config_exclude'] = $element;
+    // Pushes the element to sit just above the vertical tabs.
+    if (!empty($form['additional_settings']['#weight'])) {
+      $form['search_config_exclude']['#weight'] = $form['additional_settings']['#weight'] - 1;
+    }
   }
 }
 
