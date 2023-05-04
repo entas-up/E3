@@ -53,7 +53,7 @@ text-decoration: none;
  */
 #navigation {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-  background: #FA762B;
+  background: #978675; /* B&R color #FA762B*/
   /*margin-top: -5px;*/
   font-size: 0.9em; /* Влияет на шрифт */
   z-index: 300;
